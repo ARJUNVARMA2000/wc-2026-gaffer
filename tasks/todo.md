@@ -39,9 +39,11 @@
 - [x] Methodology page (credits Caley/PADDLIN' + Double Pivot)
 - [x] Reduced-motion support; responsive; production build clean (TS passes, all pages static)
 
-## Phase 7 — Live automation ✅ (scaffolded)
-- [x] Scheduled GitHub Action (.github/workflows/update.yml): re-run pipeline → commit JSON
-- [ ] Connect to GitHub repo + Vercel for auto-deploy (needs user: git init + Vercel link)
+## Phase 7 — Live automation ✅
+- [x] Scheduled GitHub Action (.github/workflows/update.yml): re-run pipeline → commit JSON → push
+- [x] GitHub repo created (private): github.com/ARJUNVARMA2000/wc-2026-gaffer
+- [x] Workflow tested in CI — runs in 47s (TM scrape works from GitHub IP), bot pushed a data commit
+- [ ] LAST STEP (user): import repo on Vercel, set Root Directory = web → auto-deploy on push (see DEPLOY.md)
 
 ## Phase 8 — Enhancements (LATER, per "pragmatic core")
 - [ ] Transfermarkt squad-value adjustment + confederation blending
