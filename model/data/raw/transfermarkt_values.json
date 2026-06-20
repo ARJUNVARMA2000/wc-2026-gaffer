@@ -1,0 +1,1057 @@
+{
+  "Argentina": {
+    "value": 807500000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 1
+  },
+  "Spain": {
+    "value": 1220000000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 2
+  },
+  "France": {
+    "value": 1520000000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 3
+  },
+  "England": {
+    "value": 1360000000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 4
+  },
+  "Portugal": {
+    "value": 1010000000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 5
+  },
+  "Brazil": {
+    "value": 928200000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 6
+  },
+  "Morocco": {
+    "value": 447700000.0,
+    "confederation": "CAF",
+    "fifa_rank": 7
+  },
+  "Netherlands": {
+    "value": 754200000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 8
+  },
+  "Belgium": {
+    "value": 547500000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 9
+  },
+  "Germany": {
+    "value": 947000000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 10
+  },
+  "Croatia": {
+    "value": 387300000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 11
+  },
+  "Italy": {
+    "value": 319000000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 12
+  },
+  "Colombia": {
+    "value": 302350000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 13
+  },
+  "Mexico": {
+    "value": 191850000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 14
+  },
+  "Senegal": {
+    "value": 478100000.0,
+    "confederation": "CAF",
+    "fifa_rank": 15
+  },
+  "Uruguay": {
+    "value": 359300000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 16
+  },
+  "United States": {
+    "value": 385650000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 17
+  },
+  "Japan": {
+    "value": 270850000.0,
+    "confederation": "AFC",
+    "fifa_rank": 18
+  },
+  "Switzerland": {
+    "value": 332500000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 19
+  },
+  "Iran": {
+    "value": 32049999.999999996,
+    "confederation": "AFC",
+    "fifa_rank": 20
+  },
+  "Denmark": {
+    "value": 365000000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 21
+  },
+  "Turkey": {
+    "value": 473700000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 22
+  },
+  "Ecuador": {
+    "value": 368700000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 23
+  },
+  "Austria": {
+    "value": 245200000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 24
+  },
+  "South Korea": {
+    "value": 139050000.0,
+    "confederation": "AFC",
+    "fifa_rank": 25
+  },
+  "Nigeria": {
+    "value": 172050000.0,
+    "confederation": "CAF",
+    "fifa_rank": 26
+  },
+  "Australia": {
+    "value": 77450000.0,
+    "confederation": "AFC",
+    "fifa_rank": 27
+  },
+  "Algeria": {
+    "value": 256899999.99999997,
+    "confederation": "CAF",
+    "fifa_rank": 28
+  },
+  "Egypt": {
+    "value": 116480000.0,
+    "confederation": "CAF",
+    "fifa_rank": 29
+  },
+  "Canada": {
+    "value": 198650000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 30
+  },
+  "Norway": {
+    "value": 589900000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 31
+  },
+  "Ukraine": {
+    "value": 247000000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 32
+  },
+  "Ivory Coast": {
+    "value": 522100000.0,
+    "confederation": "CAF",
+    "fifa_rank": 33
+  },
+  "Panama": {
+    "value": 34550000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 34
+  },
+  "Russia": {
+    "value": 242700000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 35
+  },
+  "Poland": {
+    "value": 232100000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 36
+  },
+  "Wales": {
+    "value": 180650000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 37
+  },
+  "Sweden": {
+    "value": 406080000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 38
+  },
+  "Hungary": {
+    "value": 209200000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 39
+  },
+  "Czech Republic": {
+    "value": 188180000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 40
+  },
+  "Paraguay": {
+    "value": 153650000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 41
+  },
+  "Scotland": {
+    "value": 170250000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 42
+  },
+  "Serbia": {
+    "value": 209500000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 43
+  },
+  "Cameroon": {
+    "value": 198700000.0,
+    "confederation": "CAF",
+    "fifa_rank": 44
+  },
+  "Tunisia": {
+    "value": 69950000.0,
+    "confederation": "CAF",
+    "fifa_rank": 45
+  },
+  "DR Congo": {
+    "value": 143900000.0,
+    "confederation": "CAF",
+    "fifa_rank": 46
+  },
+  "Slovakia": {
+    "value": 59850000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 47
+  },
+  "Greece": {
+    "value": 275600000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 48
+  },
+  "Venezuela": {
+    "value": 79000000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 49
+  },
+  "Uzbekistan": {
+    "value": 85130000.0,
+    "confederation": "AFC",
+    "fifa_rank": 50
+  },
+  "Chile": {
+    "value": 66800000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 51
+  },
+  "Peru": {
+    "value": 30630000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 52
+  },
+  "Costa Rica": {
+    "value": 28200000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 53
+  },
+  "Romania": {
+    "value": 56950000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 54
+  },
+  "Mali": {
+    "value": 116550000.0,
+    "confederation": "CAF",
+    "fifa_rank": 55
+  },
+  "Qatar": {
+    "value": 19930000.0,
+    "confederation": "AFC",
+    "fifa_rank": 56
+  },
+  "Iraq": {
+    "value": 21200000.0,
+    "confederation": "AFC",
+    "fifa_rank": 57
+  },
+  "Republic of Ireland": {
+    "value": 146850000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 58
+  },
+  "Slovenia": {
+    "value": 100500000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 59
+  },
+  "South Africa": {
+    "value": 49250000.0,
+    "confederation": "CAF",
+    "fifa_rank": 60
+  },
+  "Saudi Arabia": {
+    "value": 40680000.0,
+    "confederation": "AFC",
+    "fifa_rank": 61
+  },
+  "Burkina Faso": {
+    "value": 110500000.0,
+    "confederation": "CAF",
+    "fifa_rank": 62
+  },
+  "Jordan": {
+    "value": 20300000.0,
+    "confederation": "AFC",
+    "fifa_rank": 63
+  },
+  "Bosnia and Herzegovina": {
+    "value": 146400000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 64
+  },
+  "Honduras": {
+    "value": 21430000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 65
+  },
+  "Albania": {
+    "value": 88800000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 66
+  },
+  "Cape Verde": {
+    "value": 54500000.0,
+    "confederation": "CAF",
+    "fifa_rank": 67
+  },
+  "United Arab Emirates": {
+    "value": 29050000.0,
+    "confederation": "AFC",
+    "fifa_rank": 68
+  },
+  "North Macedonia": {
+    "value": 34450000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 69
+  },
+  "Northern Ireland": {
+    "value": 79900000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 70
+  },
+  "Jamaica": {
+    "value": 9050000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 71
+  },
+  "Georgia": {
+    "value": 260600000.00000003,
+    "confederation": "UEFA",
+    "fifa_rank": 72
+  },
+  "Ghana": {
+    "value": 234350000.0,
+    "confederation": "CAF",
+    "fifa_rank": 73
+  },
+  "Iceland": {
+    "value": 89100000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 74
+  },
+  "Finland": {
+    "value": 41850000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 75
+  },
+  "Israel": {
+    "value": 68100000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 76
+  },
+  "Bolivia": {
+    "value": 18050000.0,
+    "confederation": "CONMEBOL",
+    "fifa_rank": 77
+  },
+  "Kosovo": {
+    "value": 147450000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 78
+  },
+  "Oman": {
+    "value": 8330000.0,
+    "confederation": "AFC",
+    "fifa_rank": 79
+  },
+  "Montenegro": {
+    "value": 69430000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 80
+  },
+  "Guinea": {
+    "value": 74000000.0,
+    "confederation": "CAF",
+    "fifa_rank": 81
+  },
+  "Curaçao": {
+    "value": 25780000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 82
+  },
+  "Haiti": {
+    "value": 55900000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 83
+  },
+  "Syria": {
+    "value": 7930000.0,
+    "confederation": "AFC",
+    "fifa_rank": 84
+  },
+  "New Zealand": {
+    "value": 34300000.0,
+    "confederation": "OFC",
+    "fifa_rank": 85
+  },
+  "Gabon": {
+    "value": 35280000.0,
+    "confederation": "CAF",
+    "fifa_rank": 86
+  },
+  "Bulgaria": {
+    "value": 30050000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 87
+  },
+  "Angola": {
+    "value": 46550000.0,
+    "confederation": "CAF",
+    "fifa_rank": 88
+  },
+  "Uganda": {
+    "value": 8700000.0,
+    "confederation": "CAF",
+    "fifa_rank": 89
+  },
+  "Zambia": {
+    "value": 14130000.0,
+    "confederation": "CAF",
+    "fifa_rank": 90
+  },
+  "China": {
+    "value": 14330000.0,
+    "confederation": "AFC",
+    "fifa_rank": 91
+  },
+  "Bahrain": {
+    "value": 6150000.0,
+    "confederation": "AFC",
+    "fifa_rank": 92
+  },
+  "Benin": {
+    "value": 18300000.0,
+    "confederation": "CAF",
+    "fifa_rank": 93
+  },
+  "Thailand": {
+    "value": 6550000.0,
+    "confederation": "AFC",
+    "fifa_rank": 94
+  },
+  "Palestine": {
+    "value": 10330000.0,
+    "confederation": "AFC",
+    "fifa_rank": 95
+  },
+  "Belarus": {
+    "value": 15380000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 96
+  },
+  "Guatemala": {
+    "value": 7780000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 97
+  },
+  "Luxembourg": {
+    "value": 14630000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 98
+  },
+  "Vietnam": {
+    "value": 6830000.0,
+    "confederation": "AFC",
+    "fifa_rank": 99
+  },
+  "El Salvador": {
+    "value": 4760000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 100
+  },
+  "Tajikistan": {
+    "value": 8250000.0,
+    "confederation": "AFC",
+    "fifa_rank": 101
+  },
+  "Trinidad and Tobago": {
+    "value": 2100000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 102
+  },
+  "Mozambique": {
+    "value": 1480000.0,
+    "confederation": "CAF",
+    "fifa_rank": 103
+  },
+  "Madagascar": {
+    "value": 6800000.0,
+    "confederation": "CAF",
+    "fifa_rank": 104
+  },
+  "Equatorial Guinea": {
+    "value": 4200000.0,
+    "confederation": "CAF",
+    "fifa_rank": 105
+  },
+  "Kyrgyzstan": {
+    "value": 7050000.0,
+    "confederation": "AFC",
+    "fifa_rank": 106
+  },
+  "Armenia": {
+    "value": 42230000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 107
+  },
+  "Comoros": {
+    "value": 20000000.0,
+    "confederation": "CAF",
+    "fifa_rank": 108
+  },
+  "Kenya": {
+    "value": 3250000.0,
+    "confederation": "CAF",
+    "fifa_rank": 109
+  },
+  "Libya": {
+    "value": 10130000.0,
+    "confederation": "CAF",
+    "fifa_rank": 110
+  },
+  "Kazakhstan": {
+    "value": 16300000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 111
+  },
+  "Tanzania": {
+    "value": 9130000.0,
+    "confederation": "CAF",
+    "fifa_rank": 112
+  },
+  "Mauritania": {
+    "value": 25350000.0,
+    "confederation": "CAF",
+    "fifa_rank": 113
+  },
+  "Niger": {
+    "value": 10700000.0,
+    "confederation": "CAF",
+    "fifa_rank": 114
+  },
+  "Lebanon": {
+    "value": 5550000.0,
+    "confederation": "AFC",
+    "fifa_rank": 115
+  },
+  "The Gambia": {
+    "value": 78730000.0,
+    "confederation": "CAF",
+    "fifa_rank": 116
+  },
+  "Sudan": {
+    "value": 3280000.0,
+    "confederation": "CAF",
+    "fifa_rank": 117
+  },
+  "Indonesia": {
+    "value": 19550000.0,
+    "confederation": "AFC",
+    "fifa_rank": 118
+  },
+  "Togo": {
+    "value": 27750000.0,
+    "confederation": "CAF",
+    "fifa_rank": 119
+  },
+  "North Korea": {
+    "value": 6850000.0,
+    "confederation": "AFC",
+    "fifa_rank": 120
+  },
+  "Namibia": {
+    "value": 2080000.0,
+    "confederation": "CAF",
+    "fifa_rank": 121
+  },
+  "Sierra Leone": {
+    "value": 13430000.0,
+    "confederation": "CAF",
+    "fifa_rank": 122
+  },
+  "Faroe Islands": {
+    "value": 5100000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 123
+  },
+  "Cyprus": {
+    "value": 19900000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 124
+  },
+  "Suriname": {
+    "value": 35930000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 125
+  },
+  "Azerbaijan": {
+    "value": 21680000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 126
+  },
+  "Estonia": {
+    "value": 13900000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 127
+  },
+  "Rwanda": {
+    "value": 7100000.0,
+    "confederation": "CAF",
+    "fifa_rank": 128
+  },
+  "Malawi": {
+    "value": 1950000.0,
+    "confederation": "CAF",
+    "fifa_rank": 129
+  },
+  "Zimbabwe": {
+    "value": 25330000.0,
+    "confederation": "CAF",
+    "fifa_rank": 130
+  },
+  "Nicaragua": {
+    "value": 3780000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 131
+  },
+  "Guinea-Bissau": {
+    "value": 39450000.0,
+    "confederation": "CAF",
+    "fifa_rank": 132
+  },
+  "Kuwait": {
+    "value": 4230000.0,
+    "confederation": "AFC",
+    "fifa_rank": 133
+  },
+  "Republic of the Congo": {
+    "value": 2580000.0,
+    "confederation": "CAF",
+    "fifa_rank": 134
+  },
+  "Philippines": {
+    "value": 3230000.0,
+    "confederation": "AFC",
+    "fifa_rank": 135
+  },
+  "Malaysia": {
+    "value": 7600000.0,
+    "confederation": "AFC",
+    "fifa_rank": 136
+  },
+  "Latvia": {
+    "value": 9380000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 137
+  },
+  "India": {
+    "value": 4000000.0,
+    "confederation": "AFC",
+    "fifa_rank": 138
+  },
+  "Central African Republic": {
+    "value": 8400000.0,
+    "confederation": "CAF",
+    "fifa_rank": 139
+  },
+  "Liberia": {
+    "value": 14330000.0,
+    "confederation": "CAF",
+    "fifa_rank": 140
+  },
+  "Turkmenistan": {
+    "value": 2950000.0,
+    "confederation": "AFC",
+    "fifa_rank": 141
+  },
+  "Burundi": {
+    "value": 10930000.0,
+    "confederation": "CAF",
+    "fifa_rank": 142
+  },
+  "Ethiopia": {
+    "value": 2900000.0,
+    "confederation": "CAF",
+    "fifa_rank": 143
+  },
+  "Dominican Republic": {
+    "value": 12830000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 144
+  },
+  "Yemen": {
+    "value": 2200000.0,
+    "confederation": "AFC",
+    "fifa_rank": 145
+  },
+  "Lesotho": {
+    "value": 575000.0,
+    "confederation": "CAF",
+    "fifa_rank": 146
+  },
+  "Botswana": {
+    "value": 3050000.0,
+    "confederation": "CAF",
+    "fifa_rank": 147
+  },
+  "Singapore": {
+    "value": 4580000.0,
+    "confederation": "AFC",
+    "fifa_rank": 148
+  },
+  "Lithuania": {
+    "value": 16180000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 149
+  },
+  "Guyana": {
+    "value": 1550000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 150
+  },
+  "New Caledonia": {
+    "value": 5200000.0,
+    "confederation": "OFC",
+    "fifa_rank": 151
+  },
+  "Saint Kitts and Nevis": {
+    "value": 575000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 152
+  },
+  "Solomon Islands": {
+    "value": 450000.0,
+    "confederation": "OFC",
+    "fifa_rank": 153
+  },
+  "Puerto Rico": {
+    "value": 825000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 154
+  },
+  "Fiji": {
+    "value": 2430000.0,
+    "confederation": "OFC",
+    "fifa_rank": 155
+  },
+  "Hong Kong": {
+    "value": 3380000.0,
+    "confederation": "AFC",
+    "fifa_rank": 156
+  },
+  "Tahiti": {
+    "value": 60000.0,
+    "confederation": "OFC",
+    "fifa_rank": 157
+  },
+  "Myanmar": {
+    "value": 3000000.0,
+    "confederation": "AFC",
+    "fifa_rank": 158
+  },
+  "Moldova": {
+    "value": 9700000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 159
+  },
+  "Vanuatu": {
+    "value": 535000.0,
+    "confederation": "OFC",
+    "fifa_rank": 160
+  },
+  "Malta": {
+    "value": 15000000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 161
+  },
+  "Antigua and Barbuda": {
+    "value": 650000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 162
+  },
+  "Grenada": {
+    "value": 1680000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 163
+  },
+  "Cuba": {
+    "value": 2600000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 164
+  },
+  "Eswatini": {
+    "value": 1080000.0,
+    "confederation": "CAF",
+    "fifa_rank": 165
+  },
+  "Saint Lucia": {
+    "value": 275000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 166
+  },
+  "Bermuda": {
+    "value": 375000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 167
+  },
+  "Papua New Guinea": {
+    "value": 0.0,
+    "confederation": "OFC",
+    "fifa_rank": 168
+  },
+  "South Sudan": {
+    "value": 1630000.0,
+    "confederation": "CAF",
+    "fifa_rank": 169
+  },
+  "Saint Vincent and the Grenadines": {
+    "value": 475000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 170
+  },
+  "Afghanistan": {
+    "value": 1080000.0,
+    "confederation": "AFC",
+    "fifa_rank": 171
+  },
+  "Andorra": {
+    "value": 3710000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 172
+  },
+  "Maldives": {
+    "value": 675000.0,
+    "confederation": "AFC",
+    "fifa_rank": 173
+  },
+  "Chinese Taipei": {
+    "value": 2009999.9999999998,
+    "confederation": "AFC",
+    "fifa_rank": 174
+  },
+  "Cambodia": {
+    "value": 2580000.0,
+    "confederation": "AFC",
+    "fifa_rank": 175
+  },
+  "Montserrat": {
+    "value": 375000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 176
+  },
+  "Nepal": {
+    "value": 1350000.0,
+    "confederation": "AFC",
+    "fifa_rank": 177
+  },
+  "Mauritius": {
+    "value": 800000.0,
+    "confederation": "CAF",
+    "fifa_rank": 178
+  },
+  "Barbados": {
+    "value": 200000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 179
+  },
+  "Belize": {
+    "value": 350000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 180
+  },
+  "Bangladesh": {
+    "value": 7250000.0,
+    "confederation": "AFC",
+    "fifa_rank": 181
+  },
+  "Dominica": {
+    "value": 0.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 182
+  },
+  "Chad": {
+    "value": 8550000.0,
+    "confederation": "CAF",
+    "fifa_rank": 183
+  },
+  "Eritrea": {
+    "value": 4380000.0,
+    "confederation": "CAF",
+    "fifa_rank": 184
+  },
+  "Laos": {
+    "value": 1320000.0,
+    "confederation": "AFC",
+    "fifa_rank": 185
+  },
+  "Cook Islands": {
+    "value": 110000.0,
+    "confederation": "OFC",
+    "fifa_rank": 186
+  },
+  "Sri Lanka": {
+    "value": 860000.0,
+    "confederation": "AFC",
+    "fifa_rank": 187
+  },
+  "Samoa": {
+    "value": 225000.0,
+    "confederation": "OFC",
+    "fifa_rank": 188
+  },
+  "Aruba": {
+    "value": 175000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 189
+  },
+  "Mongolia": {
+    "value": 510000.0,
+    "confederation": "AFC",
+    "fifa_rank": 190
+  },
+  "American Samoa": {
+    "value": 0.0,
+    "confederation": "OFC",
+    "fifa_rank": 191
+  },
+  "Bhutan": {
+    "value": 840000.0,
+    "confederation": "AFC",
+    "fifa_rank": 192
+  },
+  "Macau": {
+    "value": 385000.0,
+    "confederation": "AFC",
+    "fifa_rank": 193
+  },
+  "Brunei Darussalam": {
+    "value": 800000.0,
+    "confederation": "AFC",
+    "fifa_rank": 194
+  },
+  "São Tomé and Príncipe": {
+    "value": 1580000.0,
+    "confederation": "CAF",
+    "fifa_rank": 195
+  },
+  "Djibouti": {
+    "value": 575000.0,
+    "confederation": "CAF",
+    "fifa_rank": 196
+  },
+  "Cayman Islands": {
+    "value": 0.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 197
+  },
+  "Pakistan": {
+    "value": 3440000.0,
+    "confederation": "AFC",
+    "fifa_rank": 198
+  },
+  "Somalia": {
+    "value": 760000.0,
+    "confederation": "CAF",
+    "fifa_rank": 199
+  },
+  "Tonga": {
+    "value": 0.0,
+    "confederation": "OFC",
+    "fifa_rank": 200
+  },
+  "Timor-Leste": {
+    "value": 785000.0,
+    "confederation": "AFC",
+    "fifa_rank": 201
+  },
+  "Gibraltar": {
+    "value": 1840000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 202
+  },
+  "Guam": {
+    "value": 240000.0,
+    "confederation": "AFC",
+    "fifa_rank": 203
+  },
+  "Seychelles": {
+    "value": 1030000.0,
+    "confederation": "CAF",
+    "fifa_rank": 204
+  },
+  "Turks and Caicos Islands": {
+    "value": 50000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 205
+  },
+  "Liechtenstein": {
+    "value": 625000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 206
+  },
+  "Bahamas": {
+    "value": 0.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 207
+  },
+  "United States Virgin Islands": {
+    "value": 125000.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 208
+  },
+  "British Virgin Islands": {
+    "value": 0.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 209
+  },
+  "Anguilla": {
+    "value": 0.0,
+    "confederation": "CONCACAF",
+    "fifa_rank": 210
+  },
+  "San Marino": {
+    "value": 1250000.0,
+    "confederation": "UEFA",
+    "fifa_rank": 211
+  }
+}

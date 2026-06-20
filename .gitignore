@@ -1,0 +1,28 @@
+# Dependencies & build output
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Large / regenerated data — the scheduled job re-downloads results.csv.
+# NOTE: web/public/data/*.json and model/data/output/*.json ARE committed
+# (the static site reads them); transfermarkt_values.json is committed as a
+# scrape fallback. Only the big source CSV and intermediates are ignored.
+model/data/raw/results.csv
+model/data/processed/
+
+# Env & local
+.env
+.env.*
+.vercel/
+*.log
+.DS_Store
+Thumbs.db

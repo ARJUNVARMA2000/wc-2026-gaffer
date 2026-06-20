@@ -1,0 +1,87 @@
+import "server-only";
+import { cache } from "react";
+import fs from "node:fs";
+import path from "node:path";
+
+const DATA_DIR = path.join(process.cwd(), "public", "data");
+
+function read<T>(file: string): T {
+  return JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), "utf-8")) as T;
+}
+
+export type Confed = "UEFA" | "CONMEBOL" | "CONCACAF" | "CAF" | "AFC" | "OFC" | "UNK";
+
+export interface Team {
+  name: string;
+  iso: string;
+  confederation: Confed;
+  group: string;
+  host: boolean;
+  elo: number;
+  eloRank: number;
+  rr: number;
+  value: number;
+  valueRank: number;
+  attack: number;
+  defense: number;
+  tilt: number;
+  champion: number;
+  final: number;
+  sf: number;
+  qf: number;
+  r16: number;
+  ko: number;
+  current: { played: number; points: number; gd: number; gf: number };
+}
+
+export interface GroupRow {
+  name: string;
+  iso: string;
+  host: boolean;
+  winGroup: number;
+  advance: number;
+  xPts: number;
+  played: number;
+  points: number;
+  gd: number;
+  gf: number;
+  ga?: number;
+}
+
+export interface Match {
+  date: string;
+  group: string;
+  home: string;
+  away: string;
+  homeIso: string;
+  awayIso: string;
+  city: string;
+  played: boolean;
+  homeScore?: number;
+  awayScore?: number;
+  pHome?: number;
+  pDraw?: number;
+  pAway?: number;
+  projHome?: number;
+  projAway?: number;
+  likelyHome?: number;
+  likelyAway?: number;
+}
+
+export interface Meta {
+  lastUpdated: string;
+  dataThrough: string;
+  nSims: number;
+  groupMatchesPlayed: number;
+  groupMatchesTotal: number;
+  nTeams: number;
+  modelVersion: string;
+  homeAdv: number;
+  avgGoals: number;
+  valuesLoaded?: number;
+}
+
+export const getTeams = cache((): Team[] => read<Team[]>("teams.json"));
+export const getGroups = cache((): Record<string, GroupRow[]> => read("groups.json"));
+export const getMatches = cache((): Match[] => read<Match[]>("matches.json"));
+export const getMeta = cache((): Meta => read<Meta>("meta.json"));
