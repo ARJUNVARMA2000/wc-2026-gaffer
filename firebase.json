@@ -1,0 +1,9 @@
+{
+  "hosting": {
+    "site": "gaffer-wc26",
+    "public": "web/out",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

@@ -23,6 +23,14 @@ model/data/processed/
 .env
 .env.*
 .vercel/
+.firebase/
+firebase-debug.log
 *.log
 .DS_Store
 Thumbs.db
+
+# never commit service-account keys
+*sa*.json
+*service-account*.json
+*-key.json
+application_default_credentials.json

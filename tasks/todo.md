@@ -39,11 +39,14 @@
 - [x] Methodology page (credits Caley/PADDLIN' + Double Pivot)
 - [x] Reduced-motion support; responsive; production build clean (TS passes, all pages static)
 
-## Phase 7 — Live automation ✅
-- [x] Scheduled GitHub Action (.github/workflows/update.yml): re-run pipeline → commit JSON → push
-- [x] GitHub repo created (private): github.com/ARJUNVARMA2000/wc-2026-gaffer
-- [x] Workflow tested in CI — runs in 47s (TM scrape works from GitHub IP), bot pushed a data commit
-- [ ] LAST STEP (user): import repo on Vercel, set Root Directory = web → auto-deploy on push (see DEPLOY.md)
+## Phase 7 — Live automation + hosting ✅
+- [x] GitHub repo (private): github.com/ARJUNVARMA2000/wc-2026-gaffer
+- [x] DEPLOYED on Firebase Hosting (GCP project agentic-ai-487000): https://gaffer-wc26.web.app
+      (static export via next.config output:"export" → web/out → firebase deploy)
+- [x] Workflow (.github/workflows/update.yml): every 6h refresh data → commit → build → deploy
+- [ ] LAST STEP (user): add FIREBASE_SERVICE_ACCOUNT secret to enable the auto-deploy step
+      (creating the SA key was blocked for me as a privilege escalation — see DEPLOY.md for the
+      3 commands; manual `firebase deploy` already works with gcloud login)
 
 ## Phase 8 — Enhancements (LATER, per "pragmatic core")
 - [ ] Transfermarkt squad-value adjustment + confederation blending
