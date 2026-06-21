@@ -9,10 +9,25 @@ const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton
 const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken" });
 const jb = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono-jb" });
 
+const DESC =
+  "A team-strength model for the 2026 FIFA World Cup: Elo ratings, a Dixon-Coles goal model and 50,000 Monte Carlo simulations. Live title odds, advancement probabilities and group projections.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gaffer-wc26.web.app"),
   title: "GAFFER — World Cup 2026 Forecast Engine",
-  description:
-    "A team-strength model for the 2026 FIFA World Cup: Elo ratings, a Dixon-Coles goal model and 50,000 Monte Carlo tournament simulations. Live title odds, advancement probabilities and group projections.",
+  description: DESC,
+  openGraph: {
+    title: "GAFFER — World Cup 2026 Forecast",
+    description: DESC,
+    url: "/",
+    siteName: "GAFFER",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GAFFER — World Cup 2026 Forecast",
+    description: DESC,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

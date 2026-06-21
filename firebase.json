@@ -4,6 +4,16 @@
     "public": "web/out",
     "cleanUrls": true,
     "trailingSlash": false,
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      {
+        "source": "/opengraph-image",
+        "headers": [{ "key": "Content-Type", "value": "image/png" }]
+      },
+      {
+        "source": "/data/**",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }]
+      }
+    ]
   }
 }
