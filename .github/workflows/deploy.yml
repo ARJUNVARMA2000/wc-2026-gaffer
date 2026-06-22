@@ -1,0 +1,50 @@
+# Deploy the static site to Firebase Hosting on every push to main.
+#
+# Builds straight from the committed data JSONs (web/public/data/*.json) — no
+# model run needed — and deploys. The scheduled data refresh lives in
+# update.yml; that job's gaffer-bot commits are made with the default
+# GITHUB_TOKEN, and GitHub deliberately does NOT trigger workflows from
+# GITHUB_TOKEN pushes, so this never loops. update.yml still deploys its own
+# refresh at the end, so scheduled updates go live too.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+# A newer push supersedes an in-flight deploy of older code.
+concurrency:
+  group: deploy-hosting
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Build static site
+        working-directory: web
+        run: |
+          # Same npm ci -> npm install self-heal as update.yml (Windows lockfile
+          # vs Linux runner can disagree on bundled wasm fallback versions).
+          npm ci || npm install
+          npm run build
+
+      - name: Deploy to Firebase Hosting
+        if: ${{ env.SA != '' }}
+        run: |
+          printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
+          npx --yes firebase-tools@latest deploy --only hosting:gaffer-wc26 \
+            --project agentic-ai-487000 --non-interactive
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
