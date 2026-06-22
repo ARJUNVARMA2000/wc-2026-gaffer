@@ -46,7 +46,13 @@ jobs:
       - name: Build static site
         working-directory: web
         run: |
-          npm ci
+          # `npm ci` is the strict, reproducible fast path. It can fail when the
+          # committed lock (maintained on Windows) and the Linux runner disagree on
+          # the versions bundled inside platform-specific wasm fallback packages
+          # (e.g. @emnapi/* inside @tailwindcss/oxide-wasm32-wasi). Those bundled
+          # versions are only knowable from a real Linux install, so fall back to
+          # `npm install`, which reconciles the lock instead of hard-failing.
+          npm ci || npm install
           npm run build
 
       - name: Deploy to Firebase Hosting
