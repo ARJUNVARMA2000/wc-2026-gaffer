@@ -50,10 +50,13 @@ export default function Nav({ meta }: { meta: Meta }) {
           </div>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border hairline md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/25 bg-white/[0.06] text-[var(--color-text)] transition-colors hover:border-[var(--color-lime)] hover:text-[var(--color-lime)] md:hidden"
             aria-label="Menu"
+            aria-expanded={open}
           >
-            <span className="mono text-xs">{open ? "✕" : "≡"}</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              {open ? <path d="M6 6l12 12M18 6 6 18" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
+            </svg>
           </button>
         </div>
       </div>
