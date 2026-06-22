@@ -101,6 +101,11 @@ class SimResult:
     group_advance: Dict[str, np.ndarray]
     exp_points: Dict[str, np.ndarray]
     n_sims: int
+    # opponent co-occurrence counts per knockout round: opp[R][i,j] = #sims i faced j.
+    # Row sum opp[R][i,:] == reach-count of i in round R, so opp[R][i]/rowsum is the
+    # conditional opponent distribution given i reached round R.
+    opp: Dict[str, np.ndarray] = None
+    win: np.ndarray = None    # 48x48 knockout win-prob matrix win[i,j] = P(i beats j)
 
 
 def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
@@ -140,6 +145,7 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
 
     # accumulators
     cnt = {r: np.zeros(nT) for r in ("R32", "R16", "QF", "SF", "Final", "Champion")}
+    opp = {r: np.zeros((nT, nT), dtype=np.int64) for r in ("R32", "R16", "QF", "SF")}
     win_group = {g: np.zeros(4) for g in letters}
     pts_sum = {g: np.zeros(4) for g in letters}
     group_local_idx = {g: np.array([tidx[t] for t in B.GROUPS[g]]) for g in letters}
@@ -193,11 +199,17 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
         pos, gl = slot[0], slot[1]
         return winner_g[gl] if pos == "1" else runner_g[gl]
 
+    def record_opp(R: str, ta: np.ndarray, tb: np.ndarray) -> None:
+        # np.add.at (unbuffered) is required: ta/tb repeat team indices across sims.
+        np.add.at(opp[R], (ta, tb), 1)
+        np.add.at(opp[R], (tb, ta), 1)
+
     winners: Dict[int, np.ndarray] = {}
     # R32
     for m, sa, sb in B.R32:
         ta, tb = resolve(sa), resolve(sb)
         np.add.at(cnt["R32"], ta, 1); np.add.at(cnt["R32"], tb, 1)
+        record_opp("R32", ta, tb)
         p = win[ta, tb]
         a_wins = rng.random(N) < p
         winners[m] = np.where(a_wins, ta, tb)
@@ -206,6 +218,8 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
         for m, (fa, fb) in pairs.items():
             ta, tb = winners[fa], winners[fb]
             np.add.at(cnt[reached_key], ta, 1); np.add.at(cnt[reached_key], tb, 1)
+            if reached_key in opp:
+                record_opp(reached_key, ta, tb)
             p = win[ta, tb]
             a_wins = rng.random(N) < p
             winners[m] = np.where(a_wins, ta, tb)
@@ -230,5 +244,7 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
         group_advance=group_advance,
         exp_points={g: pts_sum[g] / N for g in letters},
         n_sims=N,
+        opp=opp,
+        win=win,
     )
     return res

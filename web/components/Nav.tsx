@@ -11,6 +11,9 @@ const LINKS = [
   ["/strength", "Strength"],
   ["/groups", "Groups"],
   ["/matches", "Matches"],
+  ["/trends", "Trends"],
+  ["/h2h", "Matchup"],
+  ["/paths", "Paths"],
   ["/accuracy", "vs Market"],
   ["/method", "Method"],
 ];
@@ -29,7 +32,7 @@ export default function Nav({ meta }: { meta: Meta }) {
           <span className="hidden h-1.5 w-1.5 rounded-full bg-[var(--color-lime)] sm:block live-dot" />
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-5 lg:flex">
           {LINKS.map(([href, label]) => (
             <Link
               key={href}
@@ -51,7 +54,7 @@ export default function Nav({ meta }: { meta: Meta }) {
           </div>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/25 bg-white/[0.06] text-[var(--color-text)] transition-colors hover:border-[var(--color-lime)] hover:text-[var(--color-lime)] md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/25 bg-white/[0.06] text-[var(--color-text)] transition-colors hover:border-[var(--color-lime)] hover:text-[var(--color-lime)] lg:hidden"
             aria-label="Menu"
             aria-expanded={open}
           >
@@ -63,7 +66,7 @@ export default function Nav({ meta }: { meta: Meta }) {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t hairline px-4 py-3 md:hidden">
+        <nav className="flex flex-col gap-1 border-t hairline px-4 py-3 lg:hidden">
           {LINKS.map(([href, label]) => (
             <Link
               key={href}

@@ -17,7 +17,14 @@ from typing import Dict
 import numpy as np
 
 from . import __version__
-from .config import DEFAULT_N_SIMS, OUTPUT_DIR, WEB_DATA_DIR
+from .config import (
+    DEFAULT_N_SIMS,
+    DIXON_COLES_RHO,
+    OUTPUT_DIR,
+    VALUE_WEIGHT_CROSS,
+    VALUE_WEIGHT_SAME,
+    WEB_DATA_DIR,
+)
 from .data.flags import iso
 from .data.results import download_results, load_results, world_cup_2026
 from .data.transfermarkt import load_values
@@ -61,6 +68,87 @@ def current_standings(wc_df) -> Dict[str, dict]:
     for r in rec.values():
         r["gd"] = r["gf"] - r["ga"]
     return rec
+
+
+def build_paths(sim, rr: Dict[str, float], rating_model, team_to_group: Dict[str, str]) -> list:
+    """Per-team likely knockout opponents + draw-difficulty (powers the Paths tab).
+
+    Difficulty = "draw luck": the expected round-robin strength of the R32+R16 opponents,
+    independent of the team's own quality, min-max normalised 0 (kindest) .. 100 (cruelest).
+    """
+    teams = sim.teams
+    tidx = {t: i for i, t in enumerate(teams)}
+    rr_vec = np.array([rr[t] for t in teams])
+    OPP = ("R32", "R16", "QF", "SF")
+
+    cond = {}
+    for R in OPP:
+        M = sim.opp[R].astype(float)
+        rs = M.sum(axis=1, keepdims=True)
+        cond[R] = np.divide(M, rs, out=np.zeros_like(M), where=rs > 0)
+
+    exp_r32 = cond["R32"] @ rr_vec
+    exp_r16 = cond["R16"] @ rr_vec
+    has_r16 = sim.opp["R16"].sum(axis=1) > 0
+    raw = np.where(has_r16, 0.6 * exp_r32 + 0.4 * exp_r16, exp_r32)
+    valid = sim.opp["R32"].sum(axis=1) > 0
+    lo, hi = raw[valid].min(), raw[valid].max()
+    span = (hi - lo) or 1.0
+    diff = np.where(valid, 100.0 * (raw - lo) / span, 0.0)
+    order = np.argsort(raw)                       # ascending raw = kindest first
+    rank = np.empty(len(teams), dtype=int)
+    rank[order] = np.arange(1, len(teams) + 1)
+
+    out = []
+    for t in teams:
+        i = tidx[t]
+        entry = {
+            "name": t, "iso": iso(t),
+            "confederation": rating_model.ratings[t].confederation,
+            "group": team_to_group[t],
+            "reachR32": round(float(sim.rounds["R32"][i]), 4),
+            "reachR16": round(float(sim.rounds["R16"][i]), 4),
+            "reachQF": round(float(sim.rounds["QF"][i]), 4),
+            "reachSF": round(float(sim.rounds["SF"][i]), 4),
+            "champion": round(float(sim.champion[i]), 4),
+            "pathDifficulty": round(float(diff[i]), 1),
+            "pathRank": int(rank[i]),
+            "expOppR32": round(float(exp_r32[i]), 2),
+            "expOppR16": round(float(exp_r16[i]), 2),
+            "rounds": {},
+        }
+        for R in OPP:
+            row = cond[R][i]
+            top = np.argsort(-row)[:6]
+            entry["rounds"][R] = [
+                {"opp": teams[j], "oppIso": iso(teams[j]),
+                 "prob": round(float(row[j]), 4), "winProb": round(float(sim.win[i, j]), 4)}
+                for j in top if row[j] > 0
+            ]
+        out.append(entry)
+    out.sort(key=lambda p: p["pathRank"])
+    return out
+
+
+def build_model_params(gs, model, rating_model) -> dict:
+    """Per-team goal-model params so the website can compute any head-to-head live."""
+    return {
+        "homeAdv": round(gs.home_adv, 4),
+        "rho": DIXON_COLES_RHO,
+        "avgGoals": round(gs.avg_goals, 4),
+        "wSame": VALUE_WEIGHT_SAME,
+        "wCross": VALUE_WEIGHT_CROSS,
+        "teams": {
+            t: {
+                "atk": round(gs.atk[t], 4),
+                "dfn": round(gs.dfn[t], 4),
+                "gap": round(model.gap.get(t, 0.0), 4),
+                "confederation": rating_model.ratings[t].confederation,
+                "iso": iso(t),
+            }
+            for t in gs.teams if t in rating_model.ratings
+        },
+    }
 
 
 def build_outputs(n_sims: int = DEFAULT_N_SIMS, download: bool = False,
@@ -131,23 +219,38 @@ def build_outputs(n_sims: int = DEFAULT_N_SIMS, download: bool = False,
         groups_out[g] = rows
 
     # ---- matches.json ----
+    from .predictions_log import load_log
+    plog = load_log()                                  # frozen pre-match probs (for upsets)
     matches_out = []
     for row in wc_df.sort_values("date").itertuples(index=False):
         h, a = row.home_team, row.away_team
         g = team_to_group.get(h)
         if g is None or team_to_group.get(a) != g:
             continue
+        date_str = row.date.strftime("%Y-%m-%d")
+        venue = getattr(row, "country", None)
+        adv = h if (h in HOSTS and venue == h) else (a if (a in HOSTS and venue == a) else None)
         m = {
-            "date": row.date.strftime("%Y-%m-%d"), "group": g,
+            "date": date_str, "group": g,
             "home": h, "away": a, "homeIso": iso(h), "awayIso": iso(a),
             "city": getattr(row, "city", ""), "played": bool(row.played),
         }
         if bool(row.played):
-            m["homeScore"] = int(row.home_score)
-            m["awayScore"] = int(row.away_score)
+            hg, ag = int(row.home_score), int(row.away_score)
+            m["homeScore"], m["awayScore"] = hg, ag
+            # Pre-match probs: frozen snapshot if we logged one, else recompute (labeled hindsight).
+            frozen = plog.get(f"{date_str}|{h}|{a}")
+            if frozen and frozen.get("pHome") is not None:
+                ph, pd_, pa = frozen["pHome"], frozen["pDraw"], frozen["pAway"]
+            else:
+                ph, pd_, pa = outcome_probs(scoreline_matrix(*model.lambdas(h, a, adv)))
+            outcome = 0 if hg > ag else (2 if ag > hg else 1)
+            m.update({
+                "pHome": round(ph, 3), "pDraw": round(pd_, 3), "pAway": round(pa, 3),
+                "modelProb": round((ph, pd_, pa)[outcome], 3),   # prob model gave the actual result
+                "frozen": bool(frozen),
+            })
         else:
-            venue = getattr(row, "country", None)
-            adv = h if (h in HOSTS and venue == h) else (a if (a in HOSTS and venue == a) else None)
             lh, la = model.lambdas(h, a, adv)
             mat = scoreline_matrix(lh, la)
             ph, pd_, pa = outcome_probs(mat)
@@ -172,8 +275,14 @@ def build_outputs(n_sims: int = DEFAULT_N_SIMS, download: bool = False,
         "avgGoals": round(gs.avg_goals * 2, 2),
         "valuesLoaded": sum(1 for t in teams if model.value.get(t)),
     }
-    return {"teams.json": teams_out, "groups.json": groups_out,
-            "matches.json": matches_out, "meta.json": meta}
+    paths_out = build_paths(sim, rr, rating_model, team_to_group)
+    return {
+        "teams.json": teams_out, "groups.json": groups_out,
+        "matches.json": matches_out, "meta.json": meta,
+        "paths.json": paths_out,
+        "model.json": build_model_params(gs, model, rating_model),
+        "ratings_history.json": rating_model.history or {},
+    }
 
 
 def write_outputs(outputs: dict) -> None:
@@ -204,6 +313,10 @@ def main():
     from . import predictions_log
     log = predictions_log.update_log(outputs["matches.json"])
     outputs[predictions_log.LOG_NAME] = log
+
+    # Accumulate team-level projection snapshots over time (powers the Trends tab).
+    from . import history
+    outputs[history.HISTORY_NAME] = history.update_history(outputs["teams.json"], outputs["meta.json"])
 
     if args.scorecard:
         from .compare import build_scorecard

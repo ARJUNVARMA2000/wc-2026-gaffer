@@ -30,8 +30,57 @@ export default function MatchesView({ matches }: { matches: Match[] }) {
     return Array.from(map.entries());
   }, [filtered]);
 
+  const upsets = useMemo(
+    () =>
+      matches
+        .filter((m) => m.played && m.modelProb != null)
+        .sort((a, b) => (a.modelProb! - b.modelProb!))
+        .slice(0, 6),
+    [matches]
+  );
+
   return (
     <div>
+      {upsets.length > 0 && (
+        <section className="mb-10">
+          <div className="mb-3 flex items-end justify-between">
+            <div>
+              <div className="eyebrow">Against the odds</div>
+              <h2 className="display mt-1 text-2xl">Biggest upsets so far</h2>
+            </div>
+            <span className="mono hidden text-[0.6rem] text-[var(--color-faint)] sm:block">
+              % = chance the model gave the actual result
+            </span>
+          </div>
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {upsets.map((m, i) => (
+              <motion.div
+                key={`u-${m.home}-${m.away}`}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: Math.min(i * 0.05, 0.3) }}
+                className="panel row-glow flex items-center gap-3 px-4 py-3"
+              >
+                <span className="display w-12 shrink-0 text-xl text-[var(--color-coral)]">
+                  {Math.round((m.modelProb ?? 0) * 100)}%
+                </span>
+                <div className="flex flex-1 items-center gap-2">
+                  <Flag iso={m.homeIso} name={m.home} size={20} />
+                  <span className="mono text-sm font-semibold tabular-nums">
+                    {m.homeScore}<span className="px-1 text-[var(--color-faint)]">–</span>{m.awayScore}
+                  </span>
+                  <Flag iso={m.awayIso} name={m.away} size={20} />
+                  <span className="ml-1 truncate text-[0.7rem] text-[var(--color-muted)]">
+                    {m.home} v {m.away}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
+
       <div className="mb-6 flex flex-wrap items-center gap-2">
         {(["ALL", "UPCOMING", "PLAYED"] as const).map((f) => (
           <button

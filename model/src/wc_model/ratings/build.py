@@ -19,6 +19,7 @@ import pandas as pd
 from ..config import BASELINE_TOTAL_GOALS, DEFAULT_RATING, HOME_ADVANTAGE
 from ..data.confederations import derive_confederations
 from ..data.results import load_results
+from ..sim.bracket_2026 import GROUPS
 from .elo import expected_score, k_factor, mov_multiplier
 
 
@@ -55,7 +56,8 @@ class RatingModel:
     total_goals: float          # baseline total goals per match
     n_matches: int
     last_update: str = ""
-    history: pd.DataFrame = field(default=None, repr=False)
+    # Elo trajectory per WC team: {name: [{"d": "YYYY-MM-DD", "e": elo}, ...]}
+    history: Dict[str, list] = field(default=None, repr=False)
 
     def elo(self, team: str) -> float:
         return self.ratings[team].elo if team in self.ratings else DEFAULT_RATING
@@ -64,6 +66,7 @@ class RatingModel:
 def build_ratings(
     df: Optional[pd.DataFrame] = None,
     calibrate_since: str = "2015-01-01",
+    history_since: str = "2019-01-01",
 ) -> RatingModel:
     """Process every played match in date order to produce current ratings."""
     if df is None:
@@ -71,6 +74,10 @@ def build_ratings(
     confeds = derive_confederations(df)
 
     ratings: Dict[str, TeamRating] = {}
+    # Record an Elo trajectory (since `history_since`) for the 48 WC teams only.
+    wc_teams = {t for ts in GROUPS.values() for t in ts}
+    hist_cutoff = pd.Timestamp(history_since)
+    elo_history: Dict[str, list] = {t: [] for t in wc_teams}
 
     def get(team: str) -> TeamRating:
         if team not in ratings:
@@ -112,10 +119,13 @@ def build_ratings(
         home.elo += k * (ha - home_exp)
         away.elo += k * (aa - away_exp)
 
+        date_str = row.date.strftime("%Y-%m-%d")
         for t, new in ((home, home.elo), (away, away.elo)):
             t.peak_elo = max(t.peak_elo, new)
             t.matches_played += 1
-            t.last_match_date = row.date.strftime("%Y-%m-%d")
+            t.last_match_date = date_str
+            if t.name in wc_teams and row.date >= hist_cutoff:
+                elo_history[t.name].append({"d": date_str, "e": round(new, 1)})
         n_matches += 1
 
     beta = (cal_xy / cal_xx) if cal_xx > 0 else 0.0025
@@ -129,10 +139,12 @@ def build_ratings(
         t.defense = max(0.2, half - sup / 2.0)
 
     last_update = played["date"].max().strftime("%Y-%m-%d") if len(played) else ""
+    elo_history = {t: pts[-200:] for t, pts in elo_history.items()}  # cap series length
     return RatingModel(
         ratings=ratings,
         beta=beta,
         total_goals=total_goals,
         n_matches=n_matches,
         last_update=last_update,
+        history=elo_history,
     )

@@ -66,6 +66,8 @@ export interface Match {
   projAway?: number;
   likelyHome?: number;
   likelyAway?: number;
+  modelProb?: number; // played: prob the model gave the actual result (lower = bigger upset)
+  frozen?: boolean; // whether modelProb came from a frozen pre-match snapshot
 }
 
 export interface Meta {
@@ -148,8 +150,82 @@ export interface Scorecard {
   ledger: LedgerRow[];
 }
 
+// ---- Paths (paths.json) ----
+export interface PathOpp {
+  opp: string;
+  oppIso: string;
+  prob: number; // P(face this opponent | reached this round)
+  winProb: number; // this team's win prob vs that opponent
+}
+export interface TeamPath {
+  name: string;
+  iso: string;
+  confederation: Confed;
+  group: string;
+  reachR32: number;
+  reachR16: number;
+  reachQF: number;
+  reachSF: number;
+  champion: number;
+  pathDifficulty: number; // 0 (kindest draw) .. 100 (cruelest)
+  pathRank: number; // 1 = kindest
+  expOppR32: number;
+  expOppR16: number;
+  rounds: { R32: PathOpp[]; R16: PathOpp[]; QF: PathOpp[]; SF: PathOpp[] };
+}
+
+// ---- History (history.json) ----
+export interface SnapTeam {
+  c: number; f: number; s: number; q: number; r: number; k: number; e: number;
+}
+export interface Snapshot {
+  ts: string;
+  date: string;
+  played: number;
+  teams: Record<string, SnapTeam>;
+}
+export interface Mover {
+  name: string;
+  from: number;
+  to: number;
+  delta: number;
+}
+export interface MoverSet {
+  champ: { risers: Mover[]; fallers: Mover[] };
+  elo: { risers: Mover[]; fallers: Mover[] };
+}
+export interface History {
+  generatedAt: string;
+  snapshots: Snapshot[];
+  movers: { sinceStart: MoverSet; sinceLast: MoverSet };
+}
+
+// ---- Ratings history (ratings_history.json): {team: [{d,e}]} ----
+export type RatingsHistory = Record<string, { d: string; e: number }[]>;
+
+// ---- Model params (model.json) for client-side head-to-head ----
+export interface ModelTeam {
+  atk: number;
+  dfn: number;
+  gap: number;
+  confederation: Confed;
+  iso: string;
+}
+export interface ModelParams {
+  homeAdv: number;
+  rho: number;
+  avgGoals: number;
+  wSame: number;
+  wCross: number;
+  teams: Record<string, ModelTeam>;
+}
+
 export const getTeams = cache((): Team[] => read<Team[]>("teams.json"));
 export const getGroups = cache((): Record<string, GroupRow[]> => read("groups.json"));
 export const getMatches = cache((): Match[] => read<Match[]>("matches.json"));
 export const getMeta = cache((): Meta => read<Meta>("meta.json"));
 export const getScorecard = cache((): Scorecard => read<Scorecard>("scorecard.json"));
+export const getPaths = cache((): TeamPath[] => read<TeamPath[]>("paths.json"));
+export const getHistory = cache((): History => read<History>("history.json"));
+export const getRatingsHistory = cache((): RatingsHistory => read<RatingsHistory>("ratings_history.json"));
+export const getModelParams = cache((): ModelParams => read<ModelParams>("model.json"));

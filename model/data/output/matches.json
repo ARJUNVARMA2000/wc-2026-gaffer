@@ -9,7 +9,12 @@
     "city": "Zapopan",
     "played": true,
     "homeScore": 2,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.336,
+    "pDraw": 0.285,
+    "pAway": 0.378,
+    "modelProb": 0.336,
+    "frozen": false
   },
   {
     "date": "2026-06-11",
@@ -21,7 +26,12 @@
     "city": "Mexico City",
     "played": true,
     "homeScore": 2,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.629,
+    "pDraw": 0.243,
+    "pAway": 0.128,
+    "modelProb": 0.629,
+    "frozen": false
   },
   {
     "date": "2026-06-12",
@@ -33,7 +43,12 @@
     "city": "Toronto",
     "played": true,
     "homeScore": 1,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.548,
+    "pDraw": 0.265,
+    "pAway": 0.187,
+    "modelProb": 0.265,
+    "frozen": false
   },
   {
     "date": "2026-06-12",
@@ -45,7 +60,12 @@
     "city": "Inglewood",
     "played": true,
     "homeScore": 4,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.493,
+    "pDraw": 0.275,
+    "pAway": 0.231,
+    "modelProb": 0.493,
+    "frozen": false
   },
   {
     "date": "2026-06-13",
@@ -57,7 +77,12 @@
     "city": "Santa Clara",
     "played": true,
     "homeScore": 1,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.052,
+    "pDraw": 0.117,
+    "pAway": 0.831,
+    "modelProb": 0.117,
+    "frozen": false
   },
   {
     "date": "2026-06-13",
@@ -69,7 +94,12 @@
     "city": "East Rutherford",
     "played": true,
     "homeScore": 1,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.418,
+    "pDraw": 0.335,
+    "pAway": 0.247,
+    "modelProb": 0.335,
+    "frozen": false
   },
   {
     "date": "2026-06-13",
@@ -81,7 +111,12 @@
     "city": "Foxborough",
     "played": true,
     "homeScore": 0,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.156,
+    "pDraw": 0.23,
+    "pAway": 0.613,
+    "modelProb": 0.613,
+    "frozen": false
   },
   {
     "date": "2026-06-13",
@@ -93,7 +128,12 @@
     "city": "Vancouver",
     "played": true,
     "homeScore": 2,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.235,
+    "pDraw": 0.276,
+    "pAway": 0.489,
+    "modelProb": 0.235,
+    "frozen": false
   },
   {
     "date": "2026-06-14",
@@ -105,7 +145,12 @@
     "city": "Guadalupe",
     "played": true,
     "homeScore": 5,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.568,
+    "pDraw": 0.245,
+    "pAway": 0.186,
+    "modelProb": 0.568,
+    "frozen": false
   },
   {
     "date": "2026-06-14",
@@ -117,7 +162,12 @@
     "city": "Arlington",
     "played": true,
     "homeScore": 2,
-    "awayScore": 2
+    "awayScore": 2,
+    "pHome": 0.474,
+    "pDraw": 0.269,
+    "pAway": 0.257,
+    "modelProb": 0.269,
+    "frozen": false
   },
   {
     "date": "2026-06-14",
@@ -129,7 +179,12 @@
     "city": "Houston",
     "played": true,
     "homeScore": 7,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.938,
+    "pDraw": 0.048,
+    "pAway": 0.014,
+    "modelProb": 0.938,
+    "frozen": false
   },
   {
     "date": "2026-06-14",
@@ -141,7 +196,12 @@
     "city": "Philadelphia",
     "played": true,
     "homeScore": 1,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.282,
+    "pDraw": 0.388,
+    "pAway": 0.33,
+    "modelProb": 0.282,
+    "frozen": false
   },
   {
     "date": "2026-06-15",
@@ -153,7 +213,12 @@
     "city": "Seattle",
     "played": true,
     "homeScore": 1,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.564,
+    "pDraw": 0.274,
+    "pAway": 0.161,
+    "modelProb": 0.274,
+    "frozen": false
   },
   {
     "date": "2026-06-15",
@@ -165,7 +230,12 @@
     "city": "Inglewood",
     "played": true,
     "homeScore": 2,
-    "awayScore": 2
+    "awayScore": 2,
+    "pHome": 0.529,
+    "pDraw": 0.295,
+    "pAway": 0.175,
+    "modelProb": 0.295,
+    "frozen": false
   },
   {
     "date": "2026-06-15",
@@ -177,7 +247,12 @@
     "city": "Atlanta",
     "played": true,
     "homeScore": 0,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.836,
+    "pDraw": 0.125,
+    "pAway": 0.039,
+    "modelProb": 0.125,
+    "frozen": false
   },
   {
     "date": "2026-06-15",
@@ -189,7 +264,12 @@
     "city": "Miami Gardens",
     "played": true,
     "homeScore": 1,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.108,
+    "pDraw": 0.266,
+    "pAway": 0.626,
+    "modelProb": 0.266,
+    "frozen": false
   },
   {
     "date": "2026-06-16",
@@ -201,7 +281,12 @@
     "city": "Foxborough",
     "played": true,
     "homeScore": 1,
-    "awayScore": 4
+    "awayScore": 4,
+    "pHome": 0.063,
+    "pDraw": 0.161,
+    "pAway": 0.776,
+    "modelProb": 0.776,
+    "frozen": false
   },
   {
     "date": "2026-06-16",
@@ -213,7 +298,12 @@
     "city": "East Rutherford",
     "played": true,
     "homeScore": 3,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.538,
+    "pDraw": 0.27,
+    "pAway": 0.192,
+    "modelProb": 0.538,
+    "frozen": false
   },
   {
     "date": "2026-06-16",
@@ -225,7 +315,12 @@
     "city": "Kansas City",
     "played": true,
     "homeScore": 3,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.588,
+    "pDraw": 0.267,
+    "pAway": 0.145,
+    "modelProb": 0.588,
+    "frozen": false
   },
   {
     "date": "2026-06-16",
@@ -237,7 +332,12 @@
     "city": "Santa Clara",
     "played": true,
     "homeScore": 3,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.724,
+    "pDraw": 0.183,
+    "pAway": 0.093,
+    "modelProb": 0.724,
+    "frozen": false
   },
   {
     "date": "2026-06-17",
@@ -249,7 +349,12 @@
     "city": "Houston",
     "played": true,
     "homeScore": 1,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.641,
+    "pDraw": 0.248,
+    "pAway": 0.111,
+    "modelProb": 0.248,
+    "frozen": false
   },
   {
     "date": "2026-06-17",
@@ -261,7 +366,12 @@
     "city": "Mexico City",
     "played": true,
     "homeScore": 1,
-    "awayScore": 3
+    "awayScore": 3,
+    "pHome": 0.136,
+    "pDraw": 0.253,
+    "pAway": 0.611,
+    "modelProb": 0.611,
+    "frozen": false
   },
   {
     "date": "2026-06-17",
@@ -273,7 +383,12 @@
     "city": "Arlington",
     "played": true,
     "homeScore": 4,
-    "awayScore": 2
+    "awayScore": 2,
+    "pHome": 0.525,
+    "pDraw": 0.276,
+    "pAway": 0.199,
+    "modelProb": 0.525,
+    "frozen": false
   },
   {
     "date": "2026-06-17",
@@ -285,7 +400,12 @@
     "city": "Toronto",
     "played": true,
     "homeScore": 1,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.507,
+    "pDraw": 0.279,
+    "pAway": 0.214,
+    "modelProb": 0.507,
+    "frozen": false
   },
   {
     "date": "2026-06-18",
@@ -297,7 +417,12 @@
     "city": "Atlanta",
     "played": true,
     "homeScore": 1,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.526,
+    "pDraw": 0.278,
+    "pAway": 0.196,
+    "modelProb": 0.278,
+    "frozen": false
   },
   {
     "date": "2026-06-18",
@@ -309,7 +434,12 @@
     "city": "Zapopan",
     "played": true,
     "homeScore": 1,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.489,
+    "pDraw": 0.277,
+    "pAway": 0.234,
+    "modelProb": 0.489,
+    "frozen": false
   },
   {
     "date": "2026-06-18",
@@ -321,7 +451,12 @@
     "city": "Inglewood",
     "played": true,
     "homeScore": 4,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.649,
+    "pDraw": 0.221,
+    "pAway": 0.13,
+    "modelProb": 0.649,
+    "frozen": false
   },
   {
     "date": "2026-06-18",
@@ -333,7 +468,12 @@
     "city": "Vancouver",
     "played": true,
     "homeScore": 6,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.792,
+    "pDraw": 0.141,
+    "pAway": 0.067,
+    "modelProb": 0.792,
+    "frozen": false
   },
   {
     "date": "2026-06-19",
@@ -345,7 +485,12 @@
     "city": "Philadelphia",
     "played": true,
     "homeScore": 3,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.889,
+    "pDraw": 0.082,
+    "pAway": 0.029,
+    "modelProb": 0.889,
+    "frozen": true
   },
   {
     "date": "2026-06-19",
@@ -357,7 +502,12 @@
     "city": "Santa Clara",
     "played": true,
     "homeScore": 0,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.461,
+    "pDraw": 0.285,
+    "pAway": 0.254,
+    "modelProb": 0.254,
+    "frozen": true
   },
   {
     "date": "2026-06-19",
@@ -369,7 +519,12 @@
     "city": "Seattle",
     "played": true,
     "homeScore": 2,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.521,
+    "pDraw": 0.262,
+    "pAway": 0.217,
+    "modelProb": 0.521,
+    "frozen": true
   },
   {
     "date": "2026-06-19",
@@ -381,7 +536,12 @@
     "city": "Foxborough",
     "played": true,
     "homeScore": 0,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.19,
+    "pDraw": 0.324,
+    "pAway": 0.486,
+    "modelProb": 0.486,
+    "frozen": true
   },
   {
     "date": "2026-06-20",
@@ -393,7 +553,12 @@
     "city": "Houston",
     "played": true,
     "homeScore": 5,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.567,
+    "pDraw": 0.223,
+    "pAway": 0.21,
+    "modelProb": 0.567,
+    "frozen": true
   },
   {
     "date": "2026-06-20",
@@ -405,7 +570,12 @@
     "city": "Guadalupe",
     "played": true,
     "homeScore": 0,
-    "awayScore": 4
+    "awayScore": 4,
+    "pHome": 0.168,
+    "pDraw": 0.285,
+    "pAway": 0.547,
+    "modelProb": 0.547,
+    "frozen": true
   },
   {
     "date": "2026-06-20",
@@ -417,7 +587,12 @@
     "city": "Toronto",
     "played": true,
     "homeScore": 2,
-    "awayScore": 1
+    "awayScore": 1,
+    "pHome": 0.509,
+    "pDraw": 0.27,
+    "pAway": 0.221,
+    "modelProb": 0.509,
+    "frozen": true
   },
   {
     "date": "2026-06-20",
@@ -429,7 +604,12 @@
     "city": "Kansas City",
     "played": true,
     "homeScore": 0,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.788,
+    "pDraw": 0.164,
+    "pAway": 0.049,
+    "modelProb": 0.164,
+    "frozen": true
   },
   {
     "date": "2026-06-21",
@@ -441,7 +621,12 @@
     "city": "Inglewood",
     "played": true,
     "homeScore": 0,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.647,
+    "pDraw": 0.219,
+    "pAway": 0.134,
+    "modelProb": 0.219,
+    "frozen": true
   },
   {
     "date": "2026-06-21",
@@ -453,7 +638,12 @@
     "city": "Vancouver",
     "played": true,
     "homeScore": 1,
-    "awayScore": 3
+    "awayScore": 3,
+    "pHome": 0.163,
+    "pDraw": 0.332,
+    "pAway": 0.506,
+    "modelProb": 0.506,
+    "frozen": true
   },
   {
     "date": "2026-06-21",
@@ -465,7 +655,12 @@
     "city": "Atlanta",
     "played": true,
     "homeScore": 4,
-    "awayScore": 0
+    "awayScore": 0,
+    "pHome": 0.835,
+    "pDraw": 0.127,
+    "pAway": 0.038,
+    "modelProb": 0.835,
+    "frozen": true
   },
   {
     "date": "2026-06-21",
@@ -477,7 +672,12 @@
     "city": "Miami Gardens",
     "played": true,
     "homeScore": 2,
-    "awayScore": 2
+    "awayScore": 2,
+    "pHome": 0.612,
+    "pDraw": 0.276,
+    "pAway": 0.112,
+    "modelProb": 0.276,
+    "frozen": true
   },
   {
     "date": "2026-06-22",
