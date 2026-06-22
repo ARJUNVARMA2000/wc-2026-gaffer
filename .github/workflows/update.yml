@@ -21,9 +21,9 @@ jobs:
     env:
       SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Refresh data (results + squad values, 50k sims)
@@ -40,9 +40,9 @@ jobs:
           git commit -m "data: auto-refresh projections" || echo "no changes"
           git push || echo "nothing to push"
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Build static site
         working-directory: web
         run: |
