@@ -103,3 +103,19 @@ VALUE_GAP_CLIP = 0.7        # clip the log-strength residual to avoid extreme sw
 # Simulation
 # ---------------------------------------------------------------------------
 DEFAULT_N_SIMS = 50_000
+
+# ---------------------------------------------------------------------------
+# Kalshi comparison + betting backtest (compare.py / data/kalshi.py)
+# ---------------------------------------------------------------------------
+# Public market data, no auth needed for reads.
+KALSHI_API = "https://api.elections.kalshi.com/trade-api/v2"
+KALSHI_SERIES = "KXWCGAME"        # World Cup per-match 3-way moneyline (home/away/TIE)
+# A match market closes ~at the final whistle; its price sits on a flat plateau
+# all day until kickoff, so the price ~this many minutes before close_time is a
+# clean PRE-MATCH quote (and safely avoids leaking any in-game movement).
+KALSHI_PREMATCH_BUFFER_MIN = 150
+# Betting strategy
+EDGE_MIN = 0.02                   # min GAFFER edge over Kalshi ask to place a bet
+FLAT_STAKE = 100.0                # $ deployed per qualifying bet (flat strategy)
+KELLY_START = 1000.0              # starting bankroll for the Kelly strategy
+KELLY_FRACTION = 0.5             # fractional (half-) Kelly, for realism

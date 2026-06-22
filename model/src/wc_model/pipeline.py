@@ -192,12 +192,33 @@ def main():
     ap.add_argument("--download", action="store_true", help="fetch latest results first")
     ap.add_argument("--refresh-values", action="store_true", help="re-scrape Transfermarkt values")
     ap.add_argument("--sims", type=int, default=DEFAULT_N_SIMS)
+    ap.add_argument("--scorecard", action="store_true",
+                    help="build the Kalshi accuracy + betting scorecard")
+    ap.add_argument("--kalshi-refresh", action="store_true",
+                    help="re-pull Kalshi market prices before scoring")
     args = ap.parse_args()
     outputs = build_outputs(n_sims=args.sims, download=args.download,
                             refresh_values=args.refresh_values)
+
+    # Always remember pre-match predictions so they survive once matches are played.
+    from . import predictions_log
+    log = predictions_log.update_log(outputs["matches.json"])
+    outputs[predictions_log.LOG_NAME] = log
+
+    if args.scorecard:
+        from .compare import build_scorecard
+        from .data import kalshi
+        if args.kalshi_refresh:
+            kalshi.refresh(verbose=False)
+        outputs["scorecard.json"] = build_scorecard(outputs["matches.json"], log, kalshi.load())
+
     write_outputs(outputs)
     top = outputs["teams.json"][:5]
     print("Top 5:", ", ".join(f"{t['name']} {t['champion']*100:.1f}%" for t in top))
+    if args.scorecard:
+        sc = outputs["scorecard.json"]["meta"]
+        print(f"Scorecard: {sc['nScored']} matches scored "
+              f"({sc['skipped']['noPrediction']} no-pred, {sc['skipped']['noMarket']} no-market)")
 
 
 if __name__ == "__main__":

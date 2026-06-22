@@ -26,17 +26,17 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Refresh data (results + squad values, 50k sims)
+      - name: Refresh data (results + squad values + market scorecard, 50k sims)
         working-directory: model
         run: |
           pip install -r requirements.txt
-          PYTHONPATH=src python -m wc_model.pipeline --download --refresh-values --sims 50000
+          PYTHONPATH=src python -m wc_model.pipeline --download --refresh-values --scorecard --kalshi-refresh --sims 50000
 
       - name: Commit refreshed projections
         run: |
           git config user.name "gaffer-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add model/data/output web/public/data model/data/raw/transfermarkt_values.json
+          git add model/data/output web/public/data model/data/raw/transfermarkt_values.json model/data/raw/kalshi_wcgame.json
           git commit -m "data: auto-refresh projections" || echo "no changes"
           git push || echo "nothing to push"
 

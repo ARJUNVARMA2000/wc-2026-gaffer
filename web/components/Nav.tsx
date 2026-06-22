@@ -11,6 +11,7 @@ const LINKS = [
   ["/strength", "Strength"],
   ["/groups", "Groups"],
   ["/matches", "Matches"],
+  ["/accuracy", "vs Market"],
   ["/method", "Method"],
 ];
 
