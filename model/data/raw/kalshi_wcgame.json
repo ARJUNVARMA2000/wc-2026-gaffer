@@ -1,4 +1,42 @@
 {
+  "France | Iraq": {
+    "teams": [
+      "France",
+      "Iraq"
+    ],
+    "eventTicker": "KXWCGAME-26JUN22FRAIRQ",
+    "occurrence": "2026-06-23T00:00:00Z",
+    "closeTime": "2026-06-23T00:49:33+00:00",
+    "legs": {
+      "France": {
+        "ask": 0.96,
+        "bid": 0.95,
+        "mid": 0.955,
+        "last": 0.96,
+        "ts": 1782165600,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN22FRAIRQ-FRA"
+      },
+      "Iraq": {
+        "ask": 0.01,
+        "bid": 0.01,
+        "mid": 0.01,
+        "last": 0.01,
+        "ts": 1782165600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN22FRAIRQ-IRQ"
+      },
+      "TIE": {
+        "ask": 0.04,
+        "bid": 0.03,
+        "mid": 0.035,
+        "last": 0.04,
+        "ts": 1782165600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN22FRAIRQ-TIE"
+      }
+    }
+  },
   "Argentina | Austria": {
     "teams": [
       "Argentina",
