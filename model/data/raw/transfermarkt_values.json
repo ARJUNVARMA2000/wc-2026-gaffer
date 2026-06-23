@@ -370,7 +370,7 @@
     "fifa_rank": 74
   },
   "Finland": {
-    "value": 41850000.0,
+    "value": 42100000.0,
     "confederation": "UEFA",
     "fifa_rank": 75
   },
@@ -425,7 +425,7 @@
     "fifa_rank": 85
   },
   "Gabon": {
-    "value": 35280000.0,
+    "value": 35530000.0,
     "confederation": "CAF",
     "fifa_rank": 86
   },
@@ -550,7 +550,7 @@
     "fifa_rank": 110
   },
   "Kazakhstan": {
-    "value": 16300000.0,
+    "value": 19550000.0,
     "confederation": "UEFA",
     "fifa_rank": 111
   },
@@ -650,12 +650,12 @@
     "fifa_rank": 130
   },
   "Nicaragua": {
-    "value": 3780000.0,
+    "value": 3830000.0,
     "confederation": "CONCACAF",
     "fifa_rank": 131
   },
   "Guinea-Bissau": {
-    "value": 39450000.0,
+    "value": 39500000.0,
     "confederation": "CAF",
     "fifa_rank": 132
   },
