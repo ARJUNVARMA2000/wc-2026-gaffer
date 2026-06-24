@@ -430,7 +430,7 @@
     "fifa_rank": 86
   },
   "Bulgaria": {
-    "value": 30050000.0,
+    "value": 30150000.0,
     "confederation": "UEFA",
     "fifa_rank": 87
   },
@@ -460,7 +460,7 @@
     "fifa_rank": 92
   },
   "Benin": {
-    "value": 18280000.0,
+    "value": 18180000.0,
     "confederation": "CAF",
     "fifa_rank": 93
   },
@@ -510,7 +510,7 @@
     "fifa_rank": 102
   },
   "Mozambique": {
-    "value": 1480000.0,
+    "value": 1530000.0,
     "confederation": "CAF",
     "fifa_rank": 103
   },
@@ -525,7 +525,7 @@
     "fifa_rank": 105
   },
   "Kyrgyzstan": {
-    "value": 7050000.0,
+    "value": 7230000.0,
     "confederation": "AFC",
     "fifa_rank": 106
   },
@@ -655,7 +655,7 @@
     "fifa_rank": 131
   },
   "Guinea-Bissau": {
-    "value": 39500000.0,
+    "value": 39050000.0,
     "confederation": "CAF",
     "fifa_rank": 132
   },
@@ -740,7 +740,7 @@
     "fifa_rank": 148
   },
   "Lithuania": {
-    "value": 16180000.0,
+    "value": 16350000.000000002,
     "confederation": "UEFA",
     "fifa_rank": 149
   },
@@ -800,7 +800,7 @@
     "fifa_rank": 160
   },
   "Malta": {
-    "value": 15000000.0,
+    "value": 14980000.0,
     "confederation": "UEFA",
     "fifa_rank": 161
   },
@@ -930,7 +930,7 @@
     "fifa_rank": 186
   },
   "Sri Lanka": {
-    "value": 860000.0,
+    "value": 935000.0,
     "confederation": "AFC",
     "fifa_rank": 187
   },
@@ -970,7 +970,7 @@
     "fifa_rank": 194
   },
   "São Tomé and Príncipe": {
-    "value": 1580000.0,
+    "value": 1730000.0,
     "confederation": "CAF",
     "fifa_rank": 195
   },
