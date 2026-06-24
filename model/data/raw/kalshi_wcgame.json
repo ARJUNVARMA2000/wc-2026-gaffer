@@ -1,4 +1,42 @@
 {
+  "Colombia | DR Congo": {
+    "teams": [
+      "Colombia",
+      "DR Congo"
+    ],
+    "eventTicker": "KXWCGAME-26JUN23COLCOD",
+    "occurrence": "2026-06-24T05:00:00Z",
+    "closeTime": "2026-06-24T03:59:39+00:00",
+    "legs": {
+      "Colombia": {
+        "ask": 0.65,
+        "bid": 0.64,
+        "mid": 0.645,
+        "last": 0.65,
+        "ts": 1782262800,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN23COLCOD-COL"
+      },
+      "DR Congo": {
+        "ask": 0.14,
+        "bid": 0.13,
+        "mid": 0.135,
+        "last": 0.14,
+        "ts": 1782262800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN23COLCOD-COD"
+      },
+      "TIE": {
+        "ask": 0.24,
+        "bid": 0.23,
+        "mid": 0.235,
+        "last": 0.24,
+        "ts": 1782262800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN23COLCOD-TIE"
+      }
+    }
+  },
   "Croatia | Panama": {
     "teams": [
       "Panama",
