@@ -109,13 +109,13 @@
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.2017,
+          "prob": 0.2018,
           "winProb": 0.6409
         },
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.1074,
+          "prob": 0.1073,
           "winProb": 0.682
         },
         {
@@ -127,13 +127,13 @@
         {
           "opp": "Croatia",
           "oppIso": "hr",
-          "prob": 0.0964,
+          "prob": 0.0965,
           "winProb": 0.6739
         },
         {
           "opp": "Ghana",
           "oppIso": "gh",
-          "prob": 0.0534,
+          "prob": 0.0533,
           "winProb": 0.7938
         }
       ],
@@ -240,13 +240,13 @@
         {
           "opp": "Belgium",
           "oppIso": "be",
-          "prob": 0.1701,
+          "prob": 0.1702,
           "winProb": 0.3534
         },
         {
           "opp": "Senegal",
           "oppIso": "sn",
-          "prob": 0.125,
+          "prob": 0.1249,
           "winProb": 0.4454
         },
         {
@@ -258,7 +258,7 @@
         {
           "opp": "Iran",
           "oppIso": "ir",
-          "prob": 0.0621,
+          "prob": 0.062,
           "winProb": 0.6166
         },
         {
@@ -272,7 +272,7 @@
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.3967,
+          "prob": 0.3968,
           "winProb": 0.237
         },
         {
@@ -353,7 +353,7 @@
     "group": "L",
     "reachR32": 1.0,
     "reachR16": 0.7176,
-    "reachQF": 0.5001,
+    "reachQF": 0.5,
     "reachSF": 0.3045,
     "champion": 0.1006,
     "pathDifficulty": 26.6,
@@ -372,7 +372,7 @@
           "opp": "Senegal",
           "oppIso": "sn",
           "prob": 0.1224,
-          "winProb": 0.6736
+          "winProb": 0.6735
         },
         {
           "opp": "Uruguay",
@@ -403,7 +403,7 @@
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.4031,
+          "prob": 0.403,
           "winProb": 0.726
         },
         {
@@ -415,7 +415,7 @@
         {
           "opp": "Sweden",
           "oppIso": "se",
-          "prob": 0.0981,
+          "prob": 0.098,
           "winProb": 0.7509
         },
         {
@@ -428,7 +428,7 @@
           "opp": "Senegal",
           "oppIso": "sn",
           "prob": 0.0609,
-          "winProb": 0.6736
+          "winProb": 0.6735
         },
         {
           "opp": "Japan",
@@ -465,13 +465,13 @@
         {
           "opp": "Netherlands",
           "oppIso": "nl",
-          "prob": 0.085,
+          "prob": 0.0851,
           "winProb": 0.5778
         },
         {
           "opp": "Morocco",
           "oppIso": "ma",
-          "prob": 0.0761,
+          "prob": 0.076,
           "winProb": 0.5971
         }
       ],
@@ -485,7 +485,7 @@
         {
           "opp": "Portugal",
           "oppIso": "pt",
-          "prob": 0.1227,
+          "prob": 0.1226,
           "winProb": 0.524
         },
         {
@@ -509,7 +509,7 @@
         {
           "opp": "Croatia",
           "oppIso": "hr",
-          "prob": 0.0391,
+          "prob": 0.0392,
           "winProb": 0.658
         }
       ]
@@ -573,7 +573,7 @@
           "opp": "France",
           "oppIso": "fr",
           "prob": 0.5746,
-          "winProb": 0.4325
+          "winProb": 0.4326
         },
         {
           "opp": "Norway",
@@ -590,7 +590,7 @@
         {
           "opp": "Scotland",
           "oppIso": "gb-sct",
-          "prob": 0.0477,
+          "prob": 0.0478,
           "winProb": 0.7337
         },
         {
@@ -610,7 +610,7 @@
         {
           "opp": "Netherlands",
           "oppIso": "nl",
-          "prob": 0.24,
+          "prob": 0.2401,
           "winProb": 0.5025
         },
         {
@@ -678,7 +678,7 @@
         {
           "opp": "Belgium",
           "oppIso": "be",
-          "prob": 0.051,
+          "prob": 0.0509,
           "winProb": 0.515
         }
       ]
@@ -854,7 +854,7 @@
         {
           "opp": "Sweden",
           "oppIso": "se",
-          "prob": 0.0812,
+          "prob": 0.0813,
           "winProb": 0.6052
         },
         {
@@ -924,7 +924,7 @@
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.2197,
+          "prob": 0.2196,
           "winProb": 0.318
         },
         {
@@ -1049,7 +1049,7 @@
         {
           "opp": "United States",
           "oppIso": "us",
-          "prob": 0.3506,
+          "prob": 0.3507,
           "winProb": 0.4194
         },
         {
@@ -1061,7 +1061,7 @@
         {
           "opp": "Bosnia and Herzegovina",
           "oppIso": "ba",
-          "prob": 0.0627,
+          "prob": 0.0626,
           "winProb": 0.562
         },
         {
@@ -1125,13 +1125,13 @@
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.1581,
+          "prob": 0.1577,
           "winProb": 0.2186
         },
         {
           "opp": "Germany",
           "oppIso": "de",
-          "prob": 0.1534,
+          "prob": 0.1538,
           "winProb": 0.248
         },
         {
@@ -1167,7 +1167,7 @@
     "confederation": "CONCACAF",
     "group": "B",
     "reachR32": 1.0,
-    "reachR16": 0.5108,
+    "reachR16": 0.5109,
     "reachQF": 0.1803,
     "reachSF": 0.06,
     "champion": 0.0066,
@@ -1192,7 +1192,7 @@
         {
           "opp": "Iran",
           "oppIso": "ir",
-          "prob": 0.1161,
+          "prob": 0.116,
           "winProb": 0.5741
         },
         {
@@ -1224,7 +1224,7 @@
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.1922,
+          "prob": 0.1921,
           "winProb": 0.3628
         },
         {
@@ -1337,7 +1337,7 @@
     "group": "G",
     "reachR32": 0.9444,
     "reachR16": 0.6436,
-    "reachQF": 0.3218,
+    "reachQF": 0.3219,
     "reachSF": 0.1662,
     "champion": 0.0385,
     "pathDifficulty": 38.7,
@@ -1349,7 +1349,7 @@
         {
           "opp": "Australia",
           "oppIso": "au",
-          "prob": 0.4011,
+          "prob": 0.401,
           "winProb": 0.7185
         },
         {
@@ -1463,7 +1463,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.1836,
+          "prob": 0.1835,
           "winProb": 0.4154
         },
         {
@@ -1487,7 +1487,7 @@
         {
           "opp": "Germany",
           "oppIso": "de",
-          "prob": 0.0739,
+          "prob": 0.0738,
           "winProb": 0.485
         },
         {
@@ -1530,7 +1530,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.0578,
+          "prob": 0.0579,
           "winProb": 0.3694
         },
         {
@@ -1556,7 +1556,7 @@
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.272,
+          "prob": 0.2719,
           "winProb": 0.3399
         },
         {
@@ -1568,7 +1568,7 @@
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.1267,
+          "prob": 0.1268,
           "winProb": 0.5468
         },
         {
@@ -1606,7 +1606,7 @@
         {
           "opp": "United States",
           "oppIso": "us",
-          "prob": 0.1062,
+          "prob": 0.1061,
           "winProb": 0.6124
         },
         {
@@ -1807,7 +1807,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.1385,
+          "prob": 0.1384,
           "winProb": 0.476
         },
         {
@@ -1843,7 +1843,7 @@
     "confederation": "AFC",
     "group": "I",
     "reachR32": 0.0336,
-    "reachR16": 0.0076,
+    "reachR16": 0.0075,
     "reachQF": 0.0019,
     "reachSF": 0.0003,
     "champion": 0.0,
@@ -1856,25 +1856,25 @@
         {
           "opp": "Egypt",
           "oppIso": "eg",
-          "prob": 0.321,
+          "prob": 0.32,
           "winProb": 0.3133
         },
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.2865,
+          "prob": 0.2867,
           "winProb": 0.0976
         },
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.1626,
+          "prob": 0.1627,
           "winProb": 0.2489
         },
         {
           "opp": "United States",
           "oppIso": "us",
-          "prob": 0.0655,
+          "prob": 0.0656,
           "winProb": 0.218
         },
         {
@@ -1886,7 +1886,7 @@
         {
           "opp": "Canada",
           "oppIso": "ca",
-          "prob": 0.0357,
+          "prob": 0.0358,
           "winProb": 0.2641
         }
       ],
@@ -1894,37 +1894,37 @@
         {
           "opp": "United States",
           "oppIso": "us",
-          "prob": 0.2831,
+          "prob": 0.2812,
           "winProb": 0.218
         },
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.1296,
+          "prob": 0.13,
           "winProb": 0.0976
         },
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.0899,
+          "prob": 0.0902,
           "winProb": 0.2489
         },
         {
           "opp": "Algeria",
           "oppIso": "dz",
-          "prob": 0.0741,
+          "prob": 0.0743,
           "winProb": 0.2136
         },
         {
           "opp": "Bosnia and Herzegovina",
           "oppIso": "ba",
-          "prob": 0.0741,
+          "prob": 0.0743,
           "winProb": 0.3566
         },
         {
           "opp": "Scotland",
           "oppIso": "gb-sct",
-          "prob": 0.0635,
+          "prob": 0.0637,
           "winProb": 0.2719
         }
       ],
@@ -2011,9 +2011,9 @@
     "iso": "sn",
     "confederation": "CAF",
     "group": "I",
-    "reachR32": 0.6197,
+    "reachR32": 0.6198,
     "reachR16": 0.3174,
-    "reachQF": 0.1627,
+    "reachQF": 0.1628,
     "reachSF": 0.0629,
     "champion": 0.0105,
     "pathDifficulty": 43.3,
@@ -2032,7 +2032,7 @@
           "opp": "England",
           "oppIso": "gb-eng",
           "prob": 0.1975,
-          "winProb": 0.3264
+          "winProb": 0.3265
         },
         {
           "opp": "Mexico",
@@ -2056,7 +2056,7 @@
           "opp": "Iran",
           "oppIso": "ir",
           "prob": 0.0535,
-          "winProb": 0.6593
+          "winProb": 0.6592
         }
       ],
       "R16": [
@@ -2069,8 +2069,8 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.1377,
-          "winProb": 0.3264
+          "prob": 0.1376,
+          "winProb": 0.3265
         },
         {
           "opp": "Algeria",
@@ -2081,7 +2081,7 @@
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.0727,
+          "prob": 0.0728,
           "winProb": 0.5655
         },
         {
@@ -2101,7 +2101,7 @@
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.235,
+          "prob": 0.2349,
           "winProb": 0.2953
         },
         {
@@ -2125,7 +2125,7 @@
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.0669,
+          "prob": 0.0668,
           "winProb": 0.4462
         },
         {
@@ -2139,7 +2139,7 @@
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.1507,
+          "prob": 0.1506,
           "winProb": 0.3211
         },
         {
@@ -2151,19 +2151,19 @@
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.1243,
+          "prob": 0.1242,
           "winProb": 0.3157
         },
         {
           "opp": "Netherlands",
           "oppIso": "nl",
-          "prob": 0.0795,
+          "prob": 0.0794,
           "winProb": 0.3841
         },
         {
           "opp": "Morocco",
           "oppIso": "ma",
-          "prob": 0.0598,
+          "prob": 0.0597,
           "winProb": 0.4096
         },
         {
@@ -2212,7 +2212,7 @@
         {
           "opp": "Australia",
           "oppIso": "au",
-          "prob": 0.0987,
+          "prob": 0.0986,
           "winProb": 0.7985
         },
         {
@@ -2233,7 +2233,7 @@
           "opp": "Germany",
           "oppIso": "de",
           "prob": 0.603,
-          "winProb": 0.5675
+          "winProb": 0.5674
         },
         {
           "opp": "Brazil",
@@ -2276,13 +2276,13 @@
         {
           "opp": "Morocco",
           "oppIso": "ma",
-          "prob": 0.1655,
+          "prob": 0.1654,
           "winProb": 0.6028
         },
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.1322,
+          "prob": 0.1323,
           "winProb": 0.6533
         },
         {
@@ -2308,7 +2308,7 @@
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.2505,
+          "prob": 0.2506,
           "winProb": 0.4417
         },
         {
@@ -2520,7 +2520,7 @@
     "group": "A",
     "reachR32": 0.2811,
     "reachR16": 0.1128,
-    "reachQF": 0.0429,
+    "reachQF": 0.043,
     "reachSF": 0.0113,
     "champion": 0.0012,
     "pathDifficulty": 49.4,
@@ -2556,7 +2556,7 @@
         {
           "opp": "Belgium",
           "oppIso": "be",
-          "prob": 0.1054,
+          "prob": 0.1055,
           "winProb": 0.2797
         },
         {
@@ -2588,7 +2588,7 @@
         {
           "opp": "Japan",
           "oppIso": "jp",
-          "prob": 0.069,
+          "prob": 0.0692,
           "winProb": 0.3795
         },
         {
@@ -2608,13 +2608,13 @@
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.2473,
+          "prob": 0.2472,
           "winProb": 0.1759
         },
         {
           "opp": "Germany",
           "oppIso": "de",
-          "prob": 0.1351,
+          "prob": 0.135,
           "winProb": 0.2505
         },
         {
@@ -2687,7 +2687,7 @@
     "iso": "ir",
     "confederation": "AFC",
     "group": "G",
-    "reachR32": 0.6622,
+    "reachR32": 0.6623,
     "reachR16": 0.2553,
     "reachQF": 0.0762,
     "reachSF": 0.0213,
@@ -2701,13 +2701,13 @@
         {
           "opp": "Australia",
           "oppIso": "au",
-          "prob": 0.1853,
-          "winProb": 0.4922
+          "prob": 0.1854,
+          "winProb": 0.4923
         },
         {
           "opp": "Canada",
           "oppIso": "ca",
-          "prob": 0.1753,
+          "prob": 0.1752,
           "winProb": 0.4259
         },
         {
@@ -2732,7 +2732,7 @@
           "opp": "Senegal",
           "oppIso": "sn",
           "prob": 0.0501,
-          "winProb": 0.3407
+          "winProb": 0.3408
         }
       ],
       "R16": [
@@ -2745,19 +2745,19 @@
         {
           "opp": "United States",
           "oppIso": "us",
-          "prob": 0.1368,
+          "prob": 0.1367,
           "winProb": 0.3834
         },
         {
           "opp": "Portugal",
           "oppIso": "pt",
-          "prob": 0.103,
+          "prob": 0.1029,
           "winProb": 0.1968
         },
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.092,
+          "prob": 0.0921,
           "winProb": 0.2872
         },
         {
@@ -2770,20 +2770,20 @@
           "opp": "Croatia",
           "oppIso": "hr",
           "prob": 0.047,
-          "winProb": 0.3217
+          "winProb": 0.3218
         }
       ],
       "QF": [
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.1596,
+          "prob": 0.1597,
           "winProb": 0.198
         },
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.1391,
+          "prob": 0.1392,
           "winProb": 0.1635
         },
         {
@@ -2795,7 +2795,7 @@
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.0971,
+          "prob": 0.0972,
           "winProb": 0.2872
         },
         {
@@ -2808,7 +2808,7 @@
           "opp": "Croatia",
           "oppIso": "hr",
           "prob": 0.0517,
-          "winProb": 0.3217
+          "winProb": 0.3218
         }
       ],
       "SF": [
@@ -2900,7 +2900,7 @@
         {
           "opp": "Iran",
           "oppIso": "ir",
-          "prob": 0.0294,
+          "prob": 0.0295,
           "winProb": 0.7234
         }
       ],
@@ -2946,7 +2946,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.3341,
+          "prob": 0.3342,
           "winProb": 0.355
         },
         {
@@ -2964,7 +2964,7 @@
         {
           "opp": "Morocco",
           "oppIso": "ma",
-          "prob": 0.0569,
+          "prob": 0.0568,
           "winProb": 0.4857
         },
         {
@@ -3064,7 +3064,7 @@
           "opp": "Belgium",
           "oppIso": "be",
           "prob": 0.0438,
-          "winProb": 0.1801
+          "winProb": 0.1802
         },
         {
           "opp": "Iran",
@@ -3208,7 +3208,7 @@
         {
           "opp": "Scotland",
           "oppIso": "gb-sct",
-          "prob": 0.3348,
+          "prob": 0.3347,
           "winProb": 0.5411
         },
         {
@@ -3232,7 +3232,7 @@
         {
           "opp": "Brazil",
           "oppIso": "br",
-          "prob": 0.0575,
+          "prob": 0.0576,
           "winProb": 0.2753
         },
         {
@@ -3697,7 +3697,7 @@
     "group": "F",
     "reachR32": 0.946,
     "reachR16": 0.4222,
-    "reachQF": 0.1751,
+    "reachQF": 0.175,
     "reachSF": 0.059,
     "champion": 0.0065,
     "pathDifficulty": 57.0,
@@ -3709,7 +3709,7 @@
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.1979,
+          "prob": 0.1978,
           "winProb": 0.5352
         },
         {
@@ -3747,7 +3747,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.1667,
+          "prob": 0.1666,
           "winProb": 0.2491
         },
         {
@@ -3771,7 +3771,7 @@
         {
           "opp": "Ivory Coast",
           "oppIso": "ci",
-          "prob": 0.0674,
+          "prob": 0.0675,
           "winProb": 0.4847
         },
         {
@@ -3791,13 +3791,13 @@
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.1218,
-          "winProb": 0.264
+          "prob": 0.1217,
+          "winProb": 0.2641
         },
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.0869,
+          "prob": 0.0868,
           "winProb": 0.2491
         },
         {
@@ -3824,7 +3824,7 @@
           "opp": "Argentina",
           "oppIso": "ar",
           "prob": 0.1579,
-          "winProb": 0.264
+          "winProb": 0.2641
         },
         {
           "opp": "Portugal",
@@ -3916,7 +3916,7 @@
         {
           "opp": "Egypt",
           "oppIso": "eg",
-          "prob": 0.1848,
+          "prob": 0.1847,
           "winProb": 0.438
         },
         {
@@ -3941,7 +3941,7 @@
           "opp": "Algeria",
           "oppIso": "dz",
           "prob": 0.0663,
-          "winProb": 0.3372
+          "winProb": 0.3373
         },
         {
           "opp": "South Korea",
@@ -4053,7 +4053,7 @@
         {
           "opp": "Algeria",
           "oppIso": "dz",
-          "prob": 0.2753,
+          "prob": 0.2752,
           "winProb": 0.7553
         },
         {
@@ -4103,7 +4103,7 @@
         {
           "opp": "Ghana",
           "oppIso": "gh",
-          "prob": 0.0891,
+          "prob": 0.0892,
           "winProb": 0.8285
         },
         {
@@ -4203,7 +4203,7 @@
     "confederation": "CAF",
     "group": "J",
     "reachR32": 0.817,
-    "reachR16": 0.3357,
+    "reachR16": 0.3356,
     "reachQF": 0.1527,
     "reachSF": 0.0581,
     "champion": 0.0077,
@@ -4304,7 +4304,7 @@
         {
           "opp": "Austria",
           "oppIso": "at",
-          "prob": 0.1092,
+          "prob": 0.1093,
           "winProb": 0.4827
         },
         {
@@ -4330,13 +4330,13 @@
         {
           "opp": "Germany",
           "oppIso": "de",
-          "prob": 0.2014,
+          "prob": 0.2017,
           "winProb": 0.3092
         },
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.1907,
+          "prob": 0.1906,
           "winProb": 0.2642
         },
         {
@@ -4354,7 +4354,7 @@
         {
           "opp": "Brazil",
           "oppIso": "br",
-          "prob": 0.0775,
+          "prob": 0.0774,
           "winProb": 0.2815
         },
         {
@@ -4453,7 +4453,7 @@
         {
           "opp": "Sweden",
           "oppIso": "se",
-          "prob": 0.0576,
+          "prob": 0.0578,
           "winProb": 0.544
         }
       ],
@@ -4461,7 +4461,7 @@
         {
           "opp": "Brazil",
           "oppIso": "br",
-          "prob": 0.1839,
+          "prob": 0.1841,
           "winProb": 0.3586
         },
         {
@@ -4560,7 +4560,7 @@
         {
           "opp": "Japan",
           "oppIso": "jp",
-          "prob": 0.3009,
+          "prob": 0.3008,
           "winProb": 0.5508
         },
         {
@@ -4616,7 +4616,7 @@
         {
           "opp": "Ivory Coast",
           "oppIso": "ci",
-          "prob": 0.1116,
+          "prob": 0.1117,
           "winProb": 0.616
         },
         {
@@ -4642,13 +4642,13 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.1283,
+          "prob": 0.1281,
           "winProb": 0.4029
         },
         {
           "opp": "Norway",
           "oppIso": "no",
-          "prob": 0.0526,
+          "prob": 0.0525,
           "winProb": 0.5143
         },
         {
@@ -4710,7 +4710,7 @@
     "confederation": "CONMEBOL",
     "group": "H",
     "reachR32": 0.5031,
-    "reachR16": 0.2322,
+    "reachR16": 0.2323,
     "reachQF": 0.1191,
     "reachSF": 0.0555,
     "champion": 0.0094,
@@ -4735,7 +4735,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.1979,
+          "prob": 0.1978,
           "winProb": 0.352
         },
         {
@@ -4747,7 +4747,7 @@
         {
           "opp": "Algeria",
           "oppIso": "dz",
-          "prob": 0.102,
+          "prob": 0.1021,
           "winProb": 0.5576
         },
         {
@@ -4773,7 +4773,7 @@
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.1059,
+          "prob": 0.106,
           "winProb": 0.432
         },
         {
@@ -4799,7 +4799,7 @@
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.1337,
+          "prob": 0.1336,
           "winProb": 0.323
         },
         {
@@ -4968,19 +4968,19 @@
         {
           "opp": "Germany",
           "oppIso": "de",
-          "prob": 0.2961,
+          "prob": 0.2962,
           "winProb": 0.4975
         },
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.2534,
+          "prob": 0.2533,
           "winProb": 0.4327
         },
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.1267,
+          "prob": 0.1268,
           "winProb": 0.4222
         },
         {
@@ -5079,7 +5079,7 @@
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.0575,
+          "prob": 0.0576,
           "winProb": 0.7247
         },
         {
@@ -5137,7 +5137,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.3096,
+          "prob": 0.3095,
           "winProb": 0.4753
         },
         {
@@ -5217,7 +5217,7 @@
     "confederation": "AFC",
     "group": "F",
     "reachR32": 1.0,
-    "reachR16": 0.4494,
+    "reachR16": 0.4495,
     "reachQF": 0.2198,
     "reachSF": 0.0923,
     "champion": 0.0153,
@@ -5236,7 +5236,7 @@
         {
           "opp": "Morocco",
           "oppIso": "ma",
-          "prob": 0.3009,
+          "prob": 0.3008,
           "winProb": 0.4492
         },
         {
@@ -5286,7 +5286,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.0838,
+          "prob": 0.0837,
           "winProb": 0.3313
         },
         {
@@ -5324,7 +5324,7 @@
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.0652,
+          "prob": 0.0651,
           "winProb": 0.3003
         },
         {
@@ -5336,7 +5336,7 @@
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.0581,
+          "prob": 0.058,
           "winProb": 0.5717
         }
       ],
@@ -5350,7 +5350,7 @@
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.1073,
+          "prob": 0.1072,
           "winProb": 0.3003
         },
         {
@@ -5362,7 +5362,7 @@
         {
           "opp": "Belgium",
           "oppIso": "be",
-          "prob": 0.0709,
+          "prob": 0.0711,
           "winProb": 0.4198
         },
         {
@@ -5374,7 +5374,7 @@
         {
           "opp": "Croatia",
           "oppIso": "hr",
-          "prob": 0.0371,
+          "prob": 0.037,
           "winProb": 0.4921
         }
       ]
@@ -5386,7 +5386,7 @@
     "confederation": "UEFA",
     "group": "C",
     "reachR32": 0.7862,
-    "reachR16": 0.2873,
+    "reachR16": 0.2874,
     "reachQF": 0.0944,
     "reachSF": 0.0292,
     "champion": 0.0029,
@@ -5399,13 +5399,13 @@
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.4258,
+          "prob": 0.4257,
           "winProb": 0.4589
         },
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.1771,
+          "prob": 0.1772,
           "winProb": 0.2336
         },
         {
@@ -5455,7 +5455,7 @@
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.0472,
+          "prob": 0.0473,
           "winProb": 0.3631
         },
         {
@@ -5493,7 +5493,7 @@
         {
           "opp": "Morocco",
           "oppIso": "ma",
-          "prob": 0.1017,
+          "prob": 0.1015,
           "winProb": 0.3511
         },
         {
@@ -5550,109 +5550,6 @@
     }
   },
   {
-    "name": "Panama",
-    "iso": "pa",
-    "confederation": "CONCACAF",
-    "group": "L",
-    "reachR32": 0.006,
-    "reachR16": 0.0006,
-    "reachQF": 0.0002,
-    "reachSF": 0.0,
-    "champion": 0.0,
-    "pathDifficulty": 73.7,
-    "pathRank": 35,
-    "expOppR32": 1.92,
-    "expOppR16": 1.52,
-    "rounds": {
-      "R32": [
-        {
-          "opp": "Portugal",
-          "oppIso": "pt",
-          "prob": 0.5067,
-          "winProb": 0.0882
-        },
-        {
-          "opp": "Colombia",
-          "oppIso": "co",
-          "prob": 0.4933,
-          "winProb": 0.1531
-        }
-      ],
-      "R16": [
-        {
-          "opp": "Switzerland",
-          "oppIso": "ch",
-          "prob": 0.2581,
-          "winProb": 0.176
-        },
-        {
-          "opp": "Canada",
-          "oppIso": "ca",
-          "prob": 0.1935,
-          "winProb": 0.2927
-        },
-        {
-          "opp": "Sweden",
-          "oppIso": "se",
-          "prob": 0.129,
-          "winProb": 0.1962
-        },
-        {
-          "opp": "Senegal",
-          "oppIso": "sn",
-          "prob": 0.0968,
-          "winProb": 0.1989
-        },
-        {
-          "opp": "Belgium",
-          "oppIso": "be",
-          "prob": 0.0645,
-          "winProb": 0.1289
-        },
-        {
-          "opp": "Algeria",
-          "oppIso": "dz",
-          "prob": 0.0645,
-          "winProb": 0.2227
-        }
-      ],
-      "QF": [
-        {
-          "opp": "Argentina",
-          "oppIso": "ar",
-          "prob": 0.7,
-          "winProb": 0.0981
-        },
-        {
-          "opp": "Belgium",
-          "oppIso": "be",
-          "prob": 0.2,
-          "winProb": 0.1289
-        },
-        {
-          "opp": "Paraguay",
-          "oppIso": "py",
-          "prob": 0.1,
-          "winProb": 0.3077
-        }
-      ],
-      "SF": [
-        {
-          "opp": "Norway",
-          "oppIso": "no",
-          "prob": 0.5,
-          "winProb": 0.1395
-        },
-        {
-          "opp": "Sweden",
-          "oppIso": "se",
-          "prob": 0.5,
-          "winProb": 0.1962
-        }
-      ]
-    }
-  },
-  {
     "name": "Haiti",
     "iso": "ht",
     "confederation": "CONCACAF",
@@ -5662,8 +5559,8 @@
     "reachQF": 0.0002,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 73.7,
-    "pathRank": 36,
+    "pathDifficulty": 73.6,
+    "pathRank": 35,
     "expOppR32": 1.68,
     "expOppR16": 1.87,
     "rounds": {
@@ -5671,7 +5568,7 @@
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.514,
+          "prob": 0.5162,
           "winProb": 0.2096
         },
         {
@@ -5683,7 +5580,7 @@
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.1922,
+          "prob": 0.1901,
           "winProb": 0.066
         },
         {
@@ -5786,13 +5683,116 @@
     }
   },
   {
+    "name": "Panama",
+    "iso": "pa",
+    "confederation": "CONCACAF",
+    "group": "L",
+    "reachR32": 0.006,
+    "reachR16": 0.0006,
+    "reachQF": 0.0002,
+    "reachSF": 0.0,
+    "champion": 0.0,
+    "pathDifficulty": 73.7,
+    "pathRank": 36,
+    "expOppR32": 1.92,
+    "expOppR16": 1.52,
+    "rounds": {
+      "R32": [
+        {
+          "opp": "Portugal",
+          "oppIso": "pt",
+          "prob": 0.5067,
+          "winProb": 0.0882
+        },
+        {
+          "opp": "Colombia",
+          "oppIso": "co",
+          "prob": 0.4933,
+          "winProb": 0.1531
+        }
+      ],
+      "R16": [
+        {
+          "opp": "Switzerland",
+          "oppIso": "ch",
+          "prob": 0.2581,
+          "winProb": 0.176
+        },
+        {
+          "opp": "Canada",
+          "oppIso": "ca",
+          "prob": 0.1935,
+          "winProb": 0.2927
+        },
+        {
+          "opp": "Sweden",
+          "oppIso": "se",
+          "prob": 0.129,
+          "winProb": 0.1962
+        },
+        {
+          "opp": "Senegal",
+          "oppIso": "sn",
+          "prob": 0.0968,
+          "winProb": 0.1989
+        },
+        {
+          "opp": "Belgium",
+          "oppIso": "be",
+          "prob": 0.0645,
+          "winProb": 0.1289
+        },
+        {
+          "opp": "Algeria",
+          "oppIso": "dz",
+          "prob": 0.0645,
+          "winProb": 0.2228
+        }
+      ],
+      "QF": [
+        {
+          "opp": "Argentina",
+          "oppIso": "ar",
+          "prob": 0.7,
+          "winProb": 0.0981
+        },
+        {
+          "opp": "Belgium",
+          "oppIso": "be",
+          "prob": 0.2,
+          "winProb": 0.1289
+        },
+        {
+          "opp": "Paraguay",
+          "oppIso": "py",
+          "prob": 0.1,
+          "winProb": 0.3077
+        }
+      ],
+      "SF": [
+        {
+          "opp": "Norway",
+          "oppIso": "no",
+          "prob": 0.5,
+          "winProb": 0.1395
+        },
+        {
+          "opp": "Sweden",
+          "oppIso": "se",
+          "prob": 0.5,
+          "winProb": 0.1962
+        }
+      ]
+    }
+  },
+  {
     "name": "Australia",
     "iso": "au",
     "confederation": "AFC",
     "group": "D",
-    "reachR32": 0.8832,
+    "reachR32": 0.8831,
     "reachR16": 0.3002,
-    "reachQF": 0.0821,
+    "reachQF": 0.082,
     "reachSF": 0.0279,
     "champion": 0.0022,
     "pathDifficulty": 77.1,
@@ -5811,7 +5811,7 @@
           "opp": "Iran",
           "oppIso": "ir",
           "prob": 0.139,
-          "winProb": 0.5078
+          "winProb": 0.5077
         },
         {
           "opp": "Egypt",
@@ -5880,7 +5880,7 @@
         {
           "opp": "Portugal",
           "oppIso": "pt",
-          "prob": 0.1903,
+          "prob": 0.1904,
           "winProb": 0.2208
         },
         {
@@ -5892,7 +5892,7 @@
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.1184,
+          "prob": 0.1182,
           "winProb": 0.3462
         },
         {
@@ -5964,7 +5964,7 @@
     "reachQF": 0.0004,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 77.4,
+    "pathDifficulty": 77.3,
     "pathRank": 38,
     "expOppR32": 1.81,
     "expOppR16": 1.74,
@@ -6100,10 +6100,10 @@
     "group": "K",
     "reachR32": 0.0657,
     "reachR16": 0.012,
-    "reachQF": 0.0036,
+    "reachQF": 0.0037,
     "reachSF": 0.0009,
     "champion": 0.0,
-    "pathDifficulty": 77.6,
+    "pathDifficulty": 77.5,
     "pathRank": 39,
     "expOppR32": 2.0,
     "expOppR16": 1.45,
@@ -6112,7 +6112,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.8825,
+          "prob": 0.8822,
           "winProb": 0.1676
         },
         {
@@ -6124,39 +6124,39 @@
         {
           "opp": "Ghana",
           "oppIso": "gh",
-          "prob": 0.0426,
-          "winProb": 0.448
+          "prob": 0.0429,
+          "winProb": 0.4479
         }
       ],
       "R16": [
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.4582,
+          "prob": 0.4574,
           "winProb": 0.3599
         },
         {
           "opp": "Scotland",
           "oppIso": "gb-sct",
-          "prob": 0.1639,
+          "prob": 0.1636,
           "winProb": 0.3923
         },
         {
           "opp": "Sweden",
           "oppIso": "se",
-          "prob": 0.1555,
+          "prob": 0.1569,
           "winProb": 0.3047
         },
         {
           "opp": "Japan",
           "oppIso": "jp",
-          "prob": 0.0953,
+          "prob": 0.0952,
           "winProb": 0.2678
         },
         {
           "opp": "Senegal",
           "oppIso": "sn",
-          "prob": 0.0652,
+          "prob": 0.0651,
           "winProb": 0.297
         },
         {
@@ -6170,37 +6170,37 @@
         {
           "opp": "Brazil",
           "oppIso": "br",
-          "prob": 0.2802,
+          "prob": 0.2787,
           "winProb": 0.16
         },
         {
           "opp": "Ivory Coast",
           "oppIso": "ci",
-          "prob": 0.1593,
+          "prob": 0.1585,
           "winProb": 0.3268
         },
         {
           "opp": "Norway",
           "oppIso": "no",
-          "prob": 0.1484,
+          "prob": 0.1475,
           "winProb": 0.2343
         },
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.1374,
+          "prob": 0.1366,
           "winProb": 0.1492
         },
         {
           "opp": "Morocco",
           "oppIso": "ma",
-          "prob": 0.1044,
+          "prob": 0.1093,
           "winProb": 0.2771
         },
         {
           "opp": "Netherlands",
           "oppIso": "nl",
-          "prob": 0.0714,
+          "prob": 0.071,
           "winProb": 0.1888
         }
       ],
@@ -6250,7 +6250,7 @@
     "confederation": "CAF",
     "group": "K",
     "reachR32": 0.39,
-    "reachR16": 0.0971,
+    "reachR16": 0.0972,
     "reachQF": 0.0384,
     "reachSF": 0.0117,
     "champion": 0.0008,
@@ -6263,7 +6263,7 @@
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.8748,
+          "prob": 0.8747,
           "winProb": 0.2307
         },
         {
@@ -6275,7 +6275,7 @@
         {
           "opp": "Ghana",
           "oppIso": "gh",
-          "prob": 0.0427,
+          "prob": 0.0428,
           "winProb": 0.5396
         }
       ],
@@ -6283,7 +6283,7 @@
         {
           "opp": "Mexico",
           "oppIso": "mx",
-          "prob": 0.4468,
+          "prob": 0.4465,
           "winProb": 0.4233
         },
         {
@@ -6301,13 +6301,13 @@
         {
           "opp": "Senegal",
           "oppIso": "sn",
-          "prob": 0.0719,
+          "prob": 0.072,
           "winProb": 0.375
         },
         {
           "opp": "Japan",
           "oppIso": "jp",
-          "prob": 0.0659,
+          "prob": 0.0661,
           "winProb": 0.3586
         },
         {
@@ -6401,8 +6401,8 @@
     "confederation": "UEFA",
     "group": "L",
     "reachR32": 0.9464,
-    "reachR16": 0.3958,
-    "reachQF": 0.1902,
+    "reachR16": 0.3959,
+    "reachQF": 0.1903,
     "reachSF": 0.0887,
     "champion": 0.0165,
     "pathDifficulty": 78.4,
@@ -6414,13 +6414,13 @@
         {
           "opp": "Portugal",
           "oppIso": "pt",
-          "prob": 0.4612,
+          "prob": 0.4613,
           "winProb": 0.3518
         },
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.4532,
+          "prob": 0.4531,
           "winProb": 0.4588
         },
         {
@@ -6470,7 +6470,7 @@
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.0995,
+          "prob": 0.0996,
           "winProb": 0.493
         },
         {
@@ -6482,7 +6482,7 @@
         {
           "opp": "Sweden",
           "oppIso": "se",
-          "prob": 0.0573,
+          "prob": 0.0572,
           "winProb": 0.5952
         }
       ],
@@ -6490,7 +6490,7 @@
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.2913,
+          "prob": 0.2915,
           "winProb": 0.3261
         },
         {
@@ -6764,7 +6764,7 @@
         {
           "opp": "DR Congo",
           "oppIso": "cd",
-          "prob": 0.0166,
+          "prob": 0.0167,
           "winProb": 0.4604
         },
         {
@@ -6790,13 +6790,13 @@
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.2449,
+          "prob": 0.245,
           "winProb": 0.1715
         },
         {
           "opp": "Canada",
           "oppIso": "ca",
-          "prob": 0.1453,
+          "prob": 0.1454,
           "winProb": 0.4282
         },
         {
@@ -6808,7 +6808,7 @@
         {
           "opp": "Austria",
           "oppIso": "at",
-          "prob": 0.1063,
+          "prob": 0.1062,
           "winProb": 0.3699
         },
         {
@@ -6828,7 +6828,7 @@
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.3635,
+          "prob": 0.3633,
           "winProb": 0.2062
         },
         {
@@ -6840,7 +6840,7 @@
         {
           "opp": "United States",
           "oppIso": "us",
-          "prob": 0.0806,
+          "prob": 0.0808,
           "winProb": 0.387
         },
         {
@@ -6853,7 +6853,7 @@
           "opp": "Australia",
           "oppIso": "au",
           "prob": 0.0351,
-          "winProb": 0.4811
+          "winProb": 0.4812
         },
         {
           "opp": "Spain",
@@ -6891,7 +6891,7 @@
           "opp": "Netherlands",
           "oppIso": "nl",
           "prob": 0.0726,
-          "winProb": 0.2328
+          "winProb": 0.2329
         },
         {
           "opp": "Norway",
@@ -7010,7 +7010,7 @@
           "opp": "Canada",
           "oppIso": "ca",
           "prob": 0.0784,
-          "winProb": 0.3073
+          "winProb": 0.3074
         },
         {
           "opp": "Croatia",
@@ -7077,7 +7077,7 @@
     "confederation": "UEFA",
     "group": "J",
     "reachR32": 0.9346,
-    "reachR16": 0.3464,
+    "reachR16": 0.3463,
     "reachQF": 0.1547,
     "reachSF": 0.0704,
     "champion": 0.0103,
@@ -7120,7 +7120,7 @@
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.0329,
+          "prob": 0.0328,
           "winProb": 0.4642
         }
       ],
@@ -7140,13 +7140,13 @@
         {
           "opp": "Croatia",
           "oppIso": "hr",
-          "prob": 0.1266,
+          "prob": 0.1267,
           "winProb": 0.4718
         },
         {
           "opp": "Ghana",
           "oppIso": "gh",
-          "prob": 0.0788,
+          "prob": 0.0787,
           "winProb": 0.6301
         },
         {
@@ -7184,13 +7184,13 @@
         {
           "opp": "Belgium",
           "oppIso": "be",
-          "prob": 0.091,
+          "prob": 0.0912,
           "winProb": 0.39
         },
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.0637,
+          "prob": 0.0636,
           "winProb": 0.296
         },
         {
@@ -7434,7 +7434,7 @@
         {
           "opp": "Germany",
           "oppIso": "de",
-          "prob": 0.241,
+          "prob": 0.2411,
           "winProb": 0.2615
         },
         {
@@ -7504,13 +7504,13 @@
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.1349,
+          "prob": 0.1347,
           "winProb": 0.3771
         },
         {
           "opp": "Portugal",
           "oppIso": "pt",
-          "prob": 0.1254,
+          "prob": 0.1255,
           "winProb": 0.2494
         },
         {
@@ -7522,7 +7522,7 @@
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.1059,
+          "prob": 0.106,
           "winProb": 0.3106
         },
         {
@@ -7534,7 +7534,7 @@
         {
           "opp": "Canada",
           "oppIso": "ca",
-          "prob": 0.0856,
+          "prob": 0.0857,
           "winProb": 0.4745
         }
       ],
@@ -7597,13 +7597,13 @@
         {
           "opp": "Germany",
           "oppIso": "de",
-          "prob": 0.428,
+          "prob": 0.4279,
           "winProb": 0.3064
         },
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.4122,
+          "prob": 0.4124,
           "winProb": 0.2642
         },
         {
@@ -7635,25 +7635,25 @@
         {
           "opp": "Germany",
           "oppIso": "de",
-          "prob": 0.4195,
+          "prob": 0.4198,
           "winProb": 0.3064
         },
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.2441,
+          "prob": 0.244,
           "winProb": 0.2642
         },
         {
           "opp": "Norway",
           "oppIso": "no",
-          "prob": 0.0662,
+          "prob": 0.0661,
           "winProb": 0.3904
         },
         {
           "opp": "Scotland",
           "oppIso": "gb-sct",
-          "prob": 0.0647,
+          "prob": 0.0646,
           "winProb": 0.5585
         },
         {
