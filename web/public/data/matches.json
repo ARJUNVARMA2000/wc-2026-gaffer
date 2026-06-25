@@ -180,10 +180,10 @@
     "played": true,
     "homeScore": 7,
     "awayScore": 1,
-    "pHome": 0.938,
+    "pHome": 0.939,
     "pDraw": 0.047,
     "pAway": 0.014,
-    "modelProb": 0.938,
+    "modelProb": 0.939,
     "frozen": false
   },
   {
@@ -283,7 +283,7 @@
     "homeScore": 1,
     "awayScore": 4,
     "pHome": 0.06,
-    "pDraw": 0.155,
+    "pDraw": 0.154,
     "pAway": 0.785,
     "modelProb": 0.785,
     "frozen": false
@@ -1028,7 +1028,7 @@
     "awayIso": "iq",
     "city": "Toronto",
     "played": false,
-    "pHome": 0.699,
+    "pHome": 0.7,
     "pDraw": 0.215,
     "pAway": 0.085,
     "projHome": 1.84,
