@@ -59,11 +59,22 @@ jobs:
         if: ${{ env.SA != '' }}
         run: |
           printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
-          # Pin firebase-tools, do NOT use @latest. 15.22.2 (2026-06-24) shipped a
-          # regression that ignores GOOGLE_APPLICATION_CREDENTIALS and fails with
-          # "Failed to authenticate, have you run firebase login?". 15.22.1 is the
-          # last known-good release. Bump deliberately after confirming a deploy works.
-          npx --yes firebase-tools@15.22.1 deploy --only hosting:gaffer-wc26 \
-            --project agentic-ai-487000 --non-interactive
+          # firebase-tools occasionally fails the service-account token exchange
+          # with a transient "Failed to authenticate, have you run firebase login?"
+          # even when the credentials are valid — a momentary blip from Google's
+          # OAuth token endpoint. Retry with backoff so one bad attempt doesn't
+          # fail the whole scheduled run.
+          ok=0
+          for attempt in 1 2 3 4; do
+            if npx --yes firebase-tools@latest deploy --only hosting:gaffer-wc26 \
+                 --project agentic-ai-487000 --non-interactive; then
+              ok=1; break
+            fi
+            if [ "$attempt" -lt 4 ]; then
+              echo "::warning::Firebase deploy attempt $attempt failed; retrying in $((attempt*20))s"
+              sleep $((attempt * 20))
+            fi
+          done
+          [ "$ok" = 1 ] || { echo "::error::Firebase deploy failed after 4 attempts"; exit 1; }
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
