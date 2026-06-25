@@ -44,7 +44,11 @@ jobs:
         if: ${{ env.SA != '' }}
         run: |
           printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
-          npx --yes firebase-tools@latest deploy --only hosting:gaffer-wc26 \
+          # Pin firebase-tools, do NOT use @latest. 15.22.2 (2026-06-24) shipped a
+          # regression that ignores GOOGLE_APPLICATION_CREDENTIALS and fails with
+          # "Failed to authenticate, have you run firebase login?". 15.22.1 is the
+          # last known-good release. Bump deliberately after confirming a deploy works.
+          npx --yes firebase-tools@15.22.1 deploy --only hosting:gaffer-wc26 \
             --project agentic-ai-487000 --non-interactive
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
