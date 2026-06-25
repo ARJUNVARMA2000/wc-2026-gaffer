@@ -59,22 +59,27 @@ jobs:
         if: ${{ env.SA != '' }}
         run: |
           printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
-          # firebase-tools occasionally fails the service-account token exchange
-          # with a transient "Failed to authenticate, have you run firebase login?"
-          # even when the credentials are valid — a momentary blip from Google's
-          # OAuth token endpoint. Retry with backoff so one bad attempt doesn't
-          # fail the whole scheduled run.
+          # Two independent failure modes have broken this deploy; guard both:
+          #  1. @latest is a moving target. npm flipped the `latest` tag to a new
+          #     version (15.22.3) whose tarball had not propagated yet, so every
+          #     attempt hit "No matching version found". Pin to a known-good,
+          #     installable version; bump FIREBASE_TOOLS deliberately after a green run.
+          #  2. firebase-tools intermittently fails the service-account token
+          #     exchange with a generic "Failed to authenticate, have you run
+          #     firebase login?" when Google's OAuth endpoint blips. Retry with
+          #     backoff (30/60/90/120s, ~5min total) to outlast a multi-minute blip.
+          FIREBASE_TOOLS=15.22.1
           ok=0
-          for attempt in 1 2 3 4; do
-            if npx --yes firebase-tools@latest deploy --only hosting:gaffer-wc26 \
+          for attempt in 1 2 3 4 5; do
+            if npx --yes firebase-tools@"$FIREBASE_TOOLS" deploy --only hosting:gaffer-wc26 \
                  --project agentic-ai-487000 --non-interactive; then
               ok=1; break
             fi
-            if [ "$attempt" -lt 4 ]; then
-              echo "::warning::Firebase deploy attempt $attempt failed; retrying in $((attempt*20))s"
-              sleep $((attempt * 20))
+            if [ "$attempt" -lt 5 ]; then
+              echo "::warning::Firebase deploy attempt $attempt failed; retrying in $((attempt*30))s"
+              sleep $((attempt * 30))
             fi
           done
-          [ "$ok" = 1 ] || { echo "::error::Firebase deploy failed after 4 attempts"; exit 1; }
+          [ "$ok" = 1 ] || { echo "::error::Firebase deploy failed after 5 attempts"; exit 1; }
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
