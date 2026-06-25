@@ -44,22 +44,18 @@ jobs:
         if: ${{ env.SA != '' }}
         run: |
           printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
-          # Exchange the service-account JWT for an access token directly against
-          # Google's OAuth endpoint and print the RAW response. This bypasses
-          # firebase-tools' generic "Failed to authenticate" and shows the real
-          # reason (invalid_grant / disabled / deleted / signature mismatch).
-          node -e '
-            const fs=require("fs"), crypto=require("crypto"), https=require("https");
-            const sa=JSON.parse(fs.readFileSync(process.env.GOOGLE_APPLICATION_CREDENTIALS,"utf8"));
-            const now=Math.floor(Date.now()/1000);
-            const b64=o=>Buffer.from(JSON.stringify(o)).toString("base64url");
-            const unsigned=b64({alg:"RS256",typ:"JWT"})+"."+b64({iss:sa.client_email,scope:"https://www.googleapis.com/auth/cloud-platform",aud:"https://oauth2.googleapis.com/token",iat:now,exp:now+3600});
-            const sig=crypto.createSign("RSA-SHA256").update(unsigned).sign(sa.private_key,"base64url");
-            const body="grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion="+unsigned+"."+sig;
-            const req=https.request("https://oauth2.googleapis.com/token",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded","Content-Length":Buffer.byteLength(body)}},res=>{let d="";res.on("data",c=>d+=c);res.on("end",()=>{console.log("HTTP_STATUS:",res.statusCode);console.log("RESPONSE:",d.slice(0,600).replace(/"access_token":"[^"]+"/,"\"access_token\":\"<redacted>\""));});});
-            req.on("error",e=>console.log("REQ_ERROR:",e.message));
-            req.write(body); req.end();
-          '
+          # The raw SA JWT->token exchange already proved the key is valid (HTTP 200),
+          # yet firebase-tools reports "Failed to authenticate". Run the real deploy
+          # with --debug and dump firebase-debug.log to see which auth path it takes
+          # and the exact error it hits.
+          echo "::group::google/firebase env (values masked)"
+          env | grep -iE "GOOGLE|GCLOUD|FIREBASE|CLOUDSDK" | sed 's/=.*/=<set>/' || echo "(none)"
+          echo "::endgroup::"
+          npx --yes firebase-tools@15.22.1 deploy --only hosting:gaffer-wc26 \
+            --project agentic-ai-487000 --non-interactive --debug || true
+          echo "::group::firebase-debug.log (tail)"
+          tail -80 firebase-debug.log 2>/dev/null || echo "no firebase-debug.log in $(pwd)"
+          echo "::endgroup::"
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
 
