@@ -1,4 +1,80 @@
 {
+  "Ecuador | Germany": {
+    "teams": [
+      "Ecuador",
+      "Germany"
+    ],
+    "eventTicker": "KXWCGAME-26JUN25ECUGER",
+    "occurrence": "2026-06-25T21:49:54.891Z",
+    "closeTime": "2026-06-25T22:00:22+00:00",
+    "legs": {
+      "Ecuador": {
+        "ask": 0.2,
+        "bid": 0.19,
+        "mid": 0.195,
+        "last": 0.2,
+        "ts": 1782414000,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN25ECUGER-ECU"
+      },
+      "Germany": {
+        "ask": 0.62,
+        "bid": 0.61,
+        "mid": 0.615,
+        "last": 0.62,
+        "ts": 1782414000,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN25ECUGER-GER"
+      },
+      "TIE": {
+        "ask": 0.21,
+        "bid": 0.2,
+        "mid": 0.205,
+        "last": 0.21,
+        "ts": 1782414000,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN25ECUGER-TIE"
+      }
+    }
+  },
+  "Curaçao | Ivory Coast": {
+    "teams": [
+      "Curaçao",
+      "Ivory Coast"
+    ],
+    "eventTicker": "KXWCGAME-26JUN25CUWCIV",
+    "occurrence": "2026-06-25T21:50:22.905Z",
+    "closeTime": "2026-06-25T21:59:43+00:00",
+    "legs": {
+      "Curaçao": {
+        "ask": 0.07,
+        "bid": 0.06,
+        "mid": 0.065,
+        "last": 0.07,
+        "ts": 1782414000,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN25CUWCIV-CUW"
+      },
+      "Ivory Coast": {
+        "ask": 0.83,
+        "bid": 0.82,
+        "mid": 0.825,
+        "last": 0.83,
+        "ts": 1782414000,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN25CUWCIV-CIV"
+      },
+      "TIE": {
+        "ask": 0.13,
+        "bid": 0.12,
+        "mid": 0.125,
+        "last": 0.13,
+        "ts": 1782414000,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN25CUWCIV-TIE"
+      }
+    }
+  },
   "South Africa | South Korea": {
     "teams": [
       "South Africa",
