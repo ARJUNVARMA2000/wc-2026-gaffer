@@ -44,17 +44,23 @@ jobs:
         if: ${{ env.SA != '' }}
         run: |
           printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
-          # The raw SA JWT->token exchange already proved the key is valid (HTTP 200),
-          # yet firebase-tools reports "Failed to authenticate". Run the real deploy
-          # with --debug and dump firebase-debug.log to see which auth path it takes
-          # and the exact error it hits.
-          echo "::group::google/firebase env (values masked)"
-          env | grep -iE "GOOGLE|GCLOUD|FIREBASE|CLOUDSDK" | sed 's/=.*/=<set>/' || echo "(none)"
-          echo "::endgroup::"
+          # Root cause: firebase-tools' gtoken fetches the token from the LEGACY
+          # endpoint https://www.googleapis.com/oauth2/v4/token, which is dropping
+          # the connection ("Premature close"). The canonical oauth2.googleapis.com
+          # works (direct probe = HTTP 200). google-auth-library uses the SA JSON's
+          # token_uri, so test: rewrite token_uri to the canonical endpoint, then deploy.
+          node -e '
+            const fs=require("fs"), p=process.env.GOOGLE_APPLICATION_CREDENTIALS;
+            const j=JSON.parse(fs.readFileSync(p,"utf8"));
+            console.log("orig token_uri:", j.token_uri);
+            j.token_uri="https://oauth2.googleapis.com/token";
+            fs.writeFileSync(p, JSON.stringify(j));
+            console.log("patched token_uri:", j.token_uri);
+          '
+          echo "::group::deploy with patched token_uri"
           npx --yes firebase-tools@15.22.1 deploy --only hosting:gaffer-wc26 \
-            --project agentic-ai-487000 --non-interactive --debug || true
-          echo "::group::firebase-debug.log (tail)"
-          tail -80 firebase-debug.log 2>/dev/null || echo "no firebase-debug.log in $(pwd)"
+            --project agentic-ai-487000 --non-interactive --debug 2>&1 \
+            | grep -iE "oauth2|/token|Premature|authenticate|Deploy complete|Hosting URL|hosting\[" | tail -25 || true
           echo "::endgroup::"
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
