@@ -228,7 +228,7 @@
     "pAway": 0.073,
     "projHome": 1.9,
     "projAway": 0.44,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-24|Canada|Switzerland": {
     "date": "2026-06-24",
@@ -239,7 +239,7 @@
     "pAway": 0.398,
     "projHome": 1.19,
     "projAway": 1.35,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-24|Bosnia and Herzegovina|Qatar": {
     "date": "2026-06-24",
@@ -250,7 +250,7 @@
     "pAway": 0.173,
     "projHome": 1.77,
     "projAway": 0.85,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-24|Mexico|Czech Republic": {
     "date": "2026-06-24",
@@ -261,7 +261,7 @@
     "pAway": 0.253,
     "projHome": 1.54,
     "projAway": 1.05,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-24|Scotland|Brazil": {
     "date": "2026-06-24",
@@ -272,7 +272,7 @@
     "pAway": 0.664,
     "projHome": 0.73,
     "projAway": 1.99,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-24|South Africa|South Korea": {
     "date": "2026-06-24",
@@ -283,18 +283,18 @@
     "pAway": 0.49,
     "projHome": 0.76,
     "projAway": 1.31,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-25|Tunisia|Netherlands": {
     "date": "2026-06-25",
     "home": "Tunisia",
     "away": "Netherlands",
-    "pHome": 0.095,
+    "pHome": 0.096,
     "pDraw": 0.191,
     "pAway": 0.713,
     "projHome": 0.65,
     "projAway": 2.13,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-25|Japan|Sweden": {
     "date": "2026-06-25",
@@ -305,7 +305,7 @@
     "pAway": 0.318,
     "projHome": 1.46,
     "projAway": 1.25,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-25|Ecuador|Germany": {
     "date": "2026-06-25",
@@ -316,7 +316,7 @@
     "pAway": 0.456,
     "projHome": 0.83,
     "projAway": 1.26,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-25|United States|Turkey": {
     "date": "2026-06-25",
@@ -327,7 +327,7 @@
     "pAway": 0.338,
     "projHome": 1.65,
     "projAway": 1.47,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-25|Paraguay|Australia": {
     "date": "2026-06-25",
@@ -338,7 +338,7 @@
     "pAway": 0.302,
     "projHome": 0.93,
     "projAway": 0.84,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-25|Curaçao|Ivory Coast": {
     "date": "2026-06-25",
@@ -349,7 +349,7 @@
     "pAway": 0.775,
     "projHome": 0.45,
     "projAway": 2.2,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-26|Senegal|Iraq": {
     "date": "2026-06-26",
@@ -360,7 +360,7 @@
     "pAway": 0.086,
     "projHome": 1.84,
     "projAway": 0.49,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-26|New Zealand|Belgium": {
     "date": "2026-06-26",
@@ -371,7 +371,7 @@
     "pAway": 0.79,
     "projHome": 0.46,
     "projAway": 2.31,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-26|Egypt|Iran": {
     "date": "2026-06-26",
@@ -382,7 +382,7 @@
     "pAway": 0.304,
     "projHome": 0.96,
     "projAway": 0.86,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-26|Cape Verde|Saudi Arabia": {
     "date": "2026-06-26",
@@ -393,7 +393,7 @@
     "pAway": 0.31,
     "projHome": 0.92,
     "projAway": 0.86,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-26|Uruguay|Spain": {
     "date": "2026-06-26",
@@ -404,7 +404,7 @@
     "pAway": 0.533,
     "projHome": 0.69,
     "projAway": 1.4,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-26|Norway|France": {
     "date": "2026-06-26",
@@ -415,7 +415,7 @@
     "pAway": 0.515,
     "projHome": 1.07,
     "projAway": 1.7,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-27|Jordan|Argentina": {
     "date": "2026-06-27",
@@ -426,7 +426,7 @@
     "pAway": 0.873,
     "projHome": 0.36,
     "projAway": 2.81,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-27|DR Congo|Uzbekistan": {
     "date": "2026-06-27",
@@ -437,7 +437,7 @@
     "pAway": 0.265,
     "projHome": 0.87,
     "projAway": 0.69,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-27|Colombia|Portugal": {
     "date": "2026-06-27",
@@ -448,7 +448,7 @@
     "pAway": 0.473,
     "projHome": 1.02,
     "projAway": 1.48,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-27|Panama|England": {
     "date": "2026-06-27",
@@ -459,7 +459,7 @@
     "pAway": 0.849,
     "projHome": 0.42,
     "projAway": 2.69,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-27|Algeria|Austria": {
     "date": "2026-06-27",
@@ -470,17 +470,17 @@
     "pAway": 0.371,
     "projHome": 1.14,
     "projAway": 1.22,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   },
   "2026-06-27|Croatia|Ghana": {
     "date": "2026-06-27",
     "home": "Croatia",
     "away": "Ghana",
     "pHome": 0.534,
-    "pDraw": 0.278,
+    "pDraw": 0.277,
     "pAway": 0.188,
     "projHome": 1.47,
     "projAway": 0.76,
-    "snapshotAt": "2026-06-24T19:24:21Z"
+    "snapshotAt": "2026-06-25T02:01:29Z"
   }
 }
