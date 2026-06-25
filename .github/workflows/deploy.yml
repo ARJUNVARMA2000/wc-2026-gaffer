@@ -43,12 +43,27 @@ jobs:
       - name: Deploy to Firebase Hosting
         if: ${{ env.SA != '' }}
         run: |
+          set -o pipefail
           printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
-          # Pin firebase-tools, do NOT use @latest. 15.22.2 (2026-06-24) shipped a
-          # regression that ignores GOOGLE_APPLICATION_CREDENTIALS and fails with
-          # "Failed to authenticate, have you run firebase login?". 15.22.1 is the
-          # last known-good release. Bump deliberately after confirming a deploy works.
+          # --- TEMP auth diagnostics (remove once deploy is green) ---
+          # Print only non-secret SA fields so we can tell whether the key JSON is
+          # well-formed and which account/key it points at. Never echo private_key.
+          echo "::group::SA key sanity (no secrets)"
+          node -e '
+            const fs=require("fs");
+            const p=process.env.GOOGLE_APPLICATION_CREDENTIALS;
+            try {
+              const j=JSON.parse(fs.readFileSync(p,"utf8"));
+              console.log("type:",j.type);
+              console.log("project_id:",j.project_id);
+              console.log("client_email:",j.client_email);
+              console.log("private_key_id:",j.private_key_id);
+              console.log("has_private_key:",!!j.private_key,"len:",(j.private_key||"").length);
+              console.log("private_key_starts:",(j.private_key||"").slice(0,27));
+            } catch(e){ console.log("PARSE ERROR:",e.message); }
+          '
+          echo "::endgroup::"
           npx --yes firebase-tools@15.22.1 deploy --only hosting:gaffer-wc26 \
-            --project agentic-ai-487000 --non-interactive
+            --project agentic-ai-487000 --non-interactive --debug 2>&1 | tail -60
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
