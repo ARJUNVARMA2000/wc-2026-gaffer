@@ -31,7 +31,11 @@ jobs:
 
       - uses: actions/setup-node@v5
         with:
-          node-version: "22"
+          # Pin the exact patch, not floating "22". Node 22.23.0 ships an undici
+          # regression that makes firebase-tools' OAuth token fetch fail with
+          # "Premature close" -> "Failed to authenticate" (firebase-tools#10692).
+          # 22.22.3 is the last patch that deploys cleanly. Re-test before bumping.
+          node-version: "22.22.3"
       - name: Build static site
         working-directory: web
         run: |
@@ -40,44 +44,16 @@ jobs:
           npm ci || npm install
           npm run build
 
-      - name: Diagnose SA auth (TEMP)
-        if: ${{ env.SA != '' }}
-        run: |
-          printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
-          # Root cause: firebase-tools' gtoken fetches the token from the LEGACY
-          # endpoint https://www.googleapis.com/oauth2/v4/token, which is dropping
-          # the connection ("Premature close"). The canonical oauth2.googleapis.com
-          # works (direct probe = HTTP 200). google-auth-library uses the SA JSON's
-          # token_uri, so test: rewrite token_uri to the canonical endpoint, then deploy.
-          node -e '
-            const fs=require("fs"), p=process.env.GOOGLE_APPLICATION_CREDENTIALS;
-            const j=JSON.parse(fs.readFileSync(p,"utf8"));
-            console.log("orig token_uri:", j.token_uri);
-            j.token_uri="https://oauth2.googleapis.com/token";
-            fs.writeFileSync(p, JSON.stringify(j));
-            console.log("patched token_uri:", j.token_uri);
-          '
-          echo "::group::deploy with patched token_uri"
-          npx --yes firebase-tools@15.22.1 deploy --only hosting:gaffer-wc26 \
-            --project agentic-ai-487000 --non-interactive --debug 2>&1 \
-            | grep -iE "oauth2|/token|Premature|authenticate|Deploy complete|Hosting URL|hosting\[" | tail -25 || true
-          echo "::endgroup::"
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
-
       - name: Deploy to Firebase Hosting
         if: ${{ env.SA != '' }}
         run: |
           printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
-          # Two independent failure modes have broken this deploy; guard both:
-          #  1. @latest is a moving target. npm flipped the `latest` tag to a new
-          #     version (15.22.3) whose tarball had not propagated yet, so every
-          #     attempt hit "No matching version found". Pin to a known-good,
-          #     installable version; bump FIREBASE_TOOLS deliberately after a green run.
-          #  2. firebase-tools intermittently fails the service-account token
-          #     exchange with a generic "Failed to authenticate, have you run
-          #     firebase login?" when Google's OAuth endpoint blips. Retry with
-          #     backoff (30/60/90/120s, ~5min total) to outlast a multi-minute blip.
+          # Pin firebase-tools, do not use @latest: npm once flipped the `latest`
+          # tag to a version (15.22.3) whose tarball had not propagated, so every
+          # attempt hit "No matching version found". Bump FIREBASE_TOOLS deliberately
+          # after a green run. (The "Failed to authenticate / Premature close" auth
+          # break was a Node 22.23.0 regression, fixed by the node-version pin above.)
+          # The retry still rides out an occasional transient OAuth blip.
           FIREBASE_TOOLS=15.22.1
           ok=0
           for attempt in 1 2 3 4 5; do
