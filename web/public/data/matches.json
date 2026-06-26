@@ -233,7 +233,7 @@
     "awayScore": 2,
     "pHome": 0.523,
     "pDraw": 0.298,
-    "pAway": 0.178,
+    "pAway": 0.179,
     "modelProb": 0.298,
     "frozen": false
   },
@@ -352,7 +352,7 @@
     "awayScore": 1,
     "pHome": 0.644,
     "pDraw": 0.247,
-    "pAway": 0.109,
+    "pAway": 0.108,
     "modelProb": 0.247,
     "frozen": false
   },
@@ -401,10 +401,10 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 0,
-    "pHome": 0.51,
+    "pHome": 0.509,
     "pDraw": 0.284,
     "pAway": 0.206,
-    "modelProb": 0.51,
+    "modelProb": 0.509,
     "frozen": false
   },
   {
@@ -1062,7 +1062,7 @@
     "awayIso": "ir",
     "city": "Seattle",
     "played": false,
-    "pHome": 0.358,
+    "pHome": 0.359,
     "pDraw": 0.34,
     "pAway": 0.302,
     "projHome": 0.96,
@@ -1100,7 +1100,7 @@
     "pDraw": 0.288,
     "pAway": 0.532,
     "projHome": 0.69,
-    "projAway": 1.39,
+    "projAway": 1.4,
     "likelyHome": 0,
     "likelyAway": 1
   },
