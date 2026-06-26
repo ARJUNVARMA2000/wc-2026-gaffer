@@ -1,4 +1,80 @@
 {
+  "Turkey | United States": {
+    "teams": [
+      "Turkey",
+      "United States"
+    ],
+    "eventTicker": "KXWCGAME-26JUN25TURUSA",
+    "occurrence": "2026-06-26T05:00:00Z",
+    "closeTime": "2026-06-26T04:03:34+00:00",
+    "legs": {
+      "Turkey": {
+        "ask": 0.26,
+        "bid": 0.25,
+        "mid": 0.255,
+        "last": 0.26,
+        "ts": 1782435600,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN25TURUSA-TUR"
+      },
+      "United States": {
+        "ask": 0.52,
+        "bid": 0.51,
+        "mid": 0.515,
+        "last": 0.52,
+        "ts": 1782435600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN25TURUSA-USA"
+      },
+      "TIE": {
+        "ask": 0.23,
+        "bid": 0.22,
+        "mid": 0.225,
+        "last": 0.23,
+        "ts": 1782435600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN25TURUSA-TIE"
+      }
+    }
+  },
+  "Australia | Paraguay": {
+    "teams": [
+      "Paraguay",
+      "Australia"
+    ],
+    "eventTicker": "KXWCGAME-26JUN25PARAUS",
+    "occurrence": "2026-06-26T03:49:03.17Z",
+    "closeTime": "2026-06-26T03:59:49+00:00",
+    "legs": {
+      "Paraguay": {
+        "ask": 0.37,
+        "bid": 0.36,
+        "mid": 0.365,
+        "last": 0.37,
+        "ts": 1782435600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN25PARAUS-PAR"
+      },
+      "Australia": {
+        "ask": 0.23,
+        "bid": 0.22,
+        "mid": 0.225,
+        "last": 0.23,
+        "ts": 1782435600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN25PARAUS-AUS"
+      },
+      "TIE": {
+        "ask": 0.43,
+        "bid": 0.42,
+        "mid": 0.425,
+        "last": 0.42,
+        "ts": 1782435600,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN25PARAUS-TIE"
+      }
+    }
+  },
   "Netherlands | Tunisia": {
     "teams": [
       "Tunisia",
