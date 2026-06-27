@@ -1,4 +1,156 @@
 {
+  "Belgium | New Zealand": {
+    "teams": [
+      "New Zealand",
+      "Belgium"
+    ],
+    "eventTicker": "KXWCGAME-26JUN26NZLBEL",
+    "occurrence": "2026-06-27T04:48:36.923Z",
+    "closeTime": "2026-06-27T04:59:37+00:00",
+    "legs": {
+      "New Zealand": {
+        "ask": 0.08,
+        "bid": 0.07,
+        "mid": 0.075,
+        "last": 0.07,
+        "ts": 1782525600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26NZLBEL-NZL"
+      },
+      "Belgium": {
+        "ask": 0.82,
+        "bid": 0.81,
+        "mid": 0.815,
+        "last": 0.82,
+        "ts": 1782525600,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN26NZLBEL-BEL"
+      },
+      "TIE": {
+        "ask": 0.12,
+        "bid": 0.11,
+        "mid": 0.115,
+        "last": 0.11,
+        "ts": 1782525600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26NZLBEL-TIE"
+      }
+    }
+  },
+  "Egypt | Iran": {
+    "teams": [
+      "Egypt",
+      "Iran"
+    ],
+    "eventTicker": "KXWCGAME-26JUN26EGYIRI",
+    "occurrence": "2026-06-27T04:50:43.131Z",
+    "closeTime": "2026-06-27T05:04:22+00:00",
+    "legs": {
+      "Egypt": {
+        "ask": 0.37,
+        "bid": 0.36,
+        "mid": 0.365,
+        "last": 0.37,
+        "ts": 1782525600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26EGYIRI-EGY"
+      },
+      "Iran": {
+        "ask": 0.29,
+        "bid": 0.28,
+        "mid": 0.285,
+        "last": 0.29,
+        "ts": 1782525600,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26EGYIRI-IRI"
+      },
+      "TIE": {
+        "ask": 0.36,
+        "bid": 0.35,
+        "mid": 0.355,
+        "last": 0.36,
+        "ts": 1782525600,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN26EGYIRI-TIE"
+      }
+    }
+  },
+  "Spain | Uruguay": {
+    "teams": [
+      "Uruguay",
+      "Spain"
+    ],
+    "eventTicker": "KXWCGAME-26JUN26URUESP",
+    "occurrence": "2026-06-27T01:51:28.461Z",
+    "closeTime": "2026-06-27T02:04:26+00:00",
+    "legs": {
+      "Uruguay": {
+        "ask": 0.15,
+        "bid": 0.14,
+        "mid": 0.145,
+        "last": 0.15,
+        "ts": 1782514800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26URUESP-URU"
+      },
+      "Spain": {
+        "ask": 0.59,
+        "bid": 0.58,
+        "mid": 0.585,
+        "last": 0.59,
+        "ts": 1782514800,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN26URUESP-ESP"
+      },
+      "TIE": {
+        "ask": 0.26,
+        "bid": 0.25,
+        "mid": 0.255,
+        "last": 0.26,
+        "ts": 1782514800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26URUESP-TIE"
+      }
+    }
+  },
+  "Cape Verde | Saudi Arabia": {
+    "teams": [
+      "Cape Verde",
+      "Saudi Arabia"
+    ],
+    "eventTicker": "KXWCGAME-26JUN26CPVKSA",
+    "occurrence": null,
+    "closeTime": "2026-06-27T01:59:41+00:00",
+    "legs": {
+      "Cape Verde": {
+        "ask": 0.33,
+        "bid": 0.32,
+        "mid": 0.325,
+        "last": 0.33,
+        "ts": 1782514800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26CPVKSA-CPV"
+      },
+      "Saudi Arabia": {
+        "ask": 0.39,
+        "bid": 0.38,
+        "mid": 0.385,
+        "last": 0.39,
+        "ts": 1782514800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26CPVKSA-KSA"
+      },
+      "TIE": {
+        "ask": 0.29,
+        "bid": 0.28,
+        "mid": 0.285,
+        "last": 0.29,
+        "ts": 1782514800,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN26CPVKSA-TIE"
+      }
+    }
+  },
   "Iraq | Senegal": {
     "teams": [
       "Senegal",
