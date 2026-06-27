@@ -1,4 +1,80 @@
 {
+  "Iraq | Senegal": {
+    "teams": [
+      "Senegal",
+      "Iraq"
+    ],
+    "eventTicker": "KXWCGAME-26JUN26SENIRQ",
+    "occurrence": "2026-06-26T22:00:00Z",
+    "closeTime": "2026-06-26T21:04:26+00:00",
+    "legs": {
+      "Senegal": {
+        "ask": 0.79,
+        "bid": 0.78,
+        "mid": 0.785,
+        "last": 0.79,
+        "ts": 1782496800,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN26SENIRQ-SEN"
+      },
+      "Iraq": {
+        "ask": 0.09,
+        "bid": 0.08,
+        "mid": 0.085,
+        "last": 0.09,
+        "ts": 1782496800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26SENIRQ-IRQ"
+      },
+      "TIE": {
+        "ask": 0.14,
+        "bid": 0.13,
+        "mid": 0.135,
+        "last": 0.14,
+        "ts": 1782496800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26SENIRQ-TIE"
+      }
+    }
+  },
+  "France | Norway": {
+    "teams": [
+      "Norway",
+      "France"
+    ],
+    "eventTicker": "KXWCGAME-26JUN26NORFRA",
+    "occurrence": "2026-06-26T20:50:05.814Z",
+    "closeTime": "2026-06-26T21:00:37+00:00",
+    "legs": {
+      "Norway": {
+        "ask": 0.13,
+        "bid": 0.12,
+        "mid": 0.125,
+        "last": 0.13,
+        "ts": 1782496800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26NORFRA-NOR"
+      },
+      "France": {
+        "ask": 0.71,
+        "bid": 0.7,
+        "mid": 0.705,
+        "last": 0.71,
+        "ts": 1782496800,
+        "result": "yes",
+        "ticker": "KXWCGAME-26JUN26NORFRA-FRA"
+      },
+      "TIE": {
+        "ask": 0.17,
+        "bid": 0.16,
+        "mid": 0.165,
+        "last": 0.17,
+        "ts": 1782496800,
+        "result": "no",
+        "ticker": "KXWCGAME-26JUN26NORFRA-TIE"
+      }
+    }
+  },
   "Turkey | United States": {
     "teams": [
       "Turkey",
