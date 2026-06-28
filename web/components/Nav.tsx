@@ -2,9 +2,25 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Meta } from "@/lib/data";
 import { timeAgo } from "@/lib/ui";
+
+// Relative time depends on Date.now(), so it must be computed only on the
+// client after mount — otherwise the server-rendered "Xm ago" disagrees with
+// the client's value and React reports a hydration mismatch. We render a
+// stable "Live" placeholder until mounted, then fill in and tick the relative
+// time so the indicator stays honest.
+function LiveTimestamp({ iso }: { iso: string }) {
+  const [ago, setAgo] = useState<string | null>(null);
+  useEffect(() => {
+    const update = () => setAgo(timeAgo(iso));
+    update();
+    const id = setInterval(update, 60_000);
+    return () => clearInterval(id);
+  }, [iso]);
+  return <>{ago ? `Live · ${ago}` : "Live"}</>;
+}
 
 const LINKS = [
   ["/", "Projections"],
@@ -50,7 +66,7 @@ export default function Nav({ meta }: { meta: Meta }) {
           <div className="hidden items-center gap-2 rounded-full border hairline px-3 py-1.5 sm:flex">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-lime)] live-dot" />
             <span className="mono text-[0.62rem] uppercase tracking-wider text-[var(--color-muted)]">
-              Live · {timeAgo(meta.lastUpdated)}
+              <LiveTimestamp iso={meta.lastUpdated} />
             </span>
           </div>
           <button
