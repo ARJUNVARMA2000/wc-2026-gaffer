@@ -15,9 +15,10 @@ export default function BracketPage() {
         <div className="eyebrow">The most likely road to the trophy</div>
         <h1 className="display mt-3 text-4xl sm:text-5xl">Bracket</h1>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-[var(--color-muted)]">
-          The projected Round-of-32 knockout bracket — each slot filled with the team most likely to
-          land there across {meta.nSims.toLocaleString()} simulations, seeded by strength and tagged
-          with its title odds.
+          The full projected knockout run, all the way to the trophy. Every tie shows each side&apos;s
+          head-to-head win odds — the two add to 100% — and the favourite advances to fill the next
+          round. Hover a projected R16/QF/SF slot to see the other teams that could land there. Built
+          from {meta.nSims.toLocaleString()} simulations.
         </p>
       </Reveal>
 

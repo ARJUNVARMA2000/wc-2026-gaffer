@@ -74,3 +74,31 @@
 - [ ] Knockout-stage live conditioning once those fixtures appear in the dataset
 - [ ] Altitude / time-zone-travel components of home advantage
 - [ ] Tune VALUE_WEIGHT_SAME (0.15) / VALUE_WEIGHT_CROSS (0.45) via backtest
+
+## Phase 9 — Bracket redesign: per-match win % + forward fill + hover alternatives
+Goal: (1) %s = chance of winning THAT match (each match sums to 100%), not title odds;
+(2) populate every downstream round (R16/QF/SF/Final) with the projected match winner;
+(3) hover a projected slot → other likely teams that could fill it (with probs).
+- [ ] sim: expose per-match winner-occupancy dist (`match_win[m]`) from `winners[m]`
+- [ ] pipeline `build_bracket`: full multi-round bracket — chalk-propagate favorite by
+      `sim.win`; per slot winPct (sums to 100) + fav + candidates (top-K feeder dist);
+      champion = final favorite, hover = title-odds dist
+- [ ] data.ts: new Bracket/BracketMatch/BracketSlot/Candidate types
+- [ ] BracketTree.tsx: all rounds as match cards; heat win% chips; portal hover tooltip
+- [ ] page.tsx copy; regen data; build; verify in browser
+- Verify: each match sums to 100; advancer == feeding-match favorite; hover alternatives
+
+### Phase 9 — DONE + adversarial review (16-agent workflow)
+- [x] All 6 build steps implemented + verified (data math validated across all 31 matches;
+      DOM-verified render, hover, champion badge; prod build + ESLint clean)
+- [x] Fixed 9 confirmed review findings:
+      HIGH — center/final connectors realigned to column 50% (verified connectorTop==centerCell50);
+             champion hover relabeled "Most likely to win it all", no misleading bold
+      MED  — R32 de-dup zero-occupancy guard; tooltip horizontal viewport clamp;
+             ESLint set-state-in-effect → useSyncExternalStore
+      LOW  — fav = single source (proj_winner); removed unused import; keyboard/touch a11y
+             (tabIndex+onFocus/onBlur+title fallback); copy scoped to R16/QF/SF slots
+- Note: projected champion = Spain (wins chalk final 51-49) ≠ title-odds leader Argentina
+        (15.4%, easiest draw). Faithful to "winner advances"; flagged to user to confirm headline.
+- Pre-existing (out of scope): Nav.tsx:53 timeAgo(Date.now()) causes a recoverable hydration
+  mismatch on every page — flagged as a separate task.

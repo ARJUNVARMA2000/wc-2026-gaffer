@@ -131,27 +131,33 @@ def build_paths(sim, rr: Dict[str, float], rating_model, team_to_group: Dict[str
     return out
 
 
-def _bracket_leaf_order() -> list:
-    """R32 match numbers, top-to-bottom, as they stack in the knockout tree.
+def _bracket_feeders() -> Dict[int, tuple]:
+    """match_no -> (feeder_a, feeder_b) for every non-R32 knockout match (incl. the final)."""
+    return {**B.R16, **B.QF, **B.SF, B.FINAL: (101, 102)}
 
-    In-order walk of the tree from the two semi-finals: 101 (left half) then 102
-    (right half). The first 8 are the left side of the bracket, the last 8 the right.
+
+def _inorder_matches() -> list:
+    """All knockout match numbers in visual top-to-bottom order (in-order tree walk).
+
+    Walking left-subtree -> node -> right-subtree from the final yields, within any
+    single round, the matches in the order they stack vertically in the bracket. The
+    first half of each round is the left side of the tree, the second half the right.
     """
-    feeders = {**B.R16, **B.QF, **B.SF}
+    feeders = _bracket_feeders()
     r32 = {m for m, _, _ in B.R32}
-    order: list = []
+    seq: list = []
 
     def walk(m: int) -> None:
         if m in r32:
-            order.append(m)
+            seq.append(m)
             return
         fa, fb = feeders[m]
         walk(fa)
+        seq.append(m)
         walk(fb)
 
-    walk(101)
-    walk(102)
-    return order
+    walk(B.FINAL)
+    return seq
 
 
 def _slot_label(slot: str) -> str:
@@ -163,44 +169,108 @@ def _slot_label(slot: str) -> str:
 
 
 def build_bracket(sim, rating_model, team_to_group: Dict[str, str], elo_rank: Dict[str, int]) -> dict:
-    """Projected Round-of-32 bracket: the modal (most likely) team in each slot.
+    """Forward-filled projected knockout bracket.
 
-    For every slot we take the team that filled it in the most simulations, assigning
-    the most confident slots first and de-duplicating so no team appears twice. Each
-    team carries its strength seed (Elo rank) and title odds, for the bracket view.
+    The Round-of-32 is seeded with the modal (most-simulated) team per slot. From there
+    the favourite of each tie advances (chalk propagation by the neutral head-to-head
+    win matrix), filling R16 -> QF -> SF -> Final -> champion. Every slot carries:
+      - winPct: P(this team beats the other team IN THIS MATCH) — the two sides of a
+        match sum to 1.0;
+      - candidates: the teams most likely to actually occupy this slot (from the feeding
+        match's winner distribution), for the on-hover "who else could be here" list.
     """
     teams = sim.teams
     n = sim.n_sims
+    win = sim.win
+    feeders = _bracket_feeders()
+    r32_slots = {m: (sa, sb) for m, sa, sb in B.R32}
+
+    # ---- R32 occupants: modal team per slot, de-duplicated (confident slots first) ----
     counts = sim.slots
     top_share = {s: float(c.max()) / n for s, c in counts.items()}
     used: set = set()
-    slot_team: Dict[str, tuple] = {}
+    slot_team: Dict[str, int] = {}
     for s in sorted(counts, key=lambda s: -top_share[s]):
+        modal = int(np.argmax(counts[s]))
+        chosen = modal  # fallback: a real occupant (may duplicate) beats an impossible team
         for ti in np.argsort(-counts[s]):
             ti = int(ti)
+            if counts[s][ti] <= 0:
+                break       # support exhausted — keep the modal pick, never invent a 0-sim team
             if ti not in used:
-                used.add(ti)
-                slot_team[s] = (ti, float(counts[s][ti]) / n)
+                chosen = ti
                 break
+        used.add(chosen)
+        slot_team[s] = chosen
 
-    def entry(slot: str) -> dict:
-        ti, share = slot_team[slot]
-        name = teams[ti]
-        return {
-            "slot": slot, "slotLabel": _slot_label(slot),
-            "name": name, "iso": iso(name),
-            "seed": elo_rank[name], "group": team_to_group[name],
-            "champion": round(float(sim.champion[ti]), 4),
-            "modal": round(share, 3),
+    # ---- chalk propagation: participants + projected winner of every match ----
+    part: Dict[int, tuple] = {}      # match -> (team_a_idx, team_b_idx)
+    proj_winner: Dict[int, int] = {}
+    for m, sa, sb in B.R32:
+        a, b = slot_team[sa], slot_team[sb]
+        part[m] = (a, b)
+        proj_winner[m] = a if win[a, b] >= win[b, a] else b
+    for pairs in (B.R16, B.QF, B.SF, {B.FINAL: (101, 102)}):
+        for m, (fa, fb) in pairs.items():
+            a, b = proj_winner[fa], proj_winner[fb]
+            part[m] = (a, b)
+            proj_winner[m] = a if win[a, b] >= win[b, a] else b
+
+    def candidates(dist: np.ndarray, k: int = 6) -> list:
+        """Top-k teams by occupancy probability (drop the long tail < 0.5%)."""
+        out = []
+        for ti in np.argsort(-dist)[:k]:
+            p = float(dist[int(ti)])
+            if p <= 0 or (p < 0.005 and out):
+                break
+            nm = teams[int(ti)]
+            out.append({"name": nm, "iso": iso(nm), "prob": round(p, 4)})
+        return out
+
+    def slot(m: int, which: str) -> dict:
+        a, b = part[m]
+        me, other = (a, b) if which == "a" else (b, a)
+        nm = teams[me]
+        info = {
+            "name": nm, "iso": iso(nm),
+            "seed": elo_rank[nm], "group": team_to_group[nm],
+            "winPct": round(float(win[me, other]), 4),
+            "fav": bool(me == proj_winner[m]),   # single source of truth — matches the advancer
         }
+        if m in r32_slots:                       # R32: occupant is a fixed group finisher
+            src = r32_slots[m][0] if which == "a" else r32_slots[m][1]
+            info["slotLabel"] = _slot_label(src)
+            info["candidates"] = candidates(counts[src] / n)
+        else:                                    # R16+: occupant = winner of a feeder match
+            f = feeders[m][0] if which == "a" else feeders[m][1]
+            info["slotLabel"] = ""
+            info["candidates"] = candidates(sim.match_win[f])
+        return info
 
-    r32_slots = {m: (sa, sb) for m, sa, sb in B.R32}
-    leaves = _bracket_leaf_order()
-    matches = [
-        {"match": m, "a": entry(r32_slots[m][0]), "b": entry(r32_slots[m][1])}
-        for m in leaves
-    ]
-    return {"left": matches[:8], "right": matches[8:]}
+    def make_match(m: int) -> dict:
+        return {"match": m, "round": B.ROUND_OF[m], "a": slot(m, "a"), "b": slot(m, "b")}
+
+    rounds = {"R32": [], "R16": [], "QF": [], "SF": []}
+    for m in _inorder_matches():
+        r = B.ROUND_OF[m]
+        if r in rounds:
+            rounds[r].append(make_match(m))
+    left = {r: ms[: len(ms) // 2] for r, ms in rounds.items()}
+    right = {r: ms[len(ms) // 2:] for r, ms in rounds.items()}
+
+    champ = proj_winner[B.FINAL]
+    a, b = part[B.FINAL]
+    runner = b if champ == a else a
+    champ_name = teams[champ]
+    champion = {
+        "name": champ_name, "iso": iso(champ_name),
+        "seed": elo_rank[champ_name], "group": team_to_group[champ_name],
+        "champion": round(float(sim.champion[champ]), 4),   # title odds (headline)
+        "winPct": round(float(win[champ, runner]), 4),      # win-the-final, head-to-head
+        "candidates": candidates(sim.match_win[B.FINAL]),   # title-odds field, for hover
+    }
+    return {"nSims": n, "left": left, "right": right,
+            "final": make_match(B.FINAL), "champion": champion}
 
 
 def build_model_params(gs, model, rating_model) -> dict:

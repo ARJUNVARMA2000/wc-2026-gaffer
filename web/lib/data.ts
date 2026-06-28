@@ -221,24 +221,45 @@ export interface ModelParams {
 }
 
 // ---- Projected knockout bracket (bracket.json) ----
+export type BracketRound = "R32" | "R16" | "QF" | "SF";
+
+export interface BracketCandidate {
+  name: string;
+  iso: string;
+  prob: number; // P(this team occupies this slot)
+}
 export interface BracketSlot {
-  slot: string; // "1E", "2C", "T74"
-  slotLabel: string; // "Winner Grp E"
   name: string;
   iso: string;
   seed: number; // strength seed = overall Elo rank
   group: string;
-  champion: number; // title odds
-  modal: number; // share of sims this team filled the slot
+  slotLabel: string; // "Winner Grp E" (R32 only; "" for filled rounds)
+  winPct: number; // P(beat the OTHER team in this match) — a.winPct + b.winPct = 1
+  fav: boolean; // favourite (projected to advance)
+  candidates: BracketCandidate[]; // who else could fill this slot, for hover
 }
 export interface BracketMatch {
   match: number;
+  round: BracketRound | "Final";
   a: BracketSlot;
   b: BracketSlot;
 }
+export type BracketSide = Record<BracketRound, BracketMatch[]>;
+export interface BracketChampion {
+  name: string;
+  iso: string;
+  seed: number;
+  group: string;
+  champion: number; // title odds (headline)
+  winPct: number; // win-the-final, head-to-head
+  candidates: BracketCandidate[]; // title contenders, for hover
+}
 export interface Bracket {
-  left: BracketMatch[]; // 8 R32 matches, top to bottom
-  right: BracketMatch[];
+  nSims: number;
+  left: BracketSide; // R32(8)/R16(4)/QF(2)/SF(1), top to bottom
+  right: BracketSide;
+  final: BracketMatch;
+  champion: BracketChampion;
 }
 
 export const getTeams = cache((): Team[] => read<Team[]>("teams.json"));

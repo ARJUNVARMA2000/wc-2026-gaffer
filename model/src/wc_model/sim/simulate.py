@@ -109,6 +109,10 @@ class SimResult:
     # R32 slot occupancy: slots[slot][i] = #sims team i filled that slot (e.g. "1E", "2C", "T74").
     # argmax over a slot is the projected (modal) occupant — a self-consistent bracket.
     slots: Dict[str, np.ndarray] = None
+    # Per knockout match: match_win[m][i] = P(team i WON match m) = P(i fills the slot that
+    # match m feeds). Keyed by match number for every R32/R16/QF/SF match plus the final
+    # (B.FINAL). Drives the forward-filled bracket's per-slot "who else could be here" hover.
+    match_win: Dict[int, np.ndarray] = None
 
 
 def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
@@ -213,15 +217,20 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
         np.add.at(opp[R], (tb, ta), 1)
 
     winners: Dict[int, np.ndarray] = {}
+    match_win: Dict[int, np.ndarray] = {}   # m -> who-won-match-m histogram (fills next slot)
+
+    def _record_winner(m: int, w: np.ndarray) -> None:
+        winners[m] = w
+        h = np.zeros(nT); np.add.at(h, w, 1); match_win[m] = h
+
     # R32
     for m, sa, sb in B.R32:
         ta, tb = resolve(sa), resolve(sb)
         np.add.at(cnt["R32"], ta, 1); np.add.at(cnt["R32"], tb, 1)
         np.add.at(slot_cnt[sa], ta, 1); np.add.at(slot_cnt[sb], tb, 1)
         record_opp("R32", ta, tb)
-        p = win[ta, tb]
-        a_wins = rng.random(N) < p
-        winners[m] = np.where(a_wins, ta, tb)
+        a_wins = rng.random(N) < win[ta, tb]
+        _record_winner(m, np.where(a_wins, ta, tb))
 
     def play_round(pairs: Dict[int, tuple], reached_key: str):
         for m, (fa, fb) in pairs.items():
@@ -229,9 +238,8 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
             np.add.at(cnt[reached_key], ta, 1); np.add.at(cnt[reached_key], tb, 1)
             if reached_key in opp:
                 record_opp(reached_key, ta, tb)
-            p = win[ta, tb]
-            a_wins = rng.random(N) < p
-            winners[m] = np.where(a_wins, ta, tb)
+            a_wins = rng.random(N) < win[ta, tb]
+            _record_winner(m, np.where(a_wins, ta, tb))
 
     play_round(B.R16, "R16")
     play_round(B.QF, "QF")
@@ -240,6 +248,7 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
     ta, tb = winners[101], winners[102]
     np.add.at(cnt["Final"], ta, 1); np.add.at(cnt["Final"], tb, 1)
     champ = np.where(rng.random(N) < win[ta, tb], ta, tb)
+    _record_winner(B.FINAL, champ)
     np.add.at(cnt["Champion"], champ, 1)
 
     # group advancement (make knockouts) = share of R32 participants, per group team
@@ -256,5 +265,6 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
         opp=opp,
         win=win,
         slots=slot_cnt,
+        match_win={m: v / N for m, v in match_win.items()},
     )
     return res
