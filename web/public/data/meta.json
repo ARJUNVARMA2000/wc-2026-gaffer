@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-06-28T02:07:19Z",
-  "dataThrough": "2026-06-25",
+  "lastUpdated": "2026-06-28T08:38:16Z",
+  "dataThrough": "2026-06-27",
   "nSims": 50000,
-  "groupMatchesPlayed": 60,
+  "groupMatchesPlayed": 72,
   "groupMatchesTotal": 72,
   "nTeams": 48,
   "modelVersion": "0.1.0",
-  "homeAdv": 1.261,
+  "homeAdv": 1.259,
   "avgGoals": 2.75,
   "valuesLoaded": 48
 }
