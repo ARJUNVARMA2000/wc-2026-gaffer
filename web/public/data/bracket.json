@@ -1,0 +1,374 @@
+{
+  "left": [
+    {
+      "match": 74,
+      "a": {
+        "slot": "1E",
+        "slotLabel": "Winner Grp E",
+        "name": "Germany",
+        "iso": "de",
+        "seed": 15,
+        "group": "E",
+        "champion": 0.0637,
+        "modal": 1.0
+      },
+      "b": {
+        "slot": "T74",
+        "slotLabel": "3rd place",
+        "name": "Bosnia and Herzegovina",
+        "iso": "ba",
+        "seed": 41,
+        "group": "B",
+        "champion": 0.0006,
+        "modal": 0.633
+      }
+    },
+    {
+      "match": 77,
+      "a": {
+        "slot": "1I",
+        "slotLabel": "Winner Grp I",
+        "name": "France",
+        "iso": "fr",
+        "seed": 3,
+        "group": "I",
+        "champion": 0.0954,
+        "modal": 0.767
+      },
+      "b": {
+        "slot": "T77",
+        "slotLabel": "3rd place",
+        "name": "Paraguay",
+        "iso": "py",
+        "seed": 22,
+        "group": "D",
+        "champion": 0.0033,
+        "modal": 0.831
+      }
+    },
+    {
+      "match": 73,
+      "a": {
+        "slot": "2A",
+        "slotLabel": "Runner-up Grp A",
+        "name": "South Africa",
+        "iso": "za",
+        "seed": 38,
+        "group": "A",
+        "champion": 0.0006,
+        "modal": 1.0
+      },
+      "b": {
+        "slot": "2B",
+        "slotLabel": "Runner-up Grp B",
+        "name": "Canada",
+        "iso": "ca",
+        "seed": 28,
+        "group": "B",
+        "champion": 0.007,
+        "modal": 1.0
+      }
+    },
+    {
+      "match": 75,
+      "a": {
+        "slot": "1F",
+        "slotLabel": "Winner Grp F",
+        "name": "Netherlands",
+        "iso": "nl",
+        "seed": 7,
+        "group": "F",
+        "champion": 0.055,
+        "modal": 1.0
+      },
+      "b": {
+        "slot": "2C",
+        "slotLabel": "Runner-up Grp C",
+        "name": "Morocco",
+        "iso": "ma",
+        "seed": 9,
+        "group": "C",
+        "champion": 0.0299,
+        "modal": 1.0
+      }
+    },
+    {
+      "match": 83,
+      "a": {
+        "slot": "2K",
+        "slotLabel": "Runner-up Grp K",
+        "name": "Portugal",
+        "iso": "pt",
+        "seed": 8,
+        "group": "K",
+        "champion": 0.082,
+        "modal": 0.524
+      },
+      "b": {
+        "slot": "2L",
+        "slotLabel": "Runner-up Grp L",
+        "name": "Croatia",
+        "iso": "hr",
+        "seed": 16,
+        "group": "L",
+        "champion": 0.0135,
+        "modal": 0.455
+      }
+    },
+    {
+      "match": 84,
+      "a": {
+        "slot": "1H",
+        "slotLabel": "Winner Grp H",
+        "name": "Spain",
+        "iso": "es",
+        "seed": 2,
+        "group": "H",
+        "champion": 0.1293,
+        "modal": 0.819
+      },
+      "b": {
+        "slot": "2J",
+        "slotLabel": "Runner-up Grp J",
+        "name": "Austria",
+        "iso": "at",
+        "seed": 21,
+        "group": "J",
+        "champion": 0.0086,
+        "modal": 0.66
+      }
+    },
+    {
+      "match": 81,
+      "a": {
+        "slot": "1D",
+        "slotLabel": "Winner Grp D",
+        "name": "United States",
+        "iso": "us",
+        "seed": 23,
+        "group": "D",
+        "champion": 0.0097,
+        "modal": 1.0
+      },
+      "b": {
+        "slot": "T81",
+        "slotLabel": "3rd place",
+        "name": "Sweden",
+        "iso": "se",
+        "seed": 32,
+        "group": "F",
+        "champion": 0.0071,
+        "modal": 0.312
+      }
+    },
+    {
+      "match": 82,
+      "a": {
+        "slot": "1G",
+        "slotLabel": "Winner Grp G",
+        "name": "Egypt",
+        "iso": "eg",
+        "seed": 29,
+        "group": "G",
+        "champion": 0.0041,
+        "modal": 0.582
+      },
+      "b": {
+        "slot": "T82",
+        "slotLabel": "3rd place",
+        "name": "South Korea",
+        "iso": "kr",
+        "seed": 30,
+        "group": "A",
+        "champion": 0.0016,
+        "modal": 0.394
+      }
+    }
+  ],
+  "right": [
+    {
+      "match": 76,
+      "a": {
+        "slot": "1C",
+        "slotLabel": "Winner Grp C",
+        "name": "Brazil",
+        "iso": "br",
+        "seed": 5,
+        "group": "C",
+        "champion": 0.078,
+        "modal": 1.0
+      },
+      "b": {
+        "slot": "2F",
+        "slotLabel": "Runner-up Grp F",
+        "name": "Japan",
+        "iso": "jp",
+        "seed": 12,
+        "group": "F",
+        "champion": 0.0105,
+        "modal": 1.0
+      }
+    },
+    {
+      "match": 78,
+      "a": {
+        "slot": "2E",
+        "slotLabel": "Runner-up Grp E",
+        "name": "Ivory Coast",
+        "iso": "ci",
+        "seed": 27,
+        "group": "E",
+        "champion": 0.0085,
+        "modal": 1.0
+      },
+      "b": {
+        "slot": "2I",
+        "slotLabel": "Runner-up Grp I",
+        "name": "Norway",
+        "iso": "no",
+        "seed": 10,
+        "group": "I",
+        "champion": 0.0226,
+        "modal": 0.767
+      }
+    },
+    {
+      "match": 79,
+      "a": {
+        "slot": "1A",
+        "slotLabel": "Winner Grp A",
+        "name": "Mexico",
+        "iso": "mx",
+        "seed": 11,
+        "group": "A",
+        "champion": 0.0067,
+        "modal": 1.0
+      },
+      "b": {
+        "slot": "T79",
+        "slotLabel": "3rd place",
+        "name": "Ecuador",
+        "iso": "ec",
+        "seed": 14,
+        "group": "E",
+        "champion": 0.0177,
+        "modal": 0.572
+      }
+    },
+    {
+      "match": 80,
+      "a": {
+        "slot": "1L",
+        "slotLabel": "Winner Grp L",
+        "name": "England",
+        "iso": "gb-eng",
+        "seed": 4,
+        "group": "L",
+        "champion": 0.093,
+        "modal": 0.878
+      },
+      "b": {
+        "slot": "T80",
+        "slotLabel": "3rd place",
+        "name": "DR Congo",
+        "iso": "cd",
+        "seed": 34,
+        "group": "K",
+        "champion": 0.0005,
+        "modal": 0.365
+      }
+    },
+    {
+      "match": 88,
+      "a": {
+        "slot": "2D",
+        "slotLabel": "Runner-up Grp D",
+        "name": "Australia",
+        "iso": "au",
+        "seed": 20,
+        "group": "D",
+        "champion": 0.0024,
+        "modal": 1.0
+      },
+      "b": {
+        "slot": "2G",
+        "slotLabel": "Runner-up Grp G",
+        "name": "Belgium",
+        "iso": "be",
+        "seed": 17,
+        "group": "G",
+        "champion": 0.0401,
+        "modal": 0.594
+      }
+    },
+    {
+      "match": 86,
+      "a": {
+        "slot": "1J",
+        "slotLabel": "Winner Grp J",
+        "name": "Argentina",
+        "iso": "ar",
+        "seed": 1,
+        "group": "J",
+        "champion": 0.1319,
+        "modal": 0.999
+      },
+      "b": {
+        "slot": "2H",
+        "slotLabel": "Runner-up Grp H",
+        "name": "Cape Verde",
+        "iso": "cv",
+        "seed": 40,
+        "group": "H",
+        "champion": 0.0002,
+        "modal": 0.519
+      }
+    },
+    {
+      "match": 85,
+      "a": {
+        "slot": "1B",
+        "slotLabel": "Winner Grp B",
+        "name": "Switzerland",
+        "iso": "ch",
+        "seed": 13,
+        "group": "B",
+        "champion": 0.019,
+        "modal": 1.0
+      },
+      "b": {
+        "slot": "T85",
+        "slotLabel": "3rd place",
+        "name": "Iran",
+        "iso": "ir",
+        "seed": 24,
+        "group": "G",
+        "champion": 0.0012,
+        "modal": 0.268
+      }
+    },
+    {
+      "match": 87,
+      "a": {
+        "slot": "1K",
+        "slotLabel": "Winner Grp K",
+        "name": "Colombia",
+        "iso": "co",
+        "seed": 6,
+        "group": "K",
+        "champion": 0.0328,
+        "modal": 0.525
+      },
+      "b": {
+        "slot": "T87",
+        "slotLabel": "3rd place",
+        "name": "Ghana",
+        "iso": "gh",
+        "seed": 39,
+        "group": "L",
+        "champion": 0.0015,
+        "modal": 0.535
+      }
+    }
+  ]
+}

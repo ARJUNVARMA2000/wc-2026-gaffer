@@ -220,6 +220,27 @@ export interface ModelParams {
   teams: Record<string, ModelTeam>;
 }
 
+// ---- Projected knockout bracket (bracket.json) ----
+export interface BracketSlot {
+  slot: string; // "1E", "2C", "T74"
+  slotLabel: string; // "Winner Grp E"
+  name: string;
+  iso: string;
+  seed: number; // strength seed = overall Elo rank
+  group: string;
+  champion: number; // title odds
+  modal: number; // share of sims this team filled the slot
+}
+export interface BracketMatch {
+  match: number;
+  a: BracketSlot;
+  b: BracketSlot;
+}
+export interface Bracket {
+  left: BracketMatch[]; // 8 R32 matches, top to bottom
+  right: BracketMatch[];
+}
+
 export const getTeams = cache((): Team[] => read<Team[]>("teams.json"));
 export const getGroups = cache((): Record<string, GroupRow[]> => read("groups.json"));
 export const getMatches = cache((): Match[] => read<Match[]>("matches.json"));
@@ -229,3 +250,4 @@ export const getPaths = cache((): TeamPath[] => read<TeamPath[]>("paths.json"));
 export const getHistory = cache((): History => read<History>("history.json"));
 export const getRatingsHistory = cache((): RatingsHistory => read<RatingsHistory>("ratings_history.json"));
 export const getModelParams = cache((): ModelParams => read<ModelParams>("model.json"));
+export const getBracket = cache((): Bracket => read<Bracket>("bracket.json"));

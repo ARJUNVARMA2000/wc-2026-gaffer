@@ -106,6 +106,9 @@ class SimResult:
     # conditional opponent distribution given i reached round R.
     opp: Dict[str, np.ndarray] = None
     win: np.ndarray = None    # 48x48 knockout win-prob matrix win[i,j] = P(i beats j)
+    # R32 slot occupancy: slots[slot][i] = #sims team i filled that slot (e.g. "1E", "2C", "T74").
+    # argmax over a slot is the projected (modal) occupant — a self-consistent bracket.
+    slots: Dict[str, np.ndarray] = None
 
 
 def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
@@ -146,6 +149,11 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
     # accumulators
     cnt = {r: np.zeros(nT) for r in ("R32", "R16", "QF", "SF", "Final", "Champion")}
     opp = {r: np.zeros((nT, nT), dtype=np.int64) for r in ("R32", "R16", "QF", "SF")}
+    # per-R32-slot team occupancy counts (for the projected bracket)
+    slot_cnt: Dict[str, np.ndarray] = {}
+    for _m, _sa, _sb in B.R32:
+        slot_cnt.setdefault(_sa, np.zeros(nT))
+        slot_cnt.setdefault(_sb, np.zeros(nT))
     win_group = {g: np.zeros(4) for g in letters}
     pts_sum = {g: np.zeros(4) for g in letters}
     group_local_idx = {g: np.array([tidx[t] for t in B.GROUPS[g]]) for g in letters}
@@ -209,6 +217,7 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
     for m, sa, sb in B.R32:
         ta, tb = resolve(sa), resolve(sb)
         np.add.at(cnt["R32"], ta, 1); np.add.at(cnt["R32"], tb, 1)
+        np.add.at(slot_cnt[sa], ta, 1); np.add.at(slot_cnt[sb], tb, 1)
         record_opp("R32", ta, tb)
         p = win[ta, tb]
         a_wins = rng.random(N) < p
@@ -246,5 +255,6 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
         n_sims=N,
         opp=opp,
         win=win,
+        slots=slot_cnt,
     )
     return res

@@ -158,6 +158,42 @@ body {
 /* Selection */
 ::selection { background: var(--color-lime); color: #07090d; }
 
+:root { --br-gap: 30px; } /* column spacing + horizontal connector length for the bracket */
+
+/* ---- Knockout bracket connectors ----
+   Balanced tree (8→4→2→1): every round-to-round merge halves the count, so a
+   merging cell's two children always sit at its 25% and 75% marks. That makes the
+   vertical connector a constant 50% of the cell height — depth-independent, pure CSS.
+   Columns sit in a flex row with `gap: var(--br-gap)`; connectors live in that gap. */
+.br-cell { position: relative; }
+.br-line { background: var(--color-line); }
+
+/* sender: short horizontal stub from a cell out toward the next round */
+.br-send-r::after,
+.br-send-l::after {
+  content: ""; position: absolute; top: 50%; height: 2px;
+  width: calc(var(--br-gap) / 2); background: var(--color-line);
+}
+.br-send-r::after { right: calc(var(--br-gap) / -2); }
+.br-send-l::after { left: calc(var(--br-gap) / -2); }
+
+/* receiver: vertical bar joining its two children + a stub into the cell */
+.br-recv-l::before,
+.br-recv-r::before {
+  content: ""; position: absolute; top: 25%; bottom: 25%; width: 2px;
+  background: var(--color-line);
+}
+.br-recv-l::before { left: calc(var(--br-gap) / -2); }
+.br-recv-r::before { right: calc(var(--br-gap) / -2); }
+/* the inward stub uses a wrapper element (.br-stub) so it can coexist with ::before */
+.br-recv-l > .br-stub,
+.br-recv-r > .br-stub {
+  content: ""; position: absolute; top: 50%; height: 2px;
+  width: calc(var(--br-gap) / 2); background: var(--color-line);
+}
+.br-recv-l > .br-stub { left: calc(var(--br-gap) / -2); }
+.br-recv-r > .br-stub { right: calc(var(--br-gap) / -2); }
+
 /* Respect reduced-motion: disable looping/transition animation */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

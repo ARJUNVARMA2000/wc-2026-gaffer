@@ -32,6 +32,7 @@ from .goals.blend import BlendedModel, build_blend
 from .goals.dixon_coles import most_likely_score, outcome_probs, scoreline_matrix
 from .goals.strength import fit_goal_strength
 from .ratings.build import build_ratings
+from .sim import bracket_2026 as B
 from .sim.bracket_2026 import GROUPS, HOSTS
 from .sim.simulate import simulate
 
@@ -128,6 +129,78 @@ def build_paths(sim, rr: Dict[str, float], rating_model, team_to_group: Dict[str
         out.append(entry)
     out.sort(key=lambda p: p["pathRank"])
     return out
+
+
+def _bracket_leaf_order() -> list:
+    """R32 match numbers, top-to-bottom, as they stack in the knockout tree.
+
+    In-order walk of the tree from the two semi-finals: 101 (left half) then 102
+    (right half). The first 8 are the left side of the bracket, the last 8 the right.
+    """
+    feeders = {**B.R16, **B.QF, **B.SF}
+    r32 = {m for m, _, _ in B.R32}
+    order: list = []
+
+    def walk(m: int) -> None:
+        if m in r32:
+            order.append(m)
+            return
+        fa, fb = feeders[m]
+        walk(fa)
+        walk(fb)
+
+    walk(101)
+    walk(102)
+    return order
+
+
+def _slot_label(slot: str) -> str:
+    """Human label for a bracket slot: '1E' -> 'Winner Grp E', 'T74' -> '3rd place'."""
+    if slot.startswith("T"):
+        return "3rd place"
+    pos, g = slot[0], slot[1]
+    return f"{'Winner' if pos == '1' else 'Runner-up'} Grp {g}"
+
+
+def build_bracket(sim, rating_model, team_to_group: Dict[str, str], elo_rank: Dict[str, int]) -> dict:
+    """Projected Round-of-32 bracket: the modal (most likely) team in each slot.
+
+    For every slot we take the team that filled it in the most simulations, assigning
+    the most confident slots first and de-duplicating so no team appears twice. Each
+    team carries its strength seed (Elo rank) and title odds, for the bracket view.
+    """
+    teams = sim.teams
+    n = sim.n_sims
+    counts = sim.slots
+    top_share = {s: float(c.max()) / n for s, c in counts.items()}
+    used: set = set()
+    slot_team: Dict[str, tuple] = {}
+    for s in sorted(counts, key=lambda s: -top_share[s]):
+        for ti in np.argsort(-counts[s]):
+            ti = int(ti)
+            if ti not in used:
+                used.add(ti)
+                slot_team[s] = (ti, float(counts[s][ti]) / n)
+                break
+
+    def entry(slot: str) -> dict:
+        ti, share = slot_team[slot]
+        name = teams[ti]
+        return {
+            "slot": slot, "slotLabel": _slot_label(slot),
+            "name": name, "iso": iso(name),
+            "seed": elo_rank[name], "group": team_to_group[name],
+            "champion": round(float(sim.champion[ti]), 4),
+            "modal": round(share, 3),
+        }
+
+    r32_slots = {m: (sa, sb) for m, sa, sb in B.R32}
+    leaves = _bracket_leaf_order()
+    matches = [
+        {"match": m, "a": entry(r32_slots[m][0]), "b": entry(r32_slots[m][1])}
+        for m in leaves
+    ]
+    return {"left": matches[:8], "right": matches[8:]}
 
 
 def build_model_params(gs, model, rating_model) -> dict:
@@ -276,10 +349,11 @@ def build_outputs(n_sims: int = DEFAULT_N_SIMS, download: bool = False,
         "valuesLoaded": sum(1 for t in teams if model.value.get(t)),
     }
     paths_out = build_paths(sim, rr, rating_model, team_to_group)
+    bracket_out = build_bracket(sim, rating_model, team_to_group, elo_rank)
     return {
         "teams.json": teams_out, "groups.json": groups_out,
         "matches.json": matches_out, "meta.json": meta,
-        "paths.json": paths_out,
+        "paths.json": paths_out, "bracket.json": bracket_out,
         "model.json": build_model_params(gs, model, rating_model),
         "ratings_history.json": rating_model.history or {},
     }
