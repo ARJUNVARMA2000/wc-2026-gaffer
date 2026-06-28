@@ -7,9 +7,9 @@
         "slotLabel": "Winner Grp E",
         "name": "Germany",
         "iso": "de",
-        "seed": 15,
+        "seed": 14,
         "group": "E",
-        "champion": 0.0637,
+        "champion": 0.0594,
         "modal": 1.0
       },
       "b": {
@@ -17,10 +17,10 @@
         "slotLabel": "3rd place",
         "name": "Bosnia and Herzegovina",
         "iso": "ba",
-        "seed": 41,
+        "seed": 40,
         "group": "B",
-        "champion": 0.0006,
-        "modal": 0.633
+        "champion": 0.0003,
+        "modal": 1.0
       }
     },
     {
@@ -32,18 +32,18 @@
         "iso": "fr",
         "seed": 3,
         "group": "I",
-        "champion": 0.0954,
-        "modal": 0.767
+        "champion": 0.1019,
+        "modal": 1.0
       },
       "b": {
         "slot": "T77",
         "slotLabel": "3rd place",
         "name": "Paraguay",
         "iso": "py",
-        "seed": 22,
+        "seed": 23,
         "group": "D",
-        "champion": 0.0033,
-        "modal": 0.831
+        "champion": 0.0021,
+        "modal": 1.0
       }
     },
     {
@@ -55,7 +55,7 @@
         "iso": "za",
         "seed": 38,
         "group": "A",
-        "champion": 0.0006,
+        "champion": 0.0004,
         "modal": 1.0
       },
       "b": {
@@ -65,7 +65,7 @@
         "iso": "ca",
         "seed": 28,
         "group": "B",
-        "champion": 0.007,
+        "champion": 0.0071,
         "modal": 1.0
       }
     },
@@ -78,7 +78,7 @@
         "iso": "nl",
         "seed": 7,
         "group": "F",
-        "champion": 0.055,
+        "champion": 0.0487,
         "modal": 1.0
       },
       "b": {
@@ -88,7 +88,7 @@
         "iso": "ma",
         "seed": 9,
         "group": "C",
-        "champion": 0.0299,
+        "champion": 0.0288,
         "modal": 1.0
       }
     },
@@ -101,8 +101,8 @@
         "iso": "pt",
         "seed": 8,
         "group": "K",
-        "champion": 0.082,
-        "modal": 0.524
+        "champion": 0.0651,
+        "modal": 1.0
       },
       "b": {
         "slot": "2L",
@@ -111,8 +111,8 @@
         "iso": "hr",
         "seed": 16,
         "group": "L",
-        "champion": 0.0135,
-        "modal": 0.455
+        "champion": 0.0098,
+        "modal": 1.0
       }
     },
     {
@@ -124,8 +124,8 @@
         "iso": "es",
         "seed": 2,
         "group": "H",
-        "champion": 0.1293,
-        "modal": 0.819
+        "champion": 0.1175,
+        "modal": 1.0
       },
       "b": {
         "slot": "2J",
@@ -134,8 +134,8 @@
         "iso": "at",
         "seed": 21,
         "group": "J",
-        "champion": 0.0086,
-        "modal": 0.66
+        "champion": 0.0065,
+        "modal": 1.0
       }
     },
     {
@@ -145,20 +145,20 @@
         "slotLabel": "Winner Grp D",
         "name": "United States",
         "iso": "us",
-        "seed": 23,
+        "seed": 24,
         "group": "D",
-        "champion": 0.0097,
+        "champion": 0.0066,
         "modal": 1.0
       },
       "b": {
         "slot": "T81",
         "slotLabel": "3rd place",
-        "name": "Sweden",
-        "iso": "se",
-        "seed": 32,
-        "group": "F",
-        "champion": 0.0071,
-        "modal": 0.312
+        "name": "Algeria",
+        "iso": "dz",
+        "seed": 26,
+        "group": "J",
+        "champion": 0.0077,
+        "modal": 1.0
       }
     },
     {
@@ -166,22 +166,22 @@
       "a": {
         "slot": "1G",
         "slotLabel": "Winner Grp G",
-        "name": "Egypt",
-        "iso": "eg",
-        "seed": 29,
+        "name": "Belgium",
+        "iso": "be",
+        "seed": 17,
         "group": "G",
-        "champion": 0.0041,
-        "modal": 0.582
+        "champion": 0.0388,
+        "modal": 1.0
       },
       "b": {
         "slot": "T82",
         "slotLabel": "3rd place",
-        "name": "South Korea",
-        "iso": "kr",
-        "seed": 30,
-        "group": "A",
-        "champion": 0.0016,
-        "modal": 0.394
+        "name": "Senegal",
+        "iso": "sn",
+        "seed": 22,
+        "group": "I",
+        "champion": 0.0138,
+        "modal": 1.0
       }
     }
   ],
@@ -195,7 +195,7 @@
         "iso": "br",
         "seed": 5,
         "group": "C",
-        "champion": 0.078,
+        "champion": 0.0784,
         "modal": 1.0
       },
       "b": {
@@ -203,9 +203,9 @@
         "slotLabel": "Runner-up Grp F",
         "name": "Japan",
         "iso": "jp",
-        "seed": 12,
+        "seed": 11,
         "group": "F",
-        "champion": 0.0105,
+        "champion": 0.0113,
         "modal": 1.0
       }
     },
@@ -218,7 +218,7 @@
         "iso": "ci",
         "seed": 27,
         "group": "E",
-        "champion": 0.0085,
+        "champion": 0.0104,
         "modal": 1.0
       },
       "b": {
@@ -226,10 +226,10 @@
         "slotLabel": "Runner-up Grp I",
         "name": "Norway",
         "iso": "no",
-        "seed": 10,
+        "seed": 15,
         "group": "I",
-        "champion": 0.0226,
-        "modal": 0.767
+        "champion": 0.0197,
+        "modal": 1.0
       }
     },
     {
@@ -239,9 +239,9 @@
         "slotLabel": "Winner Grp A",
         "name": "Mexico",
         "iso": "mx",
-        "seed": 11,
+        "seed": 10,
         "group": "A",
-        "champion": 0.0067,
+        "champion": 0.0068,
         "modal": 1.0
       },
       "b": {
@@ -249,10 +249,10 @@
         "slotLabel": "3rd place",
         "name": "Ecuador",
         "iso": "ec",
-        "seed": 14,
+        "seed": 13,
         "group": "E",
-        "champion": 0.0177,
-        "modal": 0.572
+        "champion": 0.0178,
+        "modal": 1.0
       }
     },
     {
@@ -264,18 +264,18 @@
         "iso": "gb-eng",
         "seed": 4,
         "group": "L",
-        "champion": 0.093,
-        "modal": 0.878
+        "champion": 0.104,
+        "modal": 1.0
       },
       "b": {
         "slot": "T80",
         "slotLabel": "3rd place",
         "name": "DR Congo",
         "iso": "cd",
-        "seed": 34,
+        "seed": 31,
         "group": "K",
-        "champion": 0.0005,
-        "modal": 0.365
+        "champion": 0.0026,
+        "modal": 1.0
       }
     },
     {
@@ -287,18 +287,18 @@
         "iso": "au",
         "seed": 20,
         "group": "D",
-        "champion": 0.0024,
+        "champion": 0.0037,
         "modal": 1.0
       },
       "b": {
         "slot": "2G",
         "slotLabel": "Runner-up Grp G",
-        "name": "Belgium",
-        "iso": "be",
-        "seed": 17,
+        "name": "Egypt",
+        "iso": "eg",
+        "seed": 29,
         "group": "G",
-        "champion": 0.0401,
-        "modal": 0.594
+        "champion": 0.0051,
+        "modal": 1.0
       }
     },
     {
@@ -310,18 +310,18 @@
         "iso": "ar",
         "seed": 1,
         "group": "J",
-        "champion": 0.1319,
-        "modal": 0.999
+        "champion": 0.1541,
+        "modal": 1.0
       },
       "b": {
         "slot": "2H",
         "slotLabel": "Runner-up Grp H",
         "name": "Cape Verde",
         "iso": "cv",
-        "seed": 40,
+        "seed": 39,
         "group": "H",
-        "champion": 0.0002,
-        "modal": 0.519
+        "champion": 0.0004,
+        "modal": 1.0
       }
     },
     {
@@ -331,20 +331,20 @@
         "slotLabel": "Winner Grp B",
         "name": "Switzerland",
         "iso": "ch",
-        "seed": 13,
+        "seed": 12,
         "group": "B",
-        "champion": 0.019,
+        "champion": 0.023,
         "modal": 1.0
       },
       "b": {
         "slot": "T85",
         "slotLabel": "3rd place",
-        "name": "Iran",
-        "iso": "ir",
-        "seed": 24,
-        "group": "G",
-        "champion": 0.0012,
-        "modal": 0.268
+        "name": "Sweden",
+        "iso": "se",
+        "seed": 33,
+        "group": "F",
+        "champion": 0.0076,
+        "modal": 1.0
       }
     },
     {
@@ -356,18 +356,18 @@
         "iso": "co",
         "seed": 6,
         "group": "K",
-        "champion": 0.0328,
-        "modal": 0.525
+        "champion": 0.0384,
+        "modal": 1.0
       },
       "b": {
         "slot": "T87",
         "slotLabel": "3rd place",
         "name": "Ghana",
         "iso": "gh",
-        "seed": 39,
+        "seed": 42,
         "group": "L",
-        "champion": 0.0015,
-        "modal": 0.535
+        "champion": 0.0021,
+        "modal": 1.0
       }
     }
   ]
