@@ -14,6 +14,7 @@ const LINKS = [
   ["/trends", "Trends"],
   ["/h2h", "Matchup"],
   ["/paths", "Paths"],
+  ["/bracket", "Bracket"],
   ["/accuracy", "vs Market"],
   ["/method", "Method"],
 ];
