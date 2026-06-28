@@ -396,7 +396,13 @@ def main():
         from .compare import build_scorecard
         from .data import kalshi
         if args.kalshi_refresh:
-            kalshi.refresh(verbose=False)
+            # Kalshi's API intermittently 403s cloud-runner IPs (and can rate-limit).
+            # A transient market-data blip must not abort the whole refresh+deploy;
+            # fall back to the existing cache, mirroring the Transfermarkt scrape.
+            try:
+                kalshi.refresh(verbose=False)
+            except Exception as e:
+                print(f"  kalshi refresh failed ({e}); keeping existing cache")
         outputs["scorecard.json"] = build_scorecard(outputs["matches.json"], log, kalshi.load())
 
     write_outputs(outputs)
