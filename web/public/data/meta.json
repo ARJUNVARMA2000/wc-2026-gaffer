@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-06-28T17:31:15Z",
+  "lastUpdated": "2026-06-28T18:59:27Z",
   "dataThrough": "2026-06-27",
-  "nSims": 200000,
+  "nSims": 50000,
   "groupMatchesPlayed": 72,
   "groupMatchesTotal": 72,
   "nTeams": 48,
