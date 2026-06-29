@@ -185,7 +185,7 @@
     "fifa_rank": 37
   },
   "Sweden": {
-    "value": 406080000.0,
+    "value": 409080000.0,
     "confederation": "UEFA",
     "fifa_rank": 38
   },
@@ -215,7 +215,7 @@
     "fifa_rank": 43
   },
   "Cameroon": {
-    "value": 198700000.0,
+    "value": 198600000.0,
     "confederation": "CAF",
     "fifa_rank": 44
   },
@@ -305,7 +305,7 @@
     "fifa_rank": 61
   },
   "Burkina Faso": {
-    "value": 110600000.0,
+    "value": 110700000.0,
     "confederation": "CAF",
     "fifa_rank": 62
   },
@@ -365,12 +365,12 @@
     "fifa_rank": 73
   },
   "Iceland": {
-    "value": 89000000.0,
+    "value": 88500000.0,
     "confederation": "UEFA",
     "fifa_rank": 74
   },
   "Finland": {
-    "value": 42100000.0,
+    "value": 42450000.0,
     "confederation": "UEFA",
     "fifa_rank": 75
   },
@@ -395,12 +395,12 @@
     "fifa_rank": 79
   },
   "Montenegro": {
-    "value": 69430000.0,
+    "value": 69730000.0,
     "confederation": "UEFA",
     "fifa_rank": 80
   },
   "Guinea": {
-    "value": 19550000.0,
+    "value": 20050000.0,
     "confederation": "CAF",
     "fifa_rank": 81
   },
@@ -475,7 +475,7 @@
     "fifa_rank": 95
   },
   "Belarus": {
-    "value": 15380000.0,
+    "value": 17500000.0,
     "confederation": "UEFA",
     "fifa_rank": 96
   },
@@ -525,7 +525,7 @@
     "fifa_rank": 105
   },
   "Kyrgyzstan": {
-    "value": 7180000.0,
+    "value": 7230000.0,
     "confederation": "AFC",
     "fifa_rank": 106
   },
@@ -540,12 +540,12 @@
     "fifa_rank": 108
   },
   "Kenya": {
-    "value": 4380000.0,
+    "value": 4880000.0,
     "confederation": "CAF",
     "fifa_rank": 109
   },
   "Libya": {
-    "value": 10430000.0,
+    "value": 10480000.0,
     "confederation": "CAF",
     "fifa_rank": 110
   },
@@ -575,7 +575,7 @@
     "fifa_rank": 115
   },
   "The Gambia": {
-    "value": 78730000.0,
+    "value": 79230000.0,
     "confederation": "CAF",
     "fifa_rank": 116
   },
@@ -620,7 +620,7 @@
     "fifa_rank": 124
   },
   "Suriname": {
-    "value": 35930000.0,
+    "value": 35880000.0,
     "confederation": "CONCACAF",
     "fifa_rank": 125
   },
@@ -695,7 +695,7 @@
     "fifa_rank": 139
   },
   "Liberia": {
-    "value": 14330000.0,
+    "value": 14300000.0,
     "confederation": "CAF",
     "fifa_rank": 140
   },
@@ -985,7 +985,7 @@
     "fifa_rank": 197
   },
   "Pakistan": {
-    "value": 3540000.0,
+    "value": 4340000.0,
     "confederation": "AFC",
     "fifa_rank": 198
   },
