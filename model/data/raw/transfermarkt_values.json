@@ -490,7 +490,7 @@
     "fifa_rank": 98
   },
   "Vietnam": {
-    "value": 7400000.0,
+    "value": 7250000.0,
     "confederation": "AFC",
     "fifa_rank": 99
   },
@@ -505,7 +505,7 @@
     "fifa_rank": 101
   },
   "Trinidad and Tobago": {
-    "value": 2100000.0,
+    "value": 2280000.0,
     "confederation": "CONCACAF",
     "fifa_rank": 102
   },
@@ -700,7 +700,7 @@
     "fifa_rank": 140
   },
   "Turkmenistan": {
-    "value": 2950000.0,
+    "value": 3280000.0,
     "confederation": "AFC",
     "fifa_rank": 141
   },
@@ -765,7 +765,7 @@
     "fifa_rank": 153
   },
   "Puerto Rico": {
-    "value": 825000.0,
+    "value": 1030000.0,
     "confederation": "CONCACAF",
     "fifa_rank": 154
   },
@@ -800,7 +800,7 @@
     "fifa_rank": 160
   },
   "Malta": {
-    "value": 14980000.0,
+    "value": 15000000.0,
     "confederation": "UEFA",
     "fifa_rank": 161
   },
@@ -810,12 +810,12 @@
     "fifa_rank": 162
   },
   "Grenada": {
-    "value": 1680000.0,
+    "value": 1700000.0,
     "confederation": "CONCACAF",
     "fifa_rank": 163
   },
   "Cuba": {
-    "value": 2500000.0,
+    "value": 2430000.0,
     "confederation": "CONCACAF",
     "fifa_rank": 164
   },
@@ -855,7 +855,7 @@
     "fifa_rank": 171
   },
   "Andorra": {
-    "value": 3910000.0,
+    "value": 3880000.0,
     "confederation": "UEFA",
     "fifa_rank": 172
   },
