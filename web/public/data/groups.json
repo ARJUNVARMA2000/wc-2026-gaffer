@@ -20,11 +20,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 4.0,
-      "played": 3,
+      "played": 4,
       "points": 4,
       "gf": 2,
-      "ga": 3,
-      "gd": -1
+      "ga": 4,
+      "gd": -2
     },
     {
       "name": "South Korea",
@@ -55,6 +55,19 @@
   ],
   "B": [
     {
+      "name": "Canada",
+      "iso": "ca",
+      "host": true,
+      "winGroup": 0.0,
+      "advance": 1.0,
+      "xPts": 4.0,
+      "played": 4,
+      "points": 7,
+      "gf": 9,
+      "ga": 3,
+      "gd": 6
+    },
+    {
       "name": "Switzerland",
       "iso": "ch",
       "host": false,
@@ -66,19 +79,6 @@
       "gf": 7,
       "ga": 3,
       "gd": 4
-    },
-    {
-      "name": "Canada",
-      "iso": "ca",
-      "host": true,
-      "winGroup": 0.0,
-      "advance": 1.0,
-      "xPts": 4.0,
-      "played": 3,
-      "points": 4,
-      "gf": 8,
-      "ga": 3,
-      "gd": 5
     },
     {
       "name": "Bosnia and Herzegovina",

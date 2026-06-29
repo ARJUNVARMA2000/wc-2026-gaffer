@@ -365,7 +365,7 @@
     "fifa_rank": 73
   },
   "Iceland": {
-    "value": 89100000.0,
+    "value": 89000000.0,
     "confederation": "UEFA",
     "fifa_rank": 74
   },
@@ -415,7 +415,7 @@
     "fifa_rank": 83
   },
   "Syria": {
-    "value": 7730000.0,
+    "value": 7740000.0,
     "confederation": "AFC",
     "fifa_rank": 84
   },
@@ -440,7 +440,7 @@
     "fifa_rank": 88
   },
   "Uganda": {
-    "value": 8750000.0,
+    "value": 8780000.0,
     "confederation": "CAF",
     "fifa_rank": 89
   },
@@ -540,7 +540,7 @@
     "fifa_rank": 108
   },
   "Kenya": {
-    "value": 4350000.0,
+    "value": 4380000.0,
     "confederation": "CAF",
     "fifa_rank": 109
   },
@@ -570,7 +570,7 @@
     "fifa_rank": 114
   },
   "Lebanon": {
-    "value": 5550000.0,
+    "value": 5800000.0,
     "confederation": "AFC",
     "fifa_rank": 115
   },
@@ -605,7 +605,7 @@
     "fifa_rank": 121
   },
   "Sierra Leone": {
-    "value": 13400000.0,
+    "value": 13350000.0,
     "confederation": "CAF",
     "fifa_rank": 122
   },
@@ -705,12 +705,12 @@
     "fifa_rank": 141
   },
   "Burundi": {
-    "value": 10930000.0,
+    "value": 10980000.0,
     "confederation": "CAF",
     "fifa_rank": 142
   },
   "Ethiopia": {
-    "value": 2900000.0,
+    "value": 3430000.0,
     "confederation": "CAF",
     "fifa_rank": 143
   },
@@ -750,7 +750,7 @@
     "fifa_rank": 150
   },
   "New Caledonia": {
-    "value": 5200000.0,
+    "value": 5180000.0,
     "confederation": "OFC",
     "fifa_rank": 151
   },
@@ -790,7 +790,7 @@
     "fifa_rank": 158
   },
   "Moldova": {
-    "value": 9700000.0,
+    "value": 9680000.0,
     "confederation": "UEFA",
     "fifa_rank": 159
   },
@@ -985,12 +985,12 @@
     "fifa_rank": 197
   },
   "Pakistan": {
-    "value": 3440000.0,
+    "value": 3540000.0,
     "confederation": "AFC",
     "fifa_rank": 198
   },
   "Somalia": {
-    "value": 760000.0,
+    "value": 785000.0,
     "confederation": "CAF",
     "fifa_rank": 199
   },
