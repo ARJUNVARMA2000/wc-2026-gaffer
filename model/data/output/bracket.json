@@ -627,7 +627,7 @@
             {
               "name": "France",
               "iso": "fr",
-              "prob": 0.3158
+              "prob": 0.3157
             },
             {
               "name": "Germany",
@@ -647,7 +647,7 @@
             {
               "name": "Canada",
               "iso": "ca",
-              "prob": 0.0658
+              "prob": 0.0659
             },
             {
               "name": "Paraguay",
@@ -962,7 +962,7 @@
           "iso": "co",
           "seed": 6,
           "group": "K",
-          "winPct": 0.7054,
+          "winPct": 0.7053,
           "fav": true,
           "slotLabel": "Winner Grp K",
           "candidates": [
@@ -978,7 +978,7 @@
           "iso": "gh",
           "seed": 41,
           "group": "L",
-          "winPct": 0.2946,
+          "winPct": 0.2947,
           "fav": false,
           "slotLabel": "3rd place",
           "candidates": [
@@ -1046,7 +1046,7 @@
           "iso": "ec",
           "seed": 12,
           "group": "E",
-          "winPct": 0.3608,
+          "winPct": 0.3609,
           "fav": false,
           "slotLabel": "",
           "candidates": [
@@ -1067,7 +1067,7 @@
           "iso": "gb-eng",
           "seed": 5,
           "group": "L",
-          "winPct": 0.6392,
+          "winPct": 0.6391,
           "fav": true,
           "slotLabel": "",
           "candidates": [
@@ -1092,7 +1092,7 @@
           "iso": "eg",
           "seed": 29,
           "group": "G",
-          "winPct": 0.2381,
+          "winPct": 0.2382,
           "fav": false,
           "slotLabel": "",
           "candidates": [
@@ -1113,7 +1113,7 @@
           "iso": "ar",
           "seed": 1,
           "group": "J",
-          "winPct": 0.7619,
+          "winPct": 0.7618,
           "fav": true,
           "slotLabel": "",
           "candidates": [
@@ -1295,7 +1295,7 @@
             {
               "name": "Switzerland",
               "iso": "ch",
-              "prob": 0.3126
+              "prob": 0.3125
             },
             {
               "name": "Sweden",
@@ -1305,7 +1305,7 @@
             {
               "name": "Ghana",
               "iso": "gh",
-              "prob": 0.1013
+              "prob": 0.1014
             }
           ]
         }

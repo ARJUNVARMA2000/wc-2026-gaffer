@@ -282,10 +282,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 1,
-    "pHome": 0.73,
+    "pHome": 0.729,
     "pDraw": 0.177,
     "pAway": 0.093,
-    "modelProb": 0.73,
+    "modelProb": 0.729,
     "frozen": false
   },
   {
