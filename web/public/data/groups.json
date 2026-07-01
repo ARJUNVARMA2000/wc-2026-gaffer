@@ -7,11 +7,11 @@
       "winGroup": 1.0,
       "advance": 1.0,
       "xPts": 9.0,
-      "played": 3,
-      "points": 9,
-      "gf": 6,
+      "played": 4,
+      "points": 12,
+      "gf": 8,
       "ga": 0,
-      "gd": 6
+      "gd": 8
     },
     {
       "name": "South Africa",
@@ -236,11 +236,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 6.0,
-      "played": 3,
+      "played": 4,
       "points": 6,
-      "gf": 4,
-      "ga": 2,
-      "gd": 2
+      "gf": 5,
+      "ga": 4,
+      "gd": 1
     },
     {
       "name": "Ecuador",
@@ -249,11 +249,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 4.0,
-      "played": 3,
+      "played": 4,
       "points": 4,
       "gf": 2,
-      "ga": 2,
-      "gd": 0
+      "ga": 4,
+      "gd": -2
     },
     {
       "name": "Curaçao",
@@ -303,11 +303,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 4.0,
-      "played": 3,
+      "played": 4,
       "points": 4,
       "gf": 7,
-      "ga": 7,
-      "gd": 0
+      "ga": 10,
+      "gd": -3
     },
     {
       "name": "Tunisia",
@@ -439,11 +439,11 @@
       "winGroup": 1.0,
       "advance": 1.0,
       "xPts": 9.0,
-      "played": 3,
-      "points": 9,
-      "gf": 10,
+      "played": 4,
+      "points": 12,
+      "gf": 13,
       "ga": 2,
-      "gd": 8
+      "gd": 11
     },
     {
       "name": "Norway",
@@ -452,11 +452,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 6.0,
-      "played": 3,
-      "points": 6,
-      "gf": 8,
-      "ga": 7,
-      "gd": 1
+      "played": 4,
+      "points": 9,
+      "gf": 10,
+      "ga": 8,
+      "gd": 2
     },
     {
       "name": "Senegal",
