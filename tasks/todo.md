@@ -128,5 +128,17 @@ Plan: ~/.claude/plans/task-notification-task-id-w2brfbiie-tas-compressed-storm.m
       all 10 routes error-free; ⌘K palette opens/filters/navigates; /h2h?a=br deep link;
       real-Chrome visual pass (found+fixed toLocaleString() locale hydration bug)
 - [x] README rewrite + LICENSE (MIT) + web/README pointer
-- [ ] Commit in chunks; push (auto-deploys); verify prod; trigger update.yml full=true;
+- [x] Commit in chunks; push (auto-deploys); verify prod; trigger update.yml full=true;
       capture docs/screenshots from prod + follow-up commit
+
+### Phase 10 — Review
+- Shipped in 5 commits (tests+ci, pipeline gate, web redesign, docs, screenshots).
+- Prod verified: new design live at gaffer-wc26.web.app; heat tints render (old invalid
+  hex-alpha bug visibly fixed); "LIVE · Xm ago" ticks; ⌘K palette; /h2h?a= deep links.
+- CI green (first run), deploy green; update.yml full=true run green in 2m51s with
+  "flavor: full" + MATERIAL=true → commit+deploy. Light hourly runs will skip commit/
+  build/deploy on timestamp-only churn.
+- Live client refresh proven in dev (5s poll): interest-set fetch, atomic swap w/o
+  reload, exactly one aria-live announcement; prod polls at 120s w/ minute-bucket buster.
+- Known limits: matches.json is still group-stage-only (knockout fixtures = existing
+  Phase 8 item); OG artwork only recolored (full refresh deferred w/ declined SEO track).
