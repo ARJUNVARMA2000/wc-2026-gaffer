@@ -1,7 +1,13 @@
 # Live forecast refresh + deploy to Firebase Hosting.
-# Every 6 hours: re-pull results, re-scrape squad values, recompute, rebuild the
-# static site, commit the data, and (if the FIREBASE_SERVICE_ACCOUNT secret is set)
-# deploy to https://gaffer-wc26.web.app.
+#
+# Runs HOURLY. Every run re-pulls the martj42 results and recomputes the
+# forecast; at 00/06/12/18 UTC — or when dispatched with full=true — it is a
+# FULL refresh that also re-scrapes Transfermarkt squad values and re-pulls
+# Kalshi market prices. A material-change gate (wc_model.material_diff) then
+# diffs the regenerated JSON against HEAD ignoring volatile timestamp fields
+# (meta.lastUpdated, history.generatedAt, ...): the commit, site build and
+# deploy steps only run when a probability/result actually moved, so no-news
+# hourly runs are cheap no-ops that don't spam the git history or Firebase.
 #
 # To enable the automated deploy, add one GitHub secret — see DEPLOY.md:
 #   gh secret set FIREBASE_SERVICE_ACCOUNT < key.json
@@ -9,11 +15,22 @@ name: Update forecast
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
-  workflow_dispatch: {}
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Full refresh: also re-scrape Transfermarkt values + Kalshi prices"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
+
+# One refresh at a time: an hourly tick must not race an in-flight run's
+# commit/deploy. Queue rather than cancel, so a manual run always completes.
+concurrency:
+  group: update-forecast
+  cancel-in-progress: false
 
 jobs:
   refresh:
@@ -26,13 +43,33 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Refresh data (results + squad values + market scorecard, 50k sims)
+
+      - name: Decide refresh flavor (full re-scrape every 6h or on demand)
+        id: flavor
+        run: |
+          # FULL adds the Transfermarkt squad-value re-scrape + Kalshi price pull;
+          # LIGHT (all other hourly runs) just re-pulls results and re-simulates.
+          # 10# forces base ten so hours 08/09 aren't parsed as invalid octal.
+          if [ "${{ inputs.full }}" = "true" ] || [ $(( 10#$(date -u +%H) % 6 )) -eq 0 ]; then
+            echo "extra=--refresh-values --kalshi-refresh" >> "$GITHUB_OUTPUT"
+            echo "flavor: full"
+          else
+            echo "extra=" >> "$GITHUB_OUTPUT"
+            echo "flavor: light"
+          fi
+
+      - name: Refresh data (results + market scorecard, 50k sims)
         working-directory: model
         run: |
           pip install -r requirements.txt
-          PYTHONPATH=src python -m wc_model.pipeline --download --refresh-values --scorecard --kalshi-refresh --sims 50000
+          PYTHONPATH=src python -m wc_model.pipeline --download --scorecard ${{ steps.flavor.outputs.extra }} --sims 50000
+
+      - name: Material-change gate (ignore volatile timestamp-only churn)
+        id: gate
+        run: PYTHONPATH=model/src python -m wc_model.material_diff
 
       - name: Commit refreshed projections
+        if: ${{ steps.gate.outputs.material == 'true' }}
         run: |
           git config user.name "gaffer-bot"
           git config user.email "bot@users.noreply.github.com"
@@ -41,6 +78,7 @@ jobs:
           git push || echo "nothing to push"
 
       - uses: actions/setup-node@v5
+        if: ${{ steps.gate.outputs.material == 'true' }}
         with:
           # Pin the exact patch, not floating "22". Node 22.23.0 ships an undici
           # regression that makes firebase-tools' OAuth token fetch fail with
@@ -48,6 +86,7 @@ jobs:
           # 22.22.3 is the last patch that deploys cleanly. Re-test before bumping.
           node-version: "22.22.3"
       - name: Build static site
+        if: ${{ steps.gate.outputs.material == 'true' }}
         working-directory: web
         run: |
           # `npm ci` is the strict, reproducible fast path. It can fail when the
@@ -60,7 +99,7 @@ jobs:
           npm run build
 
       - name: Deploy to Firebase Hosting
-        if: ${{ env.SA != '' }}
+        if: ${{ steps.gate.outputs.material == 'true' && env.SA != '' }}
         run: |
           printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
           # Pin firebase-tools, do not use @latest: npm once flipped the `latest`
