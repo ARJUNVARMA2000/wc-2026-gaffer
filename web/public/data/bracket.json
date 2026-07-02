@@ -524,12 +524,12 @@
             {
               "name": "Netherlands",
               "iso": "nl",
-              "prob": 0.4075
+              "prob": 0.4076
             },
             {
               "name": "Morocco",
               "iso": "ma",
-              "prob": 0.3031
+              "prob": 0.3032
             },
             {
               "name": "Canada",
@@ -673,7 +673,7 @@
             {
               "name": "Portugal",
               "iso": "pt",
-              "prob": 0.2102
+              "prob": 0.2103
             },
             {
               "name": "Belgium",
@@ -1193,7 +1193,7 @@
             {
               "name": "Brazil",
               "iso": "br",
-              "prob": 0.4429
+              "prob": 0.443
             },
             {
               "name": "Norway",
@@ -1229,7 +1229,7 @@
             {
               "name": "Ecuador",
               "iso": "ec",
-              "prob": 0.2276
+              "prob": 0.2275
             },
             {
               "name": "Mexico",
@@ -1368,12 +1368,12 @@
             {
               "name": "Argentina",
               "iso": "ar",
-              "prob": 0.4495
+              "prob": 0.4496
             },
             {
               "name": "Colombia",
               "iso": "co",
-              "prob": 0.1939
+              "prob": 0.1938
             },
             {
               "name": "Switzerland",
@@ -1456,7 +1456,7 @@
         {
           "name": "Argentina",
           "iso": "ar",
-          "prob": 0.2692
+          "prob": 0.2693
         },
         {
           "name": "England",
