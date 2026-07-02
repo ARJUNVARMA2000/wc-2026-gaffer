@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { DUR, EASE_OUT } from "@/lib/motion";
 
 export default function Reveal({
   children,
   delay = 0,
-  y = 18,
+  y = 10,
   className = "",
 }: {
   children: React.ReactNode;
@@ -18,7 +19,7 @@ export default function Reveal({
       className={className}
       initial={{ opacity: 0, y }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: DUR.slow, delay, ease: EASE_OUT }}
     >
       {children}
     </motion.div>

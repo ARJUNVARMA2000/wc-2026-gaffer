@@ -7,9 +7,9 @@ export const alt = "GAFFER — World Cup 2026 Forecast Engine";
 
 export default function OpengraphImage() {
   const bars = [
-    { h: 150, c: "#c8ff3c" },
-    { h: 240, c: "#c8ff3c" },
-    { h: 330, c: "#ffc24b" },
+    { h: 150, c: "#828bfa" },
+    { h: 240, c: "#828bfa" },
+    { h: 330, c: "#d3b862" },
   ];
   return new ImageResponse(
     (
@@ -21,16 +21,16 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           background:
-            "radial-gradient(900px 500px at 85% -10%, rgba(200,255,60,0.16), transparent), #07090d",
+            "radial-gradient(900px 500px at 85% -10%, rgba(130,139,250,0.16), transparent), #08090c",
           padding: "72px 80px",
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
           <div style={{ display: "flex", alignItems: "flex-end", gap: 8, height: 40 }}>
-            <div style={{ width: 10, height: 16, borderRadius: 3, background: "#c8ff3c" }} />
-            <div style={{ width: 10, height: 28, borderRadius: 3, background: "#c8ff3c" }} />
-            <div style={{ width: 10, height: 40, borderRadius: 3, background: "#ffc24b" }} />
+            <div style={{ width: 10, height: 16, borderRadius: 3, background: "#828bfa" }} />
+            <div style={{ width: 10, height: 28, borderRadius: 3, background: "#828bfa" }} />
+            <div style={{ width: 10, height: 40, borderRadius: 3, background: "#d3b862" }} />
           </div>
           <div
             style={{
@@ -46,7 +46,7 @@ export default function OpengraphImage() {
 
         <div style={{ display: "flex", alignItems: "flex-end", gap: 40 }}>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ fontSize: 230, fontWeight: 900, lineHeight: 1, color: "#c8ff3c" }}>
+            <div style={{ fontSize: 230, fontWeight: 900, lineHeight: 1, color: "#828bfa" }}>
               GAFFER
             </div>
             <div style={{ fontSize: 42, color: "#e9edf4", marginTop: 18, maxWidth: 760 }}>

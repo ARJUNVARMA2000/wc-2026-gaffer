@@ -2,201 +2,362 @@
 
 /* ============================================================
    GAFFER — World Cup 2026 forecast engine
-   Aesthetic: broadcast control-room / quant terminal for football
+   Aesthetic: quiet precision — Linear/Stripe-grade dark UI.
+   One accent, hairline borders, glass surfaces, disciplined motion.
    ============================================================ */
 
 @theme {
-  --color-ink: #07090d;
-  --color-ink2: #0b0e14;
-  --color-ink3: #11161f;
-  --color-line: rgba(255, 255, 255, 0.08);
-  --color-text: #e9edf4;
-  --color-muted: #868fa1;
-  --color-faint: #59616f;
+  /* ---- Backgrounds (3 tiers + overlay) ---- */
+  --color-bg: #08090c; /* page */
+  --color-bg-subtle: #0d0f15; /* panels, cards */
+  --color-bg-elevated: #141722; /* popovers, tooltips, hover surfaces */
+  --color-bg-overlay: rgba(8, 9, 12, 0.72); /* nav / palette backdrop */
 
-  --color-lime: #c8ff3c;
-  --color-gold: #ffc24b;
-  --color-cyan: #54d2ff;
-  --color-coral: #ff5d6c;
+  /* ---- Borders ---- */
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-border-strong: rgba(255, 255, 255, 0.14);
 
-  --color-uefa: #5b8cff;
-  --color-conmebol: #ffce3a;
-  --color-concacaf: #2fd6a6;
-  --color-caf: #ff8a3d;
-  --color-afc: #ff5d6c;
-  --color-ofc: #b07cff;
+  /* ---- Text (3 tiers) ---- */
+  --color-text-primary: #eef0f6;
+  --color-text-secondary: #9299a8;
+  --color-text-tertiary: #5d6472;
 
-  --font-display: var(--font-anton), "Arial Narrow", sans-serif;
-  --font-body: var(--font-hanken), system-ui, sans-serif;
+  /* ---- Accent (ONE primary) ---- */
+  --color-accent: #828bfa;
+  --color-accent-strong: #a5abff; /* hover / gradient high end */
+  --color-accent-muted: rgba(130, 139, 250, 0.14);
+  --color-on-accent: #0a0b10;
+
+  /* ---- Data semantics (low chroma) ---- */
+  --color-positive: #57c99b;
+  --color-warning: #d3b862; /* "gold" — trophy / #1 semantic */
+  --color-negative: #e06a78;
+  --color-info: #64aede;
+
+  /* ---- Confederations (hue-distinct, ~consistent lightness) ---- */
+  --color-uefa: #7d9bee;
+  --color-conmebol: #d3b862;
+  --color-concacaf: #55bfa0;
+  --color-caf: #d69261;
+  --color-afc: #d97883;
+  --color-ofc: #a98fe0;
+
+  /* ---- Type scale (11px floor) ---- */
+  --text-2xs: 0.6875rem; /* 11px — captions, eyebrows */
+  --text-2xs--line-height: 1.35;
+  --text-xs: 0.75rem; /* 12px — table meta, chips */
+  --text-xs--line-height: 1.4;
+  --text-sm: 0.8125rem; /* 13px — data cells, nav */
+  --text-sm--line-height: 1.5;
+  --text-base: 0.9375rem; /* 15px — prose */
+  --text-base--line-height: 1.6;
+  --text-lg: 1.0625rem;
+  --text-lg--line-height: 1.55;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.3;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 1.2;
+  --text-4xl: 2.375rem; /* section titles */
+  --text-4xl--line-height: 1.1;
+
+  /* ---- Radius ---- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* ---- Elevation (each includes a 1px top-edge highlight) ---- */
+  --shadow-panel: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-raised:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 2px 8px rgba(0, 0, 0, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-pop:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 4px 16px rgba(0, 0, 0, 0.45),
+    0 16px 48px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 0 1px var(--color-accent-muted), 0 4px 24px rgba(130, 139, 250, 0.18);
+
+  /* ---- Fonts ---- */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-mono-jb), ui-monospace, monospace;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: var(--color-ink);
-  color: var(--color-text);
-  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
-/* Atmospheric background: layered radial glows + pitch grid + grain */
-.atmosphere {
+/* Ambient background: two slow-drifting accent glows + grain. Quiet. */
+.aurora {
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+.aurora::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
   background:
-    radial-gradient(900px 600px at 82% -8%, rgba(200, 255, 60, 0.10), transparent 60%),
-    radial-gradient(800px 700px at 10% 0%, rgba(84, 210, 255, 0.07), transparent 55%),
-    radial-gradient(1100px 900px at 50% 120%, rgba(255, 194, 75, 0.06), transparent 60%),
-    var(--color-ink);
+    radial-gradient(1000px 700px at 18% -5%, rgba(130, 139, 250, 0.07), transparent 60%),
+    radial-gradient(900px 650px at 85% 108%, rgba(100, 174, 222, 0.04), transparent 60%),
+    radial-gradient(700px 500px at 70% 20%, rgba(211, 184, 98, 0.03), transparent 55%);
+  animation: aurora-drift 90s ease-in-out infinite alternate;
+  will-change: transform;
 }
-.atmosphere::before {
+.aurora::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse 100% 80% at 50% 0%, #000 30%, transparent 85%);
-}
-.atmosphere::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.04;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@keyframes aurora-drift {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(2%, 2%, 0) scale(1.06);
+  }
 }
 
 /* Typography helpers */
 .display {
-  font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 0.92;
-  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-optical-sizing: auto;
+  font-weight: 640;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
 }
-.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
 .eyebrow {
   font-family: var(--font-mono);
   text-transform: uppercase;
-  letter-spacing: 0.28em;
-  font-size: 0.68rem;
-  color: var(--color-faint);
+  letter-spacing: 0.16em;
+  font-size: var(--text-2xs);
+  color: var(--color-text-tertiary);
 }
 
-/* Panels */
+/* Surfaces */
 .panel {
-  background: linear-gradient(180deg, var(--color-ink2), var(--color-ink));
-  border: 1px solid var(--color-line);
-  border-radius: 16px;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
 }
-.hairline { border-color: var(--color-line); }
+.panel-glass {
+  background: color-mix(in oklab, var(--color-bg-subtle) 72%, transparent);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+}
+.hairline {
+  border-color: var(--color-border);
+}
+
+/* Gradient border (hero cards): masked pseudo-element ring */
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+/* Gradient text — reserve for the hero headline */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-text-primary) 30%, var(--color-accent-strong));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 /* Chips */
 .chip {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: var(--text-2xs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 2px 7px;
+  padding: 3px 9px;
   border-radius: 999px;
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--color-border);
 }
 
-/* Animated underline link */
-.navlink { position: relative; }
-.navlink::after {
-  content: "";
-  position: absolute;
-  left: 0; bottom: -6px;
-  height: 2px; width: 0;
-  background: var(--color-lime);
-  transition: width 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+/* Probability bar track */
+.bartrack {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
 }
-.navlink:hover::after, .navlink[data-active="true"]::after { width: 100%; }
-.navlink[data-active="true"] { color: var(--color-text); }
+/* Plain-CSS width bars slide on live data changes */
+.bar-animate {
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-/* Probability bar */
-.bartrack { background: rgba(255, 255, 255, 0.06); border-radius: 999px; overflow: hidden; }
-
-/* Row hover glow for tables */
-.row-glow { transition: background 0.2s, box-shadow 0.2s, transform 0.2s; }
+/* Row hover for tables: neutral tint + accent inset rule */
+.row-glow {
+  transition:
+    background 0.15s,
+    box-shadow 0.15s;
+}
 .row-glow:hover {
-  background: rgba(200, 255, 60, 0.04);
-  box-shadow: inset 2px 0 0 var(--color-lime);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: inset 2px 0 0 var(--color-accent);
 }
 
-/* Shimmer for the live dot */
+/* Live indicator dot */
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(200, 255, 60, 0.5); }
-  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(200, 255, 60, 0); }
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(130, 139, 250, 0.5);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 6px rgba(130, 139, 250, 0);
+  }
 }
-.live-dot { animation: pulse-dot 2s infinite; }
-
-@keyframes sheen {
-  from { background-position: -200% 0; }
-  to { background-position: 200% 0; }
-}
-.sheen {
-  background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,0.12) 50%, transparent 70%);
-  background-size: 200% 100%;
-  animation: sheen 6s linear infinite;
+.live-dot {
+  animation: pulse-dot 2s infinite;
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: var(--color-ink); }
-::-webkit-scrollbar-thumb { background: #1c2230; border-radius: 999px; border: 2px solid var(--color-ink); }
-::-webkit-scrollbar-thumb:hover { background: #2a3340; }
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1e2a;
+  border-radius: 999px;
+  border: 2px solid var(--color-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #262c3c;
+}
 
 /* Selection */
-::selection { background: var(--color-lime); color: #07090d; }
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
 
-:root { --br-gap: 30px; } /* column spacing + horizontal connector length for the bracket */
+/* Keyboard focus — design-system owned */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:root {
+  --br-gap: 30px;
+} /* column spacing + horizontal connector length for the bracket */
 
 /* ---- Knockout bracket connectors ----
    Balanced tree (8→4→2→1): every round-to-round merge halves the count, so a
    merging cell's two children always sit at its 25% and 75% marks. That makes the
    vertical connector a constant 50% of the cell height — depth-independent, pure CSS.
    Columns sit in a flex row with `gap: var(--br-gap)`; connectors live in that gap. */
-.br-cell { position: relative; }
-.br-line { background: var(--color-line); }
+.br-cell {
+  position: relative;
+}
+.br-line {
+  background: var(--color-border);
+}
 
 /* sender: short horizontal stub from a cell out toward the next round */
 .br-send-r::after,
 .br-send-l::after {
-  content: ""; position: absolute; top: 50%; height: 2px;
-  width: calc(var(--br-gap) / 2); background: var(--color-line);
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: calc(var(--br-gap) / 2);
+  background: var(--color-border);
 }
-.br-send-r::after { right: calc(var(--br-gap) / -2); }
-.br-send-l::after { left: calc(var(--br-gap) / -2); }
+.br-send-r::after {
+  right: calc(var(--br-gap) / -2);
+}
+.br-send-l::after {
+  left: calc(var(--br-gap) / -2);
+}
 
 /* receiver: vertical bar joining its two children + a stub into the cell */
 .br-recv-l::before,
 .br-recv-r::before {
-  content: ""; position: absolute; top: 25%; bottom: 25%; width: 2px;
-  background: var(--color-line);
+  content: "";
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  width: 2px;
+  background: var(--color-border);
 }
-.br-recv-l::before { left: calc(var(--br-gap) / -2); }
-.br-recv-r::before { right: calc(var(--br-gap) / -2); }
+.br-recv-l::before {
+  left: calc(var(--br-gap) / -2);
+}
+.br-recv-r::before {
+  right: calc(var(--br-gap) / -2);
+}
 /* the inward stub uses a wrapper element (.br-stub) so it can coexist with ::before */
 .br-recv-l > .br-stub,
 .br-recv-r > .br-stub {
-  content: ""; position: absolute; top: 50%; height: 2px;
-  width: calc(var(--br-gap) / 2); background: var(--color-line);
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: calc(var(--br-gap) / 2);
+  background: var(--color-border);
 }
-.br-recv-l > .br-stub { left: calc(var(--br-gap) / -2); }
-.br-recv-r > .br-stub { right: calc(var(--br-gap) / -2); }
+.br-recv-l > .br-stub {
+  left: calc(var(--br-gap) / -2);
+}
+.br-recv-r > .br-stub {
+  right: calc(var(--br-gap) / -2);
+}
 
-/* Respect reduced-motion: disable looping/transition animation */
+/* Respect reduced-motion: disable looping/transition animation (CSS side;
+   framer-motion is governed by MotionConfig reducedMotion="user") */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;

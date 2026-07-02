@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Anton, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { getMeta } from "@/lib/data";
+import Providers from "@/components/Providers";
+import LiveUpdater from "@/components/LiveUpdater";
+import { getMeta, getTeams } from "@/lib/data";
 
-const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton" });
-const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken" });
+// Inter with the optical-size axis: browsers apply font-optical-sizing and we
+// get true display letterforms at headline sizes from one family.
+const inter = Inter({ subsets: ["latin"], axes: ["opsz"], variable: "--font-inter" });
 const jb = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono-jb" });
 
 const DESC =
@@ -32,13 +35,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const meta = getMeta();
+  const paletteTeams = getTeams().map((t) => ({ name: t.name, iso: t.iso }));
   return (
-    <html lang="en" className={`${anton.variable} ${hanken.variable} ${jb.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jb.variable}`}>
       <body>
-        <div className="atmosphere" />
-        <Nav meta={meta} />
-        <main className="mx-auto w-full max-w-[1240px] px-4 sm:px-6">{children}</main>
-        <Footer meta={meta} />
+        <div className="aurora" />
+        <LiveUpdater meta={meta} />
+        <Providers teams={paletteTeams}>
+          <Nav meta={meta} />
+          <main className="mx-auto w-full max-w-[1240px] px-4 sm:px-6">{children}</main>
+          <Footer meta={meta} />
+        </Providers>
       </body>
     </html>
   );

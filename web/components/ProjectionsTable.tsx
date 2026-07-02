@@ -1,23 +1,31 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import type { Team } from "@/lib/data";
-import { CONFED_COLOR, heatColor, heatText, pct } from "@/lib/ui";
+import { useLiveData } from "@/lib/live";
+import { CONFED_COLOR, pct } from "@/lib/ui";
+import { DUR, SPRING, fadeRise, staggerChildren } from "@/lib/motion";
+import Bar from "./ui/Bar";
+import Chip from "./ui/Chip";
+import Footnote from "./ui/Footnote";
+import HeatPill from "./ui/HeatPill";
+import SortButton from "./ui/SortButton";
 import Flag from "./Flag";
 
-type Key = "champion" | "final" | "sf" | "qf" | "r16" | "ko" | "elo" | "rr";
+type Key = "champion" | "final" | "sf" | "qf" | "r16" | "ko" | "elo";
 
-const COLS: { key: Key; label: string; short: string; heat?: boolean }[] = [
+const COLS: { key: Key; label: string; short: string }[] = [
   { key: "champion", label: "Win Cup", short: "WIN" },
-  { key: "final", label: "Final", short: "FIN", heat: true },
-  { key: "sf", label: "Semis", short: "SF", heat: true },
-  { key: "qf", label: "Quarters", short: "QF", heat: true },
-  { key: "r16", label: "Last 16", short: "R16", heat: true },
-  { key: "ko", label: "Knockouts", short: "KO", heat: true },
+  { key: "final", label: "Final", short: "FIN" },
+  { key: "sf", label: "Semis", short: "SF" },
+  { key: "qf", label: "Quarters", short: "QF" },
+  { key: "r16", label: "Last 16", short: "R16" },
+  { key: "ko", label: "Knockouts", short: "KO" },
 ];
 
-export default function ProjectionsTable({ teams }: { teams: Team[] }) {
+export default function ProjectionsTable({ teams: initial }: { teams: Team[] }) {
+  const teams = useLiveData("teams", initial);
   const [sort, setSort] = useState<Key>("champion");
   const [confed, setConfed] = useState<string>("ALL");
 
@@ -28,28 +36,26 @@ export default function ProjectionsTable({ teams }: { teams: Team[] }) {
 
   const rows = useMemo(() => {
     const filtered = confed === "ALL" ? teams : teams.filter((t) => t.confederation === confed);
-    return [...filtered].sort((a, b) => (b[sort] as number) - (a[sort] as number));
+    return [...filtered].sort((a, b) => b[sort] - a[sort]);
   }, [teams, sort, confed]);
 
   const maxChamp = Math.max(...teams.map((t) => t.champion));
+  // Entrance stagger scaled so the full cascade lands inside ~0.35s.
+  const stagger = Math.min(0.03, 0.35 / Math.max(rows.length, 1));
 
   return (
     <div>
       {/* confederation filter */}
       <div className="mb-4 flex flex-wrap items-center gap-2">
         {confeds.map((c) => (
-          <button
+          <Chip
             key={c}
+            active={confed === c}
             onClick={() => setConfed(c)}
-            className="chip transition-colors"
-            style={{
-              color: confed === c ? "#07090d" : "var(--color-muted)",
-              background: confed === c ? (CONFED_COLOR[c] ?? "var(--color-lime)") : "transparent",
-              borderColor: confed === c ? "transparent" : "var(--color-line)",
-            }}
+            color={c === "ALL" ? "var(--color-accent)" : CONFED_COLOR[c]}
           >
             {c}
-          </button>
+          </Chip>
         ))}
       </div>
 
@@ -57,111 +63,136 @@ export default function ProjectionsTable({ teams }: { teams: Team[] }) {
         <table className="w-full min-w-[760px] border-collapse">
           <thead>
             <tr className="border-b hairline text-left">
-              <th className="px-3 py-3 eyebrow font-normal">#</th>
-              <th className="px-3 py-3 eyebrow font-normal">Team</th>
+              <th scope="col" className="eyebrow px-3 py-3 font-normal">
+                #
+              </th>
+              <th scope="col" className="eyebrow px-3 py-3 font-normal">
+                Team
+              </th>
               {COLS.map((c) => (
-                <th key={c.key} className="px-2 py-3 text-right">
-                  <button
+                <th
+                  key={c.key}
+                  scope="col"
+                  aria-sort={sort === c.key ? "descending" : "none"}
+                  className="px-2 py-3 text-right font-normal"
+                >
+                  <SortButton
+                    active={sort === c.key}
                     onClick={() => setSort(c.key)}
-                    className="eyebrow font-normal transition-colors hover:text-[var(--color-text)]"
-                    style={{ color: sort === c.key ? "var(--color-lime)" : undefined }}
+                    label={`Sort by ${c.label}`}
                   >
                     {c.short}
-                    {sort === c.key ? " ↓" : ""}
-                  </button>
+                  </SortButton>
                 </th>
               ))}
-              <th className="hidden px-3 py-3 text-right sm:table-cell">
-                <button
+              <th
+                scope="col"
+                aria-sort={sort === "elo" ? "descending" : "none"}
+                className="hidden px-3 py-3 text-right font-normal sm:table-cell"
+              >
+                <SortButton
+                  active={sort === "elo"}
                   onClick={() => setSort("elo")}
-                  className="eyebrow font-normal transition-colors hover:text-[var(--color-text)]"
-                  style={{ color: sort === "elo" ? "var(--color-lime)" : undefined }}
+                  label="Sort by Elo rating"
                 >
-                  ELO{sort === "elo" ? " ↓" : ""}
-                </button>
+                  ELO
+                </SortButton>
               </th>
             </tr>
           </thead>
-          <tbody>
-            {rows.map((t, i) => (
-              <motion.tr
-                key={t.name}
-                layout
-                transition={{ type: "spring", stiffness: 520, damping: 42 }}
-                className="row-glow border-b border-white/5"
-              >
-                <td className="px-3 py-2.5 mono text-sm text-[var(--color-faint)]">
-                  {String(i + 1).padStart(2, "0")}
-                </td>
-                <td className="px-3 py-2.5">
-                  <div className="flex items-center gap-3">
-                    <Flag iso={t.iso} name={t.name} size={26} />
-                    <div className="flex flex-col">
-                      <span className="flex items-center gap-2 text-sm font-semibold leading-tight">
-                        {t.name}
-                        {t.host && (
-                          <span className="chip" style={{ color: "var(--color-lime)", borderColor: "var(--color-lime)" }}>
-                            host
-                          </span>
-                        )}
-                      </span>
+          <motion.tbody
+            variants={staggerChildren(stagger)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            <AnimatePresence mode="popLayout" initial={false}>
+              {rows.map((t, i) => (
+                <motion.tr
+                  key={t.name}
+                  layout
+                  variants={fadeRise}
+                  exit={{ opacity: 0, transition: { duration: DUR.fast } }}
+                  transition={SPRING.snappy}
+                  className="row-glow border-b hairline"
+                >
+                  <td
+                    className="mono px-3 py-2.5 text-sm"
+                    style={{
+                      color: i < 3 ? "var(--color-warning)" : "var(--color-text-tertiary)",
+                    }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </td>
+                  <td className="px-3 py-2.5">
+                    <div className="flex items-center gap-3">
+                      <Flag iso={t.iso} name={t.name} size={26} decorative />
+                      <div className="flex flex-col">
+                        <span className="flex items-center gap-2 text-sm font-semibold leading-tight">
+                          {t.name}
+                          {t.host && (
+                            <span
+                              className="chip"
+                              style={{
+                                color: "var(--color-accent)",
+                                borderColor: "var(--color-accent-muted)",
+                              }}
+                            >
+                              host
+                            </span>
+                          )}
+                        </span>
+                        <span
+                          className="mono text-2xs uppercase tracking-wider"
+                          style={{ color: CONFED_COLOR[t.confederation] }}
+                        >
+                          {t.confederation} · Grp {t.group}
+                        </span>
+                      </div>
+                    </div>
+                  </td>
+
+                  {/* Win the cup — bar + value */}
+                  <td className="px-2 py-2.5">
+                    <div className="flex items-center justify-end gap-2">
+                      <div className="hidden w-16 md:block">
+                        <Bar
+                          value={maxChamp > 0 ? t.champion / maxChamp : 0}
+                          color={i < 3 ? "var(--color-warning)" : "var(--color-accent)"}
+                        />
+                      </div>
                       <span
-                        className="mono text-[0.6rem] uppercase tracking-wider"
-                        style={{ color: CONFED_COLOR[t.confederation] }}
+                        className="mono w-12 text-right text-sm font-semibold tabular-nums"
+                        style={{
+                          color: i < 3 ? "var(--color-warning)" : "var(--color-text-primary)",
+                        }}
                       >
-                        {t.confederation} · Grp {t.group}
+                        {pct(t.champion)}
                       </span>
                     </div>
-                  </div>
-                </td>
+                  </td>
 
-                {/* Win the cup — bar + value */}
-                <td className="px-2 py-2.5">
-                  <div className="flex items-center justify-end gap-2">
-                    <div className="hidden h-1.5 w-16 bartrack md:block">
-                      <motion.div
-                        className="h-full rounded-full"
-                        style={{ background: i < 3 ? "var(--color-gold)" : "var(--color-lime)" }}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${(t.champion / maxChamp) * 100}%` }}
-                        transition={{ duration: 0.8, delay: Math.min(i * 0.012, 0.3), ease: [0.16, 1, 0.3, 1] }}
-                      />
-                    </div>
-                    <span
-                      className="mono w-12 text-right text-sm font-semibold tabular-nums"
-                      style={{ color: i < 3 ? "var(--color-gold)" : "var(--color-text)" }}
-                    >
-                      {pct(t.champion)}
-                    </span>
-                  </div>
-                </td>
-
-                {/* heatmap cells */}
-                {COLS.slice(1).map((c) => {
-                  const v = t[c.key] as number;
-                  return (
+                  {/* heatmap cells */}
+                  {COLS.slice(1).map((c) => (
                     <td key={c.key} className="px-1.5 py-2.5 text-right">
-                      <span
-                        className="mono inline-block w-full min-w-[44px] rounded-md py-1 text-center text-xs tabular-nums"
-                        style={{ background: `${heatColor(v)}22`, color: heatText(v) === "#07090d" ? heatColor(v) : "var(--color-text)" }}
-                      >
-                        {pct(v, 0)}
-                      </span>
+                      <HeatPill p={t[c.key]} digits={0} className="w-full" />
                     </td>
-                  );
-                })}
+                  ))}
 
-                <td className="hidden px-3 py-2.5 text-right sm:table-cell">
-                  <span className="mono text-sm text-[var(--color-muted)]">{Math.round(t.elo)}</span>
-                </td>
-              </motion.tr>
-            ))}
-          </tbody>
+                  <td className="hidden px-3 py-2.5 text-right sm:table-cell">
+                    <span className="mono text-sm text-[var(--color-text-secondary)]">
+                      {Math.round(t.elo)}
+                    </span>
+                  </td>
+                </motion.tr>
+              ))}
+            </AnimatePresence>
+          </motion.tbody>
         </table>
       </div>
-      <p className="mt-3 mono text-[0.62rem] text-[var(--color-faint)]">
+      <Footnote>
         Cells show probability of reaching each stage · sort by any column · {rows.length} teams
-      </p>
+      </Footnote>
     </div>
   );
 }
