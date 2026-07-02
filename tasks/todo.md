@@ -102,3 +102,31 @@ Goal: (1) %s = chance of winning THAT match (each match sums to 100%), not title
         (15.4%, easiest draw). Faithful to "winner advances"; flagged to user to confirm headline.
 - Pre-existing (out of scope): Nav.tsx:53 timeAgo(Date.now()) causes a recoverable hydration
   mismatch on every page — flagged as a separate task.
+
+## Phase 10 — Live refresh + Linear/Stripe UI overhaul + resume polish
+Plan: ~/.claude/plans/task-notification-task-id-w2brfbiie-tas-compressed-storm.md
+- [x] WS2 core: lib/types.ts split; lib/live.ts (useSyncExternalStore store, visibility-aware
+      polling, minute-bucket cache buster, interest set, atomic swap); LiveUpdater; LiveStatus
+      (fixes the Nav timeAgo hydration mismatch above)
+- [x] WS1 Phase A foundation: @theme semantic tokens (+migration bridge), Inter(opsz)+JetBrains,
+      aurora bg, glass/gradient/focus-visible vocabulary, lib/motion.ts, heat() API (fixes
+      invalid `${heatColor}22` CSS), Providers(MotionConfig reducedMotion), template.tsx,
+      ui/ primitive kit (PageHeader, Chip, SegmentedControl, SortButton, Bar, Tooltip, Select,
+      HeatPill, Footnote, StatCard, Kbd, CommandPalette), CountUp/Reveal rebuilds
+- [x] WS1 Phase B shell: scroll-glass Nav w/ layoutId pill + animated mobile menu + ⌘K,
+      Footer w/ GitHub + arjun-varma.com links; foundation build green
+- [x] Component passes (10-agent fan-out): hero + 14 view components w/ live hooks,
+      a11y, perf fixes; TrendChart replaces LineChart+Spark; all tsc-clean
+- [x] Python track: model/tests (127 tests, 1.2s, no network), ci.yml, material_diff.py
+      (validated: volatile-only edits ⇒ MATERIAL=false), hourly update.yml w/ flavor +
+      material gate (pins byte-identical)
+- [x] Phase E cleanup: bridge tokens + heatColor + navlink deleted; grep sweeps zero-hit;
+      build+tsc+lint green (fixed 8 react-hooks strict errors: setState-in-effect →
+      render-adjust/useSyncExternalStore patterns; TrendChart ref→state)
+- [x] Full verification: pytest 127 green; live-refresh proven end-to-end in dev (poll →
+      interest-set fetch → atomic swap 50%→31% w/o reload + one aria-live announcement);
+      all 10 routes error-free; ⌘K palette opens/filters/navigates; /h2h?a=br deep link;
+      real-Chrome visual pass (found+fixed toLocaleString() locale hydration bug)
+- [x] README rewrite + LICENSE (MIT) + web/README pointer
+- [ ] Commit in chunks; push (auto-deploys); verify prod; trigger update.yml full=true;
+      capture docs/screenshots from prod + follow-up commit
