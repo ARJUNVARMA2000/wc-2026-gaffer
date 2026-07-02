@@ -11,7 +11,7 @@ import json
 import re
 import time
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict
 
 from ..config import RAW_DIR
 

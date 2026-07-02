@@ -83,9 +83,7 @@ def fit_goal_strength(
     # Weighted sums of goals for/against per team (numerators are fixed).
     gf = np.bincount(hi, weights=w * hg, minlength=n) + np.bincount(ai, weights=w * ag, minlength=n)
     ga = np.bincount(hi, weights=w * ag, minlength=n) + np.bincount(ai, weights=w * hg, minlength=n)
-    wsum = np.bincount(hi, weights=w, minlength=n) + np.bincount(ai, weights=w, minlength=n)
 
-    home_factor = np.where(neutral, 1.0, home_adv)
     for _ in range(n_iter):
         # Update attack: goals_for / Σ (def[opp] * venue_factor_on_my_side)
         denom_atk = (

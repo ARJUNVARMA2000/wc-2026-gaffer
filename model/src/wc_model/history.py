@@ -20,7 +20,7 @@ import json
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import List, Optional
 
 from .config import MODEL_DIR, OUTPUT_DIR, WEB_DATA_DIR
 

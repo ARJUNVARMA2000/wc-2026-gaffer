@@ -1,0 +1,166 @@
+"""pipeline pure helpers + the predictions-log / history upsert logic."""
+
+import pytest
+
+from conftest import DummyModel, make_results_df
+from wc_model import history as hist
+from wc_model import predictions_log as plog
+from wc_model.pipeline import (
+    _bracket_feeders,
+    _inorder_matches,
+    _slot_label,
+    current_standings,
+    round_robin_scores,
+)
+from wc_model.sim import bracket_2026 as B
+
+
+class TestCurrentStandings:
+    def test_points_and_goal_difference(self):
+        df = make_results_df(
+            [
+                {"home_team": "Mexico", "away_team": "South Africa",
+                 "home_score": 2, "away_score": 0, "tournament": "FIFA World Cup",
+                 "date": "2026-06-11"},
+                {"home_team": "South Korea", "away_team": "Czech Republic",
+                 "home_score": 1, "away_score": 1, "tournament": "FIFA World Cup",
+                 "date": "2026-06-11"},
+                # unplayed -> ignored
+                {"home_team": "Mexico", "away_team": "South Korea",
+                 "tournament": "FIFA World Cup", "date": "2026-06-18"},
+                # unknown side -> ignored
+                {"home_team": "Elbonia", "away_team": "Mexico",
+                 "home_score": 9, "away_score": 0, "tournament": "FIFA World Cup",
+                 "date": "2026-06-12"},
+            ]
+        )
+        rec = current_standings(df)
+        assert rec["Mexico"] == {"played": 1, "points": 3, "gf": 2, "ga": 0, "gd": 2}
+        assert rec["South Africa"] == {"played": 1, "points": 0, "gf": 0, "ga": 2, "gd": -2}
+        assert rec["South Korea"]["points"] == 1
+        assert rec["Czech Republic"]["points"] == 1
+        assert "Elbonia" not in rec
+
+    def test_all_48_teams_present_even_before_kickoff(self):
+        rec = current_standings(make_results_df([{"home_team": "X", "away_team": "Y"}]))
+        assert len(rec) == 48
+        assert all(r["played"] == 0 for r in rec.values())
+
+
+class TestRoundRobinScores:
+    def test_bounds_and_ordering(self):
+        model = DummyModel(strengths={"Big": 1.5, "Mid": 1.0, "Small": 0.7})
+        rr = round_robin_scores(model, ["Big", "Mid", "Small"])
+        assert set(rr) == {"Big", "Mid", "Small"}
+        for v in rr.values():
+            assert 0.0 <= v <= 3.0
+        assert rr["Big"] > rr["Mid"] > rr["Small"]
+
+
+class TestBracketHelpers:
+    def test_slot_labels(self):
+        assert _slot_label("1E") == "Winner Grp E"
+        assert _slot_label("2B") == "Runner-up Grp B"
+        assert _slot_label("T74") == "3rd place"
+
+    def test_feeders_cover_every_non_r32_match(self):
+        feeders = _bracket_feeders()
+        assert set(feeders) == set(B.R16) | set(B.QF) | set(B.SF) | {B.FINAL}
+        assert feeders[B.FINAL] == (101, 102)
+
+    def test_inorder_walk_visits_every_match_once(self):
+        seq = _inorder_matches()
+        assert len(seq) == len(set(seq)) == 31
+        by_round = {}
+        for m in seq:
+            by_round.setdefault(B.ROUND_OF[m], []).append(m)
+        assert {r: len(ms) for r, ms in by_round.items()} == {
+            "R32": 16, "R16": 8, "QF": 4, "SF": 2, "Final": 1,
+        }
+
+    def test_inorder_walk_shape(self):
+        seq = _inorder_matches()
+        r32 = {m for m, _, _ in B.R32}
+        # leaves (R32) sit at the even positions of an in-order tree walk,
+        # and the final is the root, dead centre.
+        assert all((seq[i] in r32) == (i % 2 == 0) for i in range(len(seq)))
+        assert seq[15] == B.FINAL
+
+
+def _match(date, home, away, played, p=0.4):
+    m = {"date": date, "home": home, "away": away, "played": played}
+    if not played:
+        m.update({"pHome": p, "pDraw": 0.3, "pAway": round(0.7 - p, 3),
+                  "projHome": 1.4, "projAway": 1.1})
+    return m
+
+
+class TestPredictionsLog:
+    def test_upserts_unplayed_only(self):
+        matches = [
+            _match("2026-06-20", "Spain", "Uruguay", played=False),
+            {"date": "2026-06-11", "home": "Mexico", "away": "South Africa",
+             "played": True, "pHome": 0.6, "pDraw": 0.2, "pAway": 0.2},
+        ]
+        log = plog.update_log(matches, prev={}, when="2026-06-19T00:00:00Z")
+        assert list(log) == ["2026-06-20|Spain|Uruguay"]
+        entry = log["2026-06-20|Spain|Uruguay"]
+        assert entry["pHome"] == 0.4
+        assert entry["snapshotAt"] == "2026-06-19T00:00:00Z"
+
+    def test_played_matches_freeze(self):
+        prev = {"2026-06-11|Mexico|South Africa": {"pHome": 0.55, "snapshotAt": "old"}}
+        matches = [{"date": "2026-06-11", "home": "Mexico", "away": "South Africa",
+                    "played": True, "pHome": 0.99}]
+        log = plog.update_log(matches, prev=prev, when="2026-06-19T00:00:00Z")
+        assert log["2026-06-11|Mexico|South Africa"]["pHome"] == 0.55  # untouched
+
+    def test_missing_probs_skipped(self):
+        matches = [{"date": "2026-06-20", "home": "A", "away": "B",
+                    "played": False, "pHome": None}]
+        assert plog.update_log(matches, prev={}, when="x") == {}
+
+    def test_pure_does_not_mutate_prev(self):
+        prev = {}
+        plog.update_log([_match("2026-06-20", "A", "B", played=False)], prev=prev, when="x")
+        assert prev == {}
+
+
+def _teams_snapshot(champ_spain: float):
+    rows = []
+    for name, c in (("Spain", champ_spain), ("Argentina", 0.15), ("Brazil", 0.09)):
+        rows.append({"name": name, "champion": c, "final": c + 0.1, "sf": c + 0.2,
+                     "qf": c + 0.3, "r16": c + 0.4, "ko": c + 0.5, "elo": 2000.0})
+    return rows
+
+
+class TestHistory:
+    def test_first_snapshot(self):
+        meta = {"lastUpdated": "2026-06-19T06:00:00Z", "dataThrough": "2026-06-18",
+                "groupMatchesPlayed": 10}
+        out = hist.update_history(_teams_snapshot(0.11), meta, prev=[])
+        assert len(out["snapshots"]) == 1
+        snap = out["snapshots"][0]
+        assert snap["ts"] == "2026-06-19T06:00:00Z"
+        assert snap["date"] == "2026-06-18"
+        assert snap["teams"]["Spain"]["c"] == 0.11
+        assert out["movers"]["sinceStart"]["champ"] == {"risers": [], "fallers": []}
+
+    def test_same_results_state_replaces_last_snapshot(self):
+        meta = {"lastUpdated": "t1", "dataThrough": "2026-06-18", "groupMatchesPlayed": 10}
+        out1 = hist.update_history(_teams_snapshot(0.11), meta, prev=[])
+        meta2 = dict(meta, lastUpdated="t2")
+        out2 = hist.update_history(_teams_snapshot(0.12), meta2, prev=out1["snapshots"])
+        assert len(out2["snapshots"]) == 1
+        assert out2["snapshots"][0]["ts"] == "t2"
+        assert out2["snapshots"][0]["teams"]["Spain"]["c"] == 0.12
+
+    def test_new_results_state_appends_and_computes_movers(self):
+        meta1 = {"lastUpdated": "t1", "dataThrough": "2026-06-18", "groupMatchesPlayed": 10}
+        meta2 = {"lastUpdated": "t2", "dataThrough": "2026-06-19", "groupMatchesPlayed": 14}
+        out1 = hist.update_history(_teams_snapshot(0.10), meta1, prev=[])
+        out2 = hist.update_history(_teams_snapshot(0.16), meta2, prev=out1["snapshots"])
+        assert len(out2["snapshots"]) == 2
+        risers = out2["movers"]["sinceLast"]["champ"]["risers"]
+        assert risers and risers[0]["name"] == "Spain"
+        assert risers[0]["delta"] == pytest.approx(0.06)

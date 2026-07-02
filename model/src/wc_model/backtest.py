@@ -16,6 +16,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
+from .config import DEFAULT_RATING, HOME_ADVANTAGE
 from .data.confederations import derive_confederations
 from .data.results import load_results
 from .data.transfermarkt import load_values
@@ -23,7 +24,6 @@ from .goals.blend import build_blend
 from .goals.dixon_coles import outcome_probs, scoreline_matrix
 from .goals.strength import fit_goal_strength
 from .ratings.elo import expected_score, k_factor, mov_multiplier, win_draw_loss
-from .config import DEFAULT_RATING, HOME_ADVANTAGE
 
 
 def _metrics(probs: np.ndarray, outcomes: np.ndarray) -> dict:
