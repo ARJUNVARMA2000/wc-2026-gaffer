@@ -143,8 +143,9 @@ then a **material-change gate** (`wc_model.material_diff`) diffs the data JSONs 
 HEAD with volatile timestamp fields stripped — if only timestamps moved, the run ends
 with no commit and no deploy. Every 6th hour is a *full* run that also re-scrapes
 Transfermarkt (politely) and refreshes Kalshi quotes. Deploys go to Firebase Hosting;
-`deploy.yml` also ships every push to `main`, and `ci.yml` gates pushes/PRs with
-ruff + pytest + lint + typecheck + build.
+`ci.yml` gates every push/PR with ruff + pytest + lint + typecheck + build, and
+`deploy.yml` ships a push to `main` only after its CI run passes — deploying the exact
+commit CI validated.
 
 Production-hardening war stories, preserved as workflow comments: Node is pinned to
 22.22.3 (22.23.0 ships an undici regression that breaks firebase-tools auth with
