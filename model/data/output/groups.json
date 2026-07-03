@@ -55,6 +55,19 @@
   ],
   "B": [
     {
+      "name": "Switzerland",
+      "iso": "ch",
+      "host": false,
+      "winGroup": 1.0,
+      "advance": 1.0,
+      "xPts": 7.0,
+      "played": 4,
+      "points": 10,
+      "gf": 9,
+      "ga": 3,
+      "gd": 6
+    },
+    {
       "name": "Canada",
       "iso": "ca",
       "host": true,
@@ -66,19 +79,6 @@
       "gf": 9,
       "ga": 3,
       "gd": 6
-    },
-    {
-      "name": "Switzerland",
-      "iso": "ch",
-      "host": false,
-      "winGroup": 1.0,
-      "advance": 1.0,
-      "xPts": 7.0,
-      "played": 3,
-      "points": 7,
-      "gf": 7,
-      "ga": 3,
-      "gd": 4
     },
     {
       "name": "Bosnia and Herzegovina",
@@ -385,11 +385,11 @@
       "winGroup": 1.0,
       "advance": 1.0,
       "xPts": 7.0,
-      "played": 3,
-      "points": 7,
-      "gf": 5,
+      "played": 4,
+      "points": 10,
+      "gf": 8,
       "ga": 0,
-      "gd": 5
+      "gd": 8
     },
     {
       "name": "Cape Verde",
@@ -506,11 +506,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 4.0,
-      "played": 3,
+      "played": 4,
       "points": 4,
       "gf": 6,
-      "ga": 6,
-      "gd": 0
+      "ga": 9,
+      "gd": -3
     },
     {
       "name": "Algeria",
@@ -519,11 +519,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 4.0,
-      "played": 3,
+      "played": 4,
       "points": 4,
       "gf": 5,
-      "ga": 7,
-      "gd": -2
+      "ga": 9,
+      "gd": -4
     },
     {
       "name": "Jordan",
@@ -541,6 +541,19 @@
   ],
   "K": [
     {
+      "name": "Portugal",
+      "iso": "pt",
+      "host": false,
+      "winGroup": 0.0,
+      "advance": 1.0,
+      "xPts": 5.0,
+      "played": 4,
+      "points": 8,
+      "gf": 8,
+      "ga": 2,
+      "gd": 6
+    },
+    {
       "name": "Colombia",
       "iso": "co",
       "host": false,
@@ -552,19 +565,6 @@
       "gf": 4,
       "ga": 1,
       "gd": 3
-    },
-    {
-      "name": "Portugal",
-      "iso": "pt",
-      "host": false,
-      "winGroup": 0.0,
-      "advance": 1.0,
-      "xPts": 5.0,
-      "played": 3,
-      "points": 5,
-      "gf": 6,
-      "ga": 1,
-      "gd": 5
     },
     {
       "name": "DR Congo",
@@ -614,11 +614,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 6.0,
-      "played": 3,
+      "played": 4,
       "points": 6,
-      "gf": 5,
-      "ga": 5,
-      "gd": 0
+      "gf": 6,
+      "ga": 7,
+      "gd": -1
     },
     {
       "name": "Ghana",
