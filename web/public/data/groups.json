@@ -176,6 +176,19 @@
       "gd": 6
     },
     {
+      "name": "Australia",
+      "iso": "au",
+      "host": false,
+      "winGroup": 0.0,
+      "advance": 1.0,
+      "xPts": 4.0,
+      "played": 4,
+      "points": 5,
+      "gf": 3,
+      "ga": 3,
+      "gd": 0
+    },
+    {
       "name": "Paraguay",
       "iso": "py",
       "host": false,
@@ -187,19 +200,6 @@
       "gf": 3,
       "ga": 5,
       "gd": -2
-    },
-    {
-      "name": "Australia",
-      "iso": "au",
-      "host": false,
-      "winGroup": 0.0,
-      "advance": 1.0,
-      "xPts": 4.0,
-      "played": 3,
-      "points": 4,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0
     },
     {
       "name": "Turkey",
@@ -344,10 +344,10 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 5.0,
-      "played": 3,
-      "points": 5,
-      "gf": 5,
-      "ga": 3,
+      "played": 4,
+      "points": 6,
+      "gf": 6,
+      "ga": 4,
       "gd": 2
     },
     {
@@ -398,11 +398,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 3.0,
-      "played": 3,
+      "played": 4,
       "points": 3,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0
+      "gf": 4,
+      "ga": 5,
+      "gd": -1
     },
     {
       "name": "Uruguay",
@@ -493,11 +493,11 @@
       "winGroup": 1.0,
       "advance": 1.0,
       "xPts": 9.0,
-      "played": 3,
-      "points": 9,
-      "gf": 8,
-      "ga": 1,
-      "gd": 7
+      "played": 4,
+      "points": 12,
+      "gf": 11,
+      "ga": 3,
+      "gd": 8
     },
     {
       "name": "Austria",
@@ -541,6 +541,19 @@
   ],
   "K": [
     {
+      "name": "Colombia",
+      "iso": "co",
+      "host": false,
+      "winGroup": 1.0,
+      "advance": 1.0,
+      "xPts": 7.0,
+      "played": 4,
+      "points": 10,
+      "gf": 5,
+      "ga": 1,
+      "gd": 4
+    },
+    {
       "name": "Portugal",
       "iso": "pt",
       "host": false,
@@ -552,19 +565,6 @@
       "gf": 8,
       "ga": 2,
       "gd": 6
-    },
-    {
-      "name": "Colombia",
-      "iso": "co",
-      "host": false,
-      "winGroup": 1.0,
-      "advance": 1.0,
-      "xPts": 7.0,
-      "played": 3,
-      "points": 7,
-      "gf": 4,
-      "ga": 1,
-      "gd": 3
     },
     {
       "name": "DR Congo",
@@ -627,11 +627,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 4.0,
-      "played": 3,
+      "played": 4,
       "points": 4,
       "gf": 2,
-      "ga": 2,
-      "gd": 0
+      "ga": 3,
+      "gd": -1
     },
     {
       "name": "Panama",
