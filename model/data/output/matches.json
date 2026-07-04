@@ -78,10 +78,10 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 0,
-    "pHome": 0.231,
+    "pHome": 0.23,
     "pDraw": 0.276,
-    "pAway": 0.493,
-    "modelProb": 0.231,
+    "pAway": 0.494,
+    "modelProb": 0.23,
     "frozen": false
   },
   {
@@ -96,9 +96,9 @@
     "homeScore": 1,
     "awayScore": 1,
     "pHome": 0.047,
-    "pDraw": 0.111,
-    "pAway": 0.842,
-    "modelProb": 0.111,
+    "pDraw": 0.11,
+    "pAway": 0.843,
+    "modelProb": 0.11,
     "frozen": false
   },
   {
@@ -129,10 +129,10 @@
     "played": true,
     "homeScore": 0,
     "awayScore": 1,
-    "pHome": 0.157,
+    "pHome": 0.156,
     "pDraw": 0.225,
-    "pAway": 0.618,
-    "modelProb": 0.618,
+    "pAway": 0.619,
+    "modelProb": 0.619,
     "frozen": false
   },
   {
@@ -163,10 +163,10 @@
     "played": true,
     "homeScore": 7,
     "awayScore": 1,
-    "pHome": 0.938,
+    "pHome": 0.939,
     "pDraw": 0.047,
     "pAway": 0.014,
-    "modelProb": 0.938,
+    "modelProb": 0.939,
     "frozen": false
   },
   {
@@ -180,10 +180,10 @@
     "played": true,
     "homeScore": 5,
     "awayScore": 1,
-    "pHome": 0.568,
-    "pDraw": 0.246,
+    "pHome": 0.569,
+    "pDraw": 0.245,
     "pAway": 0.186,
-    "modelProb": 0.568,
+    "modelProb": 0.569,
     "frozen": false
   },
   {
@@ -214,7 +214,7 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 2,
-    "pHome": 0.535,
+    "pHome": 0.536,
     "pDraw": 0.289,
     "pAway": 0.175,
     "modelProb": 0.289,
@@ -233,7 +233,7 @@
     "awayScore": 1,
     "pHome": 0.572,
     "pDraw": 0.266,
-    "pAway": 0.162,
+    "pAway": 0.161,
     "modelProb": 0.266,
     "frozen": false
   },
@@ -248,7 +248,7 @@
     "played": true,
     "homeScore": 0,
     "awayScore": 0,
-    "pHome": 0.836,
+    "pHome": 0.837,
     "pDraw": 0.125,
     "pAway": 0.039,
     "modelProb": 0.125,
@@ -265,10 +265,10 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 1,
-    "pHome": 0.107,
-    "pDraw": 0.272,
+    "pHome": 0.106,
+    "pDraw": 0.271,
     "pAway": 0.622,
-    "modelProb": 0.272,
+    "modelProb": 0.271,
     "frozen": false
   },
   {
@@ -282,10 +282,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 1,
-    "pHome": 0.726,
+    "pHome": 0.727,
     "pDraw": 0.178,
     "pAway": 0.095,
-    "modelProb": 0.726,
+    "modelProb": 0.727,
     "frozen": false
   },
   {
@@ -299,10 +299,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 1,
-    "pHome": 0.562,
+    "pHome": 0.563,
     "pDraw": 0.254,
     "pAway": 0.183,
-    "modelProb": 0.562,
+    "modelProb": 0.563,
     "frozen": false
   },
   {
@@ -333,10 +333,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 0,
-    "pHome": 0.603,
+    "pHome": 0.605,
     "pDraw": 0.251,
-    "pAway": 0.145,
-    "modelProb": 0.603,
+    "pAway": 0.144,
+    "modelProb": 0.605,
     "frozen": false
   },
   {
@@ -351,7 +351,7 @@
     "homeScore": 1,
     "awayScore": 3,
     "pHome": 0.12,
-    "pDraw": 0.238,
+    "pDraw": 0.237,
     "pAway": 0.643,
     "modelProb": 0.643,
     "frozen": false
@@ -367,7 +367,7 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 1,
-    "pHome": 0.647,
+    "pHome": 0.648,
     "pDraw": 0.244,
     "pAway": 0.109,
     "modelProb": 0.244,
@@ -401,10 +401,10 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 0,
-    "pHome": 0.511,
-    "pDraw": 0.286,
+    "pHome": 0.512,
+    "pDraw": 0.285,
     "pAway": 0.203,
-    "modelProb": 0.511,
+    "modelProb": 0.512,
     "frozen": false
   },
   {
@@ -419,9 +419,9 @@
     "homeScore": 1,
     "awayScore": 1,
     "pHome": 0.51,
-    "pDraw": 0.285,
-    "pAway": 0.206,
-    "modelProb": 0.285,
+    "pDraw": 0.284,
+    "pAway": 0.205,
+    "modelProb": 0.284,
     "frozen": false
   },
   {
@@ -452,10 +452,10 @@
     "played": true,
     "homeScore": 4,
     "awayScore": 1,
-    "pHome": 0.655,
-    "pDraw": 0.219,
+    "pHome": 0.656,
+    "pDraw": 0.218,
     "pAway": 0.126,
-    "modelProb": 0.655,
+    "modelProb": 0.656,
     "frozen": false
   },
   {
