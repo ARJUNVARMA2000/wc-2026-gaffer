@@ -10,7 +10,7 @@
           "iso": "de",
           "seed": 14,
           "group": "E",
-          "winPct": 0.8383,
+          "winPct": 0.8386,
           "fav": true,
           "slotLabel": "Winner Grp E",
           "candidates": [
@@ -26,7 +26,7 @@
           "iso": "ba",
           "seed": 42,
           "group": "B",
-          "winPct": 0.1617,
+          "winPct": 0.1614,
           "fav": false,
           "slotLabel": "3rd place",
           "candidates": [
@@ -46,7 +46,7 @@
           "iso": "fr",
           "seed": 3,
           "group": "I",
-          "winPct": 0.772,
+          "winPct": 0.7699,
           "fav": true,
           "slotLabel": "Winner Grp I",
           "candidates": [
@@ -62,7 +62,7 @@
           "iso": "py",
           "seed": 22,
           "group": "D",
-          "winPct": 0.228,
+          "winPct": 0.2301,
           "fav": false,
           "slotLabel": "3rd place",
           "candidates": [
@@ -82,7 +82,7 @@
           "iso": "za",
           "seed": 40,
           "group": "A",
-          "winPct": 0.3391,
+          "winPct": 0.3451,
           "fav": false,
           "slotLabel": "Runner-up Grp A",
           "candidates": [
@@ -96,9 +96,9 @@
         "b": {
           "name": "Canada",
           "iso": "ca",
-          "seed": 26,
+          "seed": 30,
           "group": "B",
-          "winPct": 0.6609,
+          "winPct": 0.6549,
           "fav": true,
           "slotLabel": "Runner-up Grp B",
           "candidates": [
@@ -116,9 +116,9 @@
         "a": {
           "name": "Netherlands",
           "iso": "nl",
-          "seed": 8,
+          "seed": 9,
           "group": "F",
-          "winPct": 0.5439,
+          "winPct": 0.5377,
           "fav": true,
           "slotLabel": "Winner Grp F",
           "candidates": [
@@ -132,9 +132,9 @@
         "b": {
           "name": "Morocco",
           "iso": "ma",
-          "seed": 11,
+          "seed": 8,
           "group": "C",
-          "winPct": 0.4561,
+          "winPct": 0.4623,
           "fav": false,
           "slotLabel": "Runner-up Grp C",
           "candidates": [
@@ -154,7 +154,7 @@
           "iso": "pt",
           "seed": 7,
           "group": "K",
-          "winPct": 0.6544,
+          "winPct": 0.6545,
           "fav": true,
           "slotLabel": "Runner-up Grp K",
           "candidates": [
@@ -170,7 +170,7 @@
           "iso": "hr",
           "seed": 17,
           "group": "L",
-          "winPct": 0.3456,
+          "winPct": 0.3455,
           "fav": false,
           "slotLabel": "Runner-up Grp L",
           "candidates": [
@@ -190,7 +190,7 @@
           "iso": "es",
           "seed": 2,
           "group": "H",
-          "winPct": 0.7529,
+          "winPct": 0.753,
           "fav": true,
           "slotLabel": "Winner Grp H",
           "candidates": [
@@ -206,7 +206,7 @@
           "iso": "at",
           "seed": 23,
           "group": "J",
-          "winPct": 0.2471,
+          "winPct": 0.247,
           "fav": false,
           "slotLabel": "Runner-up Grp J",
           "candidates": [
@@ -226,7 +226,7 @@
           "iso": "us",
           "seed": 21,
           "group": "D",
-          "winPct": 0.4991,
+          "winPct": 0.4976,
           "fav": false,
           "slotLabel": "Winner Grp D",
           "candidates": [
@@ -240,9 +240,9 @@
         "b": {
           "name": "Algeria",
           "iso": "dz",
-          "seed": 29,
+          "seed": 28,
           "group": "J",
-          "winPct": 0.5009,
+          "winPct": 0.5024,
           "fav": true,
           "slotLabel": "3rd place",
           "candidates": [
@@ -262,7 +262,7 @@
           "iso": "be",
           "seed": 13,
           "group": "G",
-          "winPct": 0.5835,
+          "winPct": 0.5826,
           "fav": true,
           "slotLabel": "Winner Grp G",
           "candidates": [
@@ -278,7 +278,7 @@
           "iso": "sn",
           "seed": 25,
           "group": "I",
-          "winPct": 0.4165,
+          "winPct": 0.4174,
           "fav": false,
           "slotLabel": "3rd place",
           "candidates": [
@@ -300,19 +300,19 @@
           "iso": "de",
           "seed": 14,
           "group": "E",
-          "winPct": 0.4099,
+          "winPct": 0.408,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Germany",
               "iso": "de",
-              "prob": 0.8365
+              "prob": 0.8367
             },
             {
               "name": "Bosnia and Herzegovina",
               "iso": "ba",
-              "prob": 0.1635
+              "prob": 0.1633
             }
           ]
         },
@@ -321,19 +321,19 @@
           "iso": "fr",
           "seed": 3,
           "group": "I",
-          "winPct": 0.5901,
+          "winPct": 0.592,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "France",
               "iso": "fr",
-              "prob": 0.772
+              "prob": 0.7699
             },
             {
               "name": "Paraguay",
               "iso": "py",
-              "prob": 0.228
+              "prob": 0.2301
             }
           ]
         }
@@ -344,42 +344,42 @@
         "a": {
           "name": "Canada",
           "iso": "ca",
-          "seed": 26,
+          "seed": 30,
           "group": "B",
-          "winPct": 0.3001,
+          "winPct": 0.2903,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Canada",
               "iso": "ca",
-              "prob": 0.6584
+              "prob": 0.6525
             },
             {
               "name": "South Africa",
               "iso": "za",
-              "prob": 0.3416
+              "prob": 0.3475
             }
           ]
         },
         "b": {
           "name": "Netherlands",
           "iso": "nl",
-          "seed": 8,
+          "seed": 9,
           "group": "F",
-          "winPct": 0.6999,
+          "winPct": 0.7097,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Netherlands",
               "iso": "nl",
-              "prob": 0.545
+              "prob": 0.539
             },
             {
               "name": "Morocco",
               "iso": "ma",
-              "prob": 0.455
+              "prob": 0.461
             }
           ]
         }
@@ -392,19 +392,19 @@
           "iso": "pt",
           "seed": 7,
           "group": "K",
-          "winPct": 0.4272,
+          "winPct": 0.4271,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Portugal",
               "iso": "pt",
-              "prob": 0.653
+              "prob": 0.6531
             },
             {
               "name": "Croatia",
               "iso": "hr",
-              "prob": 0.347
+              "prob": 0.3469
             }
           ]
         },
@@ -413,19 +413,19 @@
           "iso": "es",
           "seed": 2,
           "group": "H",
-          "winPct": 0.5728,
+          "winPct": 0.5729,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Spain",
               "iso": "es",
-              "prob": 0.7498
+              "prob": 0.7499
             },
             {
               "name": "Austria",
               "iso": "at",
-              "prob": 0.2502
+              "prob": 0.2501
             }
           ]
         }
@@ -436,21 +436,21 @@
         "a": {
           "name": "Algeria",
           "iso": "dz",
-          "seed": 29,
+          "seed": 28,
           "group": "J",
-          "winPct": 0.3488,
+          "winPct": 0.3497,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Algeria",
               "iso": "dz",
-              "prob": 0.5008
+              "prob": 0.5026
             },
             {
               "name": "United States",
               "iso": "us",
-              "prob": 0.4992
+              "prob": 0.4974
             }
           ]
         },
@@ -459,19 +459,19 @@
           "iso": "be",
           "seed": 13,
           "group": "G",
-          "winPct": 0.6512,
+          "winPct": 0.6503,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Belgium",
               "iso": "be",
-              "prob": 0.5839
+              "prob": 0.5829
             },
             {
               "name": "Senegal",
               "iso": "sn",
-              "prob": 0.4161
+              "prob": 0.4171
             }
           ]
         }
@@ -486,7 +486,7 @@
           "iso": "fr",
           "seed": 3,
           "group": "I",
-          "winPct": 0.5819,
+          "winPct": 0.5837,
           "fav": true,
           "slotLabel": "",
           "candidates": [
@@ -498,48 +498,48 @@
             {
               "name": "Germany",
               "iso": "de",
-              "prob": 0.4031
+              "prob": 0.4019
             },
             {
               "name": "Paraguay",
               "iso": "py",
-              "prob": 0.072
+              "prob": 0.073
             },
             {
               "name": "Bosnia and Herzegovina",
               "iso": "ba",
-              "prob": 0.0324
+              "prob": 0.0326
             }
           ]
         },
         "b": {
           "name": "Netherlands",
           "iso": "nl",
-          "seed": 8,
+          "seed": 9,
           "group": "F",
-          "winPct": 0.4181,
+          "winPct": 0.4163,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Netherlands",
               "iso": "nl",
-              "prob": 0.408
+              "prob": 0.4071
             },
             {
               "name": "Morocco",
               "iso": "ma",
-              "prob": 0.3029
+              "prob": 0.3121
             },
             {
               "name": "Canada",
               "iso": "ca",
-              "prob": 0.2211
+              "prob": 0.2122
             },
             {
               "name": "South Africa",
               "iso": "za",
-              "prob": 0.068
+              "prob": 0.0686
             }
           ]
         }
@@ -552,14 +552,14 @@
           "iso": "es",
           "seed": 2,
           "group": "H",
-          "winPct": 0.6453,
+          "winPct": 0.6455,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Spain",
               "iso": "es",
-              "prob": 0.4666
+              "prob": 0.4667
             },
             {
               "name": "Portugal",
@@ -583,29 +583,29 @@
           "iso": "be",
           "seed": 13,
           "group": "G",
-          "winPct": 0.3547,
+          "winPct": 0.3545,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Belgium",
               "iso": "be",
-              "prob": 0.3807
+              "prob": 0.3801
             },
             {
               "name": "Senegal",
               "iso": "sn",
-              "prob": 0.2273
+              "prob": 0.2283
             },
             {
               "name": "Algeria",
               "iso": "dz",
-              "prob": 0.1972
+              "prob": 0.198
             },
             {
               "name": "United States",
               "iso": "us",
-              "prob": 0.1948
+              "prob": 0.1936
             }
           ]
         }
@@ -620,39 +620,39 @@
           "iso": "fr",
           "seed": 3,
           "group": "I",
-          "winPct": 0.4436,
+          "winPct": 0.4459,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "France",
               "iso": "fr",
-              "prob": 0.3222
+              "prob": 0.3224
             },
             {
               "name": "Germany",
               "iso": "de",
-              "prob": 0.2334
+              "prob": 0.2323
             },
             {
               "name": "Netherlands",
               "iso": "nl",
-              "prob": 0.1984
+              "prob": 0.198
             },
             {
               "name": "Morocco",
               "iso": "ma",
-              "prob": 0.1333
+              "prob": 0.1387
             },
             {
               "name": "Canada",
               "iso": "ca",
-              "prob": 0.0655
+              "prob": 0.0611
             },
             {
               "name": "Paraguay",
               "iso": "py",
-              "prob": 0.027
+              "prob": 0.0273
             }
           ]
         },
@@ -661,14 +661,14 @@
           "iso": "es",
           "seed": 2,
           "group": "H",
-          "winPct": 0.5564,
+          "winPct": 0.5541,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Spain",
               "iso": "es",
-              "prob": 0.3303
+              "prob": 0.3305
             },
             {
               "name": "Portugal",
@@ -678,12 +678,12 @@
             {
               "name": "Belgium",
               "iso": "be",
-              "prob": 0.1632
+              "prob": 0.163
             },
             {
               "name": "Senegal",
               "iso": "sn",
-              "prob": 0.0795
+              "prob": 0.0799
             },
             {
               "name": "Croatia",
@@ -693,7 +693,7 @@
             {
               "name": "Algeria",
               "iso": "dz",
-              "prob": 0.0588
+              "prob": 0.059
             }
           ]
         }
@@ -710,7 +710,7 @@
           "iso": "br",
           "seed": 5,
           "group": "C",
-          "winPct": 0.6702,
+          "winPct": 0.6704,
           "fav": true,
           "slotLabel": "Winner Grp C",
           "candidates": [
@@ -726,7 +726,7 @@
           "iso": "jp",
           "seed": 15,
           "group": "F",
-          "winPct": 0.3298,
+          "winPct": 0.3296,
           "fav": false,
           "slotLabel": "Runner-up Grp F",
           "candidates": [
@@ -744,9 +744,9 @@
         "a": {
           "name": "Ivory Coast",
           "iso": "ci",
-          "seed": 28,
+          "seed": 27,
           "group": "E",
-          "winPct": 0.4344,
+          "winPct": 0.4351,
           "fav": false,
           "slotLabel": "Runner-up Grp E",
           "candidates": [
@@ -762,7 +762,7 @@
           "iso": "no",
           "seed": 12,
           "group": "I",
-          "winPct": 0.5656,
+          "winPct": 0.5649,
           "fav": true,
           "slotLabel": "Runner-up Grp I",
           "candidates": [
@@ -780,9 +780,9 @@
         "a": {
           "name": "Mexico",
           "iso": "mx",
-          "seed": 9,
+          "seed": 10,
           "group": "A",
-          "winPct": 0.4465,
+          "winPct": 0.4463,
           "fav": false,
           "slotLabel": "Winner Grp A",
           "candidates": [
@@ -798,7 +798,7 @@
           "iso": "ec",
           "seed": 16,
           "group": "E",
-          "winPct": 0.5535,
+          "winPct": 0.5537,
           "fav": true,
           "slotLabel": "3rd place",
           "candidates": [
@@ -818,7 +818,7 @@
           "iso": "gb-eng",
           "seed": 4,
           "group": "L",
-          "winPct": 0.7705,
+          "winPct": 0.7698,
           "fav": true,
           "slotLabel": "Winner Grp L",
           "candidates": [
@@ -834,7 +834,7 @@
           "iso": "cd",
           "seed": 32,
           "group": "K",
-          "winPct": 0.2295,
+          "winPct": 0.2302,
           "fav": false,
           "slotLabel": "3rd place",
           "candidates": [
@@ -854,7 +854,7 @@
           "iso": "au",
           "seed": 20,
           "group": "D",
-          "winPct": 0.4901,
+          "winPct": 0.4893,
           "fav": false,
           "slotLabel": "Runner-up Grp D",
           "candidates": [
@@ -868,9 +868,9 @@
         "b": {
           "name": "Egypt",
           "iso": "eg",
-          "seed": 27,
+          "seed": 26,
           "group": "G",
-          "winPct": 0.5099,
+          "winPct": 0.5107,
           "fav": true,
           "slotLabel": "Runner-up Grp G",
           "candidates": [
@@ -890,7 +890,7 @@
           "iso": "ar",
           "seed": 1,
           "group": "J",
-          "winPct": 0.8649,
+          "winPct": 0.8644,
           "fav": true,
           "slotLabel": "Winner Grp J",
           "candidates": [
@@ -906,7 +906,7 @@
           "iso": "cv",
           "seed": 38,
           "group": "H",
-          "winPct": 0.1351,
+          "winPct": 0.1356,
           "fav": false,
           "slotLabel": "Runner-up Grp H",
           "candidates": [
@@ -924,9 +924,9 @@
         "a": {
           "name": "Switzerland",
           "iso": "ch",
-          "seed": 10,
+          "seed": 11,
           "group": "B",
-          "winPct": 0.6184,
+          "winPct": 0.6181,
           "fav": true,
           "slotLabel": "Winner Grp B",
           "candidates": [
@@ -942,7 +942,7 @@
           "iso": "se",
           "seed": 33,
           "group": "F",
-          "winPct": 0.3816,
+          "winPct": 0.3819,
           "fav": false,
           "slotLabel": "3rd place",
           "candidates": [
@@ -962,7 +962,7 @@
           "iso": "co",
           "seed": 6,
           "group": "K",
-          "winPct": 0.7001,
+          "winPct": 0.6993,
           "fav": true,
           "slotLabel": "Winner Grp K",
           "candidates": [
@@ -978,7 +978,7 @@
           "iso": "gh",
           "seed": 41,
           "group": "L",
-          "winPct": 0.2999,
+          "winPct": 0.3007,
           "fav": false,
           "slotLabel": "3rd place",
           "candidates": [
@@ -1007,12 +1007,12 @@
             {
               "name": "Brazil",
               "iso": "br",
-              "prob": 0.671
+              "prob": 0.6713
             },
             {
               "name": "Japan",
               "iso": "jp",
-              "prob": 0.329
+              "prob": 0.3287
             }
           ]
         },
@@ -1028,12 +1028,12 @@
             {
               "name": "Norway",
               "iso": "no",
-              "prob": 0.5664
+              "prob": 0.5657
             },
             {
               "name": "Ivory Coast",
               "iso": "ci",
-              "prob": 0.4336
+              "prob": 0.4343
             }
           ]
         }
@@ -1046,19 +1046,19 @@
           "iso": "ec",
           "seed": 16,
           "group": "E",
-          "winPct": 0.3539,
+          "winPct": 0.3537,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Ecuador",
               "iso": "ec",
-              "prob": 0.5538
+              "prob": 0.5541
             },
             {
               "name": "Mexico",
               "iso": "mx",
-              "prob": 0.4462
+              "prob": 0.4459
             }
           ]
         },
@@ -1067,19 +1067,19 @@
           "iso": "gb-eng",
           "seed": 4,
           "group": "L",
-          "winPct": 0.6461,
+          "winPct": 0.6463,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "England",
               "iso": "gb-eng",
-              "prob": 0.7727
+              "prob": 0.7719
             },
             {
               "name": "DR Congo",
               "iso": "cd",
-              "prob": 0.2273
+              "prob": 0.2281
             }
           ]
         }
@@ -1090,21 +1090,21 @@
         "a": {
           "name": "Egypt",
           "iso": "eg",
-          "seed": 27,
+          "seed": 26,
           "group": "G",
-          "winPct": 0.2396,
+          "winPct": 0.2403,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Egypt",
               "iso": "eg",
-              "prob": 0.5058
+              "prob": 0.5064
             },
             {
               "name": "Australia",
               "iso": "au",
-              "prob": 0.4942
+              "prob": 0.4936
             }
           ]
         },
@@ -1113,19 +1113,19 @@
           "iso": "ar",
           "seed": 1,
           "group": "J",
-          "winPct": 0.7604,
+          "winPct": 0.7597,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Argentina",
               "iso": "ar",
-              "prob": 0.862
+              "prob": 0.8614
             },
             {
               "name": "Cape Verde",
               "iso": "cv",
-              "prob": 0.138
+              "prob": 0.1386
             }
           ]
         }
@@ -1136,21 +1136,21 @@
         "a": {
           "name": "Switzerland",
           "iso": "ch",
-          "seed": 10,
+          "seed": 11,
           "group": "B",
-          "winPct": 0.4575,
+          "winPct": 0.4576,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Switzerland",
               "iso": "ch",
-              "prob": 0.6185
+              "prob": 0.6183
             },
             {
               "name": "Sweden",
               "iso": "se",
-              "prob": 0.3815
+              "prob": 0.3817
             }
           ]
         },
@@ -1159,19 +1159,19 @@
           "iso": "co",
           "seed": 6,
           "group": "K",
-          "winPct": 0.5425,
+          "winPct": 0.5424,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Colombia",
               "iso": "co",
-              "prob": 0.7003
+              "prob": 0.6996
             },
             {
               "name": "Ghana",
               "iso": "gh",
-              "prob": 0.2997
+              "prob": 0.3004
             }
           ]
         }
@@ -1186,29 +1186,29 @@
           "iso": "br",
           "seed": 5,
           "group": "C",
-          "winPct": 0.4803,
+          "winPct": 0.4804,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Brazil",
               "iso": "br",
-              "prob": 0.4424
+              "prob": 0.4423
             },
             {
               "name": "Norway",
               "iso": "no",
-              "prob": 0.239
+              "prob": 0.2386
             },
             {
               "name": "Ivory Coast",
               "iso": "ci",
-              "prob": 0.1605
+              "prob": 0.161
             },
             {
               "name": "Japan",
               "iso": "jp",
-              "prob": 0.1582
+              "prob": 0.158
             }
           ]
         },
@@ -1217,29 +1217,29 @@
           "iso": "gb-eng",
           "seed": 4,
           "group": "L",
-          "winPct": 0.5197,
+          "winPct": 0.5196,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "England",
               "iso": "gb-eng",
-              "prob": 0.5267
+              "prob": 0.5263
             },
             {
               "name": "Ecuador",
               "iso": "ec",
-              "prob": 0.2269
+              "prob": 0.227
             },
             {
               "name": "Mexico",
               "iso": "mx",
-              "prob": 0.1561
+              "prob": 0.1558
             },
             {
               "name": "DR Congo",
               "iso": "cd",
-              "prob": 0.0903
+              "prob": 0.0909
             }
           ]
         }
@@ -1252,29 +1252,29 @@
           "iso": "ar",
           "seed": 1,
           "group": "J",
-          "winPct": 0.6186,
+          "winPct": 0.6187,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Argentina",
               "iso": "ar",
-              "prob": 0.6624
+              "prob": 0.6617
             },
             {
               "name": "Egypt",
               "iso": "eg",
-              "prob": 0.1496
+              "prob": 0.1503
             },
             {
               "name": "Australia",
               "iso": "au",
-              "prob": 0.1375
+              "prob": 0.1374
             },
             {
               "name": "Cape Verde",
               "iso": "cv",
-              "prob": 0.0504
+              "prob": 0.0507
             }
           ]
         },
@@ -1283,29 +1283,29 @@
           "iso": "co",
           "seed": 6,
           "group": "K",
-          "winPct": 0.3814,
+          "winPct": 0.3813,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Colombia",
               "iso": "co",
-              "prob": 0.3943
+              "prob": 0.3939
             },
             {
               "name": "Switzerland",
               "iso": "ch",
-              "prob": 0.3232
+              "prob": 0.3229
             },
             {
               "name": "Sweden",
               "iso": "se",
-              "prob": 0.1788
+              "prob": 0.179
             },
             {
               "name": "Ghana",
               "iso": "gh",
-              "prob": 0.1037
+              "prob": 0.1042
             }
           ]
         }
@@ -1320,14 +1320,14 @@
           "iso": "gb-eng",
           "seed": 4,
           "group": "L",
-          "winPct": 0.496,
+          "winPct": 0.4962,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "England",
               "iso": "gb-eng",
-              "prob": 0.3164
+              "prob": 0.3162
             },
             {
               "name": "Brazil",
@@ -1337,22 +1337,22 @@
             {
               "name": "Norway",
               "iso": "no",
-              "prob": 0.109
+              "prob": 0.1089
             },
             {
               "name": "Ecuador",
               "iso": "ec",
-              "prob": 0.0966
+              "prob": 0.0964
             },
             {
               "name": "Japan",
               "iso": "jp",
-              "prob": 0.0686
+              "prob": 0.0687
             },
             {
               "name": "Ivory Coast",
               "iso": "ci",
-              "prob": 0.0678
+              "prob": 0.0681
             }
           ]
         },
@@ -1361,34 +1361,34 @@
           "iso": "ar",
           "seed": 1,
           "group": "J",
-          "winPct": 0.504,
+          "winPct": 0.5038,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Argentina",
               "iso": "ar",
-              "prob": 0.4456
+              "prob": 0.4451
             },
             {
               "name": "Colombia",
               "iso": "co",
-              "prob": 0.1935
+              "prob": 0.1934
             },
             {
               "name": "Switzerland",
               "iso": "ch",
-              "prob": 0.1421
+              "prob": 0.142
             },
             {
               "name": "Sweden",
               "iso": "se",
-              "prob": 0.069
+              "prob": 0.0691
             },
             {
               "name": "Egypt",
               "iso": "eg",
-              "prob": 0.0576
+              "prob": 0.0579
             },
             {
               "name": "Australia",
@@ -1408,39 +1408,39 @@
       "iso": "es",
       "seed": 2,
       "group": "H",
-      "winPct": 0.5213,
+      "winPct": 0.5216,
       "fav": true,
       "slotLabel": "",
       "candidates": [
         {
           "name": "Spain",
           "iso": "es",
-          "prob": 0.2073
+          "prob": 0.2069
         },
         {
           "name": "France",
           "iso": "fr",
-          "prob": 0.1817
+          "prob": 0.1823
         },
         {
           "name": "Portugal",
           "iso": "pt",
-          "prob": 0.1166
+          "prob": 0.1163
         },
         {
           "name": "Germany",
           "iso": "de",
-          "prob": 0.1131
+          "prob": 0.1128
         },
         {
           "name": "Netherlands",
           "iso": "nl",
-          "prob": 0.0952
+          "prob": 0.0948
         },
         {
           "name": "Belgium",
           "iso": "be",
-          "prob": 0.0803
+          "prob": 0.0799
         }
       ]
     },
@@ -1449,24 +1449,24 @@
       "iso": "ar",
       "seed": 1,
       "group": "J",
-      "winPct": 0.4787,
+      "winPct": 0.4784,
       "fav": false,
       "slotLabel": "",
       "candidates": [
         {
           "name": "Argentina",
           "iso": "ar",
-          "prob": 0.2634
+          "prob": 0.2629
         },
         {
           "name": "England",
           "iso": "gb-eng",
-          "prob": 0.1902
+          "prob": 0.1903
         },
         {
           "name": "Brazil",
           "iso": "br",
-          "prob": 0.1489
+          "prob": 0.1491
         },
         {
           "name": "Colombia",
@@ -1476,7 +1476,7 @@
         {
           "name": "Switzerland",
           "iso": "ch",
-          "prob": 0.0606
+          "prob": 0.0605
         },
         {
           "name": "Norway",
@@ -1491,28 +1491,28 @@
     "iso": "es",
     "seed": 2,
     "group": "H",
-    "champion": 0.1257,
-    "winPct": 0.5213,
+    "champion": 0.1256,
+    "winPct": 0.5216,
     "candidates": [
       {
         "name": "Argentina",
         "iso": "ar",
-        "prob": 0.1481
+        "prob": 0.1477
       },
       {
         "name": "Spain",
         "iso": "es",
-        "prob": 0.1257
+        "prob": 0.1256
       },
       {
         "name": "France",
         "iso": "fr",
-        "prob": 0.1058
+        "prob": 0.1062
       },
       {
         "name": "England",
         "iso": "gb-eng",
-        "prob": 0.1039
+        "prob": 0.1038
       },
       {
         "name": "Brazil",
@@ -1522,7 +1522,7 @@
       {
         "name": "Portugal",
         "iso": "pt",
-        "prob": 0.0652
+        "prob": 0.0651
       }
     ]
   }

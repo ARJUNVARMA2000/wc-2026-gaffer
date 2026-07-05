@@ -74,11 +74,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 4.0,
-      "played": 4,
+      "played": 5,
       "points": 7,
       "gf": 9,
-      "ga": 3,
-      "gd": 6
+      "ga": 6,
+      "gd": 3
     },
     {
       "name": "Bosnia and Herzegovina",
@@ -109,6 +109,19 @@
   ],
   "C": [
     {
+      "name": "Morocco",
+      "iso": "ma",
+      "host": false,
+      "winGroup": 0.0,
+      "advance": 1.0,
+      "xPts": 7.0,
+      "played": 5,
+      "points": 11,
+      "gf": 10,
+      "ga": 4,
+      "gd": 6
+    },
+    {
       "name": "Brazil",
       "iso": "br",
       "host": false,
@@ -120,19 +133,6 @@
       "gf": 9,
       "ga": 2,
       "gd": 7
-    },
-    {
-      "name": "Morocco",
-      "iso": "ma",
-      "host": false,
-      "winGroup": 0.0,
-      "advance": 1.0,
-      "xPts": 7.0,
-      "played": 4,
-      "points": 8,
-      "gf": 7,
-      "ga": 4,
-      "gd": 3
     },
     {
       "name": "Scotland",
@@ -195,11 +195,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 4.0,
-      "played": 4,
+      "played": 5,
       "points": 5,
       "gf": 3,
-      "ga": 5,
-      "gd": -2
+      "ga": 6,
+      "gd": -3
     },
     {
       "name": "Turkey",
@@ -439,11 +439,11 @@
       "winGroup": 1.0,
       "advance": 1.0,
       "xPts": 9.0,
-      "played": 4,
-      "points": 12,
-      "gf": 13,
+      "played": 5,
+      "points": 15,
+      "gf": 14,
       "ga": 2,
-      "gd": 11
+      "gd": 12
     },
     {
       "name": "Norway",
