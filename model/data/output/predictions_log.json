@@ -482,5 +482,71 @@
     "projHome": 1.47,
     "projAway": 0.76,
     "snapshotAt": "2026-06-28T17:03:15Z"
+  },
+  "2026-07-06|Portugal|Spain": {
+    "date": "2026-07-06",
+    "home": "Portugal",
+    "away": "Spain",
+    "pHome": 0.284,
+    "pDraw": 0.285,
+    "pAway": 0.431,
+    "projHome": 1.05,
+    "projAway": 1.36,
+    "snapshotAt": "2026-07-06T23:16:30Z"
+  },
+  "2026-07-06|United States|Belgium": {
+    "date": "2026-07-06",
+    "home": "United States",
+    "away": "Belgium",
+    "pHome": 0.287,
+    "pDraw": 0.247,
+    "pAway": 0.465,
+    "projHome": 1.31,
+    "projAway": 1.72,
+    "snapshotAt": "2026-07-06T23:16:30Z"
+  },
+  "2026-07-06|Argentina|Egypt": {
+    "date": "2026-07-06",
+    "home": "Argentina",
+    "away": "Egypt",
+    "pHome": 0.625,
+    "pDraw": 0.269,
+    "pAway": 0.106,
+    "projHome": 1.48,
+    "projAway": 0.45,
+    "snapshotAt": "2026-07-06T23:16:30Z"
+  },
+  "2026-07-06|Switzerland|Colombia": {
+    "date": "2026-07-06",
+    "home": "Switzerland",
+    "away": "Colombia",
+    "pHome": 0.315,
+    "pDraw": 0.289,
+    "pAway": 0.396,
+    "projHome": 1.11,
+    "projAway": 1.28,
+    "snapshotAt": "2026-07-06T23:16:30Z"
+  },
+  "2026-07-09|France|Morocco": {
+    "date": "2026-07-09",
+    "home": "France",
+    "away": "Morocco",
+    "pHome": 0.449,
+    "pDraw": 0.327,
+    "pAway": 0.225,
+    "projHome": 1.13,
+    "projAway": 0.71,
+    "snapshotAt": "2026-07-06T23:16:30Z"
+  },
+  "2026-07-11|Norway|England": {
+    "date": "2026-07-11",
+    "home": "Norway",
+    "away": "England",
+    "pHome": 0.22,
+    "pDraw": 0.263,
+    "pAway": 0.517,
+    "projHome": 0.95,
+    "projAway": 1.59,
+    "snapshotAt": "2026-07-06T23:16:30Z"
   }
 }
