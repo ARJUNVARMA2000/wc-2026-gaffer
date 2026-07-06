@@ -21,6 +21,12 @@ WEB_DATA_DIR = MODEL_DIR.parent / "web" / "public" / "data"   # web reads this
 
 RESULTS_CSV = RAW_DIR / "results.csv"
 RESULTS_URL = "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
+SHOOTOUTS_CSV = RAW_DIR / "shootouts.csv"
+SHOOTOUTS_URL = "https://raw.githubusercontent.com/martj42/international_results/master/shootouts.csv"
+
+# Last group matchday of the 2026 World Cup; knockout play starts the day after.
+# Same-group pairings after this date are knockout rematches (possible from the QF on).
+GROUP_STAGE_END = "2026-06-27"
 
 # ---------------------------------------------------------------------------
 # Elo parameters (World Football Elo style)

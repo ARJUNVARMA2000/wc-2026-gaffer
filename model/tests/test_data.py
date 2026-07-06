@@ -5,7 +5,12 @@ import pytest
 
 from wc_model.data.confederations import MANUAL_OVERRIDES, derive_confederations
 from wc_model.data.flags import TEAM_ISO, iso
-from wc_model.data.results import classify_tournament, load_results, world_cup_2026
+from wc_model.data.results import (
+    classify_tournament,
+    load_results,
+    load_shootouts,
+    world_cup_2026,
+)
 from wc_model.sim.bracket_2026 import GROUPS
 
 
@@ -88,6 +93,56 @@ class TestWorldCup2026:
         assert len(wc) == 2
         assert (wc["tournament"] == "FIFA World Cup").all()
         assert (wc["date"].dt.year == 2026).all()
+
+    def test_stage_split(self, results_factory, capsys):
+        df = results_factory(
+            [
+                # group game inside the window
+                {"home_team": "Mexico", "away_team": "South Africa", "home_score": 2,
+                 "away_score": 1, "tournament": "FIFA World Cup", "date": "2026-06-11"},
+                # cross-group knockout after the window
+                {"home_team": "Germany", "away_team": "Paraguay", "home_score": 1,
+                 "away_score": 1, "tournament": "FIFA World Cup", "date": "2026-06-29"},
+                # SAME-group pairing after the window = knockout rematch (e.g. a final)
+                {"home_team": "Spain", "away_team": "Uruguay",
+                 "tournament": "FIFA World Cup", "date": "2026-07-19"},
+                # cross-group row INSIDE the group window: anomalous, in neither
+                {"home_team": "Brazil", "away_team": "France", "home_score": 1,
+                 "away_score": 0, "tournament": "FIFA World Cup", "date": "2026-06-15"},
+            ]
+        )
+        assert len(world_cup_2026(df, "all")) == 4
+        group = world_cup_2026(df, "group")
+        assert list(group["home_team"]) == ["Mexico"]
+        ko = world_cup_2026(df, "ko")
+        assert set(ko["home_team"]) == {"Germany", "Spain"}
+        assert "WARN" in capsys.readouterr().out  # the anomalous Brazil-France row
+
+    def test_stage_rejects_unknown_value(self, results_factory):
+        df = results_factory([{"home_team": "Mexico", "away_team": "South Africa",
+                               "tournament": "FIFA World Cup", "date": "2026-06-11"}])
+        with pytest.raises(ValueError):
+            world_cup_2026(df, stage="knockout")
+
+
+class TestLoadShootouts:
+    def test_missing_file_yields_empty_typed_frame(self, tmp_path):
+        df = load_shootouts(tmp_path / "nope.csv")
+        assert list(df.columns) == ["date", "home_team", "away_team", "winner", "first_shooter"]
+        assert len(df) == 0
+        assert pd.api.types.is_datetime64_any_dtype(df["date"])
+
+    def test_parses_dates(self, tmp_path):
+        p = tmp_path / "shootouts.csv"
+        p.write_text(
+            "date,home_team,away_team,winner,first_shooter\n"
+            "2026-06-29,Germany,Paraguay,Paraguay,Germany\n",
+            encoding="utf-8",
+        )
+        df = load_shootouts(p)
+        assert len(df) == 1
+        assert df.iloc[0]["winner"] == "Paraguay"
+        assert df.iloc[0]["date"].year == 2026
 
 
 class TestDeriveConfederations:

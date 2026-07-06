@@ -49,6 +49,46 @@ SF = {101: (97, 98), 102: (99, 100)}
 FINAL = 104          # winners of 101, 102
 THIRD_PLACE = 103    # losers of 101, 102
 
+# Official knockout schedule: match_no -> (date, city, country). Used only as
+# metadata for synthesized fixture rows whose pairing is known before the
+# dataset lists the fixture — a real CSV row always takes precedence. R32/R16
+# entries verified against dataset rows 2026-07-06; QF 98/100, SFs, third place
+# and the final are from the official FIFA schedule fixed at the draw.
+KO_SCHEDULE: Dict[int, Tuple[str, str, str]] = {
+    73: ("2026-06-28", "Inglewood", "United States"),
+    74: ("2026-06-29", "Foxborough", "United States"),
+    75: ("2026-06-29", "Guadalupe", "Mexico"),
+    76: ("2026-06-29", "Houston", "United States"),
+    77: ("2026-06-30", "East Rutherford", "United States"),
+    78: ("2026-06-30", "Arlington", "United States"),
+    79: ("2026-06-30", "Mexico City", "Mexico"),
+    80: ("2026-07-01", "Atlanta", "United States"),
+    81: ("2026-07-01", "Santa Clara", "United States"),
+    82: ("2026-07-01", "Seattle", "United States"),
+    83: ("2026-07-02", "Toronto", "Canada"),
+    84: ("2026-07-02", "Inglewood", "United States"),
+    85: ("2026-07-02", "Vancouver", "Canada"),
+    86: ("2026-07-03", "Miami Gardens", "United States"),
+    87: ("2026-07-03", "Kansas City", "United States"),
+    88: ("2026-07-03", "Arlington", "United States"),
+    89: ("2026-07-04", "Philadelphia", "United States"),
+    90: ("2026-07-04", "Houston", "United States"),
+    91: ("2026-07-05", "East Rutherford", "United States"),
+    92: ("2026-07-05", "Mexico City", "Mexico"),
+    93: ("2026-07-06", "Dallas", "United States"),
+    94: ("2026-07-06", "Seattle", "United States"),
+    95: ("2026-07-06", "Atlanta", "United States"),
+    96: ("2026-07-06", "Vancouver", "Canada"),
+    97: ("2026-07-09", "Foxborough", "United States"),
+    98: ("2026-07-10", "Inglewood", "United States"),
+    99: ("2026-07-11", "Miami Gardens", "United States"),
+    100: ("2026-07-11", "Kansas City", "United States"),
+    101: ("2026-07-14", "Arlington", "United States"),
+    102: ("2026-07-15", "Atlanta", "United States"),
+    103: ("2026-07-18", "Miami Gardens", "United States"),
+    104: ("2026-07-19", "East Rutherford", "United States"),
+}
+
 # Round each knockout match belongs to (for tallying advancement odds).
 ROUND_OF = (
     {m: "R32" for m, _, _ in R32}
@@ -59,13 +99,16 @@ ROUND_OF = (
 )
 
 
-def assign_thirds(qualified_groups: List[str]) -> Optional[Dict[int, str]]:
-    """Match the 8 best third-placed groups to the 8 third-place slots.
+def assign_thirds(qualified_groups: List[str],
+                  slots: Optional[List[int]] = None) -> Optional[Dict[int, str]]:
+    """Match the best third-placed groups to the third-place slots.
 
     Returns {match_no: group_letter} or None if no valid assignment exists.
     Solved as a small bipartite perfect matching over THIRD_ELIGIBILITY.
+    `slots` restricts the matching to a subset (used when live results have
+    already pinned some slots' occupants).
     """
-    slots = list(THIRD_ELIGIBILITY.keys())
+    slots = list(THIRD_ELIGIBILITY.keys()) if slots is None else list(slots)
     groups = list(qualified_groups)
     assignment: Dict[int, str] = {}
     used = set()

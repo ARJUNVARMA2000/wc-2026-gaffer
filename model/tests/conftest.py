@@ -131,3 +131,46 @@ def wc2026_groupA_played() -> pd.DataFrame:
             else:
                 r["home_score"], r["away_score"] = 1, 1
     return make_results_df(rows)
+
+
+def wc2026_all_played_rows() -> list[dict]:
+    """All 72 group games played with deterministic scores: within each group,
+    the draw-order teams finish 1st..4th with distinct points (9/6/3/0) — no
+    ties anywhere, so final standings are unambiguous."""
+    rows = _wc2026_rows()
+    for g, ts in B.GROUPS.items():
+        rank = {t: i for i, t in enumerate(ts)}
+        for r in rows:
+            if r["home_team"] in rank and r["away_team"] in rank:
+                if rank[r["home_team"]] < rank[r["away_team"]]:
+                    r["home_score"], r["away_score"] = 1, 0
+                else:
+                    r["home_score"], r["away_score"] = 0, 1
+    return rows
+
+
+@pytest.fixture
+def wc2026_all_played() -> pd.DataFrame:
+    return make_results_df(wc2026_all_played_rows())
+
+
+def ko_row(date: str, home: str, away: str, hg=None, ag=None,
+           city: str = "Somewhere", country: str = "United States",
+           neutral: bool = True) -> dict:
+    """A 2026 WC knockout row for make_results_df (unplayed when scores None)."""
+    return {
+        "date": date, "home_team": home, "away_team": away,
+        "home_score": np.nan if hg is None else hg,
+        "away_score": np.nan if ag is None else ag,
+        "tournament": "FIFA World Cup", "neutral": neutral,
+        "city": city, "country": country,
+    }
+
+
+def make_shootouts_df(rows: list[dict]) -> pd.DataFrame:
+    """Frame shaped like data.results.load_shootouts()."""
+    cols = ["date", "home_team", "away_team", "winner", "first_shooter"]
+    base = {c: "" for c in cols}
+    df = pd.DataFrame([{**base, **r} for r in rows], columns=cols)
+    df["date"] = pd.to_datetime(df["date"])
+    return df

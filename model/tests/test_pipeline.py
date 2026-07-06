@@ -2,17 +2,26 @@
 
 import pytest
 
-from conftest import DummyModel, make_results_df
+from conftest import (
+    DummyModel,
+    ko_row,
+    make_results_df,
+    make_shootouts_df,
+    wc2026_all_played_rows,
+)
 from wc_model import history as hist
 from wc_model import predictions_log as plog
+from wc_model.data.results import world_cup_2026
 from wc_model.pipeline import (
     _bracket_feeders,
     _inorder_matches,
     _slot_label,
+    build_matches,
     current_standings,
     round_robin_scores,
 )
 from wc_model.sim import bracket_2026 as B
+from wc_model.sim.knockout import build_knockout_state
 
 
 class TestCurrentStandings:
@@ -45,6 +54,75 @@ class TestCurrentStandings:
         rec = current_standings(make_results_df([{"home_team": "X", "away_team": "Y"}]))
         assert len(rec) == 48
         assert all(r["played"] == 0 for r in rec.values())
+
+    def test_knockout_rematches_never_count(self):
+        # Both teams are known WC teams, but from different groups — a played
+        # knockout row must not leak into group standings.
+        rec = current_standings(make_results_df(
+            [ko_row("2026-06-29", "Germany", "Paraguay", 1, 1)]
+        ))
+        assert rec["Germany"]["played"] == 0
+        assert rec["Paraguay"]["played"] == 0
+
+
+class TestBuildMatches:
+    NO_SO = make_shootouts_df([])
+
+    def _build(self, ko_rows, plog_dict=None):
+        df = make_results_df(wc2026_all_played_rows() + ko_rows)
+        ko = build_knockout_state(df, self.NO_SO)
+        group_df = world_cup_2026(df, "group")
+        return build_matches(group_df, ko, DummyModel(), plog_dict or {})
+
+    def test_group_rows_keep_their_schema(self):
+        out = self._build([])
+        group_rows = [m for m in out if m.get("group")]
+        assert len(group_rows) == 72
+        for m in group_rows:
+            assert "round" not in m and "matchNo" not in m
+            assert m["played"] and "modelProb" in m
+
+    def test_played_ko_row_shape(self):
+        out = self._build([ko_row("2026-06-29", "Germany", "Sweden", 1, 1)])
+        m = next(r for r in out if r.get("matchNo") == 74)
+        assert m["round"] == "R32" and m["group"] is None
+        assert (m["homeScore"], m["awayScore"]) == (1, 1)
+        assert "pens" not in m                      # drawn, shootout winner unknown
+        assert 0 < m["modelProb"] < 1
+
+    def test_pens_metadata(self):
+        df = make_results_df(wc2026_all_played_rows()
+                             + [ko_row("2026-06-29", "Germany", "Sweden", 1, 1)])
+        so = make_shootouts_df([{"date": "2026-06-29", "home_team": "Germany",
+                                 "away_team": "Sweden", "winner": "Sweden"}])
+        ko = build_knockout_state(df, so)
+        out = build_matches(world_cup_2026(df, "group"), ko, DummyModel(), {})
+        m = next(r for r in out if r.get("matchNo") == 74)
+        assert m["pens"] is True and m["penWinner"] == "Sweden"
+
+    def test_unplayed_fixture_row_gets_projection_and_advance_prob(self):
+        out = self._build([ko_row("2026-06-29", "Germany", "Sweden")])
+        m = next(r for r in out if r.get("matchNo") == 74)
+        assert not m["played"]
+        assert "projHome" in m and "likelyHome" in m
+        assert m["advHome"] == pytest.approx(m["pHome"] + 0.5 * m["pDraw"], abs=1e-3)
+
+    def test_known_pairing_without_row_is_synthesized_from_schedule(self):
+        out = self._build([
+            ko_row("2026-06-29", "Germany", "Sweden", 2, 0),   # 74 decided
+            ko_row("2026-06-30", "France", "Haiti", 1, 0),     # 77 decided
+        ])                                                     # no row for R16 match 89
+        m = next(r for r in out if r.get("matchNo") == 89)
+        assert (m["home"], m["away"]) == ("Germany", "France")
+        assert m["round"] == "R16" and not m["played"]
+        assert (m["date"], m["city"]) == B.KO_SCHEDULE[89][:2]
+
+    def test_frozen_prematch_probs_are_preferred(self):
+        key = "2026-06-29|Germany|Sweden"
+        out = self._build([ko_row("2026-06-29", "Germany", "Sweden", 2, 0)],
+                          plog_dict={key: {"pHome": 0.7, "pDraw": 0.2, "pAway": 0.1}})
+        m = next(r for r in out if r.get("matchNo") == 74)
+        assert (m["pHome"], m["frozen"], m["modelProb"]) == (0.7, True, 0.7)
 
 
 class TestRoundRobinScores:

@@ -12,11 +12,13 @@ __pycache__/
 venv/
 *.egg-info/
 
-# Large / regenerated data — the scheduled job re-downloads results.csv.
+# Large / regenerated data — the scheduled job re-downloads results.csv and
+# shootouts.csv (a failed shootouts pull degrades gracefully to coin-flip pens).
 # NOTE: web/public/data/*.json and model/data/output/*.json ARE committed
 # (the static site reads them); transfermarkt_values.json is committed as a
-# scrape fallback. Only the big source CSV and intermediates are ignored.
+# scrape fallback. Only the source CSVs and intermediates are ignored.
 model/data/raw/results.csv
+model/data/raw/shootouts.csv
 model/data/processed/
 
 # Env & local

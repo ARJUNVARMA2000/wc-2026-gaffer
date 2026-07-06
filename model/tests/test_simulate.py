@@ -3,8 +3,16 @@
 import numpy as np
 import pytest
 
-from conftest import DummyModel, _wc2026_rows, make_results_df
+from conftest import (
+    DummyModel,
+    _wc2026_rows,
+    ko_row,
+    make_results_df,
+    make_shootouts_df,
+    wc2026_all_played_rows,
+)
 from wc_model.sim import bracket_2026 as B
+from wc_model.sim.knockout import build_knockout_state
 from wc_model.sim.simulate import SLOT_ORDER, build_thirds_lut, load_group_fixtures, simulate
 
 N_SIMS = 2000
@@ -139,3 +147,60 @@ class TestLiveConditioning:
         assert sim.exp_points["A"][0] == pytest.approx(9.0)
         mex = sim.teams.index("Mexico")
         assert sim.rounds["R32"][mex] == pytest.approx(1.0)
+
+
+class TestKnockoutConditioning:
+    """simulate(ko=...) pins real R32 occupants and forces decided winners."""
+
+    NO_SO = make_shootouts_df([])
+
+    def _sim(self, model, ko_rows, shootouts=None, n=500, seed=3):
+        df = make_results_df(wc2026_all_played_rows() + ko_rows)
+        ko = build_knockout_state(df, shootouts if shootouts is not None else self.NO_SO)
+        return simulate(model, n_sims=n, seed=seed, df=df, ko=ko), ko
+
+    def test_forced_winner_reaches_next_round_in_every_sim(self, model):
+        sim, _ = self._sim(model, [ko_row("2026-06-29", "Germany", "Sweden", 2, 0)])
+        t = {name: i for i, name in enumerate(sim.teams)}
+        assert sim.rounds["R16"][t["Germany"]] == pytest.approx(1.0)
+        assert sim.champion[t["Sweden"]] == 0.0
+        # degenerate where reality is known
+        assert sim.match_win[74][t["Germany"]] == pytest.approx(1.0)
+        assert sim.slots["T74"][t["Sweden"]] == 500
+        assert sim.slots["1E"][t["Germany"]] == 500
+
+    def test_learned_occupant_overrides_thirds_allocation(self, model):
+        # Iran (3rd of G) is NOT eligible for T74 under assign_thirds, but the
+        # dataset says it played there — reality wins (the GER-PAR class of bug).
+        sim, ko = self._sim(model, [ko_row("2026-06-29", "Germany", "Iran", 0, 1)])
+        t = {name: i for i, name in enumerate(sim.teams)}
+        assert ko.slot_occupants["T74"] == "Iran"
+        assert sim.rounds["R16"][t["Iran"]] == pytest.approx(1.0)
+        assert sim.champion[t["Germany"]] == 0.0
+
+    def test_drawn_pending_is_a_coin_flip(self, model):
+        sim, ko = self._sim(model, [ko_row("2026-06-29", "Germany", "Sweden", 1, 1)],
+                            n=2000)
+        assert ko.drawn_pending() == {74}
+        t = {name: i for i, name in enumerate(sim.teams)}
+        assert sim.match_win[74][t["Germany"]] == pytest.approx(0.5, abs=0.05)
+        assert sim.match_win[74][t["Sweden"]] == pytest.approx(0.5, abs=0.05)
+
+    def test_round_invariants_hold_under_conditioning(self, model):
+        sim, _ = self._sim(model, [
+            ko_row("2026-06-29", "Germany", "Sweden", 2, 0),
+            ko_row("2026-06-30", "France", "Haiti", 1, 0),
+            ko_row("2026-07-04", "Germany", "France", 0, 1),
+        ])
+        for r, total in {"R32": 32, "R16": 16, "QF": 8, "SF": 4, "Final": 2}.items():
+            assert sim.rounds[r].sum() == pytest.approx(total)
+        assert sim.champion.sum() == pytest.approx(1.0)
+        t = {name: i for i, name in enumerate(sim.teams)}
+        assert sim.rounds["QF"][t["France"]] == pytest.approx(1.0)
+        assert sim.champion[t["Germany"]] == 0.0
+
+    def test_deterministic_for_a_seed_with_ko(self, model):
+        rows = [ko_row("2026-06-29", "Germany", "Sweden", 2, 0)]
+        a, _ = self._sim(model, rows, n=400, seed=7)
+        b, _ = self._sim(model, rows, n=400, seed=7)
+        np.testing.assert_array_equal(a.champion, b.champion)

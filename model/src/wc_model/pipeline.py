@@ -26,7 +26,7 @@ from .config import (
     WEB_DATA_DIR,
 )
 from .data.flags import iso
-from .data.results import download_results, load_results, world_cup_2026
+from .data.results import download_results, download_shootouts, load_results, world_cup_2026
 from .data.transfermarkt import load_values
 from .goals.blend import BlendedModel, build_blend
 from .goals.dixon_coles import most_likely_score, outcome_probs, scoreline_matrix
@@ -34,7 +34,12 @@ from .goals.strength import fit_goal_strength
 from .ratings.build import build_ratings
 from .sim import bracket_2026 as B
 from .sim.bracket_2026 import GROUPS, HOSTS
+from .sim.knockout import KnockoutState, build_knockout_state
 from .sim.simulate import simulate
+
+# matches.json round codes per B.ROUND_OF label
+ROUND_LABEL = {"R32": "R32", "R16": "R16", "QF": "QF", "SF": "SF",
+               "Final": "F", "ThirdPlace": "3P"}
 
 
 def round_robin_scores(model: BlendedModel, teams: list) -> Dict[str, float]:
@@ -55,12 +60,15 @@ def round_robin_scores(model: BlendedModel, teams: list) -> Dict[str, float]:
 def current_standings(wc_df) -> Dict[str, dict]:
     """Group-stage points/GD/GF so far, from played matches only."""
     rec = {t: {"played": 0, "points": 0, "gf": 0, "ga": 0} for ts in GROUPS.values() for t in ts}
+    team_to_group = {t: g for g, ts in GROUPS.items() for t in ts}
     for row in wc_df.itertuples(index=False):
         if not bool(row.played):
             continue
         h, a, hg, ag = row.home_team, row.away_team, int(row.home_score), int(row.away_score)
         if h not in rec or a not in rec:
             continue
+        if team_to_group[h] != team_to_group[a]:
+            continue  # knockout rematch — must never count toward group standings
         for tt, gf, ga in ((h, hg, ag), (a, ag, hg)):
             rec[tt]["played"] += 1
             rec[tt]["gf"] += gf
@@ -168,7 +176,8 @@ def _slot_label(slot: str) -> str:
     return f"{'Winner' if pos == '1' else 'Runner-up'} Grp {g}"
 
 
-def build_bracket(sim, rating_model, team_to_group: Dict[str, str], elo_rank: Dict[str, int]) -> dict:
+def build_bracket(sim, rating_model, team_to_group: Dict[str, str], elo_rank: Dict[str, int],
+                  ko: "KnockoutState | None" = None) -> dict:
     """Forward-filled projected knockout bracket.
 
     The Round-of-32 is seeded with the modal (most-simulated) team per slot. From there
@@ -178,12 +187,19 @@ def build_bracket(sim, rating_model, team_to_group: Dict[str, str], elo_rank: Di
         match sum to 1.0;
       - candidates: the teams most likely to actually occupy this slot (from the feeding
         match's winner distribution), for the on-hover "who else could be here" list.
+
+    Matches already decided in reality (via `ko`) advance their ACTUAL winner —
+    chalk must not forward-fill the loser of a real upset — and carry
+    decided/score/pens metadata for the UI.
     """
     teams = sim.teams
     n = sim.n_sims
     win = sim.win
     feeders = _bracket_feeders()
     r32_slots = {m: (sa, sb) for m, sa, sb in B.R32}
+    tidx = {t: i for i, t in enumerate(teams)}
+    decided = {} if ko is None else {m: km for m, km in ko.matches.items()
+                                     if m != B.THIRD_PLACE and km.winner is not None}
 
     # ---- R32 occupants: modal team per slot, de-duplicated (confident slots first) ----
     counts = sim.slots
@@ -204,17 +220,22 @@ def build_bracket(sim, rating_model, team_to_group: Dict[str, str], elo_rank: Di
         slot_team[s] = chosen
 
     # ---- chalk propagation: participants + projected winner of every match ----
+    def advancer(m: int, a: int, b: int) -> int:
+        if m in decided:                       # reality overrides chalk
+            return tidx[decided[m].winner]
+        return a if win[a, b] >= win[b, a] else b
+
     part: Dict[int, tuple] = {}      # match -> (team_a_idx, team_b_idx)
     proj_winner: Dict[int, int] = {}
     for m, sa, sb in B.R32:
         a, b = slot_team[sa], slot_team[sb]
         part[m] = (a, b)
-        proj_winner[m] = a if win[a, b] >= win[b, a] else b
+        proj_winner[m] = advancer(m, a, b)
     for pairs in (B.R16, B.QF, B.SF, {B.FINAL: (101, 102)}):
         for m, (fa, fb) in pairs.items():
             a, b = proj_winner[fa], proj_winner[fb]
             part[m] = (a, b)
-            proj_winner[m] = a if win[a, b] >= win[b, a] else b
+            proj_winner[m] = advancer(m, a, b)
 
     def candidates(dist: np.ndarray, k: int = 6) -> list:
         """Top-k teams by occupancy probability (drop the long tail < 0.5%)."""
@@ -237,6 +258,9 @@ def build_bracket(sim, rating_model, team_to_group: Dict[str, str], elo_rank: Di
             "winPct": round(float(win[me, other]), 4),
             "fav": bool(me == proj_winner[m]),   # single source of truth — matches the advancer
         }
+        km = decided.get(m)
+        if km is not None and nm in (km.home, km.away):
+            info["result"] = "won" if nm == km.winner else "lost"
         if m in r32_slots:                       # R32: occupant is a fixed group finisher
             src = r32_slots[m][0] if which == "a" else r32_slots[m][1]
             info["slotLabel"] = _slot_label(src)
@@ -248,7 +272,19 @@ def build_bracket(sim, rating_model, team_to_group: Dict[str, str], elo_rank: Di
         return info
 
     def make_match(m: int) -> dict:
-        return {"match": m, "round": B.ROUND_OF[m], "a": slot(m, "a"), "b": slot(m, "b")}
+        out = {"match": m, "round": B.ROUND_OF[m], "a": slot(m, "a"), "b": slot(m, "b")}
+        km = decided.get(m)
+        if km is not None:
+            a, b = part[m]
+            if {teams[a], teams[b]} == {km.home, km.away}:   # sanity: sim matches reality
+                a_is_home = teams[a] == km.home
+                out["decided"] = True
+                out["aScore"] = km.home_score if a_is_home else km.away_score
+                out["bScore"] = km.away_score if a_is_home else km.home_score
+                if km.pens:
+                    out["pens"] = True
+                out["winner"] = "a" if teams[a] == km.winner else "b"
+        return out
 
     rounds = {"R32": [], "R16": [], "QF": [], "SF": []}
     for m in _inorder_matches():
@@ -273,6 +309,99 @@ def build_bracket(sim, rating_model, team_to_group: Dict[str, str], elo_rank: Di
             "final": make_match(B.FINAL), "champion": champion}
 
 
+def build_matches(group_df, ko: "KnockoutState | None", model, plog: dict) -> list:
+    """matches.json rows: the 72 group games (unchanged schema) followed by every
+    knockout match with a known pairing — played (with result, pens), scheduled
+    (dataset fixture row), or synthesized from feeder winners + KO_SCHEDULE."""
+    team_to_group = {t: g for g, ts in GROUPS.items() for t in ts}
+
+    def probs_for(h: str, a: str, adv, date_str: str, hg: int, ag: int) -> dict:
+        """Played-match prob block: frozen pre-match snapshot if logged, else
+        recomputed with the current model (labeled hindsight)."""
+        frozen = plog.get(f"{date_str}|{h}|{a}")
+        if frozen and frozen.get("pHome") is not None:
+            ph, pd_, pa = frozen["pHome"], frozen["pDraw"], frozen["pAway"]
+        else:
+            ph, pd_, pa = outcome_probs(scoreline_matrix(*model.lambdas(h, a, adv)))
+        outcome = 0 if hg > ag else (2 if ag > hg else 1)
+        return {
+            "pHome": round(ph, 3), "pDraw": round(pd_, 3), "pAway": round(pa, 3),
+            "modelProb": round((ph, pd_, pa)[outcome], 3),   # prob model gave the actual result
+            "frozen": bool(frozen),
+        }
+
+    def projection_for(h: str, a: str, adv) -> dict:
+        lh, la = model.lambdas(h, a, adv)
+        mat = scoreline_matrix(lh, la)
+        ph, pd_, pa = outcome_probs(mat)
+        mh, ma, _ = most_likely_score(mat)
+        return {
+            "pHome": round(ph, 3), "pDraw": round(pd_, 3), "pAway": round(pa, 3),
+            "projHome": round(lh, 2), "projAway": round(la, 2),
+            "likelyHome": mh, "likelyAway": ma,
+        }
+
+    matches_out = []
+    for row in group_df.sort_values("date").itertuples(index=False):
+        h, a = row.home_team, row.away_team
+        g = team_to_group.get(h)
+        if g is None or team_to_group.get(a) != g:
+            continue
+        date_str = row.date.strftime("%Y-%m-%d")
+        venue = getattr(row, "country", None)
+        adv = h if (h in HOSTS and venue == h) else (a if (a in HOSTS and venue == a) else None)
+        m = {
+            "date": date_str, "group": g,
+            "home": h, "away": a, "homeIso": iso(h), "awayIso": iso(a),
+            "city": getattr(row, "city", ""), "played": bool(row.played),
+        }
+        if bool(row.played):
+            hg, ag = int(row.home_score), int(row.away_score)
+            m["homeScore"], m["awayScore"] = hg, ag
+            m.update(probs_for(h, a, adv, date_str, hg, ag))
+        else:
+            m.update(projection_for(h, a, adv))
+        matches_out.append(m)
+
+    if ko is None:
+        return matches_out
+
+    ko_rows = []
+    pairings = ko.known_pairings()
+    for mno in sorted(set(ko.matches) | set(pairings)):
+        km = ko.matches.get(mno)
+        if km is not None:
+            h, a = km.home, km.away
+            date_str, city, country = km.date, km.city, km.country
+            played = km.played
+        else:                                   # pairing known, fixture row not yet listed
+            h, a = pairings[mno]
+            date_str, city, country = B.KO_SCHEDULE[mno]
+            played = False
+        adv = h if (h in HOSTS and country == h) else (a if (a in HOSTS and country == a) else None)
+        m = {
+            "date": date_str, "round": ROUND_LABEL[B.ROUND_OF[mno]], "matchNo": mno,
+            "group": None, "home": h, "away": a, "homeIso": iso(h), "awayIso": iso(a),
+            "city": city, "played": played,
+        }
+        if played:
+            # Dataset scores include extra time; a 90'-draw won in ET is
+            # indistinguishable from a 90' win here, so modelProb grades the
+            # three-way outcome against the final score.
+            hg, ag = km.home_score, km.away_score
+            m["homeScore"], m["awayScore"] = hg, ag
+            if km.pens:
+                m["pens"] = True
+                m["penWinner"] = km.winner
+            m.update(probs_for(h, a, adv, date_str, hg, ag))
+        else:
+            m.update(projection_for(h, a, adv))
+            m["advHome"] = round(m["pHome"] + 0.5 * m["pDraw"], 3)  # draws -> 50/50 pens
+        ko_rows.append(m)
+    ko_rows.sort(key=lambda r: (r["date"], r["matchNo"]))
+    return matches_out + ko_rows
+
+
 def build_model_params(gs, model, rating_model) -> dict:
     """Per-team goal-model params so the website can compute any head-to-head live."""
     return {
@@ -294,10 +423,30 @@ def build_model_params(gs, model, rating_model) -> dict:
     }
 
 
+def tournament_stage(ko: "KnockoutState | None", group_done: bool) -> str:
+    """Coarse tournament progress marker for meta.json."""
+    if not group_done or ko is None:
+        return "GROUP"
+    w = ko.winners()
+    if B.FINAL in w:
+        return "DONE"
+    for label, nums in (("R32", [m for m, _, _ in B.R32]), ("R16", list(B.R16)),
+                        ("QF", list(B.QF)), ("SF", list(B.SF))):
+        if any(m not in w for m in nums):
+            return label
+    return "FINAL"
+
+
 def build_outputs(n_sims: int = DEFAULT_N_SIMS, download: bool = False,
                   refresh_values: bool = False) -> dict:
     if download:
         download_results()
+        try:
+            # A shootouts blip must not abort the refresh: drawn KO matches just
+            # stay 50/50 until the next successful pull.
+            download_shootouts()
+        except Exception as e:
+            print(f"  shootouts download failed ({e}); keeping existing cache")
     df = load_results()
     rating_model = build_ratings(df)
     gs = fit_goal_strength(df)
@@ -310,14 +459,17 @@ def build_outputs(n_sims: int = DEFAULT_N_SIMS, download: bool = False,
     values = load_values()
     model = build_blend(gs, confed, values)
 
-    sim = simulate(model, n_sims=n_sims, df=df)
+    ko = build_knockout_state(df)
+    for w in ko.validate():
+        print(f"  WARN knockout: {w}")
+    sim = simulate(model, n_sims=n_sims, df=df, ko=ko)
 
-    wc_df = world_cup_2026(df)
+    group_df = world_cup_2026(df, stage="group")
     teams = sim.teams
     tidx = {t: i for i, t in enumerate(teams)}
     team_to_group = {t: g for g, ts in GROUPS.items() for t in ts}
     rr = round_robin_scores(model, teams)
-    stand = current_standings(wc_df)
+    stand = current_standings(group_df)
     elo_order = sorted(teams, key=lambda t: rating_model.elo(t), reverse=True)
     elo_rank = {t: i + 1 for i, t in enumerate(elo_order)}
     val_order = sorted(teams, key=lambda t: model.value.get(t, 0), reverse=True)
@@ -364,54 +516,20 @@ def build_outputs(n_sims: int = DEFAULT_N_SIMS, download: bool = False,
     # ---- matches.json ----
     from .predictions_log import load_log
     plog = load_log()                                  # frozen pre-match probs (for upsets)
-    matches_out = []
-    for row in wc_df.sort_values("date").itertuples(index=False):
-        h, a = row.home_team, row.away_team
-        g = team_to_group.get(h)
-        if g is None or team_to_group.get(a) != g:
-            continue
-        date_str = row.date.strftime("%Y-%m-%d")
-        venue = getattr(row, "country", None)
-        adv = h if (h in HOSTS and venue == h) else (a if (a in HOSTS and venue == a) else None)
-        m = {
-            "date": date_str, "group": g,
-            "home": h, "away": a, "homeIso": iso(h), "awayIso": iso(a),
-            "city": getattr(row, "city", ""), "played": bool(row.played),
-        }
-        if bool(row.played):
-            hg, ag = int(row.home_score), int(row.away_score)
-            m["homeScore"], m["awayScore"] = hg, ag
-            # Pre-match probs: frozen snapshot if we logged one, else recompute (labeled hindsight).
-            frozen = plog.get(f"{date_str}|{h}|{a}")
-            if frozen and frozen.get("pHome") is not None:
-                ph, pd_, pa = frozen["pHome"], frozen["pDraw"], frozen["pAway"]
-            else:
-                ph, pd_, pa = outcome_probs(scoreline_matrix(*model.lambdas(h, a, adv)))
-            outcome = 0 if hg > ag else (2 if ag > hg else 1)
-            m.update({
-                "pHome": round(ph, 3), "pDraw": round(pd_, 3), "pAway": round(pa, 3),
-                "modelProb": round((ph, pd_, pa)[outcome], 3),   # prob model gave the actual result
-                "frozen": bool(frozen),
-            })
-        else:
-            lh, la = model.lambdas(h, a, adv)
-            mat = scoreline_matrix(lh, la)
-            ph, pd_, pa = outcome_probs(mat)
-            mh, ma, _ = most_likely_score(mat)
-            m.update({
-                "pHome": round(ph, 3), "pDraw": round(pd_, 3), "pAway": round(pa, 3),
-                "projHome": round(lh, 2), "projAway": round(la, 2),
-                "likelyHome": mh, "likelyAway": ma,
-            })
-        matches_out.append(m)
+    matches_out = build_matches(group_df, ko, model, plog)
 
-    played_group = sum(1 for m in matches_out if m["played"])
+    group_rows = [m for m in matches_out if m.get("group")]
+    ko_rows = [m for m in matches_out if not m.get("group")]
+    played_group = sum(1 for m in group_rows if m["played"])
     meta = {
         "lastUpdated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "dataThrough": rating_model.last_update,
         "nSims": n_sims,
         "groupMatchesPlayed": played_group,
-        "groupMatchesTotal": len(matches_out),
+        "groupMatchesTotal": len(group_rows),
+        "koMatchesPlayed": sum(1 for m in ko_rows if m["played"]),
+        "koMatchesTotal": 32,
+        "stage": tournament_stage(ko, played_group == len(group_rows) and played_group > 0),
         "nTeams": len(teams),
         "modelVersion": __version__,
         "homeAdv": round(gs.home_adv, 3),
@@ -419,7 +537,7 @@ def build_outputs(n_sims: int = DEFAULT_N_SIMS, download: bool = False,
         "valuesLoaded": sum(1 for t in teams if model.value.get(t)),
     }
     paths_out = build_paths(sim, rr, rating_model, team_to_group)
-    bracket_out = build_bracket(sim, rating_model, team_to_group, elo_rank)
+    bracket_out = build_bracket(sim, rating_model, team_to_group, elo_rank, ko=ko)
     return {
         "teams.json": teams_out, "groups.json": groups_out,
         "matches.json": matches_out, "meta.json": meta,
@@ -473,7 +591,10 @@ def main():
                 kalshi.refresh(verbose=False)
             except Exception as e:
                 print(f"  kalshi refresh failed ({e}); keeping existing cache")
-        outputs["scorecard.json"] = build_scorecard(outputs["matches.json"], log, kalshi.load())
+        # Group rows only: KO scores include extra time, so a 90'-draw decided in
+        # ET would be graded as a win against a market that settled TIE.
+        group_only = [m for m in outputs["matches.json"] if m.get("group")]
+        outputs["scorecard.json"] = build_scorecard(group_only, log, kalshi.load())
 
     write_outputs(outputs)
     top = outputs["teams.json"][:5]

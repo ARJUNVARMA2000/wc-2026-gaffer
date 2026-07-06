@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from itertools import combinations
-from typing import Dict, List, Optional
+from typing import TYPE_CHECKING, Dict, List, Optional
 
 import numpy as np
 import pandas as pd
@@ -19,6 +19,9 @@ from ..config import DEFAULT_N_SIMS
 from ..data.results import world_cup_2026
 from ..goals.dixon_coles import outcome_probs, scoreline_matrix
 from . import bracket_2026 as B
+
+if TYPE_CHECKING:
+    from .knockout import KnockoutState
 
 SLOT_ORDER = [74, 77, 79, 80, 81, 82, 85, 87]   # third-place slot match numbers
 _GRID = None  # set to scoreline grid width lazily
@@ -45,6 +48,28 @@ def build_thirds_lut() -> np.ndarray:
     return lut
 
 
+def _partial_thirds_lut(open_slots: tuple, pinned_groups: frozenset) -> np.ndarray:
+    """build_thirds_lut for the sub-problem left once live results pin some
+    third-place slots: LUT[bitmask of remaining qualified groups] -> group index
+    per open slot. If eligibility is unsatisfiable for a combo (reality can pin
+    awkwardly), fall back to any bijection — a duplicate-free bracket beats a
+    crash, and the CSV overrides these slots as soon as their rows land.
+    """
+    letters = "ABCDEFGHIJKL"
+    n_open = len(open_slots)
+    lut = np.full((1 << 12, n_open), -1, dtype=np.int64)
+    avail = [g for g in range(12) if g not in pinned_groups]
+    for combo in combinations(avail, n_open):
+        mask = 0
+        for g in combo:
+            mask |= (1 << g)
+        assign = B.assign_thirds([letters[g] for g in combo], slots=list(open_slots))
+        if assign is None:
+            assign = {s: letters[g] for s, g in zip(open_slots, combo)}
+        lut[mask] = [ord(assign[s]) - 65 for s in open_slots]
+    return lut
+
+
 # ---------------------------------------------------------------------------
 # Fixtures
 # ---------------------------------------------------------------------------
@@ -64,7 +89,7 @@ def load_group_fixtures(model, df: Optional[pd.DataFrame] = None):
     `model` is anything exposing lambdas(home, away, adv_team) -> (lh, la)
     (a BlendedModel; a plain GoalStrength works too via its expected_goals).
     """
-    wc = world_cup_2026(df)
+    wc = world_cup_2026(df, stage="group")
     team_to_group = {t: g for g, ts in B.GROUPS.items() for t in ts}
     local_idx = {g: {t: i for i, t in enumerate(ts)} for g, ts in B.GROUPS.items()}
 
@@ -116,7 +141,8 @@ class SimResult:
 
 
 def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
-             df: Optional[pd.DataFrame] = None) -> SimResult:
+             df: Optional[pd.DataFrame] = None,
+             ko: "Optional[KnockoutState]" = None) -> SimResult:
     global _GRID
     rng = np.random.default_rng(seed)
     teams = sorted({t for ts in B.GROUPS.values() for t in ts})
@@ -191,21 +217,59 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
         for p in range(4):
             pts_sum[g][p] = pts[:, p].sum()
 
-    # best 8 third-placed teams
+    # best third-placed teams -> third-place slots. Live knockout conditioning:
+    # T-slots already pinned by real results take their actual occupant, and the
+    # pinned teams' GROUPS are qualified-by-reality — excluded from the ranking
+    # for the remaining slots, so a pinned team can never re-enter the bracket
+    # through a second slot.
+    letters_str = "ABCDEFGHIJKL"
+    group_of_team = {t: gl for gl, ts in B.GROUPS.items() for t in ts}
+    pinned: Dict[int, str] = {}                              # T-slot match_no -> team
+    if ko is not None:
+        for slot, team in ko.slot_occupants.items():
+            if slot.startswith("T"):
+                pinned[int(slot[1:])] = team
+
     key3 = third_pts * 1e7 + (third_gd + 200) * 1e3 + third_gf + rng.random((N, 12)) * 1e-3
-    order3 = np.argsort(-key3, axis=1)
-    top8 = order3[:, :8]                                     # group indices (0-11)
-    mask = np.zeros(N, dtype=np.int64)
-    for k in range(8):
-        mask |= (1 << top8[:, k])
-    lut = build_thirds_lut()
-    assign = lut[mask]                                       # [N,8] group idx per slot
     rows = np.arange(N)
     third_by_group = third_team.T                           # [12, N]
-    slot_third = {SLOT_ORDER[k]: third_by_group[assign[:, k], rows] for k in range(8)}
+    slot_third: Dict[int, np.ndarray] = {
+        s: np.full(N, tidx[t], dtype=np.int64) for s, t in pinned.items()
+    }
+    open_slots = [s for s in SLOT_ORDER if s not in pinned]
+    if open_slots:
+        if pinned:
+            pinned_groups = frozenset(letters_str.index(group_of_team[t]) for t in pinned.values())
+            key3[:, list(pinned_groups)] = -np.inf           # taken by reality
+            lut = _partial_thirds_lut(tuple(open_slots), pinned_groups)
+        else:
+            lut = build_thirds_lut()
+        n_open = len(open_slots)
+        order3 = np.argsort(-key3, axis=1)
+        top = order3[:, :n_open]                             # group indices (0-11)
+        mask = np.zeros(N, dtype=np.int64)
+        for k in range(n_open):
+            mask |= (1 << top[:, k])
+        assign = lut[mask]                                   # [N, n_open] group idx per slot
+        for k, s in enumerate(open_slots):
+            slot_third[s] = third_by_group[assign[:, k], rows]
+
+    # Deterministic winner/runner-up slots pinned by real results (the sim's
+    # random tie-break can diverge from FIFA's deeper criteria); decided
+    # winners are forced; drawn matches awaiting shootout data stay a 50/50
+    # coin per sim.
+    fixed_slot: Dict[str, np.ndarray] = {}
+    if ko is not None:
+        for slot, team in ko.slot_occupants.items():
+            if not slot.startswith("T"):
+                fixed_slot[slot] = np.full(N, tidx[team], dtype=np.int64)
+    forced = {} if ko is None else {m: tidx[t] for m, t in ko.winners().items()}
+    coin = set() if ko is None else ko.drawn_pending()
 
     # resolve R32 slot -> team array
     def resolve(slot: str) -> np.ndarray:
+        if slot in fixed_slot:
+            return fixed_slot[slot]
         if slot.startswith("T"):
             return slot_third[int(slot[1:])]
         pos, gl = slot[0], slot[1]
@@ -223,14 +287,23 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
         winners[m] = w
         h = np.zeros(nT); np.add.at(h, w, 1); match_win[m] = h
 
+    def settle(m: int, ta: np.ndarray, tb: np.ndarray) -> np.ndarray:
+        if m in forced:                      # decided in reality
+            w = np.full(N, forced[m], dtype=np.int64)
+        elif m in coin:                      # played draw, shootout winner unknown yet
+            w = np.where(rng.random(N) < 0.5, ta, tb)
+        else:
+            w = np.where(rng.random(N) < win[ta, tb], ta, tb)
+        _record_winner(m, w)
+        return w
+
     # R32
     for m, sa, sb in B.R32:
         ta, tb = resolve(sa), resolve(sb)
         np.add.at(cnt["R32"], ta, 1); np.add.at(cnt["R32"], tb, 1)
         np.add.at(slot_cnt[sa], ta, 1); np.add.at(slot_cnt[sb], tb, 1)
         record_opp("R32", ta, tb)
-        a_wins = rng.random(N) < win[ta, tb]
-        _record_winner(m, np.where(a_wins, ta, tb))
+        settle(m, ta, tb)
 
     def play_round(pairs: Dict[int, tuple], reached_key: str):
         for m, (fa, fb) in pairs.items():
@@ -238,8 +311,7 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
             np.add.at(cnt[reached_key], ta, 1); np.add.at(cnt[reached_key], tb, 1)
             if reached_key in opp:
                 record_opp(reached_key, ta, tb)
-            a_wins = rng.random(N) < win[ta, tb]
-            _record_winner(m, np.where(a_wins, ta, tb))
+            settle(m, ta, tb)
 
     play_round(B.R16, "R16")
     play_round(B.QF, "QF")
@@ -247,8 +319,7 @@ def simulate(model, n_sims: int = DEFAULT_N_SIMS, seed: int = 12345,
     # final (winners of SF 101 vs 102)
     ta, tb = winners[101], winners[102]
     np.add.at(cnt["Final"], ta, 1); np.add.at(cnt["Final"], tb, 1)
-    champ = np.where(rng.random(N) < win[ta, tb], ta, tb)
-    _record_winner(B.FINAL, champ)
+    champ = settle(B.FINAL, ta, tb)
     np.add.at(cnt["Champion"], champ, 1)
 
     # group advancement (make knockouts) = share of R32 participants, per group team
