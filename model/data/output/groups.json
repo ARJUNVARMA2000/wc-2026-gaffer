@@ -7,11 +7,11 @@
       "winGroup": 1.0,
       "advance": 1.0,
       "xPts": 9.0,
-      "played": 4,
+      "played": 5,
       "points": 12,
-      "gf": 8,
-      "ga": 0,
-      "gd": 8
+      "gf": 10,
+      "ga": 3,
+      "gd": 7
     },
     {
       "name": "South Africa",
@@ -128,11 +128,11 @@
       "winGroup": 1.0,
       "advance": 1.0,
       "xPts": 7.0,
-      "played": 4,
+      "played": 5,
       "points": 10,
       "gf": 9,
-      "ga": 2,
-      "gd": 7
+      "ga": 4,
+      "gd": 5
     },
     {
       "name": "Scotland",
@@ -452,11 +452,11 @@
       "winGroup": 0.0,
       "advance": 1.0,
       "xPts": 6.0,
-      "played": 4,
-      "points": 9,
-      "gf": 10,
+      "played": 5,
+      "points": 12,
+      "gf": 12,
       "ga": 8,
-      "gd": 2
+      "gd": 4
     },
     {
       "name": "Senegal",
@@ -601,11 +601,11 @@
       "winGroup": 1.0,
       "advance": 1.0,
       "xPts": 7.0,
-      "played": 4,
-      "points": 10,
-      "gf": 8,
-      "ga": 3,
-      "gd": 5
+      "played": 5,
+      "points": 13,
+      "gf": 11,
+      "ga": 5,
+      "gd": 6
     },
     {
       "name": "Croatia",
