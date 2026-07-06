@@ -56,6 +56,22 @@ def parse_value(s: str) -> float:
     return val * mult
 
 
+def _get_with_retries(session, url: str, attempts: int = 3, verbose: bool = True):
+    """GET with exponential backoff; raises the last error if all attempts fail."""
+    import requests
+
+    for i in range(attempts):
+        try:
+            return session.get(url, timeout=25)
+        except requests.RequestException as exc:
+            if i == attempts - 1:
+                raise
+            wait = 2 ** (i + 1)
+            if verbose:
+                print(f"  {type(exc).__name__}, retrying in {wait}s")
+            time.sleep(wait)
+
+
 def scrape(max_pages: int = 12, delay: float = 1.5, verbose: bool = True) -> Dict[str, dict]:
     """Scrape all nations -> {canonical_name: {value, confederation, fifa_rank}}."""
     import requests
@@ -66,7 +82,7 @@ def scrape(max_pages: int = 12, delay: float = 1.5, verbose: bool = True) -> Dic
     session.headers.update(HEADERS)
     for page in range(1, max_pages + 1):
         url = TM_URL if page == 1 else f"{TM_URL}?page={page}"
-        resp = session.get(url, timeout=25)
+        resp = _get_with_retries(session, url, verbose=verbose)
         if resp.status_code != 200:
             if verbose:
                 print(f"  page {page}: HTTP {resp.status_code}, stopping")
@@ -100,10 +116,20 @@ def scrape(max_pages: int = 12, delay: float = 1.5, verbose: bool = True) -> Dic
 def refresh(dest: Path = CACHE, min_teams: int = 50, **kw) -> Dict[str, dict]:
     """Scrape and write the cache file.
 
-    Guard: if the scrape returns implausibly few nations (likely blocked), keep the
-    existing cache instead of overwriting good data with a bad run.
+    Guards: if the scrape fails outright (network error after retries) or returns
+    implausibly few nations (likely blocked), keep the existing cache instead of
+    overwriting good data with a bad run.
     """
-    data = scrape(**kw)
+    import requests
+
+    try:
+        data = scrape(**kw)
+    except requests.RequestException as exc:
+        if not dest.exists():
+            raise
+        print(f"  scrape failed ({type(exc).__name__}); keeping existing cache")
+        with open(dest, encoding="utf-8") as f:
+            return json.load(f)
     if len(data) < min_teams and dest.exists():
         print(f"  scrape returned only {len(data)} nations; keeping existing cache")
         with open(dest, encoding="utf-8") as f:
