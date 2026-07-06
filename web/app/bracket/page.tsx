@@ -16,10 +16,11 @@ export default function BracketPage() {
         title="Bracket"
         lede={
           <>
-            The full projected knockout run, all the way to the trophy. Every tie shows each
-            side&apos;s head-to-head win odds — the two add to 100% — and the favourite advances to
-            fill the next round. Hover a projected R16/QF/SF slot to see the other teams that could
-            land there. Built from {meta.nSims.toLocaleString("en-US")} simulations.
+            The knockout bracket as it stands: decided ties show the real score and winner; open
+            ties show each side&apos;s head-to-head win odds — the two add to 100% — with the
+            favourite advancing to fill the next round. Hover a projected slot to see the other
+            teams that could land there. Built from {meta.nSims.toLocaleString("en-US")}{" "}
+            simulations.
           </>
         }
       />

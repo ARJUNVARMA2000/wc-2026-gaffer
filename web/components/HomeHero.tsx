@@ -48,6 +48,13 @@ export default function HomeHero({ meta: initial }: { meta: Meta }) {
           value={meta.groupMatchesPlayed}
           suffix={`/${meta.groupMatchesTotal}`}
         />
+        {meta.koMatchesTotal != null && (
+          <StatCard
+            label="Knockout games"
+            value={meta.koMatchesPlayed ?? 0}
+            suffix={`/${meta.koMatchesTotal}`}
+          />
+        )}
         <StatCard label="Teams" value={meta.nTeams} />
         <StatCard label="Goals / game" value={meta.avgGoals} decimals={2} />
         <StatCard label="Home edge" value={meta.homeAdv} prefix="×" decimals={2} />

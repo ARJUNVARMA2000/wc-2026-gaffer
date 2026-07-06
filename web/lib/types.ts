@@ -40,17 +40,23 @@ export interface GroupRow {
   ga?: number;
 }
 
+export type MatchRound = "R32" | "R16" | "QF" | "SF" | "3P" | "F";
+
 export interface Match {
   date: string;
-  group: string;
+  group: string | null; // null for knockout matches
+  round?: MatchRound; // knockout matches only
+  matchNo?: number; // knockout matches only (73..104)
   home: string;
   away: string;
   homeIso: string;
   awayIso: string;
   city: string;
   played: boolean;
-  homeScore?: number;
+  homeScore?: number; // knockout: includes extra time
   awayScore?: number;
+  pens?: boolean; // knockout draw decided on penalties
+  penWinner?: string;
   pHome?: number;
   pDraw?: number;
   pAway?: number;
@@ -58,9 +64,12 @@ export interface Match {
   projAway?: number;
   likelyHome?: number;
   likelyAway?: number;
+  advHome?: number; // unplayed knockout: P(home advances), draws -> 50/50 pens
   modelProb?: number; // played: prob the model gave the actual result (lower = bigger upset)
   frozen?: boolean; // whether modelProb came from a frozen pre-match snapshot
 }
+
+export type Stage = "GROUP" | "R32" | "R16" | "QF" | "SF" | "FINAL" | "DONE";
 
 export interface Meta {
   lastUpdated: string;
@@ -68,6 +77,9 @@ export interface Meta {
   nSims: number;
   groupMatchesPlayed: number;
   groupMatchesTotal: number;
+  koMatchesPlayed?: number;
+  koMatchesTotal?: number;
+  stage?: Stage;
   nTeams: number;
   modelVersion: string;
   homeAdv: number;
@@ -228,6 +240,7 @@ export interface BracketSlot {
   slotLabel: string; // "Winner Grp E" (R32 only; "" for filled rounds)
   winPct: number; // P(beat the OTHER team in this match) — a.winPct + b.winPct = 1
   fav: boolean; // favourite (projected to advance)
+  result?: "won" | "lost"; // set once the match is decided in reality
   candidates: BracketCandidate[]; // who else could fill this slot, for hover
 }
 export interface BracketMatch {
@@ -235,6 +248,11 @@ export interface BracketMatch {
   round: BracketRound | "Final";
   a: BracketSlot;
   b: BracketSlot;
+  decided?: boolean; // played and decided in reality
+  aScore?: number; // final score (includes extra time)
+  bScore?: number;
+  pens?: boolean; // decided on penalties
+  winner?: "a" | "b";
 }
 export type BracketSide = Record<BracketRound, BracketMatch[]>;
 export interface BracketChampion {

@@ -20,6 +20,17 @@ const STATUS_OPTIONS: { value: StatusFilter; label: string }[] = [
   { value: "PLAYED", label: "Played" },
 ];
 
+/** Knockout round chips, in play order (only rounds present in the data show). */
+const ROUND_ORDER = ["R32", "R16", "QF", "SF", "3P", "F"] as const;
+const ROUND_LABEL: Record<string, string> = {
+  R32: "R32",
+  R16: "R16",
+  QF: "Quarters",
+  SF: "Semis",
+  "3P": "3rd place",
+  F: "Final",
+};
+
 /** Neutral middle segment of the W/D/L strip (draws carry no team color). */
 const DRAW_GREY = "rgba(255, 255, 255, 0.14)";
 
@@ -37,27 +48,34 @@ const cardTransition = {
 
 export default function MatchesView({ matches: initial }: { matches: Match[] }) {
   const matches = useLiveData("matches", initial);
-  const [group, setGroup] = useState("ALL");
+  // "ALL" | "G:<letter>" (group stage) | "R:<round>" (knockout round)
+  const [sel, setSel] = useState("ALL");
   const [filter, setFilter] = useState<StatusFilter>("ALL");
 
   const groups = useMemo(
-    () => ["ALL", ...Array.from(new Set(matches.map((m) => m.group))).sort()],
+    () =>
+      Array.from(new Set(matches.map((m) => m.group).filter((g): g is string => g != null))).sort(),
     [matches]
   );
+  const rounds = useMemo(() => {
+    const present = new Set(matches.map((m) => m.round).filter(Boolean));
+    return ROUND_ORDER.filter((r) => present.has(r));
+  }, [matches]);
 
   // Filter folded into the grouping memo so it recomputes only when the
   // inputs actually change (the old standalone `filtered` defeated this).
   const byDate = useMemo(() => {
     const map = new Map<string, Match[]>();
     for (const m of matches) {
-      if (group !== "ALL" && m.group !== group) continue;
+      if (sel.startsWith("G:") && m.group !== sel.slice(2)) continue;
+      if (sel.startsWith("R:") && m.round !== sel.slice(2)) continue;
       if (filter !== "ALL" && (filter === "PLAYED") !== m.played) continue;
       const list = map.get(m.date);
       if (list) list.push(m);
       else map.set(m.date, [m]);
     }
     return Array.from(map.entries());
-  }, [matches, group, filter]);
+  }, [matches, sel, filter]);
 
   const upsets = useMemo(
     () =>
@@ -131,9 +149,20 @@ export default function MatchesView({ matches: initial }: { matches: Match[] }) 
           label="Filter matches by status"
         />
         <span aria-hidden className="mx-1 h-4 w-px bg-[var(--color-border)]" />
+        <Chip active={sel === "ALL"} onClick={() => setSel("ALL")}>
+          All
+        </Chip>
         {groups.map((g) => (
-          <Chip key={g} active={group === g} onClick={() => setGroup(g)}>
-            {g === "ALL" ? "All groups" : `Grp ${g}`}
+          <Chip key={g} active={sel === `G:${g}`} onClick={() => setSel(`G:${g}`)}>
+            {`Grp ${g}`}
+          </Chip>
+        ))}
+        {rounds.length > 0 && (
+          <span aria-hidden className="mx-1 h-4 w-px bg-[var(--color-border)]" />
+        )}
+        {rounds.map((r) => (
+          <Chip key={r} active={sel === `R:${r}`} onClick={() => setSel(`R:${r}`)}>
+            {ROUND_LABEL[r]}
           </Chip>
         ))}
       </div>
@@ -182,12 +211,25 @@ export default function MatchesView({ matches: initial }: { matches: Match[] }) 
 
                       {/* center: score or odds */}
                       <div className="flex min-w-[120px] flex-col items-center">
+                        {m.round && (
+                          <span className="mono mb-0.5 text-2xs uppercase tracking-wide text-[var(--color-text-tertiary)]">
+                            {ROUND_LABEL[m.round]}
+                            {m.matchNo != null && ` · M${m.matchNo}`}
+                          </span>
+                        )}
                         {m.played ? (
-                          <div className="display text-2xl text-[var(--color-text-primary)]">
-                            {m.homeScore}
-                            <span className="px-1.5 text-[var(--color-text-tertiary)]">–</span>
-                            {m.awayScore}
-                          </div>
+                          <>
+                            <div className="display text-2xl text-[var(--color-text-primary)]">
+                              {m.homeScore}
+                              <span className="px-1.5 text-[var(--color-text-tertiary)]">–</span>
+                              {m.awayScore}
+                            </div>
+                            {m.pens && m.penWinner && (
+                              <span className="mono mt-0.5 text-2xs text-[var(--color-warning)]">
+                                {m.penWinner} win on pens
+                              </span>
+                            )}
+                          </>
                         ) : (
                           <>
                             <div className="mono text-sm text-[var(--color-accent)]">
@@ -226,6 +268,12 @@ export default function MatchesView({ matches: initial }: { matches: Match[] }) 
                                 <span>{pct(m.pAway ?? 0, 0)}</span>
                               </div>
                             </div>
+                            {m.advHome != null && (
+                              <span className="mono mt-1 text-2xs text-[var(--color-text-secondary)]">
+                                {m.advHome >= 0.5 ? m.home : m.away} advance{" "}
+                                {pct(m.advHome >= 0.5 ? m.advHome : 1 - m.advHome, 0)}
+                              </span>
+                            )}
                           </>
                         )}
                       </div>

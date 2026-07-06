@@ -73,9 +73,11 @@ export default function BracketTree({ bracket: initial }: { bracket: Bracket }) 
       </div>
 
       <Footnote className="max-w-3xl leading-relaxed">
-        Each match shows the two sides&apos; head-to-head win odds (they add to 100%); the favourite
-        advances to fill the next round. Grey number = strength seed (Elo rank). Hover or focus a
-        projected R16/QF/SF slot to see the other teams that could land there; Escape dismisses.
+        Decided matches show the final score (winner highlighted, P = won on penalties) and the
+        real winner advances. Open matches show the two sides&apos; head-to-head win odds (they add
+        to 100%); there the favourite advances to fill the next round. Grey number = strength seed
+        (Elo rank). Hover or focus a projected slot to see the other teams that could land there;
+        Escape dismisses.
       </Footnote>
 
       <TooltipFloat
@@ -130,6 +132,7 @@ function MatchCard({
   onShow: ShowFn;
   onHide: () => void;
 }) {
+  const decided = match.decided === true;
   return (
     <motion.div
       variants={fadeRise}
@@ -137,9 +140,23 @@ function MatchCard({
       transition={{ duration: DUR.fast, ease: EASE_OUT }}
       className="panel w-full overflow-hidden"
     >
-      <TeamRow s={match.a} side={side} onShow={onShow} onHide={onHide} />
+      <TeamRow
+        s={match.a}
+        side={side}
+        score={decided ? match.aScore : undefined}
+        pensWin={decided && match.pens === true && match.winner === "a"}
+        onShow={onShow}
+        onHide={onHide}
+      />
       <div className="h-px bg-[var(--color-border)]" />
-      <TeamRow s={match.b} side={side} onShow={onShow} onHide={onHide} />
+      <TeamRow
+        s={match.b}
+        side={side}
+        score={decided ? match.bScore : undefined}
+        pensWin={decided && match.pens === true && match.winner === "b"}
+        onShow={onShow}
+        onHide={onHide}
+      />
     </motion.div>
   );
 }
@@ -165,11 +182,15 @@ function OddsPill({ p }: { p: number }) {
 function TeamRow({
   s,
   side,
+  score,
+  pensWin,
   onShow,
   onHide,
 }: {
   s: BracketSlot;
   side: "l" | "r";
+  score?: number;
+  pensWin?: boolean;
   onShow: ShowFn;
   onHide: () => void;
 }) {
@@ -183,6 +204,7 @@ function TeamRow({
       style={{
         flexDirection: side === "r" ? "row-reverse" : "row",
         background: s.fav ? "color-mix(in oklab, var(--color-accent) 8%, transparent)" : undefined,
+        opacity: s.result === "lost" ? 0.55 : undefined,
       }}
       tabIndex={hoverable ? 0 : undefined}
       title={alternatives}
@@ -218,7 +240,18 @@ function TeamRow({
           </div>
         )}
       </div>
-      <OddsPill p={s.winPct} />
+      {score != null ? (
+        <span className="mono min-w-[42px] shrink-0 text-center text-sm font-semibold tabular-nums text-[var(--color-text-primary)]">
+          {score}
+          {pensWin && (
+            <sup className="ml-0.5 text-2xs font-semibold text-[var(--color-warning)]" title="won on penalties">
+              P
+            </sup>
+          )}
+        </span>
+      ) : (
+        <OddsPill p={s.winPct} />
+      )}
     </div>
   );
 }
@@ -273,9 +306,23 @@ function Center({
         <div className="mono px-2.5 pt-1.5 text-center text-2xs uppercase tracking-[0.15em] text-[var(--color-text-tertiary)]">
           Final
         </div>
-        <TeamRow s={bracket.final.a} side="l" onShow={onShow} onHide={onHide} />
+        <TeamRow
+          s={bracket.final.a}
+          side="l"
+          score={bracket.final.decided ? bracket.final.aScore : undefined}
+          pensWin={bracket.final.decided && bracket.final.pens === true && bracket.final.winner === "a"}
+          onShow={onShow}
+          onHide={onHide}
+        />
         <div className="h-px bg-[var(--color-border)]" />
-        <TeamRow s={bracket.final.b} side="l" onShow={onShow} onHide={onHide} />
+        <TeamRow
+          s={bracket.final.b}
+          side="l"
+          score={bracket.final.decided ? bracket.final.bScore : undefined}
+          pensWin={bracket.final.decided && bracket.final.pens === true && bracket.final.winner === "b"}
+          onShow={onShow}
+          onHide={onHide}
+        />
       </motion.div>
 
       {/* champion badge, anchored just below the final card */}
