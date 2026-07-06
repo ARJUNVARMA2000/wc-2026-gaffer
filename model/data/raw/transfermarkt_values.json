@@ -135,7 +135,7 @@
     "fifa_rank": 27
   },
   "Algeria": {
-    "value": 251900000.0,
+    "value": 256899999.99999997,
     "confederation": "CAF",
     "fifa_rank": 28
   },
@@ -225,7 +225,7 @@
     "fifa_rank": 45
   },
   "DR Congo": {
-    "value": 143900000.0,
+    "value": 143650000.0,
     "confederation": "CAF",
     "fifa_rank": 46
   },
@@ -495,7 +495,7 @@
     "fifa_rank": 99
   },
   "El Salvador": {
-    "value": 4760000.0,
+    "value": 5140000.0,
     "confederation": "CONCACAF",
     "fifa_rank": 100
   },
@@ -850,7 +850,7 @@
     "fifa_rank": 170
   },
   "Afghanistan": {
-    "value": 1390000.0,
+    "value": 1190000.0,
     "confederation": "AFC",
     "fifa_rank": 171
   },
