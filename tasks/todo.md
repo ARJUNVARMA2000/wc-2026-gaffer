@@ -142,3 +142,33 @@ Plan: ~/.claude/plans/task-notification-task-id-w2brfbiie-tas-compressed-storm.m
   reload, exactly one aria-live announcement; prod polls at 120s w/ minute-bucket buster.
 - Known limits: matches.json is still group-stage-only (knockout fixtures = existing
   Phase 8 item); OG artwork only recolored (full refresh deferred w/ declined SEO track).
+
+## Phase 11 — Knockout-results ingestion ✅
+Plan: ~/.claude/plans/yes-put-it-together-peppy-snowflake.md
+- [x] Data layer: shootouts.csv download/load; world_cup_2026(stage=) group/KO split
+- [x] sim/knockout.py: KOMatch/KnockoutState, standings, R32 anchor mapping (learns actual
+      T-slots, overriding the buggy assign_thirds allocation), pens via shootouts,
+      R16+ fixpoint mapping (fixture-reveals-winner)
+- [x] simulate.py: ko= conditioning (slot occupant overrides, forced winners, coin for
+      drawn-pending, partial-thirds LUT so pinned teams can't re-enter elsewhere)
+- [x] pipeline.py: build_matches extraction + KO rows (played/upcoming/synthesized via
+      KO_SCHEDULE), meta ko counts + stage, build_bracket decided flags + proj_winner
+      override, scorecard group-only filter, current_standings KO-leak fix
+- [x] web: types.ts, MatchesView round chips + KO cards + pens, dynamic eyebrow,
+      BracketTree decided styling, HomeHero KO stat
+- [x] tests: test_knockout.py (18), TestKnockoutConditioning (5), pipeline/data extensions
+      — suite 127 → 161
+- [x] Verification: pytest green; real-CSV 50k run (all 26 KO rows mapped incl. GER-PAR,
+      zero warnings, eliminated teams exactly 0.0%, MATERIAL=true); web build + preview
+      DOM checks on /matches + /bracket + home
+
+### Phase 11 — Review
+- Real data mapped perfectly first try: 32/32 R32 slots (T74=Paraguay — the pairing
+  assign_thirds got wrong), 20 winners incl. 3 pens shootouts, 4 upcoming R16 + 2 QF
+  fixtures. Post-conditioning odds: England 19.4%, France 17.9%, Argentina 14.4%.
+- Tests caught a real conditioning bug: pinning one T-slot didn't exclude that group
+  from the best-8 machinery, so a pinned loser could re-enter via another third-place
+  slot (~1% of sims). Fixed with a partial-thirds LUT over the open slots only.
+- Deviations from plan: none material. "(4–2 pens)" display became "won on pens"
+  (shootouts.csv has no pen score — known in plan). Kalshi scorecard now feeds on
+  group rows only (ET-inclusive KO scores would misgrade 90' markets).

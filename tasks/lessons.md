@@ -20,3 +20,23 @@
 - **Agent-tool output files (tasks/*.output) are 0 bytes** — only Workflow
   results persist to disk. Make agent prompts self-contained; don't rely on
   passing another agent's output file path.
+- **Learn the bracket from data, don't trust modelled allocations.** FIFA's
+  third-place → R32 assignment has degrees of freedom our assign_thirds solver
+  resolves differently than FIFA did (predicted GER–BIH, reality GER–PAR).
+  Anything reconstructable from played results (pairings, standings, winners)
+  should be ingested, with the model only filling what reality hasn't decided.
+- **When conditioning a Monte Carlo on partial reality, remove the conditioned
+  entity from every OTHER random pathway too.** Pinning Sweden into T74 without
+  excluding group F's third from the best-8 assignment let "eliminated" Sweden
+  re-enter through T77/T85 in ~1% of sims. Grep for every place the entity can
+  be sampled, not just the slot you're forcing.
+- **martj42 dataset semantics**: KO fixture rows appear (NA scores) as soon as
+  pairings are known and carry real date/city; scores include extra time but
+  NOT penalties — drawn KO matches are decided in the separate shootouts.csv
+  (winner only, no pen score). Any per-match grading vs 90-minute markets must
+  exclude KO rows (an ET win looks like a 90' win in the data).
+- **Generic frame-wide filters rot when the data grows**: current_standings and
+  matches.json both iterated "all 2026 WC rows" assuming group-stage-only; the
+  first played KO row would have polluted group standings. Route every consumer
+  through one stage-split helper (world_cup_2026(stage=)) instead of local
+  same-group checks.
