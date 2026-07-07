@@ -342,9 +342,9 @@
     "group": "J",
     "reachR32": 1.0,
     "reachR16": 1.0,
-    "reachQF": 0.7558,
-    "reachSF": 0.4863,
-    "champion": 0.1444,
+    "reachQF": 0.7567,
+    "reachSF": 0.4835,
+    "champion": 0.139,
     "pathDifficulty": 0.0,
     "pathRank": 17,
     "expOppR32": 0.85,
@@ -363,35 +363,35 @@
           "opp": "Egypt",
           "oppIso": "eg",
           "prob": 1.0,
-          "winProb": 0.7593
+          "winProb": 0.7591
         }
       ],
       "QF": [
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.5429,
-          "winProb": 0.6188
+          "prob": 0.5499,
+          "winProb": 0.619
         },
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.4571,
-          "winProb": 0.6684
+          "prob": 0.4501,
+          "winProb": 0.668
         }
       ],
       "SF": [
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.6553,
-          "winProb": 0.5061
+          "prob": 0.6533,
+          "winProb": 0.5055
         },
         {
           "opp": "Norway",
           "oppIso": "no",
-          "prob": 0.3447,
-          "winProb": 0.6451
+          "prob": 0.3467,
+          "winProb": 0.6444
         }
       ]
     }
@@ -406,7 +406,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 18.5,
+    "pathDifficulty": 18.4,
     "pathRank": 18,
     "expOppR32": 0.89,
     "expOppR16": 1.73,
@@ -416,7 +416,7 @@
           "opp": "South Africa",
           "oppIso": "za",
           "prob": 1.0,
-          "winProb": 0.6547
+          "winProb": 0.6544
         }
       ],
       "R16": [
@@ -424,7 +424,7 @@
           "opp": "Morocco",
           "oppIso": "ma",
           "prob": 1.0,
-          "winProb": 0.3633
+          "winProb": 0.363
         }
       ],
       "QF": [],
@@ -441,7 +441,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 18.7,
+    "pathDifficulty": 18.6,
     "pathRank": 19,
     "expOppR32": 1.23,
     "expOppR16": 0.0,
@@ -451,7 +451,7 @@
           "opp": "Egypt",
           "oppIso": "eg",
           "prob": 1.0,
-          "winProb": 0.4893
+          "winProb": 0.4889
         }
       ],
       "R16": [],
@@ -469,7 +469,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 21.3,
+    "pathDifficulty": 21.1,
     "pathRank": 20,
     "expOppR32": 1.26,
     "expOppR16": 0.0,
@@ -479,7 +479,7 @@
           "opp": "Paraguay",
           "oppIso": "py",
           "prob": 1.0,
-          "winProb": 0.7305
+          "winProb": 0.7311
         }
       ],
       "R16": [],
@@ -495,11 +495,11 @@
     "reachR32": 1.0,
     "reachR16": 1.0,
     "reachQF": 1.0,
-    "reachSF": 0.6489,
-    "champion": 0.1944,
-    "pathDifficulty": 21.9,
+    "reachSF": 0.6494,
+    "champion": 0.1883,
+    "pathDifficulty": 21.8,
     "pathRank": 21,
-    "expOppR32": 1.17,
+    "expOppR32": 1.16,
     "expOppR16": 1.42,
     "rounds": {
       "R32": [
@@ -507,7 +507,7 @@
           "opp": "DR Congo",
           "oppIso": "cd",
           "prob": 1.0,
-          "winProb": 0.7715
+          "winProb": 0.7719
         }
       ],
       "R16": [
@@ -515,7 +515,7 @@
           "opp": "Mexico",
           "oppIso": "mx",
           "prob": 1.0,
-          "winProb": 0.7248
+          "winProb": 0.7255
         }
       ],
       "QF": [
@@ -523,33 +523,33 @@
           "opp": "Norway",
           "oppIso": "no",
           "prob": 1.0,
-          "winProb": 0.6484
+          "winProb": 0.6483
         }
       ],
       "SF": [
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.4911,
-          "winProb": 0.4939
+          "prob": 0.4864,
+          "winProb": 0.4945
         },
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.2416,
-          "winProb": 0.6252
+          "prob": 0.249,
+          "winProb": 0.626
         },
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.1829,
-          "winProb": 0.6436
+          "prob": 0.1825,
+          "winProb": 0.6438
         },
         {
           "opp": "Egypt",
           "oppIso": "eg",
-          "prob": 0.0845,
-          "winProb": 0.7646
+          "prob": 0.0821,
+          "winProb": 0.7647
         }
       ]
     }
@@ -564,7 +564,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 26.4,
+    "pathDifficulty": 26.1,
     "pathRank": 22,
     "expOppR32": 1.32,
     "expOppR16": 0.0,
@@ -574,7 +574,7 @@
           "opp": "Canada",
           "oppIso": "ca",
           "prob": 1.0,
-          "winProb": 0.3453
+          "winProb": 0.3456
         }
       ],
       "R16": [],
@@ -589,10 +589,10 @@
     "group": "K",
     "reachR32": 1.0,
     "reachR16": 1.0,
-    "reachQF": 0.5407,
-    "reachSF": 0.2424,
-    "champion": 0.0401,
-    "pathDifficulty": 28.4,
+    "reachQF": 0.5467,
+    "reachSF": 0.2491,
+    "champion": 0.0402,
+    "pathDifficulty": 28.3,
     "pathRank": 23,
     "expOppR32": 1.12,
     "expOppR16": 1.69,
@@ -602,7 +602,7 @@
           "opp": "Ghana",
           "oppIso": "gh",
           "prob": 1.0,
-          "winProb": 0.6985
+          "winProb": 0.6983
         }
       ],
       "R16": [
@@ -610,35 +610,35 @@
           "opp": "Switzerland",
           "oppIso": "ch",
           "prob": 1.0,
-          "winProb": 0.5409
+          "winProb": 0.5402
         }
       ],
       "QF": [
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.7588,
-          "winProb": 0.3812
+          "prob": 0.7612,
+          "winProb": 0.381
         },
         {
           "opp": "Egypt",
           "oppIso": "eg",
-          "prob": 0.2412,
-          "winProb": 0.6684
+          "prob": 0.2388,
+          "winProb": 0.6679
         }
       ],
       "SF": [
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.6467,
-          "winProb": 0.3748
+          "prob": 0.6491,
+          "winProb": 0.374
         },
         {
           "opp": "Norway",
           "oppIso": "no",
-          "prob": 0.3533,
-          "winProb": 0.5069
+          "prob": 0.3509,
+          "winProb": 0.5059
         }
       ]
     }
@@ -650,20 +650,20 @@
     "group": "D",
     "reachR32": 1.0,
     "reachR16": 1.0,
-    "reachQF": 0.3424,
-    "reachSF": 0.0848,
-    "champion": 0.0082,
-    "pathDifficulty": 29.7,
+    "reachQF": 0.0,
+    "reachSF": 0.0,
+    "champion": 0.0,
+    "pathDifficulty": 30.0,
     "pathRank": 24,
     "expOppR32": 1.01,
-    "expOppR16": 1.89,
+    "expOppR16": 1.91,
     "rounds": {
       "R32": [
         {
           "opp": "Bosnia and Herzegovina",
           "oppIso": "ba",
           "prob": 1.0,
-          "winProb": 0.6547
+          "winProb": 0.6506
         }
       ],
       "R16": [
@@ -671,37 +671,11 @@
           "opp": "Belgium",
           "oppIso": "be",
           "prob": 1.0,
-          "winProb": 0.3479
+          "winProb": 0.3367
         }
       ],
-      "QF": [
-        {
-          "opp": "Spain",
-          "oppIso": "es",
-          "prob": 0.5629,
-          "winProb": 0.2304
-        },
-        {
-          "opp": "Portugal",
-          "oppIso": "pt",
-          "prob": 0.4371,
-          "winProb": 0.2771
-        }
-      ],
-      "SF": [
-        {
-          "opp": "France",
-          "oppIso": "fr",
-          "prob": 0.6037,
-          "winProb": 0.2466
-        },
-        {
-          "opp": "Morocco",
-          "oppIso": "ma",
-          "prob": 0.3963,
-          "winProb": 0.3896
-        }
-      ]
+      "QF": [],
+      "SF": []
     }
   },
   {
@@ -712,9 +686,9 @@
     "reachR32": 1.0,
     "reachR16": 1.0,
     "reachQF": 1.0,
-    "reachSF": 0.6101,
-    "champion": 0.1794,
-    "pathDifficulty": 32.9,
+    "reachSF": 0.6153,
+    "champion": 0.1688,
+    "pathDifficulty": 32.8,
     "pathRank": 25,
     "expOppR32": 1.5,
     "expOppR16": 1.26,
@@ -732,7 +706,7 @@
           "opp": "Paraguay",
           "oppIso": "py",
           "prob": 1.0,
-          "winProb": 0.7708
+          "winProb": 0.7716
         }
       ],
       "QF": [
@@ -740,33 +714,21 @@
           "opp": "Morocco",
           "oppIso": "ma",
           "prob": 1.0,
-          "winProb": 0.612
+          "winProb": 0.6125
         }
       ],
       "SF": [
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.3908,
-          "winProb": 0.4457
-        },
-        {
-          "opp": "Portugal",
-          "oppIso": "pt",
-          "prob": 0.2706,
-          "winProb": 0.5191
+          "prob": 0.6476,
+          "winProb": 0.4402
         },
         {
           "opp": "Belgium",
           "oppIso": "be",
-          "prob": 0.2547,
-          "winProb": 0.5924
-        },
-        {
-          "opp": "United States",
-          "oppIso": "us",
-          "prob": 0.084,
-          "winProb": 0.7534
+          "prob": 0.3524,
+          "winProb": 0.5874
         }
       ]
     }
@@ -781,7 +743,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 34.6,
+    "pathDifficulty": 34.4,
     "pathRank": 26,
     "expOppR32": 1.42,
     "expOppR16": 0.0,
@@ -791,7 +753,7 @@
           "opp": "Mexico",
           "oppIso": "mx",
           "prob": 1.0,
-          "winProb": 0.5562
+          "winProb": 0.5563
         }
       ],
       "R16": [],
@@ -809,9 +771,9 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 36.6,
+    "pathDifficulty": 35.3,
     "pathRank": 27,
-    "expOppR32": 1.45,
+    "expOppR32": 1.43,
     "expOppR16": 0.0,
     "rounds": {
       "R32": [
@@ -819,7 +781,7 @@
           "opp": "United States",
           "oppIso": "us",
           "prob": 1.0,
-          "winProb": 0.3453
+          "winProb": 0.3494
         }
       ],
       "R16": [],
@@ -834,20 +796,20 @@
     "group": "G",
     "reachR32": 1.0,
     "reachR16": 1.0,
-    "reachQF": 0.6576,
-    "reachSF": 0.2554,
-    "champion": 0.0538,
-    "pathDifficulty": 44.8,
+    "reachQF": 1.0,
+    "reachSF": 0.3536,
+    "champion": 0.076,
+    "pathDifficulty": 44.1,
     "pathRank": 28,
     "expOppR32": 1.61,
-    "expOppR16": 1.45,
+    "expOppR16": 1.43,
     "rounds": {
       "R32": [
         {
           "opp": "Senegal",
           "oppIso": "sn",
           "prob": 1.0,
-          "winProb": 0.583
+          "winProb": 0.5873
         }
       ],
       "R16": [
@@ -855,35 +817,29 @@
           "opp": "United States",
           "oppIso": "us",
           "prob": 1.0,
-          "winProb": 0.6521
+          "winProb": 0.6633
         }
       ],
       "QF": [
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.575,
-          "winProb": 0.3545
-        },
-        {
-          "opp": "Portugal",
-          "oppIso": "pt",
-          "prob": 0.425,
-          "winProb": 0.4268
+          "prob": 1.0,
+          "winProb": 0.3543
         }
       ],
       "SF": [
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.6083,
-          "winProb": 0.4076
+          "prob": 0.6133,
+          "winProb": 0.4126
         },
         {
           "opp": "Morocco",
           "oppIso": "ma",
-          "prob": 0.3917,
-          "winProb": 0.5149
+          "prob": 0.3867,
+          "winProb": 0.5185
         }
       ]
     }
@@ -895,12 +851,12 @@
     "group": "G",
     "reachR32": 1.0,
     "reachR16": 1.0,
-    "reachQF": 0.2442,
-    "reachSF": 0.0856,
-    "champion": 0.0056,
-    "pathDifficulty": 44.9,
+    "reachQF": 0.2433,
+    "reachSF": 0.0837,
+    "champion": 0.0055,
+    "pathDifficulty": 44.7,
     "pathRank": 29,
-    "expOppR32": 1.2,
+    "expOppR32": 1.19,
     "expOppR16": 2.08,
     "rounds": {
       "R32": [
@@ -908,7 +864,7 @@
           "opp": "Australia",
           "oppIso": "au",
           "prob": 1.0,
-          "winProb": 0.5107
+          "winProb": 0.5111
         }
       ],
       "R16": [
@@ -916,35 +872,35 @@
           "opp": "Argentina",
           "oppIso": "ar",
           "prob": 1.0,
-          "winProb": 0.2407
+          "winProb": 0.2409
         }
       ],
       "QF": [
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.5339,
-          "winProb": 0.3316
+          "prob": 0.5365,
+          "winProb": 0.3321
         },
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.4661,
-          "winProb": 0.3577
+          "prob": 0.4635,
+          "winProb": 0.3576
         }
       ],
       "SF": [
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.6402,
-          "winProb": 0.2354
+          "prob": 0.6371,
+          "winProb": 0.2353
         },
         {
           "opp": "Norway",
           "oppIso": "no",
-          "prob": 0.3598,
-          "winProb": 0.3203
+          "prob": 0.3629,
+          "winProb": 0.32
         }
       ]
     }
@@ -956,10 +912,10 @@
     "group": "B",
     "reachR32": 1.0,
     "reachR16": 1.0,
-    "reachQF": 0.4593,
-    "reachSF": 0.1857,
-    "champion": 0.0278,
-    "pathDifficulty": 48.2,
+    "reachQF": 0.4533,
+    "reachSF": 0.1837,
+    "champion": 0.0268,
+    "pathDifficulty": 48.0,
     "pathRank": 30,
     "expOppR32": 1.47,
     "expOppR16": 1.76,
@@ -969,7 +925,7 @@
           "opp": "Algeria",
           "oppIso": "dz",
           "prob": 1.0,
-          "winProb": 0.5734
+          "winProb": 0.5738
         }
       ],
       "R16": [
@@ -977,35 +933,35 @@
           "opp": "Colombia",
           "oppIso": "co",
           "prob": 1.0,
-          "winProb": 0.4591
+          "winProb": 0.4598
         }
       ],
       "QF": [
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.7522,
-          "winProb": 0.3316
+          "prob": 0.7513,
+          "winProb": 0.332
         },
         {
           "opp": "Egypt",
           "oppIso": "eg",
-          "prob": 0.2478,
-          "winProb": 0.6423
+          "prob": 0.2487,
+          "winProb": 0.6424
         }
       ],
       "SF": [
         {
           "opp": "England",
           "oppIso": "gb-eng",
-          "prob": 0.6389,
-          "winProb": 0.3564
+          "prob": 0.6453,
+          "winProb": 0.3562
         },
         {
           "opp": "Norway",
           "oppIso": "no",
-          "prob": 0.3611,
-          "winProb": 0.4977
+          "prob": 0.3547,
+          "winProb": 0.4974
         }
       ]
     }
@@ -1020,7 +976,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 54.8,
+    "pathDifficulty": 54.5,
     "pathRank": 31,
     "expOppR32": 1.6,
     "expOppR16": 1.77,
@@ -1030,7 +986,7 @@
           "opp": "Japan",
           "oppIso": "jp",
           "prob": 1.0,
-          "winProb": 0.6657
+          "winProb": 0.6656
         }
       ],
       "R16": [
@@ -1038,7 +994,7 @@
           "opp": "Norway",
           "oppIso": "no",
           "prob": 1.0,
-          "winProb": 0.6315
+          "winProb": 0.6308
         }
       ],
       "QF": [],
@@ -1055,7 +1011,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 56.3,
+    "pathDifficulty": 56.1,
     "pathRank": 32,
     "expOppR32": 1.69,
     "expOppR16": 0.0,
@@ -1065,7 +1021,7 @@
           "opp": "Switzerland",
           "oppIso": "ch",
           "prob": 1.0,
-          "winProb": 0.4266
+          "winProb": 0.4262
         }
       ],
       "R16": [],
@@ -1081,9 +1037,9 @@
     "reachR32": 1.0,
     "reachR16": 1.0,
     "reachQF": 1.0,
-    "reachSF": 0.3899,
-    "champion": 0.0751,
-    "pathDifficulty": 57.6,
+    "reachSF": 0.3847,
+    "champion": 0.0707,
+    "pathDifficulty": 57.4,
     "pathRank": 33,
     "expOppR32": 1.96,
     "expOppR16": 1.32,
@@ -1093,7 +1049,7 @@
           "opp": "Netherlands",
           "oppIso": "nl",
           "prob": 1.0,
-          "winProb": 0.4616
+          "winProb": 0.4612
         }
       ],
       "R16": [
@@ -1101,7 +1057,7 @@
           "opp": "Canada",
           "oppIso": "ca",
           "prob": 1.0,
-          "winProb": 0.6367
+          "winProb": 0.637
         }
       ],
       "QF": [
@@ -1109,33 +1065,21 @@
           "opp": "France",
           "oppIso": "fr",
           "prob": 1.0,
-          "winProb": 0.388
+          "winProb": 0.3875
         }
       ],
       "SF": [
         {
           "opp": "Spain",
           "oppIso": "es",
-          "prob": 0.3914,
-          "winProb": 0.371
-        },
-        {
-          "opp": "Portugal",
-          "oppIso": "pt",
-          "prob": 0.2657,
-          "winProb": 0.4174
+          "prob": 0.6446,
+          "winProb": 0.3686
         },
         {
           "opp": "Belgium",
           "oppIso": "be",
-          "prob": 0.2566,
-          "winProb": 0.4851
-        },
-        {
-          "opp": "United States",
-          "oppIso": "us",
-          "prob": 0.0862,
-          "winProb": 0.6104
+          "prob": 0.3554,
+          "winProb": 0.4815
         }
       ]
     }
@@ -1148,9 +1092,9 @@
     "reachR32": 1.0,
     "reachR16": 1.0,
     "reachQF": 1.0,
-    "reachSF": 0.3511,
-    "champion": 0.059,
-    "pathDifficulty": 59.9,
+    "reachSF": 0.3506,
+    "champion": 0.0556,
+    "pathDifficulty": 59.6,
     "pathRank": 34,
     "expOppR32": 1.5,
     "expOppR16": 2.08,
@@ -1160,7 +1104,7 @@
           "opp": "Ivory Coast",
           "oppIso": "ci",
           "prob": 1.0,
-          "winProb": 0.5701
+          "winProb": 0.5705
         }
       ],
       "R16": [
@@ -1168,7 +1112,7 @@
           "opp": "Brazil",
           "oppIso": "br",
           "prob": 1.0,
-          "winProb": 0.3685
+          "winProb": 0.3692
         }
       ],
       "QF": [
@@ -1176,33 +1120,33 @@
           "opp": "England",
           "oppIso": "gb-eng",
           "prob": 1.0,
-          "winProb": 0.3516
+          "winProb": 0.3517
         }
       ],
       "SF": [
         {
           "opp": "Argentina",
           "oppIso": "ar",
-          "prob": 0.4774,
-          "winProb": 0.3549
+          "prob": 0.4781,
+          "winProb": 0.3556
         },
         {
           "opp": "Colombia",
           "oppIso": "co",
-          "prob": 0.2439,
-          "winProb": 0.4931
+          "prob": 0.2493,
+          "winProb": 0.4941
         },
         {
           "opp": "Switzerland",
           "oppIso": "ch",
-          "prob": 0.191,
-          "winProb": 0.5023
+          "prob": 0.1859,
+          "winProb": 0.5026
         },
         {
           "opp": "Egypt",
           "oppIso": "eg",
-          "prob": 0.0877,
-          "winProb": 0.6797
+          "prob": 0.0867,
+          "winProb": 0.68
         }
       ]
     }
@@ -1217,7 +1161,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 60.0,
+    "pathDifficulty": 59.7,
     "pathRank": 35,
     "expOppR32": 1.73,
     "expOppR16": 0.0,
@@ -1227,7 +1171,7 @@
           "opp": "Morocco",
           "oppIso": "ma",
           "prob": 1.0,
-          "winProb": 0.5384
+          "winProb": 0.5388
         }
       ],
       "R16": [],
@@ -1242,10 +1186,10 @@
     "group": "H",
     "reachR32": 1.0,
     "reachR16": 1.0,
-    "reachQF": 0.5708,
-    "reachSF": 0.391,
-    "champion": 0.1374,
-    "pathDifficulty": 60.6,
+    "reachQF": 1.0,
+    "reachSF": 0.6464,
+    "champion": 0.2291,
+    "pathDifficulty": 60.3,
     "pathRank": 36,
     "expOppR32": 1.52,
     "expOppR16": 2.07,
@@ -1255,7 +1199,7 @@
           "opp": "Austria",
           "oppIso": "at",
           "prob": 1.0,
-          "winProb": 0.7527
+          "winProb": 0.7557
         }
       ],
       "R16": [
@@ -1263,35 +1207,29 @@
           "opp": "Portugal",
           "oppIso": "pt",
           "prob": 1.0,
-          "winProb": 0.5731
+          "winProb": 0.5784
         }
       ],
       "QF": [
         {
           "opp": "Belgium",
           "oppIso": "be",
-          "prob": 0.6624,
-          "winProb": 0.6455
-        },
-        {
-          "opp": "United States",
-          "oppIso": "us",
-          "prob": 0.3376,
-          "winProb": 0.7696
+          "prob": 1.0,
+          "winProb": 0.6457
         }
       ],
       "SF": [
         {
           "opp": "France",
           "oppIso": "fr",
-          "prob": 0.6097,
-          "winProb": 0.5543
+          "prob": 0.6164,
+          "winProb": 0.5598
         },
         {
           "opp": "Morocco",
           "oppIso": "ma",
-          "prob": 0.3903,
-          "winProb": 0.629
+          "prob": 0.3836,
+          "winProb": 0.6314
         }
       ]
     }
@@ -1306,7 +1244,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 62.5,
+    "pathDifficulty": 62.1,
     "pathRank": 37,
     "expOppR32": 1.76,
     "expOppR16": 0.0,
@@ -1316,7 +1254,7 @@
           "opp": "Colombia",
           "oppIso": "co",
           "prob": 1.0,
-          "winProb": 0.3015
+          "winProb": 0.3017
         }
       ],
       "R16": [],
@@ -1334,7 +1272,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 62.5,
+    "pathDifficulty": 62.1,
     "pathRank": 38,
     "expOppR32": 1.55,
     "expOppR16": 2.08,
@@ -1344,7 +1282,7 @@
           "opp": "Ecuador",
           "oppIso": "ec",
           "prob": 1.0,
-          "winProb": 0.4438
+          "winProb": 0.4437
         }
       ],
       "R16": [
@@ -1352,7 +1290,7 @@
           "opp": "England",
           "oppIso": "gb-eng",
           "prob": 1.0,
-          "winProb": 0.2752
+          "winProb": 0.2745
         }
       ],
       "QF": [],
@@ -1369,7 +1307,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 63.2,
+    "pathDifficulty": 63.0,
     "pathRank": 39,
     "expOppR32": 1.77,
     "expOppR16": 0.0,
@@ -1379,7 +1317,7 @@
           "opp": "Norway",
           "oppIso": "no",
           "prob": 1.0,
-          "winProb": 0.4299
+          "winProb": 0.4295
         }
       ],
       "R16": [],
@@ -1394,20 +1332,20 @@
     "group": "K",
     "reachR32": 1.0,
     "reachR16": 1.0,
-    "reachQF": 0.4292,
-    "reachSF": 0.2687,
-    "champion": 0.0749,
-    "pathDifficulty": 72.3,
+    "reachQF": 0.0,
+    "reachSF": 0.0,
+    "champion": 0.0,
+    "pathDifficulty": 72.2,
     "pathRank": 40,
     "expOppR32": 1.66,
-    "expOppR16": 2.22,
+    "expOppR16": 2.23,
     "rounds": {
       "R32": [
         {
           "opp": "Croatia",
           "oppIso": "hr",
           "prob": 1.0,
-          "winProb": 0.6545
+          "winProb": 0.6536
         }
       ],
       "R16": [
@@ -1415,37 +1353,11 @@
           "opp": "Spain",
           "oppIso": "es",
           "prob": 1.0,
-          "winProb": 0.4269
+          "winProb": 0.4216
         }
       ],
-      "QF": [
-        {
-          "opp": "Belgium",
-          "oppIso": "be",
-          "prob": 0.6512,
-          "winProb": 0.5732
-        },
-        {
-          "opp": "United States",
-          "oppIso": "us",
-          "prob": 0.3488,
-          "winProb": 0.7229
-        }
-      ],
-      "SF": [
-        {
-          "opp": "France",
-          "oppIso": "fr",
-          "prob": 0.6144,
-          "winProb": 0.4809
-        },
-        {
-          "opp": "Morocco",
-          "oppIso": "ma",
-          "prob": 0.3856,
-          "winProb": 0.5826
-        }
-      ]
+      "QF": [],
+      "SF": []
     }
   },
   {
@@ -1458,9 +1370,9 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 72.9,
+    "pathDifficulty": 73.7,
     "pathRank": 41,
-    "expOppR32": 1.89,
+    "expOppR32": 1.91,
     "expOppR16": 0.0,
     "rounds": {
       "R32": [
@@ -1468,7 +1380,7 @@
           "opp": "Belgium",
           "oppIso": "be",
           "prob": 1.0,
-          "winProb": 0.417
+          "winProb": 0.4127
         }
       ],
       "R16": [],
@@ -1486,17 +1398,17 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 86.2,
+    "pathDifficulty": 85.9,
     "pathRank": 42,
     "expOppR32": 1.99,
-    "expOppR16": 2.14,
+    "expOppR16": 2.15,
     "rounds": {
       "R32": [
         {
           "opp": "Germany",
           "oppIso": "de",
           "prob": 1.0,
-          "winProb": 0.2695
+          "winProb": 0.2689
         }
       ],
       "R16": [
@@ -1504,7 +1416,7 @@
           "opp": "France",
           "oppIso": "fr",
           "prob": 1.0,
-          "winProb": 0.2292
+          "winProb": 0.2284
         }
       ],
       "QF": [],
@@ -1521,7 +1433,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 87.9,
+    "pathDifficulty": 87.2,
     "pathRank": 43,
     "expOppR32": 2.07,
     "expOppR16": 0.0,
@@ -1531,7 +1443,7 @@
           "opp": "Portugal",
           "oppIso": "pt",
           "prob": 1.0,
-          "winProb": 0.3455
+          "winProb": 0.3464
         }
       ],
       "R16": [],
@@ -1549,7 +1461,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 88.4,
+    "pathDifficulty": 87.9,
     "pathRank": 44,
     "expOppR32": 2.08,
     "expOppR16": 0.0,
@@ -1559,7 +1471,7 @@
           "opp": "Brazil",
           "oppIso": "br",
           "prob": 1.0,
-          "winProb": 0.3343
+          "winProb": 0.3344
         }
       ],
       "R16": [],
@@ -1577,7 +1489,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 88.4,
+    "pathDifficulty": 88.0,
     "pathRank": 45,
     "expOppR32": 2.08,
     "expOppR16": 0.0,
@@ -1605,7 +1517,7 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 88.6,
+    "pathDifficulty": 88.3,
     "pathRank": 46,
     "expOppR32": 2.08,
     "expOppR16": 0.0,
@@ -1615,7 +1527,7 @@
           "opp": "England",
           "oppIso": "gb-eng",
           "prob": 1.0,
-          "winProb": 0.2285
+          "winProb": 0.2281
         }
       ],
       "R16": [],
@@ -1633,9 +1545,9 @@
     "reachQF": 0.0,
     "reachSF": 0.0,
     "champion": 0.0,
-    "pathDifficulty": 93.7,
+    "pathDifficulty": 93.3,
     "pathRank": 47,
-    "expOppR32": 2.14,
+    "expOppR32": 2.15,
     "expOppR16": 0.0,
     "rounds": {
       "R32": [
@@ -1663,7 +1575,7 @@
     "champion": 0.0,
     "pathDifficulty": 100.0,
     "pathRank": 48,
-    "expOppR32": 2.22,
+    "expOppR32": 2.23,
     "expOppR16": 0.0,
     "rounds": {
       "R32": [
@@ -1671,7 +1583,7 @@
           "opp": "Spain",
           "oppIso": "es",
           "prob": 1.0,
-          "winProb": 0.2473
+          "winProb": 0.2443
         }
       ],
       "R16": [],

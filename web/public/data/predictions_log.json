@@ -509,12 +509,12 @@
     "date": "2026-07-06",
     "home": "Argentina",
     "away": "Egypt",
-    "pHome": 0.625,
-    "pDraw": 0.269,
+    "pHome": 0.624,
+    "pDraw": 0.27,
     "pAway": 0.106,
     "projHome": 1.48,
     "projAway": 0.45,
-    "snapshotAt": "2026-07-06T23:16:30Z"
+    "snapshotAt": "2026-07-07T11:44:58Z"
   },
   "2026-07-06|Switzerland|Colombia": {
     "date": "2026-07-06",
@@ -525,7 +525,7 @@
     "pAway": 0.396,
     "projHome": 1.11,
     "projAway": 1.28,
-    "snapshotAt": "2026-07-06T23:16:30Z"
+    "snapshotAt": "2026-07-07T11:44:58Z"
   },
   "2026-07-09|France|Morocco": {
     "date": "2026-07-09",
@@ -533,10 +533,10 @@
     "away": "Morocco",
     "pHome": 0.449,
     "pDraw": 0.327,
-    "pAway": 0.225,
+    "pAway": 0.224,
     "projHome": 1.13,
     "projAway": 0.71,
-    "snapshotAt": "2026-07-06T23:16:30Z"
+    "snapshotAt": "2026-07-07T11:44:58Z"
   },
   "2026-07-11|Norway|England": {
     "date": "2026-07-11",
@@ -547,6 +547,17 @@
     "pAway": 0.517,
     "projHome": 0.95,
     "projAway": 1.59,
-    "snapshotAt": "2026-07-06T23:16:30Z"
+    "snapshotAt": "2026-07-07T11:44:58Z"
+  },
+  "2026-07-10|Spain|Belgium": {
+    "date": "2026-07-10",
+    "home": "Spain",
+    "away": "Belgium",
+    "pHome": 0.515,
+    "pDraw": 0.261,
+    "pAway": 0.224,
+    "projHome": 1.61,
+    "projAway": 0.98,
+    "snapshotAt": "2026-07-07T11:44:58Z"
   }
 }
