@@ -95,7 +95,7 @@
           "iso": "za",
           "seed": 40,
           "group": "A",
-          "winPct": 0.3459,
+          "winPct": 0.3458,
           "fav": false,
           "result": "lost",
           "slotLabel": "Runner-up Grp A",
@@ -112,7 +112,7 @@
           "iso": "ca",
           "seed": 30,
           "group": "B",
-          "winPct": 0.6541,
+          "winPct": 0.6542,
           "fav": true,
           "result": "won",
           "slotLabel": "Runner-up Grp B",
@@ -264,7 +264,7 @@
           "iso": "us",
           "seed": 28,
           "group": "D",
-          "winPct": 0.6505,
+          "winPct": 0.6506,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp D",
@@ -281,7 +281,7 @@
           "iso": "ba",
           "seed": 42,
           "group": "B",
-          "winPct": 0.3495,
+          "winPct": 0.3494,
           "fav": false,
           "result": "lost",
           "slotLabel": "3rd place",
@@ -476,7 +476,7 @@
           "iso": "us",
           "seed": 28,
           "group": "D",
-          "winPct": 0.3366,
+          "winPct": 0.3365,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -493,7 +493,7 @@
           "iso": "be",
           "seed": 10,
           "group": "G",
-          "winPct": 0.6634,
+          "winPct": 0.6635,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -1025,7 +1025,7 @@
           "iso": "mx",
           "seed": 13,
           "group": "A",
-          "winPct": 0.2744,
+          "winPct": 0.2743,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -1042,7 +1042,7 @@
           "iso": "gb-eng",
           "seed": 4,
           "group": "L",
-          "winPct": 0.7256,
+          "winPct": 0.7257,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -1256,12 +1256,12 @@
             {
               "name": "Argentina",
               "iso": "ar",
-              "prob": 0.6606
+              "prob": 0.6607
             },
             {
               "name": "Switzerland",
               "iso": "ch",
-              "prob": 0.3394
+              "prob": 0.3393
             }
           ]
         }
@@ -1350,7 +1350,7 @@
       {
         "name": "Argentina",
         "iso": "ar",
-        "prob": 0.1843
+        "prob": 0.1844
       },
       {
         "name": "England",
