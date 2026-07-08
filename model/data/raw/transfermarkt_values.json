@@ -445,7 +445,7 @@
     "fifa_rank": 89
   },
   "Zambia": {
-    "value": 14130000.0,
+    "value": 14180000.0,
     "confederation": "CAF",
     "fifa_rank": 90
   },
@@ -455,7 +455,7 @@
     "fifa_rank": 91
   },
   "Bahrain": {
-    "value": 6600000.0,
+    "value": 6300000.0,
     "confederation": "AFC",
     "fifa_rank": 92
   },
@@ -465,12 +465,12 @@
     "fifa_rank": 93
   },
   "Thailand": {
-    "value": 6550000.0,
+    "value": 450000.0,
     "confederation": "AFC",
     "fifa_rank": 94
   },
   "Palestine": {
-    "value": 10360000.0,
+    "value": 10310000.0,
     "confederation": "AFC",
     "fifa_rank": 95
   },
@@ -495,7 +495,7 @@
     "fifa_rank": 99
   },
   "El Salvador": {
-    "value": 5140000.0,
+    "value": 5360000.0,
     "confederation": "CONCACAF",
     "fifa_rank": 100
   },
@@ -580,7 +580,7 @@
     "fifa_rank": 116
   },
   "Sudan": {
-    "value": 3250000.0,
+    "value": 3130000.0,
     "confederation": "CAF",
     "fifa_rank": 117
   },
@@ -605,7 +605,7 @@
     "fifa_rank": 121
   },
   "Sierra Leone": {
-    "value": 13350000.0,
+    "value": 13330000.0,
     "confederation": "CAF",
     "fifa_rank": 122
   },
@@ -635,17 +635,17 @@
     "fifa_rank": 127
   },
   "Rwanda": {
-    "value": 7100000.0,
+    "value": 7130000.0,
     "confederation": "CAF",
     "fifa_rank": 128
   },
   "Malawi": {
-    "value": 1980000.0,
+    "value": 1950000.0,
     "confederation": "CAF",
     "fifa_rank": 129
   },
   "Zimbabwe": {
-    "value": 25330000.0,
+    "value": 25350000.0,
     "confederation": "CAF",
     "fifa_rank": 130
   },
@@ -660,7 +660,7 @@
     "fifa_rank": 132
   },
   "Kuwait": {
-    "value": 4930000.0,
+    "value": 4900000.0,
     "confederation": "AFC",
     "fifa_rank": 133
   },
@@ -850,7 +850,7 @@
     "fifa_rank": 170
   },
   "Afghanistan": {
-    "value": 1170000.0,
+    "value": 1190000.0,
     "confederation": "AFC",
     "fifa_rank": 171
   },
@@ -1000,7 +1000,7 @@
     "fifa_rank": 200
   },
   "Timor-Leste": {
-    "value": 835000.0,
+    "value": 785000.0,
     "confederation": "AFC",
     "fifa_rank": 201
   },
@@ -1015,7 +1015,7 @@
     "fifa_rank": 203
   },
   "Seychelles": {
-    "value": 1030000.0,
+    "value": 775000.0,
     "confederation": "CAF",
     "fifa_rank": 204
   },

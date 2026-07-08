@@ -10,10 +10,10 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 0,
-    "pHome": 0.625,
-    "pDraw": 0.245,
-    "pAway": 0.129,
-    "modelProb": 0.625,
+    "pHome": 0.624,
+    "pDraw": 0.246,
+    "pAway": 0.13,
+    "modelProb": 0.624,
     "frozen": false
   },
   {
@@ -63,7 +63,7 @@
     "awayScore": 1,
     "pHome": 0.482,
     "pDraw": 0.281,
-    "pAway": 0.236,
+    "pAway": 0.237,
     "modelProb": 0.482,
     "frozen": false
   },
@@ -78,10 +78,10 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 1,
-    "pHome": 0.047,
-    "pDraw": 0.112,
-    "pAway": 0.841,
-    "modelProb": 0.112,
+    "pHome": 0.048,
+    "pDraw": 0.113,
+    "pAway": 0.839,
+    "modelProb": 0.113,
     "frozen": false
   },
   {
@@ -97,7 +97,7 @@
     "awayScore": 1,
     "pHome": 0.422,
     "pDraw": 0.327,
-    "pAway": 0.251,
+    "pAway": 0.252,
     "modelProb": 0.327,
     "frozen": false
   },
@@ -112,10 +112,10 @@
     "played": true,
     "homeScore": 0,
     "awayScore": 1,
-    "pHome": 0.155,
-    "pDraw": 0.224,
-    "pAway": 0.621,
-    "modelProb": 0.621,
+    "pHome": 0.156,
+    "pDraw": 0.225,
+    "pAway": 0.62,
+    "modelProb": 0.62,
     "frozen": false
   },
   {
@@ -129,10 +129,10 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 0,
-    "pHome": 0.229,
+    "pHome": 0.23,
     "pDraw": 0.276,
-    "pAway": 0.495,
-    "modelProb": 0.229,
+    "pAway": 0.493,
+    "modelProb": 0.23,
     "frozen": false
   },
   {
@@ -146,10 +146,10 @@
     "played": true,
     "homeScore": 5,
     "awayScore": 1,
-    "pHome": 0.57,
-    "pDraw": 0.245,
-    "pAway": 0.185,
-    "modelProb": 0.57,
+    "pHome": 0.568,
+    "pDraw": 0.246,
+    "pAway": 0.186,
+    "modelProb": 0.568,
     "frozen": false
   },
   {
@@ -163,9 +163,9 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 2,
-    "pHome": 0.483,
+    "pHome": 0.482,
     "pDraw": 0.267,
-    "pAway": 0.25,
+    "pAway": 0.251,
     "modelProb": 0.267,
     "frozen": false
   },
@@ -180,10 +180,10 @@
     "played": true,
     "homeScore": 7,
     "awayScore": 1,
-    "pHome": 0.939,
+    "pHome": 0.938,
     "pDraw": 0.047,
     "pAway": 0.014,
-    "modelProb": 0.939,
+    "modelProb": 0.938,
     "frozen": false
   },
   {
@@ -214,10 +214,10 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 1,
-    "pHome": 0.107,
-    "pDraw": 0.273,
-    "pAway": 0.62,
-    "modelProb": 0.273,
+    "pHome": 0.108,
+    "pDraw": 0.274,
+    "pAway": 0.618,
+    "modelProb": 0.274,
     "frozen": false
   },
   {
@@ -231,10 +231,10 @@
     "played": true,
     "homeScore": 0,
     "awayScore": 0,
-    "pHome": 0.836,
-    "pDraw": 0.126,
-    "pAway": 0.038,
-    "modelProb": 0.126,
+    "pHome": 0.834,
+    "pDraw": 0.127,
+    "pAway": 0.039,
+    "modelProb": 0.127,
     "frozen": false
   },
   {
@@ -248,9 +248,9 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 1,
-    "pHome": 0.586,
+    "pHome": 0.585,
     "pDraw": 0.257,
-    "pAway": 0.157,
+    "pAway": 0.158,
     "modelProb": 0.257,
     "frozen": false
   },
@@ -282,10 +282,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 1,
-    "pHome": 0.728,
+    "pHome": 0.726,
     "pDraw": 0.178,
-    "pAway": 0.094,
-    "modelProb": 0.728,
+    "pAway": 0.095,
+    "modelProb": 0.726,
     "frozen": false
   },
   {
@@ -299,10 +299,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 0,
-    "pHome": 0.602,
-    "pDraw": 0.247,
+    "pHome": 0.601,
+    "pDraw": 0.248,
     "pAway": 0.151,
-    "modelProb": 0.602,
+    "modelProb": 0.601,
     "frozen": false
   },
   {
@@ -316,10 +316,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 1,
-    "pHome": 0.562,
+    "pHome": 0.561,
     "pDraw": 0.256,
-    "pAway": 0.182,
-    "modelProb": 0.562,
+    "pAway": 0.183,
+    "modelProb": 0.561,
     "frozen": false
   },
   {
@@ -333,10 +333,10 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 4,
-    "pHome": 0.054,
-    "pDraw": 0.138,
-    "pAway": 0.808,
-    "modelProb": 0.808,
+    "pHome": 0.055,
+    "pDraw": 0.14,
+    "pAway": 0.805,
+    "modelProb": 0.805,
     "frozen": false
   },
   {
@@ -352,7 +352,7 @@
     "awayScore": 2,
     "pHome": 0.518,
     "pDraw": 0.278,
-    "pAway": 0.203,
+    "pAway": 0.204,
     "modelProb": 0.518,
     "frozen": false
   },
@@ -367,10 +367,10 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 0,
-    "pHome": 0.514,
-    "pDraw": 0.285,
-    "pAway": 0.201,
-    "modelProb": 0.514,
+    "pHome": 0.512,
+    "pDraw": 0.286,
+    "pAway": 0.202,
+    "modelProb": 0.512,
     "frozen": false
   },
   {
@@ -384,10 +384,10 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 1,
-    "pHome": 0.646,
-    "pDraw": 0.245,
-    "pAway": 0.109,
-    "modelProb": 0.245,
+    "pHome": 0.644,
+    "pDraw": 0.246,
+    "pAway": 0.11,
+    "modelProb": 0.246,
     "frozen": false
   },
   {
@@ -401,10 +401,10 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 3,
-    "pHome": 0.12,
-    "pDraw": 0.242,
-    "pAway": 0.637,
-    "modelProb": 0.637,
+    "pHome": 0.121,
+    "pDraw": 0.243,
+    "pAway": 0.636,
+    "modelProb": 0.636,
     "frozen": false
   },
   {
@@ -418,9 +418,9 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 1,
-    "pHome": 0.51,
+    "pHome": 0.509,
     "pDraw": 0.285,
-    "pAway": 0.205,
+    "pAway": 0.206,
     "modelProb": 0.285,
     "frozen": false
   },
@@ -469,10 +469,10 @@
     "played": true,
     "homeScore": 6,
     "awayScore": 0,
-    "pHome": 0.795,
-    "pDraw": 0.139,
-    "pAway": 0.066,
-    "modelProb": 0.795,
+    "pHome": 0.793,
+    "pDraw": 0.14,
+    "pAway": 0.067,
+    "modelProb": 0.793,
     "frozen": false
   },
   {
@@ -1237,9 +1237,9 @@
     "homeScore": 0,
     "awayScore": 1,
     "pHome": 0.191,
-    "pDraw": 0.31,
-    "pAway": 0.499,
-    "modelProb": 0.499,
+    "pDraw": 0.311,
+    "pAway": 0.498,
+    "modelProb": 0.498,
     "frozen": false
   },
   {
@@ -1257,10 +1257,10 @@
     "awayScore": 1,
     "pens": true,
     "penWinner": "Paraguay",
-    "pHome": 0.612,
-    "pDraw": 0.238,
-    "pAway": 0.149,
-    "modelProb": 0.238,
+    "pHome": 0.611,
+    "pDraw": 0.239,
+    "pAway": 0.15,
+    "modelProb": 0.239,
     "frozen": false
   },
   {
@@ -1297,10 +1297,10 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 1,
-    "pHome": 0.534,
+    "pHome": 0.533,
     "pDraw": 0.263,
-    "pAway": 0.203,
-    "modelProb": 0.534,
+    "pAway": 0.204,
+    "modelProb": 0.533,
     "frozen": false
   },
   {
@@ -1354,10 +1354,10 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 0,
-    "pHome": 0.324,
+    "pHome": 0.325,
     "pDraw": 0.344,
     "pAway": 0.332,
-    "modelProb": 0.324,
+    "modelProb": 0.325,
     "frozen": false
   },
   {
@@ -1373,10 +1373,10 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 1,
-    "pHome": 0.644,
-    "pDraw": 0.256,
-    "pAway": 0.1,
-    "modelProb": 0.644,
+    "pHome": 0.642,
+    "pDraw": 0.257,
+    "pAway": 0.101,
+    "modelProb": 0.642,
     "frozen": false
   },
   {
@@ -1392,10 +1392,10 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 0,
-    "pHome": 0.612,
-    "pDraw": 0.223,
-    "pAway": 0.164,
-    "modelProb": 0.612,
+    "pHome": 0.611,
+    "pDraw": 0.224,
+    "pAway": 0.165,
+    "modelProb": 0.611,
     "frozen": false
   },
   {
@@ -1487,10 +1487,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 2,
-    "pHome": 0.782,
-    "pDraw": 0.167,
-    "pAway": 0.051,
-    "modelProb": 0.782,
+    "pHome": 0.78,
+    "pDraw": 0.168,
+    "pAway": 0.052,
+    "modelProb": 0.78,
     "frozen": false
   },
   {
@@ -1527,7 +1527,7 @@
     "awayScore": 1,
     "pens": true,
     "penWinner": "Egypt",
-    "pHome": 0.315,
+    "pHome": 0.316,
     "pDraw": 0.351,
     "pAway": 0.334,
     "modelProb": 0.351,
@@ -1546,10 +1546,10 @@
     "played": true,
     "homeScore": 0,
     "awayScore": 1,
-    "pHome": 0.109,
-    "pDraw": 0.237,
-    "pAway": 0.653,
-    "modelProb": 0.653,
+    "pHome": 0.11,
+    "pDraw": 0.238,
+    "pAway": 0.651,
+    "modelProb": 0.651,
     "frozen": false
   },
   {
@@ -1586,8 +1586,8 @@
     "awayScore": 2,
     "pHome": 0.507,
     "pDraw": 0.247,
-    "pAway": 0.246,
-    "modelProb": 0.246,
+    "pAway": 0.247,
+    "modelProb": 0.247,
     "frozen": false
   },
   {
@@ -1603,10 +1603,10 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 3,
-    "pHome": 0.184,
-    "pDraw": 0.266,
-    "pAway": 0.55,
-    "modelProb": 0.55,
+    "pHome": 0.185,
+    "pDraw": 0.267,
+    "pAway": 0.548,
+    "modelProb": 0.548,
     "frozen": false
   },
   {
@@ -1660,10 +1660,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 2,
-    "pHome": 0.637,
-    "pDraw": 0.256,
-    "pAway": 0.107,
-    "modelProb": 0.637,
+    "pHome": 0.635,
+    "pDraw": 0.257,
+    "pAway": 0.108,
+    "modelProb": 0.635,
     "frozen": false
   },
   {
@@ -1698,14 +1698,14 @@
     "awayIso": "ma",
     "city": "Foxborough",
     "played": false,
-    "pHome": 0.449,
+    "pHome": 0.448,
     "pDraw": 0.327,
-    "pAway": 0.224,
+    "pAway": 0.225,
     "projHome": 1.13,
     "projAway": 0.71,
     "likelyHome": 1,
     "likelyAway": 0,
-    "advHome": 0.613
+    "advHome": 0.612
   },
   {
     "date": "2026-07-10",
@@ -1740,7 +1740,7 @@
     "played": false,
     "pHome": 0.22,
     "pDraw": 0.263,
-    "pAway": 0.517,
+    "pAway": 0.516,
     "projHome": 0.95,
     "projAway": 1.59,
     "likelyHome": 1,
@@ -1758,13 +1758,13 @@
     "awayIso": "ch",
     "city": "Kansas City",
     "played": false,
-    "pHome": 0.52,
+    "pHome": 0.519,
     "pDraw": 0.281,
-    "pAway": 0.199,
-    "projHome": 1.45,
+    "pAway": 0.2,
+    "projHome": 1.44,
     "projAway": 0.79,
     "likelyHome": 1,
     "likelyAway": 0,
-    "advHome": 0.661
+    "advHome": 0.659
   }
 ]
