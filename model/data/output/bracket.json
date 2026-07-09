@@ -10,7 +10,7 @@
           "iso": "de",
           "seed": 14,
           "group": "E",
-          "winPct": 0.7303,
+          "winPct": 0.7314,
           "fav": false,
           "result": "lost",
           "slotLabel": "Winner Grp E",
@@ -27,7 +27,7 @@
           "iso": "py",
           "seed": 21,
           "group": "D",
-          "winPct": 0.2697,
+          "winPct": 0.2686,
           "fav": true,
           "result": "won",
           "slotLabel": "3rd place",
@@ -53,7 +53,7 @@
           "iso": "fr",
           "seed": 3,
           "group": "I",
-          "winPct": 0.7681,
+          "winPct": 0.7684,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp I",
@@ -70,7 +70,7 @@
           "iso": "se",
           "seed": 33,
           "group": "F",
-          "winPct": 0.2319,
+          "winPct": 0.2316,
           "fav": false,
           "result": "lost",
           "slotLabel": "3rd place",
@@ -95,7 +95,7 @@
           "iso": "za",
           "seed": 40,
           "group": "A",
-          "winPct": 0.3467,
+          "winPct": 0.3459,
           "fav": false,
           "result": "lost",
           "slotLabel": "Runner-up Grp A",
@@ -112,7 +112,7 @@
           "iso": "ca",
           "seed": 30,
           "group": "B",
-          "winPct": 0.6533,
+          "winPct": 0.6541,
           "fav": true,
           "result": "won",
           "slotLabel": "Runner-up Grp B",
@@ -137,7 +137,7 @@
           "iso": "nl",
           "seed": 9,
           "group": "F",
-          "winPct": 0.5383,
+          "winPct": 0.5386,
           "fav": false,
           "result": "lost",
           "slotLabel": "Winner Grp F",
@@ -154,7 +154,7 @@
           "iso": "ma",
           "seed": 7,
           "group": "C",
-          "winPct": 0.4617,
+          "winPct": 0.4614,
           "fav": true,
           "result": "won",
           "slotLabel": "Runner-up Grp C",
@@ -180,7 +180,7 @@
           "iso": "pt",
           "seed": 8,
           "group": "K",
-          "winPct": 0.6535,
+          "winPct": 0.6537,
           "fav": true,
           "result": "won",
           "slotLabel": "Runner-up Grp K",
@@ -197,7 +197,7 @@
           "iso": "hr",
           "seed": 17,
           "group": "L",
-          "winPct": 0.3465,
+          "winPct": 0.3463,
           "fav": false,
           "result": "lost",
           "slotLabel": "Runner-up Grp L",
@@ -222,7 +222,7 @@
           "iso": "es",
           "seed": 1,
           "group": "H",
-          "winPct": 0.7554,
+          "winPct": 0.7557,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp H",
@@ -239,7 +239,7 @@
           "iso": "at",
           "seed": 22,
           "group": "J",
-          "winPct": 0.2446,
+          "winPct": 0.2443,
           "fav": false,
           "result": "lost",
           "slotLabel": "Runner-up Grp J",
@@ -264,7 +264,7 @@
           "iso": "us",
           "seed": 28,
           "group": "D",
-          "winPct": 0.6499,
+          "winPct": 0.6505,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp D",
@@ -281,7 +281,7 @@
           "iso": "ba",
           "seed": 42,
           "group": "B",
-          "winPct": 0.3501,
+          "winPct": 0.3495,
           "fav": false,
           "result": "lost",
           "slotLabel": "3rd place",
@@ -306,7 +306,7 @@
           "iso": "be",
           "seed": 10,
           "group": "G",
-          "winPct": 0.5869,
+          "winPct": 0.587,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp G",
@@ -323,7 +323,7 @@
           "iso": "sn",
           "seed": 24,
           "group": "I",
-          "winPct": 0.4131,
+          "winPct": 0.413,
           "fav": false,
           "result": "lost",
           "slotLabel": "3rd place",
@@ -350,7 +350,7 @@
           "iso": "py",
           "seed": 21,
           "group": "D",
-          "winPct": 0.2293,
+          "winPct": 0.2282,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -367,7 +367,7 @@
           "iso": "fr",
           "seed": 3,
           "group": "I",
-          "winPct": 0.7707,
+          "winPct": 0.7718,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -392,7 +392,7 @@
           "iso": "ca",
           "seed": 30,
           "group": "B",
-          "winPct": 0.3633,
+          "winPct": 0.3628,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -409,7 +409,7 @@
           "iso": "ma",
           "seed": 7,
           "group": "C",
-          "winPct": 0.6367,
+          "winPct": 0.6372,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -434,7 +434,7 @@
           "iso": "pt",
           "seed": 8,
           "group": "K",
-          "winPct": 0.4216,
+          "winPct": 0.4215,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -451,7 +451,7 @@
           "iso": "es",
           "seed": 1,
           "group": "H",
-          "winPct": 0.5784,
+          "winPct": 0.5785,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -476,7 +476,7 @@
           "iso": "us",
           "seed": 28,
           "group": "D",
-          "winPct": 0.3368,
+          "winPct": 0.3366,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -493,7 +493,7 @@
           "iso": "be",
           "seed": 10,
           "group": "G",
-          "winPct": 0.6632,
+          "winPct": 0.6634,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -520,7 +520,7 @@
           "iso": "fr",
           "seed": 3,
           "group": "I",
-          "winPct": 0.6116,
+          "winPct": 0.6123,
           "fav": true,
           "slotLabel": "",
           "candidates": [
@@ -536,7 +536,7 @@
           "iso": "ma",
           "seed": 7,
           "group": "C",
-          "winPct": 0.3884,
+          "winPct": 0.3877,
           "fav": false,
           "slotLabel": "",
           "candidates": [
@@ -556,7 +556,7 @@
           "iso": "es",
           "seed": 1,
           "group": "H",
-          "winPct": 0.6455,
+          "winPct": 0.6457,
           "fav": true,
           "slotLabel": "",
           "candidates": [
@@ -572,7 +572,7 @@
           "iso": "be",
           "seed": 10,
           "group": "G",
-          "winPct": 0.3545,
+          "winPct": 0.3543,
           "fav": false,
           "slotLabel": "",
           "candidates": [
@@ -594,19 +594,19 @@
           "iso": "fr",
           "seed": 3,
           "group": "I",
-          "winPct": 0.44,
+          "winPct": 0.4401,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "France",
               "iso": "fr",
-              "prob": 0.6127
+              "prob": 0.6134
             },
             {
               "name": "Morocco",
               "iso": "ma",
-              "prob": 0.3873
+              "prob": 0.3866
             }
           ]
         },
@@ -615,19 +615,19 @@
           "iso": "es",
           "seed": 1,
           "group": "H",
-          "winPct": 0.56,
+          "winPct": 0.5599,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Spain",
               "iso": "es",
-              "prob": 0.6415
+              "prob": 0.6417
             },
             {
               "name": "Belgium",
               "iso": "be",
-              "prob": 0.3585
+              "prob": 0.3583
             }
           ]
         }
@@ -644,7 +644,7 @@
           "iso": "br",
           "seed": 6,
           "group": "C",
-          "winPct": 0.6645,
+          "winPct": 0.6653,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp C",
@@ -661,7 +661,7 @@
           "iso": "jp",
           "seed": 15,
           "group": "F",
-          "winPct": 0.3355,
+          "winPct": 0.3347,
           "fav": false,
           "result": "lost",
           "slotLabel": "Runner-up Grp F",
@@ -686,7 +686,7 @@
           "iso": "ci",
           "seed": 26,
           "group": "E",
-          "winPct": 0.4297,
+          "winPct": 0.4296,
           "fav": false,
           "result": "lost",
           "slotLabel": "Runner-up Grp E",
@@ -703,7 +703,7 @@
           "iso": "no",
           "seed": 11,
           "group": "I",
-          "winPct": 0.5703,
+          "winPct": 0.5704,
           "fav": true,
           "result": "won",
           "slotLabel": "Runner-up Grp I",
@@ -728,7 +728,7 @@
           "iso": "mx",
           "seed": 13,
           "group": "A",
-          "winPct": 0.4443,
+          "winPct": 0.4439,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp A",
@@ -745,7 +745,7 @@
           "iso": "ec",
           "seed": 16,
           "group": "E",
-          "winPct": 0.5557,
+          "winPct": 0.5561,
           "fav": false,
           "result": "lost",
           "slotLabel": "3rd place",
@@ -770,7 +770,7 @@
           "iso": "gb-eng",
           "seed": 4,
           "group": "L",
-          "winPct": 0.7708,
+          "winPct": 0.7718,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp L",
@@ -787,7 +787,7 @@
           "iso": "cd",
           "seed": 32,
           "group": "K",
-          "winPct": 0.2292,
+          "winPct": 0.2282,
           "fav": false,
           "result": "lost",
           "slotLabel": "3rd place",
@@ -812,7 +812,7 @@
           "iso": "au",
           "seed": 20,
           "group": "D",
-          "winPct": 0.491,
+          "winPct": 0.4907,
           "fav": false,
           "result": "lost",
           "slotLabel": "Runner-up Grp D",
@@ -829,7 +829,7 @@
           "iso": "eg",
           "seed": 25,
           "group": "G",
-          "winPct": 0.509,
+          "winPct": 0.5093,
           "fav": true,
           "result": "won",
           "slotLabel": "Runner-up Grp G",
@@ -855,7 +855,7 @@
           "iso": "ar",
           "seed": 2,
           "group": "J",
-          "winPct": 0.8641,
+          "winPct": 0.865,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp J",
@@ -872,7 +872,7 @@
           "iso": "cv",
           "seed": 38,
           "group": "H",
-          "winPct": 0.1359,
+          "winPct": 0.135,
           "fav": false,
           "result": "lost",
           "slotLabel": "Runner-up Grp H",
@@ -897,7 +897,7 @@
           "iso": "ch",
           "seed": 12,
           "group": "B",
-          "winPct": 0.5752,
+          "winPct": 0.5754,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp B",
@@ -914,7 +914,7 @@
           "iso": "dz",
           "seed": 27,
           "group": "J",
-          "winPct": 0.4248,
+          "winPct": 0.4246,
           "fav": false,
           "result": "lost",
           "slotLabel": "3rd place",
@@ -939,7 +939,7 @@
           "iso": "co",
           "seed": 5,
           "group": "K",
-          "winPct": 0.6964,
+          "winPct": 0.6966,
           "fav": true,
           "result": "won",
           "slotLabel": "Winner Grp K",
@@ -956,7 +956,7 @@
           "iso": "gh",
           "seed": 41,
           "group": "L",
-          "winPct": 0.3036,
+          "winPct": 0.3034,
           "fav": false,
           "result": "lost",
           "slotLabel": "3rd place",
@@ -983,7 +983,7 @@
           "iso": "br",
           "seed": 6,
           "group": "C",
-          "winPct": 0.63,
+          "winPct": 0.6303,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -1000,7 +1000,7 @@
           "iso": "no",
           "seed": 11,
           "group": "I",
-          "winPct": 0.37,
+          "winPct": 0.3697,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -1025,7 +1025,7 @@
           "iso": "mx",
           "seed": 13,
           "group": "A",
-          "winPct": 0.2755,
+          "winPct": 0.2744,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -1042,7 +1042,7 @@
           "iso": "gb-eng",
           "seed": 4,
           "group": "L",
-          "winPct": 0.7245,
+          "winPct": 0.7256,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -1067,7 +1067,7 @@
           "iso": "eg",
           "seed": 25,
           "group": "G",
-          "winPct": 0.2364,
+          "winPct": 0.2355,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -1084,7 +1084,7 @@
           "iso": "ar",
           "seed": 2,
           "group": "J",
-          "winPct": 0.7636,
+          "winPct": 0.7645,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -1109,7 +1109,7 @@
           "iso": "ch",
           "seed": 12,
           "group": "B",
-          "winPct": 0.462,
+          "winPct": 0.4621,
           "fav": true,
           "result": "won",
           "slotLabel": "",
@@ -1126,7 +1126,7 @@
           "iso": "co",
           "seed": 5,
           "group": "K",
-          "winPct": 0.538,
+          "winPct": 0.5379,
           "fav": false,
           "result": "lost",
           "slotLabel": "",
@@ -1154,7 +1154,7 @@
           "iso": "no",
           "seed": 11,
           "group": "I",
-          "winPct": 0.3519,
+          "winPct": 0.3517,
           "fav": false,
           "slotLabel": "",
           "candidates": [
@@ -1170,7 +1170,7 @@
           "iso": "gb-eng",
           "seed": 4,
           "group": "L",
-          "winPct": 0.6481,
+          "winPct": 0.6483,
           "fav": true,
           "slotLabel": "",
           "candidates": [
@@ -1190,7 +1190,7 @@
           "iso": "ar",
           "seed": 2,
           "group": "J",
-          "winPct": 0.6599,
+          "winPct": 0.6604,
           "fav": true,
           "slotLabel": "",
           "candidates": [
@@ -1206,7 +1206,7 @@
           "iso": "ch",
           "seed": 12,
           "group": "B",
-          "winPct": 0.3401,
+          "winPct": 0.3396,
           "fav": false,
           "slotLabel": "",
           "candidates": [
@@ -1228,19 +1228,19 @@
           "iso": "gb-eng",
           "seed": 4,
           "group": "L",
-          "winPct": 0.5011,
+          "winPct": 0.5015,
           "fav": true,
           "slotLabel": "",
           "candidates": [
             {
               "name": "England",
               "iso": "gb-eng",
-              "prob": 0.6463
+              "prob": 0.6464
             },
             {
               "name": "Norway",
               "iso": "no",
-              "prob": 0.3537
+              "prob": 0.3536
             }
           ]
         },
@@ -1249,19 +1249,19 @@
           "iso": "ar",
           "seed": 2,
           "group": "J",
-          "winPct": 0.4989,
+          "winPct": 0.4985,
           "fav": false,
           "slotLabel": "",
           "candidates": [
             {
               "name": "Argentina",
               "iso": "ar",
-              "prob": 0.6602
+              "prob": 0.6606
             },
             {
               "name": "Switzerland",
               "iso": "ch",
-              "prob": 0.3398
+              "prob": 0.3394
             }
           ]
         }
@@ -1283,22 +1283,22 @@
         {
           "name": "Spain",
           "iso": "es",
-          "prob": 0.3768
+          "prob": 0.3769
         },
         {
           "name": "France",
           "iso": "fr",
-          "prob": 0.303
+          "prob": 0.3034
         },
         {
           "name": "Belgium",
           "iso": "be",
-          "prob": 0.164
+          "prob": 0.1638
         },
         {
           "name": "Morocco",
           "iso": "ma",
-          "prob": 0.1562
+          "prob": 0.1559
         }
       ]
     },
@@ -1314,22 +1314,22 @@
         {
           "name": "Argentina",
           "iso": "ar",
-          "prob": 0.3603
+          "prob": 0.3604
         },
         {
           "name": "England",
           "iso": "gb-eng",
-          "prob": 0.3548
+          "prob": 0.3551
         },
         {
           "name": "Norway",
           "iso": "no",
-          "prob": 0.144
+          "prob": 0.1439
         },
         {
           "name": "Switzerland",
           "iso": "ch",
-          "prob": 0.1409
+          "prob": 0.1406
         }
       ]
     }
@@ -1339,38 +1339,38 @@
     "iso": "es",
     "seed": 1,
     "group": "H",
-    "champion": 0.2243,
+    "champion": 0.2245,
     "winPct": 0.5615,
     "candidates": [
       {
         "name": "Spain",
         "iso": "es",
-        "prob": 0.2243
+        "prob": 0.2245
       },
       {
         "name": "Argentina",
         "iso": "ar",
-        "prob": 0.1844
+        "prob": 0.1843
       },
       {
         "name": "England",
         "iso": "gb-eng",
-        "prob": 0.1802
+        "prob": 0.1803
       },
       {
         "name": "France",
         "iso": "fr",
-        "prob": 0.1661
+        "prob": 0.1664
       },
       {
         "name": "Belgium",
         "iso": "be",
-        "prob": 0.0756
+        "prob": 0.0755
       },
       {
         "name": "Morocco",
         "iso": "ma",
-        "prob": 0.0676
+        "prob": 0.0674
       }
     ]
   }
