@@ -231,10 +231,10 @@
     "played": true,
     "homeScore": 0,
     "awayScore": 0,
-    "pHome": 0.836,
-    "pDraw": 0.126,
+    "pHome": 0.837,
+    "pDraw": 0.125,
     "pAway": 0.038,
-    "modelProb": 0.126,
+    "modelProb": 0.125,
     "frozen": false
   },
   {
@@ -1412,8 +1412,8 @@
     "homeScore": 3,
     "awayScore": 2,
     "pHome": 0.45,
-    "pDraw": 0.275,
-    "pAway": 0.275,
+    "pDraw": 0.274,
+    "pAway": 0.276,
     "modelProb": 0.45,
     "frozen": false
   },
@@ -1431,7 +1431,7 @@
     "homeScore": 2,
     "awayScore": 1,
     "pHome": 0.522,
-    "pDraw": 0.263,
+    "pDraw": 0.264,
     "pAway": 0.215,
     "modelProb": 0.522,
     "frozen": false
@@ -1449,10 +1449,10 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 0,
-    "pHome": 0.643,
+    "pHome": 0.644,
     "pDraw": 0.225,
-    "pAway": 0.132,
-    "modelProb": 0.643,
+    "pAway": 0.131,
+    "modelProb": 0.644,
     "frozen": false
   },
   {
@@ -1716,15 +1716,14 @@
     "homeIso": "es",
     "awayIso": "be",
     "city": "Inglewood",
-    "played": false,
+    "played": true,
+    "homeScore": 2,
+    "awayScore": 1,
     "pHome": 0.515,
     "pDraw": 0.261,
     "pAway": 0.224,
-    "projHome": 1.61,
-    "projAway": 0.98,
-    "likelyHome": 1,
-    "likelyAway": 1,
-    "advHome": 0.645
+    "modelProb": 0.515,
+    "frozen": true
   },
   {
     "date": "2026-07-11",
@@ -1765,5 +1764,25 @@
     "likelyHome": 1,
     "likelyAway": 0,
     "advHome": 0.661
+  },
+  {
+    "date": "2026-07-14",
+    "round": "SF",
+    "matchNo": 101,
+    "group": null,
+    "home": "France",
+    "away": "Spain",
+    "homeIso": "fr",
+    "awayIso": "es",
+    "city": "Arlington",
+    "played": false,
+    "pHome": 0.301,
+    "pDraw": 0.291,
+    "pAway": 0.408,
+    "projHome": 1.06,
+    "projAway": 1.28,
+    "likelyHome": 1,
+    "likelyAway": 1,
+    "advHome": 0.447
   }
 ]

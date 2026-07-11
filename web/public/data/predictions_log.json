@@ -547,7 +547,7 @@
     "pAway": 0.517,
     "projHome": 0.95,
     "projAway": 1.59,
-    "snapshotAt": "2026-07-10T10:20:55Z"
+    "snapshotAt": "2026-07-11T09:24:23Z"
   },
   "2026-07-10|Spain|Belgium": {
     "date": "2026-07-10",
@@ -569,6 +569,17 @@
     "pAway": 0.199,
     "projHome": 1.44,
     "projAway": 0.79,
-    "snapshotAt": "2026-07-10T10:20:55Z"
+    "snapshotAt": "2026-07-11T09:24:23Z"
+  },
+  "2026-07-14|France|Spain": {
+    "date": "2026-07-14",
+    "home": "France",
+    "away": "Spain",
+    "pHome": 0.301,
+    "pDraw": 0.291,
+    "pAway": 0.408,
+    "projHome": 1.06,
+    "projAway": 1.28,
+    "snapshotAt": "2026-07-11T09:24:23Z"
   }
 }
