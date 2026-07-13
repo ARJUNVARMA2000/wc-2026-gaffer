@@ -580,6 +580,17 @@
     "pAway": 0.408,
     "projHome": 1.06,
     "projAway": 1.28,
-    "snapshotAt": "2026-07-11T09:24:23Z"
+    "snapshotAt": "2026-07-13T16:28:25Z"
+  },
+  "2026-07-15|England|Argentina": {
+    "date": "2026-07-15",
+    "home": "England",
+    "away": "Argentina",
+    "pHome": 0.336,
+    "pDraw": 0.33,
+    "pAway": 0.334,
+    "projHome": 0.96,
+    "projAway": 0.96,
+    "snapshotAt": "2026-07-13T16:28:25Z"
   }
 }
