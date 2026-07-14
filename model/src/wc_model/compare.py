@@ -52,6 +52,50 @@ def _key(m: dict) -> str:
     return f"{m['date']}|{m['home']}|{m['away']}"
 
 
+def _daydiff(a: str, b: str) -> int:
+    """Absolute gap in days between two YYYY-MM-DD strings (large if unparseable)."""
+    try:
+        da = datetime.strptime(a, "%Y-%m-%d")
+        db = datetime.strptime(b, "%Y-%m-%d")
+    except (ValueError, TypeError):
+        return 10_000
+    return abs((da - db).days)
+
+
+def _pair_index(log: Dict[str, dict]) -> Dict[str, List[dict]]:
+    """Unordered {home|away} -> logged prediction entries (for date-drift fallback)."""
+    idx: Dict[str, List[dict]] = {}
+    for entry in log.values():
+        h, a = entry.get("home"), entry.get("away")
+        if h and a:
+            idx.setdefault(kalshi.pair_key(h, a), []).append(entry)
+    return idx
+
+
+def _resolve_pred(m: dict, log: Dict[str, dict],
+                  pair_idx: Dict[str, List[dict]], date_tol: int = 4) -> Optional[dict]:
+    """The pre-match prediction for m, oriented to m's home/away.
+
+    Exact date|home|away hit first. On a miss (knockout fixtures are logged under
+    a scheduled date that can slip a day before kickoff) fall back to the unique
+    logged entry for the same unordered pairing within date_tol days, flipping the
+    probabilities if it was logged with the teams the other way round.
+    """
+    pred = log.get(_key(m))
+    if pred is None:
+        cands = [e for e in pair_idx.get(kalshi.pair_key(m["home"], m["away"]), [])
+                 if _daydiff(e.get("date", ""), m["date"]) <= date_tol]
+        if len(cands) != 1:            # 0 = none logged; >1 = ambiguous, don't guess
+            return None
+        pred = cands[0]
+    if pred.get("pHome") is None:
+        return None
+    if pred.get("home") == m["away"] and pred.get("away") == m["home"]:
+        return {**pred, "home": m["home"], "away": m["away"],
+                "pHome": pred["pAway"], "pAway": pred["pHome"]}   # logged reversed
+    return pred
+
+
 def _ko_advancer(m: dict) -> Optional[str]:
     """Which team progressed from a played knockout tie (penalties included)."""
     if m.get("pens"):
@@ -116,10 +160,11 @@ def build_scorecard(matches: List[dict], log: Dict[str, dict],
     played = [m for m in matches if m.get("played") and m.get("homeScore") is not None]
     skipped = {"noPrediction": 0, "noMarket": 0}
 
+    pair_idx = _pair_index(log)
     rows = []
     for m in played:
-        pred = log.get(_key(m))
-        if not pred or pred.get("pHome") is None:
+        pred = _resolve_pred(m, log, pair_idx)
+        if not pred:
             skipped["noPrediction"] += 1
             continue
         is_ko = bool(m.get("round")) and not m.get("group")

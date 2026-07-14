@@ -204,3 +204,18 @@ is win/loss (who advances), not a 3-way moneyline.
   so it's still "upcoming" in our data — will score on next refresh.
 - New raw cache model/data/raw/kalshi_wcadvance.json is untracked; commit it alongside
   the code (parallels the tracked kalshi_wcgame.json).
+
+## Phase 12b — Fix knockout prediction date-drift join ✅
+Follow-up: my Phase 12 coverage note ("only QF-onward ties have a logged pre-match
+prediction") was wrong. We DO have logged pre-match predictions for 8 R16/QF ties, but
+2 R16 ties (Argentina–Egypt, Switzerland–Colombia) were silently dropped: the prediction
+was logged under the SCHEDULED date 2026-07-06 while the tie kicked off 2026-07-07, so
+compare's exact `date|home|away` join missed → counted as noPrediction.
+- [x] compare.py: `_resolve_pred()` — exact key first, else fall back to the unique logged
+      entry for the same unordered pairing within ±4 days, re-orienting probs if the tie
+      was logged with the teams reversed. `_pair_index()`/`_daydiff()` helpers.
+- [x] tests/test_compare.py (5): KO folds into advances row, group stays 3-way, date-drift
+      join, reversed-orientation flip, beyond-tolerance rejected. Suite 161 → 166.
+- [x] Regenerated: knockout scored 6 → 8 (44 group + 8 KO), noPrediction 50 → 48.
+Still genuinely noPrediction: all 16 R32 ties (played before KO rows existed in
+matches.json, pre-Phase-11) + France–Spain SF (settled on Kalshi, martj42 score pending).
