@@ -209,6 +209,15 @@ const LEG_COLOR: Record<Leg, string> = {
 };
 const LEG_LABEL: Record<Leg, string> = { HOME: "Home", DRAW: "Draw", AWAY: "Away" };
 
+const ROUND_LABEL: Record<string, string> = {
+  R32: "Round of 32",
+  R16: "Round of 16",
+  QF: "Quarterfinal",
+  SF: "Semifinal",
+  "3P": "Third place",
+  F: "Final",
+};
+
 function ProbRow({
   label,
   labelColor,
@@ -248,7 +257,15 @@ function ProbRow({
 
 function LedgerCard({ row }: { row: LedgerRow }) {
   const winLeg = LEGS[row.outcome];
-  const resultLabel = winLeg === "HOME" ? row.home : winLeg === "AWAY" ? row.away : "Draw";
+  const isKo = !!row.round;
+  const advancer = winLeg === "HOME" ? row.home : row.away;
+  const resultLabel = isKo
+    ? `${advancer} adv.${row.pens ? " (pens)" : ""}`
+    : winLeg === "HOME"
+      ? row.home
+      : winLeg === "AWAY"
+        ? row.away
+        : "Draw";
   const market = row.devig ?? {
     HOME: row.market.HOME.mid ?? 0,
     DRAW: row.market.DRAW.mid ?? 0,
@@ -275,8 +292,11 @@ function LedgerCard({ row }: { row: LedgerRow }) {
           </span>
           <Flag iso={row.awayIso} name={row.away} size={22} />
         </div>
-        <span className="ml-auto md:ml-0">
-          <Chip title="Actual result">{resultLabel}</Chip>
+        <span className="ml-auto flex items-center gap-1.5 md:ml-0">
+          {isKo && row.round ? (
+            <Chip title={ROUND_LABEL[row.round] ?? row.round}>{row.round}</Chip>
+          ) : null}
+          <Chip title={isKo ? "Advanced" : "Actual result"}>{resultLabel}</Chip>
         </span>
       </div>
 
@@ -334,8 +354,8 @@ export default function ScorecardView({ sc: initial }: { sc: Scorecard }) {
           Not enough games yet
         </div>
         <p className="mt-3 text-sm text-[var(--color-text-secondary)]">
-          The scorecard needs group matches that we logged a pre-match prediction for and that
-          Kalshi also priced. Check back as the tournament plays out.
+          The scorecard needs matches that we logged a pre-match prediction for and that Kalshi
+          also priced. Check back as the tournament plays out.
         </p>
       </div>
     );
@@ -380,11 +400,14 @@ export default function ScorecardView({ sc: initial }: { sc: Scorecard }) {
       </section>
 
       <Footnote className="leading-relaxed">
-        {meta.nScored} of {meta.nPlayed} played group games scored · {meta.skipped.noPrediction}{" "}
-        had no logged pre-match prediction (games before we started snapshotting) ·{" "}
-        {meta.skipped.noMarket} had no Kalshi market. Bets are placed at the single largest GAFFER
-        edge per game when it clears {(meta.edgeMin * 100).toFixed(0)}%, entered at Kalshi&apos;s
-        pre-match ask. Accuracy compares de-vigged probabilities; P&amp;L uses the raw,
+        {meta.nScored} of {meta.nPlayed} played games scored ({meta.nGroup} group,{" "}
+        {meta.nKnockout} knockout) · {meta.skipped.noPrediction} had no logged pre-match prediction
+        (games before we started snapshotting) · {meta.skipped.noMarket}{" "}
+        had no Kalshi market. Knockout ties are graded on Kalshi&apos;s 2-way &ldquo;advances&rdquo;
+        market (extra time
+        &amp; penalties included); group games on the 3-way moneyline. Bets are placed at the single
+        largest GAFFER edge per game when it clears {(meta.edgeMin * 100).toFixed(0)}%, entered at
+        Kalshi&apos;s pre-match ask. Accuracy compares de-vigged probabilities; P&amp;L uses the raw,
         vig-inclusive ask — the honest cost of actually trading.
       </Footnote>
     </div>

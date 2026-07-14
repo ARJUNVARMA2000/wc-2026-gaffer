@@ -40,3 +40,14 @@
   first played KO row would have polluted group standings. Route every consumer
   through one stage-split helper (world_cup_2026(stage=)) instead of local
   same-group checks.
+- **Kalshi WC knockout: use KXWCADVANCE, not the KXWCGAME KO events.** KXWCGAME
+  runs BOTH group games and knockout games, but the KO ones are titled
+  "<A> vs <B>: Regulation Time Moneyline" and settle on the 90' result — a pens
+  win reads as TIE. To grade who actually advanced, use the separate
+  **KXWCADVANCE** series: one event per tie, two 2-way "<Team> advances" markets
+  settling on progression (ET + penalties included). GAFFER's advance prob =
+  pHome + 0.5·pDraw (the model's own coin-flip-pens convention, already used for
+  unplayed KO rows' advHome). Fold KO into the 3-way ledger shape with DRAW=0 so
+  one accuracy/betting path (and one UI) covers both. Also: refresh() must SKIP
+  "Regulation Time" events, else a KO rematch of a group pairing overwrites the
+  group entry under the same order-independent pair_key.

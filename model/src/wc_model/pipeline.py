@@ -588,13 +588,14 @@ def main():
             # A transient market-data blip must not abort the whole refresh+deploy;
             # fall back to the existing cache, mirroring the Transfermarkt scrape.
             try:
-                kalshi.refresh(verbose=False)
+                kalshi.refresh(verbose=False)          # group 3-way moneyline
+                kalshi.refresh_advance(verbose=False)  # knockout 2-way "advances"
             except Exception as e:
                 print(f"  kalshi refresh failed ({e}); keeping existing cache")
-        # Group rows only: KO scores include extra time, so a 90'-draw decided in
-        # ET would be graded as a win against a market that settled TIE.
-        group_only = [m for m in outputs["matches.json"] if m.get("group")]
-        outputs["scorecard.json"] = build_scorecard(group_only, log, kalshi.load())
+        # Group games score off the 3-way moneyline; knockout ties off the 2-way
+        # "advances" market (win/loss, extra time + pens included).
+        outputs["scorecard.json"] = build_scorecard(
+            outputs["matches.json"], log, kalshi.load(), kalshi.load_advance())
 
     write_outputs(outputs)
     top = outputs["teams.json"][:5]

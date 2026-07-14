@@ -172,3 +172,35 @@ Plan: ~/.claude/plans/yes-put-it-together-peppy-snowflake.md
 - Deviations from plan: none material. "(4–2 pens)" display became "won on pens"
   (shootouts.csv has no pen score — known in plan). Kalshi scorecard now feeds on
   group rows only (ET-inclusive KO scores would misgrade 90' markets).
+
+## Phase 12 — Knockout scorecard (KXWCADVANCE) ✅
+Goal: the "vs Market" ledger only covered group games. Add knockout ties too — outcome
+is win/loss (who advances), not a 3-way moneyline.
+- [x] Found the market: Kalshi runs per-tie "advances" markets under series KXWCADVANCE
+      (2-way, "<Team> advances", settles on who progresses incl. ET + penalties). The
+      KXWCGAME KO events ("Regulation Time Moneyline") settle on the 90' result — a pens
+      win reads as TIE — so they are the WRONG market for grading; not used.
+- [x] data/kalshi.py: parametrized fetch_events/fetch_candles over series; added
+      refresh_advance()/load_advance() → kalshi_wcadvance.json (2-way legs). refresh()
+      now skips "Regulation Time" events so a KO rematch of a group pairing can't
+      overwrite the group entry under the same pair_key.
+- [x] compare.py: knockout rows folded into the 3-way HOME/DRAW/AWAY shape with DRAW=0.
+      GAFFER P(advance) = pHome + 0.5·pDraw (model's own coin-flip-pens convention).
+      Outcome = who actually advanced (penWinner if pens). One accuracy + betting path
+      covers both. meta gains nGroup/nKnockout.
+- [x] pipeline.py: dropped group_only filter; refreshes + passes both caches.
+- [x] web: types.ts (round/pens/penWinner on LedgerRow, nGroup/nKnockout on meta),
+      ScorecardView round badge + "<Team> adv." label + reworded footnote/empty-state,
+      accuracy/page.tsx lede.
+- [x] Verify: full pipeline --download --scorecard --kalshi-refresh --sims 50000 → 50
+      scored (44 group + 6 knockout), 0 no-market; tsc clean; /accuracy DOM shows KO
+      rows w/ R16·QF badges, advance bars, correct bets. R32/early-R16 correctly
+      noPrediction (KO rows only entered matches.json once played, pre-Phase-11).
+
+### Phase 12 — Review
+- Coverage note: only QF-onward KO ties (Jul 6+) have a logged pre-match prediction, so
+  6 of 28 played KO ties score today; the rest are honest noPrediction (same as early
+  group games). France–Spain SF settled on Kalshi but martj42 hasn't posted the score,
+  so it's still "upcoming" in our data — will score on next refresh.
+- New raw cache model/data/raw/kalshi_wcadvance.json is untracked; commit it alongside
+  the code (parallels the tracked kalshi_wcgame.json).

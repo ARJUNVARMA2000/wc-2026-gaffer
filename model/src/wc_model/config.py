@@ -116,6 +116,7 @@ DEFAULT_N_SIMS = 50_000
 # Public market data, no auth needed for reads.
 KALSHI_API = "https://api.elections.kalshi.com/trade-api/v2"
 KALSHI_SERIES = "KXWCGAME"        # World Cup per-match 3-way moneyline (home/away/TIE)
+KALSHI_ADVANCE_SERIES = "KXWCADVANCE"  # knockout ties: 2-way "<team> advances" (win/loss, incl. ET+pens)
 # A match market closes ~at the final whistle; its price sits on a flat plateau
 # all day until kickoff, so the price ~this many minutes before close_time is a
 # clean PRE-MATCH quote (and safely avoids leaking any in-game movement).

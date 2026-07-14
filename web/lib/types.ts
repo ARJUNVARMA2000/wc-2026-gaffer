@@ -111,8 +111,11 @@ export interface LedgerRow {
   awayIso: string;
   homeScore: number;
   awayScore: number;
-  outcome: number; // 0 home, 1 draw, 2 away
-  gaffer: Record<Leg, number>;
+  round?: MatchRound | null; // knockout ties only; null/absent for group games
+  pens?: boolean; // knockout decided on penalties
+  penWinner?: string | null;
+  outcome: number; // group: 0 home, 1 draw, 2 away · knockout: 0 home advances, 2 away advances
+  gaffer: Record<Leg, number>; // knockout folds "advances" into HOME/AWAY with DRAW = 0
   market: Record<Leg, Quote>;
   devig: Record<Leg, number> | null;
   bet: {
@@ -131,6 +134,8 @@ export interface Scorecard {
     generatedAt: string;
     nPlayed: number;
     nScored: number;
+    nGroup: number;
+    nKnockout: number;
     nAccuracy: number;
     skipped: { noPrediction: number; noMarket: number };
     edgeMin: number;

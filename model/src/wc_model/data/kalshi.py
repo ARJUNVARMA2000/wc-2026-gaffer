@@ -27,6 +27,7 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 from ..config import (
+    KALSHI_ADVANCE_SERIES,
     KALSHI_API,
     KALSHI_PREMATCH_BUFFER_MIN,
     KALSHI_SERIES,
@@ -34,6 +35,7 @@ from ..config import (
 )
 
 CACHE = RAW_DIR / "kalshi_wcgame.json"
+ADVANCE_CACHE = RAW_DIR / "kalshi_wcadvance.json"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 HEADERS = {"User-Agent": UA, "Accept": "application/json"}
 
@@ -105,13 +107,14 @@ def _parse_ts(s: Optional[str]) -> Optional[datetime]:
         raise
 
 
-def fetch_events(session, status: str = "settled") -> List[dict]:
-    """All KXWCGAME events (with nested markets) for a status, following the cursor."""
+def fetch_events(session, status: str = "settled",
+                 series: str = KALSHI_SERIES) -> List[dict]:
+    """All events (with nested markets) for a series+status, following the cursor."""
     out: List[dict] = []
     cursor = None
     while True:
         params = {
-            "series_ticker": KALSHI_SERIES,
+            "series_ticker": series,
             "with_nested_markets": "true",
             "limit": 200,
             "status": status,
@@ -127,8 +130,8 @@ def fetch_events(session, status: str = "settled") -> List[dict]:
 
 
 def fetch_candles(session, ticker: str, start_ts: int, end_ts: int,
-                  period: int = 60) -> List[dict]:
-    path = f"/series/{KALSHI_SERIES}/markets/{ticker}/candlesticks"
+                  period: int = 60, series: str = KALSHI_SERIES) -> List[dict]:
+    path = f"/series/{series}/markets/{ticker}/candlesticks"
     data = _get(session, path,
                 {"start_ts": start_ts, "end_ts": end_ts, "period_interval": period})
     return data.get("candlesticks", [])
@@ -189,6 +192,13 @@ def refresh(dest: Path = CACHE, verbose: bool = True,
     out: Dict[str, dict] = {}
     buffer = timedelta(minutes=KALSHI_PREMATCH_BUFFER_MIN)
     for ev in events:
+        # KXWCGAME also lists knockout games as "<A> vs <B>: Regulation Time
+        # Moneyline". Those settle on the 90' result (a pens win reads as TIE),
+        # so they're scored via the KXWCADVANCE 2-way market instead (see
+        # refresh_advance). Skipping them here also stops a KO rematch of a group
+        # pairing from overwriting the group entry under the same pair_key.
+        if "Regulation Time" in (ev.get("title") or ""):
+            continue
         markets = ev.get("markets") or []
         close = next((_parse_ts(m.get("close_time")) for m in markets if m.get("close_time")), None)
         if close is None:
@@ -239,7 +249,76 @@ def refresh(dest: Path = CACHE, verbose: bool = True,
     return out
 
 
+def refresh_advance(dest: Path = ADVANCE_CACHE, verbose: bool = True,
+                    lookback_days: int = 14) -> Dict[str, dict]:
+    """Pull settled KXWCADVANCE ties and snapshot each team's pre-match "advances"
+    price. Unlike KXWCGAME these are 2-way (win/loss on who progresses, extra time
+    and penalties included), so the pair's two legs sum to ~1 (plus vig)."""
+    session = _session()
+    events = fetch_events(session, status="settled", series=KALSHI_ADVANCE_SERIES)
+    if verbose:
+        print(f"  KXWCADVANCE settled events: {len(events)}")
+
+    out: Dict[str, dict] = {}
+    buffer = timedelta(minutes=KALSHI_PREMATCH_BUFFER_MIN)
+    for ev in events:
+        markets = ev.get("markets") or []
+        close = next((_parse_ts(m.get("close_time")) for m in markets if m.get("close_time")), None)
+        if close is None:
+            continue
+        cutoff_ts = int((close - buffer).timestamp())
+        start_ts = int((close - buffer - timedelta(days=lookback_days)).timestamp())
+
+        legs: Dict[str, dict] = {}
+        teams: List[str] = []
+        for m in markets:
+            sub = (m.get("yes_sub_title") or "").strip()
+            # "<Team> advances" -> canonical team name
+            name = sub[: -len(" advances")] if sub.lower().endswith(" advances") else sub
+            team = canon(name)
+            if not team:
+                continue
+            teams.append(team)
+            candles = fetch_candles(session, m["ticker"], start_ts, cutoff_ts,
+                                    series=KALSHI_ADVANCE_SERIES)
+            snap = _snapshot(candles, cutoff_ts) or {}
+            legs[team] = {**snap, "result": m.get("result", ""), "ticker": m.get("ticker")}
+
+        if len(teams) != 2:
+            continue
+        key = pair_key(teams[0], teams[1])
+        out[key] = {
+            "teams": teams,
+            "eventTicker": ev.get("event_ticker"),
+            "closeTime": close.isoformat(),
+            "legs": legs,
+        }
+        if verbose:
+            quotes = {k: v.get("ask") for k, v in legs.items()}
+            print(f"    {key}: asks={quotes}")
+
+    # guard: an empty pull shouldn't clobber a good cache
+    if not out and dest.exists():
+        print("  Kalshi advance pull returned nothing; keeping existing cache")
+        with open(dest, encoding="utf-8") as f:
+            return json.load(f)
+
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    with open(dest, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=2)
+    if verbose:
+        print(f"  wrote {len(out)} ties -> {dest}")
+    return out
+
+
 def load(path: Path = CACHE) -> Dict[str, dict]:
+    if not path.exists():
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def load_advance(path: Path = ADVANCE_CACHE) -> Dict[str, dict]:
     if not path.exists():
         return {}
     with open(path, encoding="utf-8") as f:
@@ -253,10 +332,15 @@ def main():
     args = ap.parse_args()
     if args.refresh:
         refresh(lookback_days=args.lookback_days)
+        refresh_advance(lookback_days=args.lookback_days)
     else:
         data = load()
-        print(f"{len(data)} cached matches in {CACHE}")
+        print(f"{len(data)} cached group matches in {CACHE}")
         for k, v in list(data.items())[:5]:
+            print(" ", k, "->", {leg: q.get("ask") for leg, q in v["legs"].items()})
+        adv = load_advance()
+        print(f"{len(adv)} cached knockout ties in {ADVANCE_CACHE}")
+        for k, v in list(adv.items())[:5]:
             print(" ", k, "->", {leg: q.get("ask") for leg, q in v["legs"].items()})
 
 

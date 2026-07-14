@@ -11,7 +11,7 @@ export default function AccuracyPage() {
       <PageHeader
         eyebrow="GAFFER vs the market · Kalshi"
         title="Were we right?"
-        lede="Every group game, our pre-match odds set against Kalshi's pre-match price. Two scorelines: who forecast better (de-vigged Brier & log-loss), and how a bankroll backing our disagreements into Kalshi's real, vig-inclusive prices would have done."
+        lede="Every match — group and knockout — our pre-match odds set against Kalshi's pre-match price. Two scorelines: who forecast better (de-vigged Brier & log-loss), and how a bankroll backing our disagreements into Kalshi's real, vig-inclusive prices would have done."
       />
       <div className="mt-10">
         <ScorecardView sc={sc} />
