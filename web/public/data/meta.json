@@ -1,15 +1,15 @@
 {
-  "lastUpdated": "2026-07-15T08:01:44Z",
-  "dataThrough": "2026-07-14",
+  "lastUpdated": "2026-07-15T23:59:02Z",
+  "dataThrough": "2026-07-15",
   "nSims": 50000,
   "groupMatchesPlayed": 72,
   "groupMatchesTotal": 72,
-  "koMatchesPlayed": 29,
+  "koMatchesPlayed": 30,
   "koMatchesTotal": 32,
-  "stage": "SF",
+  "stage": "FINAL",
   "nTeams": 48,
   "modelVersion": "0.1.0",
-  "homeAdv": 1.259,
-  "avgGoals": 2.75,
+  "homeAdv": 1.257,
+  "avgGoals": 2.76,
   "valuesLoaded": 37
 }

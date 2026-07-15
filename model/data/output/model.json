@@ -1,2106 +1,2113 @@
 {
-  "homeAdv": 1.2586,
+  "homeAdv": 1.2574,
   "rho": -0.05,
-  "avgGoals": 1.3754,
+  "avgGoals": 1.3777,
   "wSame": 0.15,
   "wCross": 0.45,
   "teams": {
     "Abkhazia": {
-      "atk": 0.5926,
-      "dfn": 1.1113,
+      "atk": 0.5676,
+      "dfn": 1.1553,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Afghanistan": {
-      "atk": 0.3373,
-      "dfn": 2.1971,
+      "atk": 0.3359,
+      "dfn": 2.2064,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Albania": {
-      "atk": 1.1761,
-      "dfn": 0.5431,
+      "atk": 1.169,
+      "dfn": 0.5465,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Alderney": {
-      "atk": 0.2782,
-      "dfn": 5.247,
+      "atk": 0.3448,
+      "dfn": 4.2429,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Algeria": {
-      "atk": 2.3916,
-      "dfn": 0.5624,
-      "gap": 0.0341,
+      "atk": 2.3808,
+      "dfn": 0.5649,
+      "gap": 0.0329,
       "confederation": "CAF",
       "iso": "dz"
     },
     "American Samoa": {
-      "atk": 0.0744,
-      "dfn": 28.5786,
+      "atk": 0.0736,
+      "dfn": 28.8545,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "Andorra": {
-      "atk": 0.3696,
-      "dfn": 1.0935,
+      "atk": 0.3674,
+      "dfn": 1.1009,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Angola": {
-      "atk": 1.1569,
-      "dfn": 0.663,
+      "atk": 1.1515,
+      "dfn": 0.6659,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Anguilla": {
-      "atk": 0.1419,
-      "dfn": 6.4966,
+      "atk": 0.1416,
+      "dfn": 6.5267,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Antigua and Barbuda": {
-      "atk": 0.2855,
-      "dfn": 3.4159,
+      "atk": 0.285,
+      "dfn": 3.4253,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Arameans Suryoye": {
-      "atk": 1.0309,
-      "dfn": 1.4748,
+      "atk": 1.002,
+      "dfn": 1.6616,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Argentina": {
-      "atk": 3.3322,
-      "dfn": 0.2801,
-      "gap": -0.5104,
+      "atk": 3.348,
+      "dfn": 0.2829,
+      "gap": -0.5172,
       "confederation": "CONMEBOL",
       "iso": "ar"
     },
     "Armenia": {
-      "atk": 1.219,
-      "dfn": 1.2189,
+      "atk": 1.2121,
+      "dfn": 1.2265,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Artsakh": {
-      "atk": 0.6127,
-      "dfn": 2.3314,
+      "atk": 0.5059,
+      "dfn": 2.7175,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Aruba": {
       "atk": 0.4981,
-      "dfn": 3.0696,
+      "dfn": 3.0836,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Australia": {
-      "atk": 1.8563,
-      "dfn": 0.4777,
-      "gap": -0.3824,
+      "atk": 1.8486,
+      "dfn": 0.4798,
+      "gap": -0.3823,
       "confederation": "AFC",
       "iso": "au"
     },
     "Austria": {
-      "atk": 2.3781,
-      "dfn": 0.5015,
-      "gap": -0.0946,
+      "atk": 2.3648,
+      "dfn": 0.5042,
+      "gap": -0.0938,
       "confederation": "UEFA",
       "iso": "at"
     },
     "Aymara": {
-      "atk": 0.6125,
-      "dfn": 1.6326,
+      "atk": 0.6091,
+      "dfn": 1.6418,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Azerbaijan": {
-      "atk": 0.9157,
-      "dfn": 1.0517,
+      "atk": 0.9111,
+      "dfn": 1.0579,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Bahamas": {
-      "atk": 0.2649,
-      "dfn": 6.4425,
+      "atk": 0.2644,
+      "dfn": 6.4714,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Bahrain": {
-      "atk": 1.0234,
-      "dfn": 0.9805,
+      "atk": 1.0195,
+      "dfn": 0.9847,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Bangladesh": {
-      "atk": 0.3372,
-      "dfn": 2.533,
+      "atk": 0.3358,
+      "dfn": 2.5435,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Barawa": {
-      "atk": 0.384,
-      "dfn": 5.7609,
+      "atk": 0.3805,
+      "dfn": 5.7024,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Barbados": {
-      "atk": 0.4554,
-      "dfn": 3.687,
+      "atk": 0.454,
+      "dfn": 3.6999,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Basque Country": {
-      "atk": 2.421,
-      "dfn": 0.3692,
+      "atk": 2.4129,
+      "dfn": 0.3707,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Belarus": {
-      "atk": 1.3294,
-      "dfn": 0.9273,
+      "atk": 1.3219,
+      "dfn": 0.9328,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Belgium": {
-      "atk": 3.2245,
-      "dfn": 0.4341,
-      "gap": -0.2036,
+      "atk": 3.206,
+      "dfn": 0.4366,
+      "gap": -0.2037,
       "confederation": "UEFA",
       "iso": "be"
     },
     "Belize": {
-      "atk": 0.4238,
-      "dfn": 2.4407,
+      "atk": 0.4226,
+      "dfn": 2.4494,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Benin": {
-      "atk": 1.2114,
-      "dfn": 0.9226,
+      "atk": 1.2055,
+      "dfn": 0.9272,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Bermuda": {
-      "atk": 0.7774,
-      "dfn": 2.6862,
+      "atk": 0.7778,
+      "dfn": 2.6975,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Bhutan": {
-      "atk": 0.179,
-      "dfn": 5.2976,
+      "atk": 0.1783,
+      "dfn": 5.3211,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Biafra": {
-      "atk": 0.1166,
-      "dfn": 1.9312,
+      "atk": 0.1071,
+      "dfn": 2.0949,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Bolivia": {
-      "atk": 1.3759,
-      "dfn": 0.8971,
+      "atk": 1.3706,
+      "dfn": 0.9005,
       "gap": 0.0,
       "confederation": "CONMEBOL",
       "iso": "un"
     },
     "Bonaire": {
-      "atk": 0.3144,
-      "dfn": 3.8521,
+      "atk": 0.313,
+      "dfn": 3.8644,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Bosnia and Herzegovina": {
-      "atk": 1.451,
-      "dfn": 0.7304,
+      "atk": 1.4428,
+      "dfn": 0.7347,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "ba"
     },
     "Botswana": {
-      "atk": 0.8139,
-      "dfn": 1.0216,
+      "atk": 0.8103,
+      "dfn": 1.0268,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Brazil": {
-      "atk": 3.539,
-      "dfn": 0.3678,
-      "gap": -0.2395,
+      "atk": 3.5236,
+      "dfn": 0.3692,
+      "gap": -0.2434,
       "confederation": "CONMEBOL",
       "iso": "br"
     },
     "British Virgin Islands": {
-      "atk": 0.3022,
-      "dfn": 4.2544,
+      "atk": 0.3035,
+      "dfn": 4.3093,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Brunei": {
-      "atk": 0.2399,
-      "dfn": 4.9141,
+      "atk": 0.239,
+      "dfn": 4.9353,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Bulgaria": {
-      "atk": 1.198,
-      "dfn": 0.9288,
+      "atk": 1.1912,
+      "dfn": 0.9348,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Burkina Faso": {
-      "atk": 1.6992,
-      "dfn": 0.7733,
+      "atk": 1.691,
+      "dfn": 0.7772,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Burundi": {
-      "atk": 0.9427,
-      "dfn": 1.1508,
+      "atk": 0.9382,
+      "dfn": 1.1566,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Cambodia": {
-      "atk": 0.4758,
-      "dfn": 3.0189,
+      "atk": 0.4741,
+      "dfn": 3.0317,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Cameroon": {
-      "atk": 1.452,
-      "dfn": 0.5572,
-      "gap": 0.4152,
+      "atk": 1.4454,
+      "dfn": 0.56,
+      "gap": 0.4148,
       "confederation": "CAF",
       "iso": "un"
     },
     "Canada": {
-      "atk": 1.8567,
-      "dfn": 0.5303,
-      "gap": 0.1199,
+      "atk": 1.851,
+      "dfn": 0.5325,
+      "gap": 0.1172,
       "confederation": "CONCACAF",
       "iso": "ca"
     },
+    "Canton Ticino": {
+      "atk": 0.2769,
+      "dfn": 6.3376,
+      "gap": 0.0,
+      "confederation": "UNK",
+      "iso": "un"
+    },
     "Cape Verde": {
-      "atk": 1.3076,
-      "dfn": 0.7056,
+      "atk": 1.3015,
+      "dfn": 0.7087,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "cv"
     },
     "Cascadia": {
-      "atk": 0.9007,
-      "dfn": 3.2558,
+      "atk": 0.9075,
+      "dfn": 3.3078,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Catalonia": {
-      "atk": 2.6426,
-      "dfn": 0.7237,
+      "atk": 2.6346,
+      "dfn": 0.7267,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Cayman Islands": {
-      "atk": 0.2458,
-      "dfn": 4.1542,
+      "atk": 0.2359,
+      "dfn": 4.0145,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Central African Republic": {
-      "atk": 1.0438,
-      "dfn": 1.4589,
+      "atk": 1.0383,
+      "dfn": 1.4665,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Chad": {
-      "atk": 0.5856,
-      "dfn": 1.4094,
+      "atk": 0.5827,
+      "dfn": 1.4165,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Chagos Islands": {
-      "atk": 0.4109,
-      "dfn": 7.4978,
+      "atk": 0.4244,
+      "dfn": 7.4346,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Chameria": {
-      "atk": 0.5933,
-      "dfn": 2.5351,
+      "atk": 0.5298,
+      "dfn": 2.8801,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Chile": {
-      "atk": 2.0453,
-      "dfn": 0.5785,
+      "atk": 2.0371,
+      "dfn": 0.5806,
       "gap": 0.0,
       "confederation": "CONMEBOL",
       "iso": "un"
     },
     "China": {
-      "atk": 0.9178,
-      "dfn": 0.9642,
+      "atk": 0.9143,
+      "dfn": 0.9685,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Colombia": {
-      "atk": 2.867,
-      "dfn": 0.3605,
-      "gap": -0.5231,
+      "atk": 2.855,
+      "dfn": 0.3618,
+      "gap": -0.5257,
       "confederation": "CONMEBOL",
       "iso": "co"
     },
     "Comoros": {
-      "atk": 1.1123,
-      "dfn": 1.0369,
+      "atk": 1.107,
+      "dfn": 1.0421,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Congo": {
-      "atk": 0.8822,
-      "dfn": 1.3754,
+      "atk": 0.8782,
+      "dfn": 1.3825,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Cook Islands": {
-      "atk": 0.0543,
-      "dfn": 13.4905,
+      "atk": 0.0537,
+      "dfn": 13.648,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "Corsica": {
-      "atk": 1.3864,
-      "dfn": 0.3689,
+      "atk": 1.3811,
+      "dfn": 0.3705,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Costa Rica": {
-      "atk": 1.3887,
-      "dfn": 0.8396,
+      "atk": 1.3832,
+      "dfn": 0.8429,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "County of Nice": {
-      "atk": 1.095,
-      "dfn": 2.0571,
+      "atk": 0.8568,
+      "dfn": 2.4132,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Croatia": {
-      "atk": 2.568,
-      "dfn": 0.4784,
-      "gap": -0.0252,
+      "atk": 2.5547,
+      "dfn": 0.4812,
+      "gap": -0.0251,
       "confederation": "UEFA",
       "iso": "hr"
     },
     "Cuba": {
-      "atk": 0.5809,
-      "dfn": 1.8253,
+      "atk": 0.5799,
+      "dfn": 1.8324,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Curaçao": {
-      "atk": 0.9709,
-      "dfn": 1.1991,
+      "atk": 0.9672,
+      "dfn": 1.2035,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "cw"
     },
     "Cyprus": {
-      "atk": 1.0967,
-      "dfn": 1.1311,
+      "atk": 1.0903,
+      "dfn": 1.138,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Czech Republic": {
-      "atk": 2.0811,
-      "dfn": 0.6491,
-      "gap": 0.1851,
+      "atk": 2.0705,
+      "dfn": 0.6532,
+      "gap": 0.1867,
       "confederation": "UEFA",
       "iso": "cz"
     },
     "DR Congo": {
-      "atk": 1.4172,
-      "dfn": 0.5073,
-      "gap": 0.2086,
+      "atk": 1.4104,
+      "dfn": 0.5097,
+      "gap": 0.2089,
       "confederation": "CAF",
       "iso": "cd"
     },
     "Darfur": {
       "atk": 0.0,
-      "dfn": 26.4542,
+      "dfn": 31.1471,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Denmark": {
-      "atk": 2.551,
-      "dfn": 0.4153,
-      "gap": -0.185,
+      "atk": 2.5363,
+      "dfn": 0.4178,
+      "gap": -0.1841,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Djibouti": {
-      "atk": 0.6073,
-      "dfn": 2.2998,
+      "atk": 0.6043,
+      "dfn": 2.3113,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Dominica": {
-      "atk": 0.3017,
-      "dfn": 2.9404,
+      "atk": 0.3004,
+      "dfn": 2.9489,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Dominican Republic": {
-      "atk": 0.8561,
-      "dfn": 1.5163,
+      "atk": 0.8536,
+      "dfn": 1.5221,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Donetsk PR": {
-      "atk": 0.6127,
-      "dfn": 1.4098,
+      "atk": 0.5423,
+      "dfn": 1.4944,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Délvidék": {
-      "atk": 0.7908,
-      "dfn": 2.5772,
+      "atk": 0.7038,
+      "dfn": 2.9678,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "East Turkestan": {
-      "atk": 0.4528,
-      "dfn": 11.6174,
+      "atk": 0.6238,
+      "dfn": 9.8398,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Ecuador": {
-      "atk": 1.8048,
-      "dfn": 0.3503,
-      "gap": -0.005,
+      "atk": 1.7974,
+      "dfn": 0.3515,
+      "gap": -0.0082,
       "confederation": "CONMEBOL",
       "iso": "ec"
     },
     "Egypt": {
-      "atk": 1.6984,
-      "dfn": 0.4928,
-      "gap": -0.09,
+      "atk": 1.6907,
+      "dfn": 0.4951,
+      "gap": -0.0899,
       "confederation": "CAF",
       "iso": "eg"
     },
     "El Salvador": {
-      "atk": 0.5842,
-      "dfn": 1.0247,
+      "atk": 0.5821,
+      "dfn": 1.0285,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Elba Island": {
-      "atk": 0.4295,
-      "dfn": 5.0948,
+      "atk": 0.5684,
+      "dfn": 2.3093,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Ellan Vannin": {
-      "atk": 0.852,
-      "dfn": 1.8729,
+      "atk": 0.7821,
+      "dfn": 2.0634,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "England": {
-      "atk": 3.0414,
-      "dfn": 0.3228,
-      "gap": -0.0569,
+      "atk": 3.0295,
+      "dfn": 0.3338,
+      "gap": -0.0324,
       "confederation": "UEFA",
       "iso": "gb-eng"
     },
     "Equatorial Guinea": {
-      "atk": 0.8764,
-      "dfn": 0.9351,
+      "atk": 0.8724,
+      "dfn": 0.9397,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Eritrea": {
-      "atk": 0.4459,
-      "dfn": 2.3507,
+      "atk": 0.4439,
+      "dfn": 2.3635,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Estonia": {
-      "atk": 0.9504,
-      "dfn": 0.9709,
+      "atk": 0.9451,
+      "dfn": 0.9768,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Eswatini": {
-      "atk": 0.8576,
-      "dfn": 1.2861,
+      "atk": 0.8534,
+      "dfn": 1.2927,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Ethiopia": {
-      "atk": 0.9616,
-      "dfn": 1.1564,
+      "atk": 0.9572,
+      "dfn": 1.1623,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Falkland Islands": {
-      "atk": 0.2575,
-      "dfn": 5.0748,
+      "atk": 0.3228,
+      "dfn": 4.0393,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Faroe Islands": {
-      "atk": 0.8892,
-      "dfn": 0.8665,
+      "atk": 0.8846,
+      "dfn": 0.8729,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Felvidék": {
-      "atk": 0.4756,
-      "dfn": 1.8814,
+      "atk": 0.4062,
+      "dfn": 2.1428,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Fiji": {
-      "atk": 0.3699,
-      "dfn": 3.7512,
+      "atk": 0.3662,
+      "dfn": 3.787,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "Finland": {
-      "atk": 1.4183,
-      "dfn": 0.7171,
+      "atk": 1.4096,
+      "dfn": 0.7214,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "France": {
-      "atk": 3.3957,
-      "dfn": 0.3561,
-      "gap": -0.022,
+      "atk": 3.3792,
+      "dfn": 0.3581,
+      "gap": -0.0245,
       "confederation": "UEFA",
       "iso": "fr"
     },
     "Franconia": {
-      "atk": 0.3478,
-      "dfn": 20.3816,
+      "atk": 0.4134,
+      "dfn": 6.0559,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "French Guiana": {
-      "atk": 0.6703,
-      "dfn": 1.7702,
+      "atk": 0.668,
+      "dfn": 1.7759,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Frøya": {
-      "atk": 0.1837,
-      "dfn": 7.9755,
+      "atk": 0.2309,
+      "dfn": 6.2793,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Gabon": {
-      "atk": 1.3731,
-      "dfn": 1.0846,
+      "atk": 1.3669,
+      "dfn": 1.0899,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Galicia": {
-      "atk": 0.0936,
-      "dfn": 1.2798,
+      "atk": 0.0933,
+      "dfn": 1.2848,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Gambia": {
-      "atk": 1.4569,
-      "dfn": 1.0754,
+      "atk": 1.4498,
+      "dfn": 1.0809,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Georgia": {
-      "atk": 1.7991,
-      "dfn": 0.6738,
+      "atk": 1.7904,
+      "dfn": 0.6781,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Germany": {
-      "atk": 3.507,
-      "dfn": 0.4935,
-      "gap": 0.0722,
+      "atk": 3.488,
+      "dfn": 0.4962,
+      "gap": 0.0708,
       "confederation": "UEFA",
       "iso": "de"
     },
     "Ghana": {
-      "atk": 1.3933,
-      "dfn": 0.6578,
+      "atk": 1.3865,
+      "dfn": 0.6611,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "gh"
     },
     "Gibraltar": {
-      "atk": 0.4879,
-      "dfn": 1.7519,
+      "atk": 0.4542,
+      "dfn": 1.7498,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Gotland": {
-      "atk": 0.6727,
-      "dfn": 3.7075,
+      "atk": 0.8406,
+      "dfn": 2.9982,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Gozo": {
-      "atk": 0.2944,
-      "dfn": 1.9027,
+      "atk": 0.3687,
+      "dfn": 1.5228,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Greece": {
-      "atk": 1.899,
-      "dfn": 0.4734,
-      "gap": 0.1222,
+      "atk": 1.8888,
+      "dfn": 0.4764,
+      "gap": 0.1236,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Greenland": {
-      "atk": 0.3325,
-      "dfn": 5.5181,
+      "atk": 0.4629,
+      "dfn": 4.4059,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Grenada": {
-      "atk": 0.4704,
-      "dfn": 2.4743,
+      "atk": 0.4685,
+      "dfn": 2.4852,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Guadeloupe": {
-      "atk": 0.6925,
-      "dfn": 1.5277,
+      "atk": 0.6939,
+      "dfn": 1.5348,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Guam": {
-      "atk": 0.1885,
-      "dfn": 5.3122,
+      "atk": 0.1871,
+      "dfn": 5.3355,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Guatemala": {
-      "atk": 1.0314,
-      "dfn": 1.1447,
+      "atk": 1.0273,
+      "dfn": 1.1487,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Guernsey": {
-      "atk": 0.542,
-      "dfn": 1.487,
+      "atk": 0.676,
+      "dfn": 1.1929,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Guinea": {
-      "atk": 1.3118,
-      "dfn": 0.7921,
+      "atk": 1.3049,
+      "dfn": 0.796,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Guinea-Bissau": {
-      "atk": 0.7617,
-      "dfn": 1.0337,
+      "atk": 0.7581,
+      "dfn": 1.039,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Guyana": {
-      "atk": 0.8214,
-      "dfn": 2.1738,
+      "atk": 0.8186,
+      "dfn": 2.1816,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Haiti": {
-      "atk": 1.3662,
-      "dfn": 1.0689,
+      "atk": 1.3611,
+      "dfn": 1.0732,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "ht"
     },
     "Hitra": {
-      "atk": 0.5937,
-      "dfn": 5.2169,
+      "atk": 0.7511,
+      "dfn": 4.1476,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Hmong": {
-      "atk": 0.377,
-      "dfn": 10.5893,
+      "atk": 0.4906,
+      "dfn": 8.9725,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Honduras": {
-      "atk": 1.0247,
-      "dfn": 0.8946,
+      "atk": 1.0234,
+      "dfn": 0.8978,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Hong Kong": {
-      "atk": 0.5684,
-      "dfn": 1.6178,
+      "atk": 0.5661,
+      "dfn": 1.6238,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Hungary": {
-      "atk": 1.7467,
-      "dfn": 0.5829,
-      "gap": 0.2974,
+      "atk": 1.7364,
+      "dfn": 0.5863,
+      "gap": 0.2992,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Iceland": {
-      "atk": 1.7531,
-      "dfn": 0.8039,
+      "atk": 1.7427,
+      "dfn": 0.8081,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "India": {
-      "atk": 0.4933,
-      "dfn": 1.4693,
+      "atk": 0.4915,
+      "dfn": 1.4757,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Indonesia": {
-      "atk": 0.8777,
-      "dfn": 1.3508,
+      "atk": 0.8745,
+      "dfn": 1.356,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Iran": {
-      "atk": 1.9913,
-      "dfn": 0.5206,
+      "atk": 1.9834,
+      "dfn": 0.5228,
       "gap": -0.7,
       "confederation": "AFC",
       "iso": "ir"
     },
     "Iraq": {
-      "atk": 1.1641,
-      "dfn": 0.765,
+      "atk": 1.1594,
+      "dfn": 0.7685,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "iq"
     },
     "Iraqi Kurdistan": {
-      "atk": 1.2734,
-      "dfn": 1.3362,
+      "atk": 1.0238,
+      "dfn": 1.4924,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Isle of Man": {
-      "atk": 1.0652,
-      "dfn": 2.4787,
+      "atk": 1.342,
+      "dfn": 1.9736,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Isle of Wight": {
-      "atk": 0.6025,
-      "dfn": 1.7907,
+      "atk": 0.753,
+      "dfn": 1.432,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Israel": {
-      "atk": 2.1196,
-      "dfn": 0.8532,
+      "atk": 2.1073,
+      "dfn": 0.8585,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Italy": {
-      "atk": 2.5407,
-      "dfn": 0.4304,
-      "gap": -0.2024,
+      "atk": 2.5248,
+      "dfn": 0.4328,
+      "gap": -0.2011,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Ivory Coast": {
-      "atk": 1.7787,
-      "dfn": 0.4756,
-      "gap": 0.4625,
+      "atk": 1.7705,
+      "dfn": 0.478,
+      "gap": 0.4608,
       "confederation": "CAF",
       "iso": "ci"
     },
     "Jamaica": {
-      "atk": 0.938,
-      "dfn": 0.8758,
+      "atk": 0.9342,
+      "dfn": 0.8791,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Japan": {
-      "atk": 2.5102,
-      "dfn": 0.4297,
-      "gap": -0.261,
+      "atk": 2.4999,
+      "dfn": 0.4317,
+      "gap": -0.2627,
       "confederation": "AFC",
       "iso": "jp"
     },
     "Jersey": {
-      "atk": 0.8871,
-      "dfn": 1.8788,
+      "atk": 1.1054,
+      "dfn": 1.5116,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Jordan": {
-      "atk": 1.5527,
-      "dfn": 0.8786,
+      "atk": 1.5463,
+      "dfn": 0.8824,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "jo"
     },
     "Kabylia": {
-      "atk": 0.3439,
-      "dfn": 5.1128,
+      "atk": 0.3772,
+      "dfn": 5.2583,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Kazakhstan": {
-      "atk": 1.0706,
-      "dfn": 0.9796,
+      "atk": 1.0647,
+      "dfn": 0.9855,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Kenya": {
-      "atk": 1.0062,
-      "dfn": 1.1008,
+      "atk": 1.0016,
+      "dfn": 1.1063,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Kernow": {
-      "atk": 0.5712,
-      "dfn": 1.2884,
+      "atk": 0.5371,
+      "dfn": 1.4697,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Kosovo": {
-      "atk": 1.7449,
-      "dfn": 0.644,
+      "atk": 1.7353,
+      "dfn": 0.6479,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Kuwait": {
-      "atk": 1.0005,
-      "dfn": 1.3243,
+      "atk": 0.9965,
+      "dfn": 1.3301,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Kyrgyzstan": {
-      "atk": 0.8702,
-      "dfn": 1.343,
+      "atk": 0.8669,
+      "dfn": 1.3488,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Kárpátalja": {
-      "atk": 0.809,
-      "dfn": 1.5954,
+      "atk": 0.8423,
+      "dfn": 1.5171,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Laos": {
-      "atk": 0.375,
-      "dfn": 3.9695,
+      "atk": 0.3736,
+      "dfn": 3.9859,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Latvia": {
-      "atk": 0.8281,
-      "dfn": 1.0037,
+      "atk": 0.823,
+      "dfn": 1.0101,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Lebanon": {
-      "atk": 0.6518,
-      "dfn": 0.9824,
+      "atk": 0.649,
+      "dfn": 0.9867,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Lesotho": {
-      "atk": 0.7003,
-      "dfn": 1.1177,
+      "atk": 0.6968,
+      "dfn": 1.1234,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Liberia": {
-      "atk": 0.8705,
-      "dfn": 1.1435,
+      "atk": 0.8665,
+      "dfn": 1.1494,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Libya": {
-      "atk": 1.102,
-      "dfn": 0.8651,
+      "atk": 1.097,
+      "dfn": 0.8694,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Liechtenstein": {
-      "atk": 0.2693,
-      "dfn": 1.8037,
+      "atk": 0.268,
+      "dfn": 1.8177,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Lithuania": {
-      "atk": 0.743,
-      "dfn": 0.9722,
+      "atk": 0.7391,
+      "dfn": 0.9787,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Luhansk PR": {
-      "atk": 0.7591,
-      "dfn": 3.0284,
+      "atk": 0.705,
+      "dfn": 3.5245,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Luxembourg": {
-      "atk": 0.8696,
-      "dfn": 0.8099,
+      "atk": 0.8647,
+      "dfn": 0.8148,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Macau": {
-      "atk": 0.1274,
-      "dfn": 5.5539,
+      "atk": 0.1268,
+      "dfn": 5.5771,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Madagascar": {
-      "atk": 1.2444,
-      "dfn": 1.1682,
+      "atk": 1.2385,
+      "dfn": 1.1741,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Malawi": {
-      "atk": 0.7602,
-      "dfn": 0.9233,
+      "atk": 0.7566,
+      "dfn": 0.9281,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Malaysia": {
-      "atk": 0.7813,
-      "dfn": 1.5571,
+      "atk": 0.7784,
+      "dfn": 1.5634,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Maldives": {
-      "atk": 0.3539,
-      "dfn": 3.4146,
+      "atk": 0.3526,
+      "dfn": 3.4301,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Mali": {
-      "atk": 1.4863,
-      "dfn": 0.4757,
+      "atk": 1.4794,
+      "dfn": 0.4781,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Malta": {
-      "atk": 0.8357,
-      "dfn": 1.148,
+      "atk": 0.8309,
+      "dfn": 1.1551,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Mapuche": {
-      "atk": 1.8376,
-      "dfn": 1.6326,
+      "atk": 1.8273,
+      "dfn": 1.6418,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Marshall Islands": {
-      "atk": 0.1485,
-      "dfn": 19.3236,
+      "atk": 0.1479,
+      "dfn": 19.3996,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Martinique": {
-      "atk": 0.6649,
-      "dfn": 1.4435,
+      "atk": 0.6623,
+      "dfn": 1.4482,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Matabeleland": {
-      "atk": 0.1897,
-      "dfn": 5.3691,
+      "atk": 0.1751,
+      "dfn": 5.8499,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Maule Sur": {
-      "atk": 0.6125,
+      "atk": 0.6091,
       "dfn": 0.0,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Mauritania": {
-      "atk": 0.8108,
-      "dfn": 0.7954,
+      "atk": 0.807,
+      "dfn": 0.7988,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Mauritius": {
-      "atk": 0.5218,
-      "dfn": 1.4718,
+      "atk": 0.5194,
+      "dfn": 1.4792,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Mayotte": {
-      "atk": 0.5732,
-      "dfn": 0.5507,
+      "atk": 0.5704,
+      "dfn": 0.5534,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Menorca": {
-      "atk": 0.4088,
-      "dfn": 3.4019,
+      "atk": 0.5112,
+      "dfn": 2.7098,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Mexico": {
-      "atk": 2.1109,
-      "dfn": 0.4747,
-      "gap": -0.1339,
+      "atk": 2.1019,
+      "dfn": 0.4767,
+      "gap": -0.1353,
       "confederation": "CONCACAF",
       "iso": "mx"
     },
     "Moldova": {
-      "atk": 0.8613,
-      "dfn": 1.2514,
+      "atk": 0.8565,
+      "dfn": 1.2596,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Monaco": {
-      "atk": 0.0706,
-      "dfn": 4.7458,
+      "atk": 0.1028,
+      "dfn": 3.9704,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Mongolia": {
-      "atk": 0.2387,
-      "dfn": 3.1781,
+      "atk": 0.2377,
+      "dfn": 3.1933,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Montenegro": {
-      "atk": 1.2396,
-      "dfn": 0.8777,
+      "atk": 1.2337,
+      "dfn": 0.8841,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Montserrat": {
-      "atk": 0.441,
-      "dfn": 2.6685,
+      "atk": 0.4397,
+      "dfn": 2.6788,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Morocco": {
-      "atk": 2.1716,
-      "dfn": 0.3145,
-      "gap": -0.2158,
+      "atk": 2.1623,
+      "dfn": 0.316,
+      "gap": -0.2179,
       "confederation": "CAF",
       "iso": "ma"
     },
     "Mozambique": {
-      "atk": 1.1416,
-      "dfn": 1.1052,
+      "atk": 1.1363,
+      "dfn": 1.1107,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Myanmar": {
-      "atk": 0.4903,
-      "dfn": 3.0425,
+      "atk": 0.4885,
+      "dfn": 3.0561,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Namibia": {
-      "atk": 0.7958,
-      "dfn": 0.9814,
+      "atk": 0.7918,
+      "dfn": 0.9865,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Nepal": {
-      "atk": 0.3086,
-      "dfn": 2.1923,
+      "atk": 0.3074,
+      "dfn": 2.2022,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Netherlands": {
-      "atk": 3.3372,
-      "dfn": 0.4494,
-      "gap": -0.0681,
+      "atk": 3.321,
+      "dfn": 0.452,
+      "gap": -0.0693,
       "confederation": "UEFA",
       "iso": "nl"
     },
     "New Caledonia": {
-      "atk": 0.428,
-      "dfn": 2.352,
+      "atk": 0.4234,
+      "dfn": 2.3854,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "New Zealand": {
-      "atk": 1.078,
-      "dfn": 0.8312,
+      "atk": 1.0691,
+      "dfn": 0.8356,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "nz"
     },
     "Nicaragua": {
-      "atk": 0.6877,
-      "dfn": 1.2608,
+      "atk": 0.6854,
+      "dfn": 1.2656,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Niger": {
-      "atk": 1.1909,
-      "dfn": 1.0637,
+      "atk": 1.1854,
+      "dfn": 1.0691,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Nigeria": {
-      "atk": 1.9596,
-      "dfn": 0.6125,
-      "gap": 0.15,
+      "atk": 1.9504,
+      "dfn": 0.6156,
+      "gap": 0.1499,
       "confederation": "CAF",
       "iso": "un"
     },
     "North Korea": {
-      "atk": 1.0312,
-      "dfn": 1.161,
+      "atk": 1.027,
+      "dfn": 1.1661,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "North Macedonia": {
-      "atk": 1.2939,
-      "dfn": 0.7494,
+      "atk": 1.2865,
+      "dfn": 0.7543,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Northern Cyprus": {
-      "atk": 0.8292,
-      "dfn": 1.2432,
+      "atk": 1.0305,
+      "dfn": 1.5498,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Northern Ireland": {
-      "atk": 1.3931,
-      "dfn": 0.5918,
+      "atk": 1.3853,
+      "dfn": 0.5955,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Northern Mariana Islands": {
-      "atk": 0.1402,
-      "dfn": 17.7731,
+      "atk": 0.1384,
+      "dfn": 17.9456,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Norway": {
-      "atk": 2.9426,
-      "dfn": 0.5313,
-      "gap": 0.1214,
+      "atk": 2.9266,
+      "dfn": 0.5345,
+      "gap": 0.1212,
       "confederation": "UEFA",
       "iso": "no"
     },
     "Occitania": {
-      "atk": 0.9967,
-      "dfn": 0.785,
+      "atk": 0.9096,
+      "dfn": 0.872,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Oman": {
-      "atk": 0.9363,
-      "dfn": 0.8082,
+      "atk": 0.9327,
+      "dfn": 0.8117,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Orkney": {
-      "atk": 0.3931,
-      "dfn": 3.029,
+      "atk": 0.4963,
+      "dfn": 2.3966,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Padania": {
-      "atk": 0.7419,
-      "dfn": 1.2535,
+      "atk": 0.5524,
+      "dfn": 2.847,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Pakistan": {
-      "atk": 0.3258,
-      "dfn": 2.6831,
+      "atk": 0.3245,
+      "dfn": 2.695,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Palestine": {
-      "atk": 0.887,
-      "dfn": 0.8967,
+      "atk": 0.8832,
+      "dfn": 0.9008,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Panama": {
-      "atk": 1.4501,
-      "dfn": 0.8293,
-      "gap": 0.0748,
+      "atk": 1.4446,
+      "dfn": 0.8328,
+      "gap": 0.0757,
       "confederation": "CONCACAF",
       "iso": "pa"
     },
     "Panjab": {
-      "atk": 0.8953,
-      "dfn": 2.179,
+      "atk": 0.8513,
+      "dfn": 2.2182,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Papua New Guinea": {
-      "atk": 0.3186,
-      "dfn": 4.1214,
+      "atk": 0.3149,
+      "dfn": 4.1599,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "Paraguay": {
-      "atk": 1.6438,
-      "dfn": 0.4722,
-      "gap": 0.0171,
+      "atk": 1.6373,
+      "dfn": 0.4741,
+      "gap": 0.0156,
       "confederation": "CONMEBOL",
       "iso": "py"
     },
     "Parishes of Jersey": {
-      "atk": 0.776,
-      "dfn": 1.6475,
+      "atk": 0.7751,
+      "dfn": 1.6608,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Peru": {
-      "atk": 1.4638,
-      "dfn": 0.5157,
+      "atk": 1.4583,
+      "dfn": 0.5176,
       "gap": 0.0,
       "confederation": "CONMEBOL",
       "iso": "un"
     },
     "Philippines": {
-      "atk": 0.6585,
-      "dfn": 1.9785,
+      "atk": 0.656,
+      "dfn": 1.987,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Poland": {
-      "atk": 2.0896,
-      "dfn": 0.6116,
-      "gap": 0.2101,
+      "atk": 2.0779,
+      "dfn": 0.615,
+      "gap": 0.2113,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Portugal": {
-      "atk": 3.3184,
-      "dfn": 0.3618,
-      "gap": -0.1559,
+      "atk": 3.301,
+      "dfn": 0.3638,
+      "gap": -0.1574,
       "confederation": "UEFA",
       "iso": "pt"
     },
     "Puerto Rico": {
-      "atk": 0.5987,
-      "dfn": 2.0812,
+      "atk": 0.5974,
+      "dfn": 2.0863,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Qatar": {
-      "atk": 1.356,
-      "dfn": 1.0806,
+      "atk": 1.3507,
+      "dfn": 1.0853,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "qa"
     },
     "Raetia": {
-      "atk": 0.1408,
-      "dfn": 8.7377,
+      "atk": 0.4742,
+      "dfn": 7.3472,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Republic of Ireland": {
-      "atk": 1.4362,
-      "dfn": 0.5191,
+      "atk": 1.4289,
+      "dfn": 0.5223,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Romani people": {
-      "atk": 0.7748,
-      "dfn": 4.0846,
+      "atk": 0.5749,
+      "dfn": 4.7631,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Romania": {
-      "atk": 1.6594,
-      "dfn": 0.5969,
+      "atk": 1.6497,
+      "dfn": 0.6005,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
+    "Rouet-Provence": {
+      "atk": 0.1987,
+      "dfn": 4.4912,
+      "gap": 0.0,
+      "confederation": "UNK",
+      "iso": "un"
+    },
     "Russia": {
-      "atk": 1.8679,
-      "dfn": 0.4677,
-      "gap": 0.0729,
+      "atk": 1.8602,
+      "dfn": 0.4701,
+      "gap": 0.072,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Rwanda": {
-      "atk": 0.817,
-      "dfn": 0.6959,
+      "atk": 0.8134,
+      "dfn": 0.6995,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Ryūkyū": {
       "atk": 0.0,
-      "dfn": 41.2988,
+      "dfn": 40.1265,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Réunion": {
-      "atk": 0.8971,
-      "dfn": 0.736,
+      "atk": 0.8928,
+      "dfn": 0.7397,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Saare County": {
-      "atk": 0.4616,
-      "dfn": 5.1925,
+      "atk": 0.5801,
+      "dfn": 4.1147,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Saint Barthélemy": {
-      "atk": 0.6667,
-      "dfn": 4.2248,
+      "atk": 0.6644,
+      "dfn": 4.2389,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Saint Helena": {
-      "atk": 0.1804,
-      "dfn": 9.6847,
+      "atk": 0.2273,
+      "dfn": 7.7477,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Saint Kitts and Nevis": {
-      "atk": 0.4903,
-      "dfn": 3.0949,
+      "atk": 0.4895,
+      "dfn": 3.1083,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Saint Lucia": {
-      "atk": 0.4215,
-      "dfn": 3.0666,
+      "atk": 0.4202,
+      "dfn": 3.0778,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Saint Martin": {
-      "atk": 0.5598,
-      "dfn": 3.3904,
+      "atk": 0.5581,
+      "dfn": 3.4039,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Saint Vincent and the Grenadines": {
-      "atk": 0.652,
-      "dfn": 2.8423,
+      "atk": 0.6494,
+      "dfn": 2.8518,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Samoa": {
-      "atk": 0.1442,
-      "dfn": 8.3369,
+      "atk": 0.1428,
+      "dfn": 8.428,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "San Marino": {
-      "atk": 0.3033,
-      "dfn": 2.2007,
+      "atk": 0.3019,
+      "dfn": 2.2168,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Saudi Arabia": {
-      "atk": 1.2156,
-      "dfn": 0.6866,
+      "atk": 1.2107,
+      "dfn": 0.6896,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "sa"
     },
     "Scotland": {
-      "atk": 1.9483,
-      "dfn": 0.582,
-      "gap": 0.0995,
+      "atk": 1.938,
+      "dfn": 0.5854,
+      "gap": 0.1011,
       "confederation": "UEFA",
       "iso": "gb-sct"
     },
     "Sealand": {
-      "atk": 0.4639,
-      "dfn": 3.5432,
+      "atk": 0.4872,
+      "dfn": 2.7758,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Seborga": {
-      "atk": 0.4523,
-      "dfn": 6.4664,
+      "atk": 0.5775,
+      "dfn": 6.1582,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Senegal": {
-      "atk": 2.2923,
-      "dfn": 0.4924,
-      "gap": 0.2062,
+      "atk": 2.2811,
+      "dfn": 0.4948,
+      "gap": 0.2047,
       "confederation": "CAF",
       "iso": "sn"
     },
     "Serbia": {
-      "atk": 1.9619,
-      "dfn": 0.5918,
-      "gap": 0.1969,
+      "atk": 1.9498,
+      "dfn": 0.5952,
+      "gap": 0.1989,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Seychelles": {
-      "atk": 0.3062,
-      "dfn": 3.0385,
+      "atk": 0.3048,
+      "dfn": 3.0537,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Shetland": {
-      "atk": 0.6733,
-      "dfn": 3.1272,
+      "atk": 0.8448,
+      "dfn": 2.4798,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Sierra Leone": {
-      "atk": 0.9819,
-      "dfn": 1.1295,
+      "atk": 0.977,
+      "dfn": 1.1352,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Singapore": {
-      "atk": 0.5771,
-      "dfn": 2.2516,
+      "atk": 0.5749,
+      "dfn": 2.2609,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Sint Maarten": {
-      "atk": 0.4792,
-      "dfn": 4.2465,
+      "atk": 0.4775,
+      "dfn": 4.2577,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Slovakia": {
-      "atk": 1.6718,
-      "dfn": 0.6138,
-      "gap": -0.1361,
+      "atk": 1.6621,
+      "dfn": 0.6174,
+      "gap": -0.1324,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Slovenia": {
-      "atk": 1.4428,
-      "dfn": 0.5006,
+      "atk": 1.4346,
+      "dfn": 0.5037,
       "gap": 0.0,
       "confederation": "UEFA",
       "iso": "un"
     },
     "Solomon Islands": {
-      "atk": 0.364,
-      "dfn": 4.1542,
+      "atk": 0.3604,
+      "dfn": 4.1916,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "Somalia": {
-      "atk": 0.4391,
-      "dfn": 1.4462,
+      "atk": 0.4369,
+      "dfn": 1.4536,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Somaliland": {
-      "atk": 0.6879,
-      "dfn": 4.8381,
+      "atk": 0.677,
+      "dfn": 5.0582,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "South Africa": {
-      "atk": 1.3223,
-      "dfn": 0.6331,
+      "atk": 1.3166,
+      "dfn": 0.6361,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "za"
     },
     "South Korea": {
-      "atk": 1.8896,
-      "dfn": 0.5898,
-      "gap": 0.0579,
+      "atk": 1.8825,
+      "dfn": 0.5925,
+      "gap": 0.0569,
       "confederation": "AFC",
       "iso": "kr"
     },
     "South Ossetia": {
-      "atk": 0.6455,
-      "dfn": 2.5744,
+      "atk": 0.5373,
+      "dfn": 2.7891,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "South Sudan": {
-      "atk": 0.5714,
-      "dfn": 1.4086,
+      "atk": 0.5687,
+      "dfn": 1.4158,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Spain": {
-      "atk": 3.7819,
-      "dfn": 0.2931,
-      "gap": -0.4173,
+      "atk": 3.7611,
+      "dfn": 0.2947,
+      "gap": -0.4189,
       "confederation": "UEFA",
       "iso": "es"
     },
     "Sri Lanka": {
-      "atk": 0.2462,
-      "dfn": 2.5534,
+      "atk": 0.2452,
+      "dfn": 2.5574,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Sudan": {
-      "atk": 0.7646,
-      "dfn": 0.8994,
+      "atk": 0.761,
+      "dfn": 0.9039,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Suriname": {
-      "atk": 0.867,
-      "dfn": 1.0566,
+      "atk": 0.865,
+      "dfn": 1.0607,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Surrey": {
-      "atk": 0.525,
-      "dfn": 2.069,
+      "atk": 0.5301,
+      "dfn": 2.0904,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Sweden": {
-      "atk": 2.5025,
-      "dfn": 0.6687,
-      "gap": 0.3586,
+      "atk": 2.4891,
+      "dfn": 0.6726,
+      "gap": 0.3589,
       "confederation": "UEFA",
       "iso": "se"
     },
     "Switzerland": {
-      "atk": 2.7433,
-      "dfn": 0.4726,
-      "gap": -0.168,
+      "atk": 2.7282,
+      "dfn": 0.4751,
+      "gap": -0.1677,
       "confederation": "UEFA",
       "iso": "ch"
     },
     "Syria": {
-      "atk": 1.0554,
-      "dfn": 1.0133,
+      "atk": 1.0507,
+      "dfn": 1.0179,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Székely Land": {
-      "atk": 0.689,
-      "dfn": 3.2136,
+      "atk": 0.6051,
+      "dfn": 3.5807,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Sápmi": {
-      "atk": 0.6564,
-      "dfn": 3.1929,
+      "atk": 0.5618,
+      "dfn": 3.5313,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "São Tomé and Príncipe": {
-      "atk": 0.6275,
-      "dfn": 2.393,
+      "atk": 0.6244,
+      "dfn": 2.4055,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Tahiti": {
-      "atk": 0.3043,
-      "dfn": 3.0929,
+      "atk": 0.301,
+      "dfn": 3.1239,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "Taiwan": {
-      "atk": 0.564,
-      "dfn": 3.1131,
+      "atk": 0.5621,
+      "dfn": 3.1209,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Tajikistan": {
-      "atk": 0.7571,
-      "dfn": 1.2045,
+      "atk": 0.7541,
+      "dfn": 1.2096,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Tamil Eelam": {
-      "atk": 0.3057,
-      "dfn": 2.2319,
+      "atk": 0.3624,
+      "dfn": 1.8318,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Tanzania": {
-      "atk": 0.7729,
-      "dfn": 0.8147,
+      "atk": 0.7693,
+      "dfn": 0.8187,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Thailand": {
-      "atk": 0.9452,
-      "dfn": 1.2535,
+      "atk": 0.9418,
+      "dfn": 1.2583,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Tibet": {
-      "atk": 0.3329,
-      "dfn": 11.5861,
-      "gap": 0.0,
-      "confederation": "UNK",
-      "iso": "un"
-    },
-    "Ticino": {
-      "atk": 0.1024,
-      "dfn": 40.6124,
+      "atk": 0.3898,
+      "dfn": 8.6594,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Timor-Leste": {
-      "atk": 0.2747,
-      "dfn": 4.622,
+      "atk": 0.2736,
+      "dfn": 4.6421,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Togo": {
-      "atk": 1.1582,
-      "dfn": 0.8827,
+      "atk": 1.1529,
+      "dfn": 0.8872,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Tonga": {
-      "atk": 0.1054,
-      "dfn": 19.8524,
+      "atk": 0.104,
+      "dfn": 20.0823,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "Trinidad and Tobago": {
-      "atk": 0.8471,
-      "dfn": 1.4401,
+      "atk": 0.8441,
+      "dfn": 1.4459,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Tunisia": {
-      "atk": 1.5343,
-      "dfn": 0.6123,
-      "gap": 0.0133,
+      "atk": 1.5274,
+      "dfn": 0.6154,
+      "gap": 0.0145,
       "confederation": "CAF",
       "iso": "tn"
     },
     "Turkey": {
-      "atk": 2.4694,
-      "dfn": 0.622,
-      "gap": 0.3616,
+      "atk": 2.4565,
+      "dfn": 0.6257,
+      "gap": 0.3615,
       "confederation": "UEFA",
       "iso": "tr"
     },
     "Turkmenistan": {
-      "atk": 0.6561,
-      "dfn": 1.5916,
+      "atk": 0.6691,
+      "dfn": 1.5908,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Turks and Caicos Islands": {
-      "atk": 0.193,
-      "dfn": 7.7903,
+      "atk": 0.1921,
+      "dfn": 7.8107,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Tuvalu": {
-      "atk": 0.1568,
-      "dfn": 15.2643,
+      "atk": 0.1542,
+      "dfn": 15.76,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Two Sicilies": {
-      "atk": 0.1752,
-      "dfn": 6.8481,
+      "atk": 0.1558,
+      "dfn": 7.7487,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Uganda": {
-      "atk": 1.0142,
-      "dfn": 0.8992,
+      "atk": 1.0096,
+      "dfn": 0.9037,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Ukraine": {
-      "atk": 2.1614,
-      "dfn": 0.5968,
-      "gap": 0.1782,
+      "atk": 2.1482,
+      "dfn": 0.6004,
+      "gap": 0.1801,
       "confederation": "UEFA",
       "iso": "un"
     },
     "United Arab Emirates": {
-      "atk": 1.3047,
-      "dfn": 0.8398,
+      "atk": 1.2997,
+      "dfn": 0.8432,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "United Koreans in Japan": {
-      "atk": 0.2179,
-      "dfn": 1.3995,
+      "atk": 0.2243,
+      "dfn": 1.4807,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "United States": {
-      "atk": 2.1163,
-      "dfn": 0.6361,
-      "gap": 0.4513,
+      "atk": 2.1088,
+      "dfn": 0.639,
+      "gap": 0.4485,
       "confederation": "CONCACAF",
       "iso": "us"
     },
     "United States Virgin Islands": {
-      "atk": 0.1692,
-      "dfn": 5.6862,
+      "atk": 0.1687,
+      "dfn": 5.7158,
       "gap": 0.0,
       "confederation": "CONCACAF",
       "iso": "un"
     },
     "Uruguay": {
-      "atk": 2.081,
-      "dfn": 0.3746,
-      "gap": -0.0912,
+      "atk": 2.0721,
+      "dfn": 0.376,
+      "gap": -0.094,
       "confederation": "CONMEBOL",
       "iso": "uy"
     },
     "Uzbekistan": {
-      "atk": 1.4247,
-      "dfn": 0.6786,
-      "gap": 0.2732,
+      "atk": 1.4197,
+      "dfn": 0.6814,
+      "gap": 0.2722,
       "confederation": "AFC",
       "iso": "uz"
     },
     "Vanuatu": {
-      "atk": 0.3474,
-      "dfn": 4.1893,
+      "atk": 0.3433,
+      "dfn": 4.2294,
       "gap": 0.0,
       "confederation": "OFC",
       "iso": "un"
     },
     "Vatican City": {
-      "atk": 0.2422,
-      "dfn": 8.0912,
+      "atk": 0.3598,
+      "dfn": 5.3184,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Venezuela": {
-      "atk": 1.8505,
-      "dfn": 0.6095,
-      "gap": -0.133,
+      "atk": 1.8429,
+      "dfn": 0.6114,
+      "gap": -0.1342,
       "confederation": "CONMEBOL",
       "iso": "un"
     },
     "Vietnam": {
-      "atk": 0.8599,
-      "dfn": 1.2128,
+      "atk": 0.8568,
+      "dfn": 1.218,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Wales": {
-      "atk": 1.6195,
-      "dfn": 0.5765,
-      "gap": 0.2999,
+      "atk": 1.6107,
+      "dfn": 0.5801,
+      "gap": 0.3019,
       "confederation": "UEFA",
       "iso": "un"
     },
     "West Papua": {
-      "atk": 0.1363,
-      "dfn": 13.1845,
+      "atk": 0.1615,
+      "dfn": 5.9322,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Western Armenia": {
-      "atk": 0.7022,
-      "dfn": 1.8275,
+      "atk": 0.6414,
+      "dfn": 2.0263,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Western Isles": {
-      "atk": 0.4417,
-      "dfn": 3.7232,
+      "atk": 0.553,
+      "dfn": 2.9714,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Yemen": {
-      "atk": 0.7884,
-      "dfn": 1.8419,
+      "atk": 0.7852,
+      "dfn": 1.8499,
       "gap": 0.0,
       "confederation": "AFC",
       "iso": "un"
     },
     "Ynys Môn": {
-      "atk": 0.6062,
-      "dfn": 1.5438,
+      "atk": 0.7598,
+      "dfn": 1.2323,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Yorkshire": {
-      "atk": 0.9148,
-      "dfn": 2.1591,
+      "atk": 0.9001,
+      "dfn": 2.2072,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Yoruba Nation": {
-      "atk": 0.1378,
-      "dfn": 6.5301,
+      "atk": 0.1266,
+      "dfn": 7.0866,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Zambia": {
-      "atk": 1.3125,
-      "dfn": 0.9884,
+      "atk": 1.3063,
+      "dfn": 0.9927,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Zanzibar": {
-      "atk": 1.0216,
-      "dfn": 0.5245,
+      "atk": 1.0173,
+      "dfn": 0.527,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"
     },
     "Zimbabwe": {
-      "atk": 1.0791,
-      "dfn": 0.8878,
+      "atk": 1.0739,
+      "dfn": 0.8922,
       "gap": 0.0,
       "confederation": "CAF",
       "iso": "un"
     },
     "Åland Islands": {
-      "atk": 0.2059,
-      "dfn": 3.8752,
+      "atk": 0.2576,
+      "dfn": 3.1107,
       "gap": 0.0,
       "confederation": "UNK",
       "iso": "un"

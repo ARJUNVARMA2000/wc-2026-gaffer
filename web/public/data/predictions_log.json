@@ -800,5 +800,27 @@
     "snapshotAt": "2026-06-28T08:39:08Z",
     "reconstructed": true,
     "anchorSha": "6af792eea2510458c2de6784af40eb3d4e3ca482"
+  },
+  "2026-07-18|France|England": {
+    "date": "2026-07-18",
+    "home": "France",
+    "away": "England",
+    "pHome": 0.359,
+    "pDraw": 0.304,
+    "pAway": 0.337,
+    "projHome": 1.13,
+    "projAway": 1.08,
+    "snapshotAt": "2026-07-15T23:59:02Z"
+  },
+  "2026-07-19|Spain|Argentina": {
+    "date": "2026-07-19",
+    "home": "Spain",
+    "away": "Argentina",
+    "pHome": 0.374,
+    "pDraw": 0.316,
+    "pAway": 0.31,
+    "projHome": 1.09,
+    "projAway": 0.97,
+    "snapshotAt": "2026-07-15T23:59:02Z"
   }
 }
