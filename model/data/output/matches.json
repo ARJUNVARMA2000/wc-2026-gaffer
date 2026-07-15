@@ -1236,11 +1236,11 @@
     "played": true,
     "homeScore": 0,
     "awayScore": 1,
-    "pHome": 0.203,
-    "pDraw": 0.316,
-    "pAway": 0.481,
-    "modelProb": 0.481,
-    "frozen": false
+    "pHome": 0.187,
+    "pDraw": 0.308,
+    "pAway": 0.505,
+    "modelProb": 0.505,
+    "frozen": true
   },
   {
     "date": "2026-06-29",
@@ -1257,11 +1257,11 @@
     "awayScore": 1,
     "pens": true,
     "penWinner": "Paraguay",
-    "pHome": 0.577,
-    "pDraw": 0.252,
-    "pAway": 0.172,
-    "modelProb": 0.252,
-    "frozen": false
+    "pHome": 0.617,
+    "pDraw": 0.234,
+    "pAway": 0.149,
+    "modelProb": 0.234,
+    "frozen": true
   },
   {
     "date": "2026-06-29",
@@ -1278,11 +1278,11 @@
     "awayScore": 1,
     "pens": true,
     "penWinner": "Morocco",
-    "pHome": 0.377,
-    "pDraw": 0.318,
-    "pAway": 0.304,
-    "modelProb": 0.318,
-    "frozen": false
+    "pHome": 0.384,
+    "pDraw": 0.319,
+    "pAway": 0.296,
+    "modelProb": 0.319,
+    "frozen": true
   },
   {
     "date": "2026-06-29",
@@ -1297,11 +1297,11 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 1,
-    "pHome": 0.509,
-    "pDraw": 0.27,
-    "pAway": 0.221,
-    "modelProb": 0.509,
-    "frozen": false
+    "pHome": 0.534,
+    "pDraw": 0.266,
+    "pAway": 0.2,
+    "modelProb": 0.534,
+    "frozen": true
   },
   {
     "date": "2026-06-30",
@@ -1316,11 +1316,11 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 0,
-    "pHome": 0.668,
-    "pDraw": 0.196,
-    "pAway": 0.135,
-    "modelProb": 0.668,
-    "frozen": false
+    "pHome": 0.66,
+    "pDraw": 0.198,
+    "pAway": 0.143,
+    "modelProb": 0.66,
+    "frozen": true
   },
   {
     "date": "2026-06-30",
@@ -1335,11 +1335,11 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 2,
-    "pHome": 0.286,
-    "pDraw": 0.292,
-    "pAway": 0.421,
-    "modelProb": 0.421,
-    "frozen": false
+    "pHome": 0.292,
+    "pDraw": 0.295,
+    "pAway": 0.413,
+    "modelProb": 0.413,
+    "frozen": true
   },
   {
     "date": "2026-06-30",
@@ -1354,11 +1354,11 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 0,
-    "pHome": 0.334,
-    "pDraw": 0.344,
-    "pAway": 0.322,
-    "modelProb": 0.334,
-    "frozen": false
+    "pHome": 0.313,
+    "pDraw": 0.348,
+    "pAway": 0.338,
+    "modelProb": 0.313,
+    "frozen": true
   },
   {
     "date": "2026-07-01",
@@ -1373,11 +1373,11 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 1,
-    "pHome": 0.607,
-    "pDraw": 0.275,
-    "pAway": 0.118,
-    "modelProb": 0.607,
-    "frozen": false
+    "pHome": 0.633,
+    "pDraw": 0.267,
+    "pAway": 0.1,
+    "modelProb": 0.633,
+    "frozen": true
   },
   {
     "date": "2026-07-01",
@@ -1392,11 +1392,11 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 0,
-    "pHome": 0.672,
-    "pDraw": 0.2,
-    "pAway": 0.128,
-    "modelProb": 0.672,
-    "frozen": false
+    "pHome": 0.613,
+    "pDraw": 0.223,
+    "pAway": 0.164,
+    "modelProb": 0.613,
+    "frozen": true
   },
   {
     "date": "2026-07-01",
@@ -1411,11 +1411,11 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 2,
-    "pHome": 0.446,
-    "pDraw": 0.275,
+    "pHome": 0.436,
+    "pDraw": 0.285,
     "pAway": 0.279,
-    "modelProb": 0.446,
-    "frozen": false
+    "modelProb": 0.436,
+    "frozen": true
   },
   {
     "date": "2026-07-02",
@@ -1430,11 +1430,11 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 1,
-    "pHome": 0.515,
-    "pDraw": 0.265,
-    "pAway": 0.219,
-    "modelProb": 0.515,
-    "frozen": false
+    "pHome": 0.52,
+    "pDraw": 0.264,
+    "pAway": 0.217,
+    "modelProb": 0.52,
+    "frozen": true
   },
   {
     "date": "2026-07-02",
@@ -1449,11 +1449,11 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 0,
-    "pHome": 0.633,
-    "pDraw": 0.229,
-    "pAway": 0.137,
-    "modelProb": 0.633,
-    "frozen": false
+    "pHome": 0.621,
+    "pDraw": 0.233,
+    "pAway": 0.146,
+    "modelProb": 0.621,
+    "frozen": true
   },
   {
     "date": "2026-07-02",
@@ -1468,11 +1468,11 @@
     "played": true,
     "homeScore": 2,
     "awayScore": 0,
-    "pHome": 0.432,
-    "pDraw": 0.27,
-    "pAway": 0.298,
-    "modelProb": 0.432,
-    "frozen": false
+    "pHome": 0.431,
+    "pDraw": 0.268,
+    "pAway": 0.302,
+    "modelProb": 0.431,
+    "frozen": true
   },
   {
     "date": "2026-07-03",
@@ -1487,11 +1487,11 @@
     "played": true,
     "homeScore": 3,
     "awayScore": 2,
-    "pHome": 0.768,
-    "pDraw": 0.175,
-    "pAway": 0.057,
-    "modelProb": 0.768,
-    "frozen": false
+    "pHome": 0.772,
+    "pDraw": 0.18,
+    "pAway": 0.049,
+    "modelProb": 0.772,
+    "frozen": true
   },
   {
     "date": "2026-07-03",
@@ -1506,11 +1506,11 @@
     "played": true,
     "homeScore": 1,
     "awayScore": 0,
-    "pHome": 0.64,
-    "pDraw": 0.244,
-    "pAway": 0.116,
-    "modelProb": 0.64,
-    "frozen": false
+    "pHome": 0.571,
+    "pDraw": 0.268,
+    "pAway": 0.162,
+    "modelProb": 0.571,
+    "frozen": true
   },
   {
     "date": "2026-07-03",
@@ -1527,11 +1527,11 @@
     "awayScore": 1,
     "pens": true,
     "penWinner": "Egypt",
-    "pHome": 0.322,
-    "pDraw": 0.351,
-    "pAway": 0.327,
-    "modelProb": 0.351,
-    "frozen": false
+    "pHome": 0.312,
+    "pDraw": 0.358,
+    "pAway": 0.331,
+    "modelProb": 0.358,
+    "frozen": true
   },
   {
     "date": "2026-07-04",
