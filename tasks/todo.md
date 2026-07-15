@@ -219,3 +219,22 @@ compare's exact `date|home|away` join missed → counted as noPrediction.
 - [x] Regenerated: knockout scored 6 → 8 (44 group + 8 KO), noPrediction 50 → 48.
 Still genuinely noPrediction: all 16 R32 ties (played before KO rows existed in
 matches.json, pre-Phase-11) + France–Spain SF (settled on Kalshi, martj42 score pending).
+
+## Phase 12c — Backfill R32 predictions from committed model history ✅
+R32 ties had no pre-match prediction (rows entered matches.json only once played,
+pre-Phase-11). Reconstructed them from the model.json committed just after the group
+stage — a legitimate pre-R32 forecast with zero knockout leakage.
+- [x] Anchor = commit 6af792e (2026-06-28 08:39Z): verified every R32 team's latest Elo
+      entry is 2026-06-27 (full group stage in, no R32 result), first R32 tie is 06-28.
+      Single anchor is exact for R32 because each R32 team's prior match was a group game.
+- [x] predictions_log.py: `_predict_from_params` (mirrors blend.lambdas, runs shared
+      Dixon-Coles core — validated to reproduce France–Morocco/Norway–England live logs to
+      3dp), `_host_adv` (Mexico & USA host their R32 ties; others neutral), `_model_at`,
+      `_results_country_index`, `backfill_r32_from_model`, CLI `--backfill-r32`. Entries
+      carry reconstructed/anchorSha provenance and never clobber a live snapshot.
+- [x] tests: test_predictions_log.py (5) — distribution sums to 1, host lifts host only,
+      host-adv rule. Suite 166 → 171.
+- [x] Ran backfill (16 R32 ties) + rebuilt scorecard: 52 → 68 scored (44 group + 24 KO:
+      16 R32 + 4 R16 + 4 QF), noPrediction 48 → 32. Reconstructed probs differ from the
+      current-model hindsight values in matches.json (confirming they're genuine pre-R32,
+      not copies). Only France–Spain SF still pending (martj42 score).
