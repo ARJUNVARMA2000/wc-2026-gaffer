@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generatedAt": "2026-07-15T02:03:47Z",
-    "nPlayed": 100,
-    "nScored": 68,
+    "generatedAt": "2026-07-15T08:01:44Z",
+    "nPlayed": 101,
+    "nScored": 69,
     "nGroup": 44,
-    "nKnockout": 24,
-    "nAccuracy": 68,
+    "nKnockout": 25,
+    "nAccuracy": 69,
     "skipped": {
       "noPrediction": 32,
       "noMarket": 0
@@ -16,28 +16,28 @@
     "kellyFraction": 0.5
   },
   "accuracy": {
-    "n": 68,
+    "n": 69,
     "gaffer": {
-      "n": 68,
-      "logloss": 0.6686,
-      "brier": 0.3981,
-      "acc": 0.7353
+      "n": 69,
+      "logloss": 0.6675,
+      "brier": 0.398,
+      "acc": 0.7391
     },
     "kalshi": {
-      "n": 68,
-      "logloss": 0.6214,
-      "brier": 0.3599,
-      "acc": 0.7647
+      "n": 69,
+      "logloss": 0.6246,
+      "brier": 0.3641,
+      "acc": 0.7536
     }
   },
   "pnl": {
     "flat": {
-      "staked": 6000.0,
-      "net": -352.3,
-      "roi": -0.0587,
-      "nBets": 60,
-      "wins": 13,
-      "winRate": 0.2167,
+      "staked": 6100.0,
+      "net": -225.03,
+      "roi": -0.0369,
+      "nBets": 61,
+      "wins": 14,
+      "winRate": 0.2295,
       "curve": [
         -100.0,
         -200.0,
@@ -98,13 +98,14 @@
         -52.3,
         -152.3,
         -252.3,
-        -352.3
+        -352.3,
+        -225.03
       ]
     },
     "kelly": {
       "start": 1000.0,
-      "final": 551.49,
-      "roi": -0.4485,
+      "final": 623.25,
+      "roi": -0.3768,
       "curve": [
         973.08,
         937.09,
@@ -165,7 +166,8 @@
         632.67,
         596.05,
         586.49,
-        551.49
+        551.49,
+        623.25
       ]
     }
   },
@@ -3436,6 +3438,55 @@
         "netFlat": -100.0,
         "stakeKelly": 34.99,
         "netKelly": -34.99
+      }
+    },
+    {
+      "date": "2026-07-14",
+      "home": "France",
+      "away": "Spain",
+      "homeIso": "fr",
+      "awayIso": "es",
+      "homeScore": 0,
+      "awayScore": 2,
+      "round": "SF",
+      "pens": false,
+      "penWinner": null,
+      "outcome": 2,
+      "gaffer": {
+        "HOME": 0.446,
+        "DRAW": 0.0,
+        "AWAY": 0.554
+      },
+      "market": {
+        "HOME": {
+          "ask": 0.58,
+          "bid": 0.57,
+          "mid": 0.575
+        },
+        "DRAW": {
+          "ask": null,
+          "bid": null,
+          "mid": 0.0
+        },
+        "AWAY": {
+          "ask": 0.44,
+          "bid": 0.43,
+          "mid": 0.435
+        }
+      },
+      "devig": {
+        "HOME": 0.5693,
+        "DRAW": 0.0,
+        "AWAY": 0.4307
+      },
+      "bet": {
+        "leg": "AWAY",
+        "ask": 0.44,
+        "edge": 0.1145,
+        "won": true,
+        "netFlat": 127.27,
+        "stakeKelly": 56.38,
+        "netKelly": 71.76
       }
     }
   ]

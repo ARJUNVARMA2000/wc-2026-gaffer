@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-07-15T02:03:47Z",
-  "dataThrough": "2026-07-11",
+  "lastUpdated": "2026-07-15T08:01:44Z",
+  "dataThrough": "2026-07-14",
   "nSims": 50000,
   "groupMatchesPlayed": 72,
   "groupMatchesTotal": 72,
-  "koMatchesPlayed": 28,
+  "koMatchesPlayed": 29,
   "koMatchesTotal": 32,
   "stage": "SF",
   "nTeams": 48,
