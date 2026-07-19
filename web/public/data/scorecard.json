@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-07-19T08:09:56Z",
-    "nPlayed": 103,
+    "generatedAt": "2026-07-19T22:47:18Z",
+    "nPlayed": 104,
     "nScored": 69,
     "nGroup": 44,
     "nKnockout": 25,
     "nAccuracy": 69,
     "skipped": {
       "noPrediction": 32,
-      "noMarket": 2
+      "noMarket": 3
     },
     "edgeMin": 0.02,
     "flatStake": 100.0,
