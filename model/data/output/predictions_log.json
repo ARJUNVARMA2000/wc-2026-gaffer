@@ -816,11 +816,11 @@
     "date": "2026-07-19",
     "home": "Spain",
     "away": "Argentina",
-    "pHome": 0.374,
-    "pDraw": 0.316,
+    "pHome": 0.373,
+    "pDraw": 0.317,
     "pAway": 0.31,
-    "projHome": 1.09,
-    "projAway": 0.97,
-    "snapshotAt": "2026-07-18T20:04:40Z"
+    "projHome": 1.08,
+    "projAway": 0.96,
+    "snapshotAt": "2026-07-19T08:09:56Z"
   }
 }
