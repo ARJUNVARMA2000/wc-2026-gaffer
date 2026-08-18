@@ -2696,43 +2696,5 @@
         "ticker": "KXWCGAME-26JUN11KORCZE-TIE"
       }
     }
-  },
-  "Mexico | South Africa": {
-    "teams": [
-      "Mexico",
-      "South Africa"
-    ],
-    "eventTicker": "KXWCGAME-26JUN11MEXRSA",
-    "occurrence": "2026-06-11T20:55:26.354Z",
-    "closeTime": "2026-06-11T21:07:29+00:00",
-    "legs": {
-      "Mexico": {
-        "ask": 0.7,
-        "bid": 0.69,
-        "mid": 0.695,
-        "last": 0.7,
-        "ts": 1781200800,
-        "result": "yes",
-        "ticker": "KXWCGAME-26JUN11MEXRSA-MEX"
-      },
-      "South Africa": {
-        "ask": 0.11,
-        "bid": 0.1,
-        "mid": 0.105,
-        "last": 0.11,
-        "ts": 1781200800,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN11MEXRSA-RSA"
-      },
-      "TIE": {
-        "ask": 0.21,
-        "bid": 0.2,
-        "mid": 0.205,
-        "last": 0.21,
-        "ts": 1781200800,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN11MEXRSA-TIE"
-      }
-    }
   }
 }
