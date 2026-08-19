@@ -2658,43 +2658,5 @@
         "ticker": "KXWCGAME-26JUN12CANBIH-TIE"
       }
     }
-  },
-  "Czech Republic | South Korea": {
-    "teams": [
-      "South Korea",
-      "Czech Republic"
-    ],
-    "eventTicker": "KXWCGAME-26JUN11KORCZE",
-    "occurrence": "2026-06-12T05:00:00Z",
-    "closeTime": "2026-06-12T04:00:48+00:00",
-    "legs": {
-      "South Korea": {
-        "ask": 0.38,
-        "bid": 0.37,
-        "mid": 0.375,
-        "last": 0.38,
-        "ts": 1781226000,
-        "result": "yes",
-        "ticker": "KXWCGAME-26JUN11KORCZE-KOR"
-      },
-      "Czech Republic": {
-        "ask": 0.33,
-        "bid": 0.32,
-        "mid": 0.325,
-        "last": 0.33,
-        "ts": 1781226000,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN11KORCZE-CZE"
-      },
-      "TIE": {
-        "ask": 0.32,
-        "bid": 0.31,
-        "mid": 0.315,
-        "last": 0.32,
-        "ts": 1781226000,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN11KORCZE-TIE"
-      }
-    }
   }
 }
