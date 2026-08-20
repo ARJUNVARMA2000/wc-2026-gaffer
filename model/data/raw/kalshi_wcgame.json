@@ -2582,43 +2582,5 @@
         "ticker": "KXWCGAME-26JUN13QATSUI-TIE"
       }
     }
-  },
-  "Paraguay | United States": {
-    "teams": [
-      "United States",
-      "Paraguay"
-    ],
-    "eventTicker": "KXWCGAME-26JUN12USAPAR",
-    "occurrence": "2026-06-13T02:51:13.713Z",
-    "closeTime": "2026-06-13T03:03:46+00:00",
-    "legs": {
-      "United States": {
-        "ask": 0.48,
-        "bid": 0.47,
-        "mid": 0.475,
-        "last": 0.48,
-        "ts": 1781308800,
-        "result": "yes",
-        "ticker": "KXWCGAME-26JUN12USAPAR-USA"
-      },
-      "Paraguay": {
-        "ask": 0.24,
-        "bid": 0.23,
-        "mid": 0.235,
-        "last": 0.24,
-        "ts": 1781308800,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN12USAPAR-PAR"
-      },
-      "TIE": {
-        "ask": 0.3,
-        "bid": 0.29,
-        "mid": 0.295,
-        "last": 0.3,
-        "ts": 1781308800,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN12USAPAR-TIE"
-      }
-    }
   }
 }
