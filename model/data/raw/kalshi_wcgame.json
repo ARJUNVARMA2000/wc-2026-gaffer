@@ -2316,43 +2316,5 @@
         "ticker": "KXWCGAME-26JUN14SWETUN-TIE"
       }
     }
-  },
-  "Ecuador | Ivory Coast": {
-    "teams": [
-      "Ivory Coast",
-      "Ecuador"
-    ],
-    "eventTicker": "KXWCGAME-26JUN14CIVECU",
-    "occurrence": "2026-06-15T00:53:07.37Z",
-    "closeTime": "2026-06-15T01:05:51+00:00",
-    "legs": {
-      "Ivory Coast": {
-        "ask": 0.29,
-        "bid": 0.28,
-        "mid": 0.285,
-        "last": 0.29,
-        "ts": 1781474400,
-        "result": "yes",
-        "ticker": "KXWCGAME-26JUN14CIVECU-CIV"
-      },
-      "Ecuador": {
-        "ask": 0.39,
-        "bid": 0.38,
-        "mid": 0.385,
-        "last": 0.39,
-        "ts": 1781474400,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN14CIVECU-ECU"
-      },
-      "TIE": {
-        "ask": 0.34,
-        "bid": 0.33,
-        "mid": 0.335,
-        "last": 0.34,
-        "ts": 1781474400,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN14CIVECU-TIE"
-      }
-    }
   }
 }
