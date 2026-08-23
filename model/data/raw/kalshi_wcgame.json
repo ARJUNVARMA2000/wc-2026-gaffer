@@ -2088,43 +2088,5 @@
         "ticker": "KXWCGAME-26JUN16IRQNOR-TIE"
       }
     }
-  },
-  "France | Senegal": {
-    "teams": [
-      "France",
-      "Senegal"
-    ],
-    "eventTicker": "KXWCGAME-26JUN16FRASEN",
-    "occurrence": "2026-06-16T20:55:38.453Z",
-    "closeTime": "2026-06-16T21:06:11+00:00",
-    "legs": {
-      "France": {
-        "ask": 0.67,
-        "bid": 0.66,
-        "mid": 0.665,
-        "last": 0.67,
-        "ts": 1781632800,
-        "result": "yes",
-        "ticker": "KXWCGAME-26JUN16FRASEN-FRA"
-      },
-      "Senegal": {
-        "ask": 0.13,
-        "bid": 0.12,
-        "mid": 0.125,
-        "last": 0.13,
-        "ts": 1781632800,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN16FRASEN-SEN"
-      },
-      "TIE": {
-        "ask": 0.22,
-        "bid": 0.21,
-        "mid": 0.215,
-        "last": 0.22,
-        "ts": 1781632800,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN16FRASEN-TIE"
-      }
-    }
   }
 }
