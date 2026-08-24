@@ -1898,43 +1898,5 @@
         "ticker": "KXWCGAME-26JUN17GHAPAN-TIE"
       }
     }
-  },
-  "Croatia | England": {
-    "teams": [
-      "England",
-      "Croatia"
-    ],
-    "eventTicker": "KXWCGAME-26JUN17ENGCRO",
-    "occurrence": "2026-06-17T21:52:39.255Z",
-    "closeTime": "2026-06-17T22:08:34+00:00",
-    "legs": {
-      "England": {
-        "ask": 0.58,
-        "bid": 0.57,
-        "mid": 0.575,
-        "last": 0.58,
-        "ts": 1781722800,
-        "result": "yes",
-        "ticker": "KXWCGAME-26JUN17ENGCRO-ENG"
-      },
-      "Croatia": {
-        "ask": 0.19,
-        "bid": 0.18,
-        "mid": 0.185,
-        "last": 0.19,
-        "ts": 1781722800,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN17ENGCRO-CRO"
-      },
-      "TIE": {
-        "ask": 0.26,
-        "bid": 0.25,
-        "mid": 0.255,
-        "last": 0.26,
-        "ts": 1781722800,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN17ENGCRO-TIE"
-      }
-    }
   }
 }
