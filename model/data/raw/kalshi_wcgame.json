@@ -1746,43 +1746,5 @@
         "ticker": "KXWCGAME-26JUN18CANQAT-TIE"
       }
     }
-  },
-  "Bosnia and Herzegovina | Switzerland": {
-    "teams": [
-      "Switzerland",
-      "Bosnia and Herzegovina"
-    ],
-    "eventTicker": "KXWCGAME-26JUN18SUIBIH",
-    "occurrence": "2026-06-18T22:00:00Z",
-    "closeTime": "2026-06-18T20:59:14+00:00",
-    "legs": {
-      "Switzerland": {
-        "ask": 0.63,
-        "bid": 0.62,
-        "mid": 0.625,
-        "last": 0.63,
-        "ts": 1781805600,
-        "result": "yes",
-        "ticker": "KXWCGAME-26JUN18SUIBIH-SUI"
-      },
-      "Bosnia and Herzegovina": {
-        "ask": 0.15,
-        "bid": 0.14,
-        "mid": 0.145,
-        "last": 0.15,
-        "ts": 1781805600,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN18SUIBIH-BIH"
-      },
-      "TIE": {
-        "ask": 0.24,
-        "bid": 0.23,
-        "mid": 0.235,
-        "last": 0.24,
-        "ts": 1781805600,
-        "result": "no",
-        "ticker": "KXWCGAME-26JUN18SUIBIH-TIE"
-      }
-    }
   }
 }
