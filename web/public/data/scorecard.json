@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-08-26T18:56:58Z",
+    "generatedAt": "2026-08-26T21:37:56Z",
     "nPlayed": 104,
-    "nScored": 70,
+    "nScored": 68,
     "nGroup": 43,
-    "nKnockout": 27,
-    "nAccuracy": 70,
+    "nKnockout": 25,
+    "nAccuracy": 68,
     "skipped": {
       "noPrediction": 32,
-      "noMarket": 2
+      "noMarket": 4
     },
     "edgeMin": 0.02,
     "flatStake": 100.0,
@@ -16,28 +16,28 @@
     "kellyFraction": 0.5
   },
   "accuracy": {
-    "n": 70,
+    "n": 68,
     "gaffer": {
-      "n": 70,
-      "logloss": 0.6686,
-      "brier": 0.4018,
-      "acc": 0.7286
+      "n": 68,
+      "logloss": 0.6677,
+      "brier": 0.3988,
+      "acc": 0.7353
     },
     "kalshi": {
-      "n": 70,
-      "logloss": 0.6358,
-      "brier": 0.3771,
-      "acc": 0.7286
+      "n": 68,
+      "logloss": 0.6263,
+      "brier": 0.366,
+      "acc": 0.75
     }
   },
   "pnl": {
     "flat": {
-      "staked": 6200.0,
-      "net": 200.24,
-      "roi": 0.0323,
-      "nBets": 62,
-      "wins": 16,
-      "winRate": 0.2581,
+      "staked": 6000.0,
+      "net": -125.03,
+      "roi": -0.0208,
+      "nBets": 60,
+      "wins": 14,
+      "winRate": 0.2333,
       "curve": [
         -100.0,
         -200.0,
@@ -98,15 +98,13 @@
         -52.3,
         -152.3,
         -252.3,
-        -125.03,
-        -12.26,
-        200.24
+        -125.03
       ]
     },
     "kelly": {
       "start": 1000.0,
-      "final": 841.49,
-      "roi": -0.1585,
+      "final": 640.49,
+      "roi": -0.3595,
       "curve": [
         963.01,
         912.65,
@@ -167,9 +165,7 @@
         612.54,
         602.71,
         566.75,
-        640.49,
-        665.7,
-        841.49
+        640.49
       ]
     }
   },
@@ -3440,104 +3436,6 @@
         "netFlat": 127.27,
         "stakeKelly": 57.94,
         "netKelly": 73.74
-      }
-    },
-    {
-      "date": "2026-07-15",
-      "home": "England",
-      "away": "Argentina",
-      "homeIso": "gb-eng",
-      "awayIso": "ar",
-      "homeScore": 1,
-      "awayScore": 2,
-      "round": "SF",
-      "pens": false,
-      "penWinner": null,
-      "outcome": 2,
-      "gaffer": {
-        "HOME": 0.492,
-        "DRAW": 0.0,
-        "AWAY": 0.507
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.54,
-          "bid": 0.53,
-          "mid": 0.535
-        },
-        "DRAW": {
-          "ask": null,
-          "bid": null,
-          "mid": 0.0
-        },
-        "AWAY": {
-          "ask": 0.47,
-          "bid": 0.46,
-          "mid": 0.465
-        }
-      },
-      "devig": {
-        "HOME": 0.535,
-        "DRAW": 0.0,
-        "AWAY": 0.465
-      },
-      "bet": {
-        "leg": "AWAY",
-        "ask": 0.47,
-        "edge": 0.037,
-        "won": true,
-        "netFlat": 112.77,
-        "stakeKelly": 22.36,
-        "netKelly": 25.21
-      }
-    },
-    {
-      "date": "2026-07-18",
-      "home": "France",
-      "away": "England",
-      "homeIso": "fr",
-      "awayIso": "gb-eng",
-      "homeScore": 4,
-      "awayScore": 6,
-      "round": "3P",
-      "pens": false,
-      "penWinner": null,
-      "outcome": 2,
-      "gaffer": {
-        "HOME": 0.511,
-        "DRAW": 0.0,
-        "AWAY": 0.489
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.69,
-          "bid": 0.68,
-          "mid": 0.685
-        },
-        "DRAW": {
-          "ask": null,
-          "bid": null,
-          "mid": 0.0
-        },
-        "AWAY": {
-          "ask": 0.32,
-          "bid": 0.31,
-          "mid": 0.315
-        }
-      },
-      "devig": {
-        "HOME": 0.685,
-        "DRAW": 0.0,
-        "AWAY": 0.315
-      },
-      "bet": {
-        "leg": "AWAY",
-        "ask": 0.32,
-        "edge": 0.169,
-        "won": true,
-        "netFlat": 212.5,
-        "stakeKelly": 82.72,
-        "netKelly": 175.79
       }
     }
   ]
