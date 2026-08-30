@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-08-27T02:50:52Z",
+    "generatedAt": "2026-08-30T01:00:01Z",
     "nPlayed": 104,
-    "nScored": 68,
-    "nGroup": 43,
-    "nKnockout": 25,
-    "nAccuracy": 68,
+    "nScored": 58,
+    "nGroup": 31,
+    "nKnockout": 27,
+    "nAccuracy": 58,
     "skipped": {
       "noPrediction": 32,
-      "noMarket": 4
+      "noMarket": 14
     },
     "edgeMin": 0.02,
     "flatStake": 100.0,
@@ -16,724 +16,146 @@
     "kellyFraction": 0.5
   },
   "accuracy": {
-    "n": 68,
+    "n": 58,
     "gaffer": {
-      "n": 68,
-      "logloss": 0.6677,
-      "brier": 0.3988,
-      "acc": 0.7353
+      "n": 58,
+      "logloss": 0.6323,
+      "brier": 0.3772,
+      "acc": 0.7414
     },
     "kalshi": {
-      "n": 68,
-      "logloss": 0.6263,
-      "brier": 0.366,
-      "acc": 0.75
+      "n": 58,
+      "logloss": 0.5991,
+      "brier": 0.3538,
+      "acc": 0.7414
     }
   },
   "pnl": {
     "flat": {
-      "staked": 6000.0,
-      "net": -125.03,
-      "roi": -0.0208,
-      "nBets": 60,
+      "staked": 5300.0,
+      "net": -243.63,
+      "roi": -0.046,
+      "nBets": 53,
       "wins": 14,
-      "winRate": 0.2333,
+      "winRate": 0.2642,
       "curve": [
         -100.0,
-        -200.0,
-        609.09,
-        509.09,
-        409.09,
-        309.09,
-        643.87,
-        543.87,
-        443.87,
-        343.87,
-        397.72,
-        297.72,
-        1031.05,
-        1078.11,
-        978.11,
-        878.11,
-        778.11,
-        678.11,
-        578.11,
-        1103.11,
-        1003.11,
-        903.11,
-        803.11,
-        703.11,
-        603.11,
-        503.11,
-        787.73,
-        687.73,
-        587.73,
-        832.55,
-        732.55,
-        632.55,
-        932.55,
-        832.55,
-        732.55,
-        632.55,
-        532.55,
-        1146.84,
-        1284.94,
-        1184.94,
-        1084.94,
-        984.94,
-        884.94,
-        784.94,
-        684.94,
-        584.94,
-        484.94,
-        384.94,
-        284.94,
-        184.94,
-        84.94,
-        -15.06,
-        97.7,
-        -2.3,
-        147.7,
-        47.7,
-        -52.3,
-        -152.3,
-        -252.3,
-        -125.03
+        -46.15,
+        -146.15,
+        587.18,
+        634.24,
+        534.24,
+        434.24,
+        334.24,
+        234.24,
+        134.24,
+        659.24,
+        559.24,
+        459.24,
+        359.24,
+        259.24,
+        159.24,
+        59.24,
+        343.85,
+        243.85,
+        143.85,
+        388.68,
+        288.68,
+        188.68,
+        488.68,
+        388.68,
+        288.68,
+        188.68,
+        88.68,
+        702.97,
+        841.06,
+        741.06,
+        641.06,
+        541.06,
+        441.06,
+        341.06,
+        241.06,
+        141.06,
+        41.06,
+        -58.94,
+        -158.94,
+        -258.94,
+        -358.94,
+        -458.94,
+        -346.17,
+        -446.17,
+        -296.17,
+        -396.17,
+        -496.17,
+        -596.17,
+        -696.17,
+        -568.9,
+        -456.13,
+        -243.63
       ]
     },
     "kelly": {
       "start": 1000.0,
-      "final": 640.49,
-      "roi": -0.3595,
+      "final": 824.06,
+      "roi": -0.1759,
       "curve": [
-        963.01,
-        912.65,
-        1136.66,
-        1082.71,
-        1055.05,
-        1040.83,
-        1144.91,
-        1075.61,
-        1021.15,
-        984.98,
-        1039.54,
-        986.98,
-        1352.98,
-        1410.68,
-        1359.64,
-        1337.3,
-        1297.03,
-        1273.51,
-        1233.81,
-        1426.59,
-        1392.31,
-        1363.51,
-        1281.53,
-        1209.7,
-        1178.62,
-        1124.28,
-        1288.6,
-        1212.32,
-        1159.46,
-        1267.41,
-        1245.04,
-        1219.57,
-        1278.11,
-        1177.57,
-        1103.97,
-        1064.32,
-        1018.4,
-        1476.67,
-        1539.08,
-        1443.49,
-        1343.43,
-        1192.03,
-        1121.12,
-        1051.9,
-        985.05,
-        905.29,
-        861.91,
-        799.23,
-        738.62,
-        714.94,
-        672.04,
-        632.49,
-        712.23,
-        674.1,
-        724.24,
-        650.17,
-        612.54,
-        602.71,
-        566.75,
-        640.49
+        964.58,
+        1018.01,
+        966.53,
+        1324.96,
+        1381.46,
+        1331.48,
+        1309.6,
+        1270.16,
+        1247.13,
+        1208.25,
+        1397.04,
+        1363.48,
+        1335.27,
+        1254.98,
+        1184.65,
+        1154.21,
+        1101.0,
+        1261.91,
+        1187.21,
+        1135.44,
+        1241.16,
+        1219.25,
+        1194.31,
+        1251.64,
+        1153.18,
+        1081.11,
+        1042.28,
+        997.3,
+        1446.09,
+        1507.2,
+        1413.59,
+        1315.6,
+        1167.34,
+        1097.9,
+        1030.11,
+        964.65,
+        886.54,
+        844.06,
+        782.68,
+        723.32,
+        700.13,
+        658.12,
+        619.39,
+        697.48,
+        660.14,
+        709.24,
+        636.7,
+        599.85,
+        590.23,
+        555.01,
+        627.23,
+        651.91,
+        824.06
       ]
     }
   },
   "ledger": [
-    {
-      "date": "2026-06-19",
-      "home": "Scotland",
-      "away": "Morocco",
-      "homeIso": "gb-sct",
-      "awayIso": "ma",
-      "homeScore": 0,
-      "awayScore": 1,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 2,
-      "gaffer": {
-        "HOME": 0.19,
-        "DRAW": 0.324,
-        "AWAY": 0.486
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.16,
-          "bid": 0.15,
-          "mid": 0.155
-        },
-        "DRAW": {
-          "ask": 0.27,
-          "bid": 0.26,
-          "mid": 0.265
-        },
-        "AWAY": {
-          "ask": 0.59,
-          "bid": 0.58,
-          "mid": 0.585
-        }
-      },
-      "devig": {
-        "HOME": 0.1542,
-        "DRAW": 0.2637,
-        "AWAY": 0.5821
-      },
-      "bet": {
-        "leg": "DRAW",
-        "ask": 0.27,
-        "edge": 0.054,
-        "won": false,
-        "netFlat": -100.0,
-        "stakeKelly": 36.99,
-        "netKelly": -36.99
-      }
-    },
-    {
-      "date": "2026-06-19",
-      "home": "Brazil",
-      "away": "Haiti",
-      "homeIso": "br",
-      "awayIso": "ht",
-      "homeScore": 3,
-      "awayScore": 0,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 0,
-      "gaffer": {
-        "HOME": 0.889,
-        "DRAW": 0.082,
-        "AWAY": 0.029
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.89,
-          "bid": 0.88,
-          "mid": 0.885
-        },
-        "DRAW": {
-          "ask": 0.08,
-          "bid": 0.07,
-          "mid": 0.075
-        },
-        "AWAY": {
-          "ask": 0.05,
-          "bid": 0.04,
-          "mid": 0.045
-        }
-      },
-      "devig": {
-        "HOME": 0.8806,
-        "DRAW": 0.0746,
-        "AWAY": 0.0448
-      },
-      "bet": null
-    },
-    {
-      "date": "2026-06-19",
-      "home": "Turkey",
-      "away": "Paraguay",
-      "homeIso": "tr",
-      "awayIso": "py",
-      "homeScore": 0,
-      "awayScore": 1,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 2,
-      "gaffer": {
-        "HOME": 0.461,
-        "DRAW": 0.285,
-        "AWAY": 0.254
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.49,
-          "bid": 0.48,
-          "mid": 0.485
-        },
-        "DRAW": {
-          "ask": 0.29,
-          "bid": 0.28,
-          "mid": 0.285
-        },
-        "AWAY": {
-          "ask": 0.25,
-          "bid": 0.24,
-          "mid": 0.245
-        }
-      },
-      "devig": {
-        "HOME": 0.4778,
-        "DRAW": 0.2808,
-        "AWAY": 0.2414
-      },
-      "bet": null
-    },
-    {
-      "date": "2026-06-20",
-      "home": "Netherlands",
-      "away": "Sweden",
-      "homeIso": "nl",
-      "awayIso": "se",
-      "homeScore": 5,
-      "awayScore": 1,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 0,
-      "gaffer": {
-        "HOME": 0.567,
-        "DRAW": 0.223,
-        "AWAY": 0.21
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.58,
-          "bid": 0.57,
-          "mid": 0.575
-        },
-        "DRAW": {
-          "ask": 0.24,
-          "bid": 0.23,
-          "mid": 0.235
-        },
-        "AWAY": {
-          "ask": 0.21,
-          "bid": 0.2,
-          "mid": 0.205
-        }
-      },
-      "devig": {
-        "HOME": 0.5665,
-        "DRAW": 0.2315,
-        "AWAY": 0.202
-      },
-      "bet": null
-    },
-    {
-      "date": "2026-06-20",
-      "home": "Germany",
-      "away": "Ivory Coast",
-      "homeIso": "de",
-      "awayIso": "ci",
-      "homeScore": 2,
-      "awayScore": 1,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 0,
-      "gaffer": {
-        "HOME": 0.509,
-        "DRAW": 0.27,
-        "AWAY": 0.221
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.7,
-          "bid": 0.69,
-          "mid": 0.695
-        },
-        "DRAW": {
-          "ask": 0.19,
-          "bid": 0.18,
-          "mid": 0.185
-        },
-        "AWAY": {
-          "ask": 0.13,
-          "bid": 0.12,
-          "mid": 0.125
-        }
-      },
-      "devig": {
-        "HOME": 0.6915,
-        "DRAW": 0.1841,
-        "AWAY": 0.1244
-      },
-      "bet": {
-        "leg": "AWAY",
-        "ask": 0.13,
-        "edge": 0.091,
-        "won": false,
-        "netFlat": -100.0,
-        "stakeKelly": 50.36,
-        "netKelly": -50.36
-      }
-    },
-    {
-      "date": "2026-06-20",
-      "home": "Ecuador",
-      "away": "Curaçao",
-      "homeIso": "ec",
-      "awayIso": "cw",
-      "homeScore": 0,
-      "awayScore": 0,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 1,
-      "gaffer": {
-        "HOME": 0.788,
-        "DRAW": 0.164,
-        "AWAY": 0.049
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.85,
-          "bid": 0.84,
-          "mid": 0.845
-        },
-        "DRAW": {
-          "ask": 0.11,
-          "bid": 0.1,
-          "mid": 0.105
-        },
-        "AWAY": {
-          "ask": 0.06,
-          "bid": 0.05,
-          "mid": 0.055
-        }
-      },
-      "devig": {
-        "HOME": 0.8408,
-        "DRAW": 0.1045,
-        "AWAY": 0.0547
-      },
-      "bet": {
-        "leg": "DRAW",
-        "ask": 0.11,
-        "edge": 0.054,
-        "won": true,
-        "netFlat": 809.09,
-        "stakeKelly": 27.69,
-        "netKelly": 224.01
-      }
-    },
-    {
-      "date": "2026-06-20",
-      "home": "Tunisia",
-      "away": "Japan",
-      "homeIso": "tn",
-      "awayIso": "jp",
-      "homeScore": 0,
-      "awayScore": 4,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 2,
-      "gaffer": {
-        "HOME": 0.168,
-        "DRAW": 0.285,
-        "AWAY": 0.547
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.11,
-          "bid": 0.1,
-          "mid": 0.105
-        },
-        "DRAW": {
-          "ask": 0.21,
-          "bid": 0.2,
-          "mid": 0.205
-        },
-        "AWAY": {
-          "ask": 0.7,
-          "bid": 0.69,
-          "mid": 0.695
-        }
-      },
-      "devig": {
-        "HOME": 0.1045,
-        "DRAW": 0.204,
-        "AWAY": 0.6915
-      },
-      "bet": {
-        "leg": "DRAW",
-        "ask": 0.21,
-        "edge": 0.075,
-        "won": false,
-        "netFlat": -100.0,
-        "stakeKelly": 53.96,
-        "netKelly": -53.96
-      }
-    },
-    {
-      "date": "2026-06-21",
-      "home": "Spain",
-      "away": "Saudi Arabia",
-      "homeIso": "es",
-      "awayIso": "sa",
-      "homeScore": 4,
-      "awayScore": 0,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 0,
-      "gaffer": {
-        "HOME": 0.835,
-        "DRAW": 0.127,
-        "AWAY": 0.038
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.89,
-          "bid": 0.88,
-          "mid": 0.885
-        },
-        "DRAW": {
-          "ask": 0.08,
-          "bid": 0.07,
-          "mid": 0.075
-        },
-        "AWAY": {
-          "ask": 0.05,
-          "bid": 0.04,
-          "mid": 0.045
-        }
-      },
-      "devig": {
-        "HOME": 0.8806,
-        "DRAW": 0.0746,
-        "AWAY": 0.0448
-      },
-      "bet": {
-        "leg": "DRAW",
-        "ask": 0.08,
-        "edge": 0.047,
-        "won": false,
-        "netFlat": -100.0,
-        "stakeKelly": 27.66,
-        "netKelly": -27.66
-      }
-    },
-    {
-      "date": "2026-06-21",
-      "home": "Belgium",
-      "away": "Iran",
-      "homeIso": "be",
-      "awayIso": "ir",
-      "homeScore": 0,
-      "awayScore": 0,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 1,
-      "gaffer": {
-        "HOME": 0.647,
-        "DRAW": 0.219,
-        "AWAY": 0.134
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.7,
-          "bid": 0.69,
-          "mid": 0.695
-        },
-        "DRAW": {
-          "ask": 0.21,
-          "bid": 0.2,
-          "mid": 0.205
-        },
-        "AWAY": {
-          "ask": 0.11,
-          "bid": 0.1,
-          "mid": 0.105
-        }
-      },
-      "devig": {
-        "HOME": 0.6915,
-        "DRAW": 0.204,
-        "AWAY": 0.1045
-      },
-      "bet": {
-        "leg": "AWAY",
-        "ask": 0.11,
-        "edge": 0.024,
-        "won": false,
-        "netFlat": -100.0,
-        "stakeKelly": 14.23,
-        "netKelly": -14.23
-      }
-    },
-    {
-      "date": "2026-06-21",
-      "home": "Uruguay",
-      "away": "Cape Verde",
-      "homeIso": "uy",
-      "awayIso": "cv",
-      "homeScore": 2,
-      "awayScore": 2,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 1,
-      "gaffer": {
-        "HOME": 0.612,
-        "DRAW": 0.276,
-        "AWAY": 0.112
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.7,
-          "bid": 0.69,
-          "mid": 0.695
-        },
-        "DRAW": {
-          "ask": 0.23,
-          "bid": 0.22,
-          "mid": 0.225
-        },
-        "AWAY": {
-          "ask": 0.1,
-          "bid": 0.09,
-          "mid": 0.095
-        }
-      },
-      "devig": {
-        "HOME": 0.6847,
-        "DRAW": 0.2217,
-        "AWAY": 0.0936
-      },
-      "bet": {
-        "leg": "DRAW",
-        "ask": 0.23,
-        "edge": 0.046,
-        "won": true,
-        "netFlat": 334.78,
-        "stakeKelly": 31.09,
-        "netKelly": 104.08
-      }
-    },
-    {
-      "date": "2026-06-21",
-      "home": "New Zealand",
-      "away": "Egypt",
-      "homeIso": "nz",
-      "awayIso": "eg",
-      "homeScore": 1,
-      "awayScore": 3,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 2,
-      "gaffer": {
-        "HOME": 0.163,
-        "DRAW": 0.332,
-        "AWAY": 0.506
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.17,
-          "bid": 0.16,
-          "mid": 0.165
-        },
-        "DRAW": {
-          "ask": 0.24,
-          "bid": 0.23,
-          "mid": 0.235
-        },
-        "AWAY": {
-          "ask": 0.62,
-          "bid": 0.61,
-          "mid": 0.615
-        }
-      },
-      "devig": {
-        "HOME": 0.1626,
-        "DRAW": 0.2315,
-        "AWAY": 0.6059
-      },
-      "bet": {
-        "leg": "DRAW",
-        "ask": 0.24,
-        "edge": 0.092,
-        "won": false,
-        "netFlat": -100.0,
-        "stakeKelly": 69.3,
-        "netKelly": -69.3
-      }
-    },
-    {
-      "date": "2026-06-22",
-      "home": "Argentina",
-      "away": "Austria",
-      "homeIso": "ar",
-      "awayIso": "at",
-      "homeScore": 2,
-      "awayScore": 0,
-      "round": null,
-      "pens": false,
-      "penWinner": null,
-      "outcome": 0,
-      "gaffer": {
-        "HOME": 0.553,
-        "DRAW": 0.29,
-        "AWAY": 0.156
-      },
-      "market": {
-        "HOME": {
-          "ask": 0.69,
-          "bid": 0.68,
-          "mid": 0.685
-        },
-        "DRAW": {
-          "ask": 0.21,
-          "bid": 0.2,
-          "mid": 0.205
-        },
-        "AWAY": {
-          "ask": 0.12,
-          "bid": 0.11,
-          "mid": 0.115
-        }
-      },
-      "devig": {
-        "HOME": 0.6816,
-        "DRAW": 0.204,
-        "AWAY": 0.1144
-      },
-      "bet": {
-        "leg": "DRAW",
-        "ask": 0.21,
-        "edge": 0.08,
-        "won": false,
-        "netFlat": -100.0,
-        "stakeKelly": 54.46,
-        "netKelly": -54.46
-      }
-    },
     {
       "date": "2026-06-22",
       "home": "France",
@@ -779,8 +201,8 @@
         "edge": 0.068,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 36.17,
-        "netKelly": -36.17
+        "stakeKelly": 35.42,
+        "netKelly": -35.42
       }
     },
     {
@@ -869,8 +291,8 @@
         "edge": 0.072,
         "won": true,
         "netFlat": 53.85,
-        "stakeKelly": 101.31,
-        "netKelly": 54.55
+        "stakeKelly": 99.21,
+        "netKelly": 53.42
       }
     },
     {
@@ -918,8 +340,8 @@
         "edge": 0.09,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 52.56,
-        "netKelly": -52.56
+        "stakeKelly": 51.47,
+        "netKelly": -51.47
       }
     },
     {
@@ -967,8 +389,8 @@
         "edge": 0.089,
         "won": true,
         "netFlat": 733.33,
-        "stakeKelly": 49.91,
-        "netKelly": 366.0
+        "stakeKelly": 48.88,
+        "netKelly": 358.42
       }
     },
     {
@@ -1016,8 +438,8 @@
         "edge": 0.058,
         "won": true,
         "netFlat": 47.06,
-        "stakeKelly": 122.61,
-        "netKelly": 57.7
+        "stakeKelly": 120.07,
+        "netKelly": 56.51
       }
     },
     {
@@ -1065,8 +487,8 @@
         "edge": 0.055,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 51.04,
-        "netKelly": -51.04
+        "stakeKelly": 49.99,
+        "netKelly": -49.99
       }
     },
     {
@@ -1114,8 +536,8 @@
         "edge": 0.023,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 22.34,
-        "netKelly": -22.34
+        "stakeKelly": 21.87,
+        "netKelly": -21.87
       }
     },
     {
@@ -1163,8 +585,8 @@
         "edge": 0.053,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 40.27,
-        "netKelly": -40.27
+        "stakeKelly": 39.44,
+        "netKelly": -39.44
       }
     },
     {
@@ -1212,8 +634,8 @@
         "edge": 0.033,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 23.52,
-        "netKelly": -23.52
+        "stakeKelly": 23.03,
+        "netKelly": -23.03
       }
     },
     {
@@ -1261,8 +683,8 @@
         "edge": 0.053,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 39.7,
-        "netKelly": -39.7
+        "stakeKelly": 38.88,
+        "netKelly": -38.88
       }
     },
     {
@@ -1310,8 +732,8 @@
         "edge": 0.05,
         "won": true,
         "netFlat": 525.0,
-        "stakeKelly": 36.72,
-        "netKelly": 192.78
+        "stakeKelly": 35.96,
+        "netKelly": 188.79
       }
     },
     {
@@ -1359,8 +781,8 @@
         "edge": 0.037,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 34.28,
-        "netKelly": -34.28
+        "stakeKelly": 33.57,
+        "netKelly": -33.57
       }
     },
     {
@@ -1408,8 +830,8 @@
         "edge": 0.036,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 28.81,
-        "netKelly": -28.81
+        "stakeKelly": 28.21,
+        "netKelly": -28.21
       }
     },
     {
@@ -1457,8 +879,8 @@
         "edge": 0.095,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 81.98,
-        "netKelly": -81.98
+        "stakeKelly": 80.29,
+        "netKelly": -80.29
       }
     },
     {
@@ -1506,8 +928,8 @@
         "edge": 0.102,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 71.82,
-        "netKelly": -71.82
+        "stakeKelly": 70.33,
+        "netKelly": -70.33
       }
     },
     {
@@ -1555,8 +977,8 @@
         "edge": 0.037,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 31.08,
-        "netKelly": -31.08
+        "stakeKelly": 30.44,
+        "netKelly": -30.44
       }
     },
     {
@@ -1604,8 +1026,8 @@
         "edge": 0.071,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 54.34,
-        "netKelly": -54.34
+        "stakeKelly": 53.21,
+        "netKelly": -53.21
       }
     },
     {
@@ -1653,8 +1075,8 @@
         "edge": 0.076,
         "won": true,
         "netFlat": 284.62,
-        "stakeKelly": 57.73,
-        "netKelly": 164.32
+        "stakeKelly": 56.54,
+        "netKelly": 160.91
       }
     },
     {
@@ -1702,8 +1124,8 @@
         "edge": 0.103,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 76.28,
-        "netKelly": -76.28
+        "stakeKelly": 74.7,
+        "netKelly": -74.7
       }
     },
     {
@@ -1751,8 +1173,8 @@
         "edge": 0.075,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 52.86,
-        "netKelly": -52.86
+        "stakeKelly": 51.77,
+        "netKelly": -51.77
       }
     },
     {
@@ -1800,8 +1222,8 @@
         "edge": 0.054,
         "won": true,
         "netFlat": 244.83,
-        "stakeKelly": 44.09,
-        "netKelly": 107.95
+        "stakeKelly": 43.18,
+        "netKelly": 105.71
       }
     },
     {
@@ -1849,8 +1271,8 @@
         "edge": 0.03,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 22.37,
-        "netKelly": -22.37
+        "stakeKelly": 21.9,
+        "netKelly": -21.9
       }
     },
     {
@@ -1898,8 +1320,8 @@
         "edge": 0.036,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 25.47,
-        "netKelly": -25.47
+        "stakeKelly": 24.94,
+        "netKelly": -24.94
       }
     },
     {
@@ -2070,8 +1492,8 @@
         "edge": 0.024,
         "won": true,
         "netFlat": 300.0,
-        "stakeKelly": 19.51,
-        "netKelly": 58.54
+        "stakeKelly": 19.11,
+        "netKelly": 57.33
       }
     },
     {
@@ -2119,8 +1541,8 @@
         "edge": 0.118,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 100.54,
-        "netKelly": -100.54
+        "stakeKelly": 98.46,
+        "netKelly": -98.46
       }
     },
     {
@@ -2209,8 +1631,8 @@
         "edge": 0.09,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 73.6,
-        "netKelly": -73.6
+        "stakeKelly": 72.07,
+        "netKelly": -72.07
       }
     },
     {
@@ -2258,8 +1680,8 @@
         "edge": 0.051,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 39.65,
-        "netKelly": -39.65
+        "stakeKelly": 38.83,
+        "netKelly": -38.83
       }
     },
     {
@@ -2307,8 +1729,8 @@
         "edge": 0.063,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 45.93,
-        "netKelly": -45.93
+        "stakeKelly": 44.97,
+        "netKelly": -44.97
       }
     },
     {
@@ -2356,8 +1778,8 @@
         "edge": 0.126,
         "won": true,
         "netFlat": 614.29,
-        "stakeKelly": 74.6,
-        "netKelly": 458.28
+        "stakeKelly": 73.06,
+        "netKelly": 448.79
       }
     },
     {
@@ -2405,8 +1827,8 @@
         "edge": 0.0355,
         "won": true,
         "netFlat": 138.1,
-        "stakeKelly": 45.19,
-        "netKelly": 62.41
+        "stakeKelly": 44.26,
+        "netKelly": 61.11
       }
     },
     {
@@ -2454,8 +1876,8 @@
         "edge": 0.0795,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 95.59,
-        "netKelly": -95.59
+        "stakeKelly": 93.61,
+        "netKelly": -93.61
       }
     },
     {
@@ -2503,8 +1925,8 @@
         "edge": 0.122,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 100.06,
-        "netKelly": -100.06
+        "stakeKelly": 97.99,
+        "netKelly": -97.99
       }
     },
     {
@@ -2552,8 +1974,8 @@
         "edge": 0.142,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 151.4,
-        "netKelly": -151.4
+        "stakeKelly": 148.27,
+        "netKelly": -148.27
       }
     },
     {
@@ -2601,8 +2023,8 @@
         "edge": 0.1035,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 70.91,
-        "netKelly": -70.91
+        "stakeKelly": 69.44,
+        "netKelly": -69.44
       }
     },
     {
@@ -2650,8 +2072,8 @@
         "edge": 0.0815,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 69.22,
-        "netKelly": -69.22
+        "stakeKelly": 67.79,
+        "netKelly": -67.79
       }
     },
     {
@@ -2699,8 +2121,8 @@
         "edge": 0.1055,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 66.85,
-        "netKelly": -66.85
+        "stakeKelly": 65.47,
+        "netKelly": -65.47
       }
     },
     {
@@ -2748,8 +2170,8 @@
         "edge": 0.1425,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 79.76,
-        "netKelly": -79.76
+        "stakeKelly": 78.1,
+        "netKelly": -78.1
       }
     },
     {
@@ -2797,8 +2219,8 @@
         "edge": 0.069,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 43.38,
-        "netKelly": -43.38
+        "stakeKelly": 42.48,
+        "netKelly": -42.48
       }
     },
     {
@@ -2846,8 +2268,8 @@
         "edge": 0.096,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 62.68,
-        "netKelly": -62.68
+        "stakeKelly": 61.39,
+        "netKelly": -61.39
       }
     },
     {
@@ -2895,8 +2317,8 @@
         "edge": 0.091,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 60.61,
-        "netKelly": -60.61
+        "stakeKelly": 59.35,
+        "netKelly": -59.35
       }
     },
     {
@@ -2944,8 +2366,8 @@
         "edge": 0.059,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 23.68,
-        "netKelly": -23.68
+        "stakeKelly": 23.19,
+        "netKelly": -23.19
       }
     },
     {
@@ -2993,8 +2415,8 @@
         "edge": 0.096,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 42.9,
-        "netKelly": -42.9
+        "stakeKelly": 42.01,
+        "netKelly": -42.01
       }
     },
     {
@@ -3042,8 +2464,8 @@
         "edge": 0.0765,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 39.55,
-        "netKelly": -39.55
+        "stakeKelly": 38.73,
+        "netKelly": -38.73
       }
     },
     {
@@ -3091,8 +2513,8 @@
         "edge": 0.1185,
         "won": true,
         "netFlat": 112.77,
-        "stakeKelly": 70.71,
-        "netKelly": 79.73
+        "stakeKelly": 69.24,
+        "netKelly": 78.08
       }
     },
     {
@@ -3140,8 +2562,8 @@
         "edge": 0.091,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 38.13,
-        "netKelly": -38.13
+        "stakeKelly": 37.34,
+        "netKelly": -37.34
       }
     },
     {
@@ -3189,8 +2611,8 @@
         "edge": 0.0595,
         "won": true,
         "netFlat": 150.0,
-        "stakeKelly": 33.42,
-        "netKelly": 50.14
+        "stakeKelly": 32.73,
+        "netKelly": 49.1
       }
     },
     {
@@ -3238,8 +2660,8 @@
         "edge": 0.1575,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 74.07,
-        "netKelly": -74.07
+        "stakeKelly": 72.54,
+        "netKelly": -72.54
       }
     },
     {
@@ -3287,8 +2709,8 @@
         "edge": 0.0845,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 37.63,
-        "netKelly": -37.63
+        "stakeKelly": 36.85,
+        "netKelly": -36.85
       }
     },
     {
@@ -3336,8 +2758,8 @@
         "edge": 0.0215,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 9.83,
-        "netKelly": -9.83
+        "stakeKelly": 9.62,
+        "netKelly": -9.62
       }
     },
     {
@@ -3385,8 +2807,8 @@
         "edge": 0.0895,
         "won": false,
         "netFlat": -100.0,
-        "stakeKelly": 35.96,
-        "netKelly": -35.96
+        "stakeKelly": 35.22,
+        "netKelly": -35.22
       }
     },
     {
@@ -3434,8 +2856,106 @@
         "edge": 0.1145,
         "won": true,
         "netFlat": 127.27,
-        "stakeKelly": 57.94,
-        "netKelly": 73.74
+        "stakeKelly": 56.74,
+        "netKelly": 72.21
+      }
+    },
+    {
+      "date": "2026-07-15",
+      "home": "England",
+      "away": "Argentina",
+      "homeIso": "gb-eng",
+      "awayIso": "ar",
+      "homeScore": 1,
+      "awayScore": 2,
+      "round": "SF",
+      "pens": false,
+      "penWinner": null,
+      "outcome": 2,
+      "gaffer": {
+        "HOME": 0.492,
+        "DRAW": 0.0,
+        "AWAY": 0.507
+      },
+      "market": {
+        "HOME": {
+          "ask": 0.54,
+          "bid": 0.53,
+          "mid": 0.535
+        },
+        "DRAW": {
+          "ask": null,
+          "bid": null,
+          "mid": 0.0
+        },
+        "AWAY": {
+          "ask": 0.47,
+          "bid": 0.46,
+          "mid": 0.465
+        }
+      },
+      "devig": {
+        "HOME": 0.535,
+        "DRAW": 0.0,
+        "AWAY": 0.465
+      },
+      "bet": {
+        "leg": "AWAY",
+        "ask": 0.47,
+        "edge": 0.037,
+        "won": true,
+        "netFlat": 112.77,
+        "stakeKelly": 21.89,
+        "netKelly": 24.69
+      }
+    },
+    {
+      "date": "2026-07-18",
+      "home": "France",
+      "away": "England",
+      "homeIso": "fr",
+      "awayIso": "gb-eng",
+      "homeScore": 4,
+      "awayScore": 6,
+      "round": "3P",
+      "pens": false,
+      "penWinner": null,
+      "outcome": 2,
+      "gaffer": {
+        "HOME": 0.511,
+        "DRAW": 0.0,
+        "AWAY": 0.489
+      },
+      "market": {
+        "HOME": {
+          "ask": 0.69,
+          "bid": 0.68,
+          "mid": 0.685
+        },
+        "DRAW": {
+          "ask": null,
+          "bid": null,
+          "mid": 0.0
+        },
+        "AWAY": {
+          "ask": 0.32,
+          "bid": 0.31,
+          "mid": 0.315
+        }
+      },
+      "devig": {
+        "HOME": 0.685,
+        "DRAW": 0.0,
+        "AWAY": 0.315
+      },
+      "bet": {
+        "leg": "AWAY",
+        "ask": 0.32,
+        "edge": 0.169,
+        "won": true,
+        "netFlat": 212.5,
+        "stakeKelly": 81.01,
+        "netKelly": 172.15
       }
     }
   ]
